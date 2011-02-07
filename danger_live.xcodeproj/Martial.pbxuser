@@ -44,10 +44,37 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	833ACC9B1300371800B1EAF0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */;
+		name = "main.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 414;
+		vrLoc = 0;
+	};
+	833ACC9C1300371800B1EAF0 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+	};
+	833ACC9D1300371800B1EAF0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 5";
+		rLen = 0;
+		rLoc = 110;
+		rType = 0;
+		vrLen = 363;
+		vrLoc = 0;
+	};
 	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 		activeBuildConfigurationName = Release;
 		activeExecutable = 8329FA89130033FF00C56217 /* danger_live */;
 		activeTarget = E4B69B5A0A3A1756003C02F2 /* danger_live */;
+		addToTargets = (
+			E4B69B5A0A3A1756003C02F2 /* danger_live */,
+		);
 		codeSenseManager = 8329FAB21300340700C56217 /* Code sense */;
 		executables = (
 			8329FA89130033FF00C56217 /* danger_live */,
@@ -83,7 +110,7 @@
 					301,
 					60,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 				);
@@ -97,8 +124,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 318780457;
-			PBXWorkspaceStateSaveDate = 318780457;
+			PBXPerProjectTemplateStateSaveDate = 318781100;
+			PBXWorkspaceStateSaveDate = 318781100;
+		};
+		perUserProjectItems = {
+			833ACC9B1300371800B1EAF0 /* PBXTextBookmark */ = 833ACC9B1300371800B1EAF0 /* PBXTextBookmark */;
+			833ACC9C1300371800B1EAF0 /* PBXBookmark */ = 833ACC9C1300371800B1EAF0 /* PBXBookmark */;
+			833ACC9D1300371800B1EAF0 /* PBXTextBookmark */ = 833ACC9D1300371800B1EAF0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 8329FAB11300340700C56217 /* Source Control */;
 		userBuildSettings = {
@@ -109,5 +141,19 @@
 		executables = (
 			8329FA89130033FF00C56217 /* danger_live */,
 		);
+	};
+	E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {570, 228}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 414}";
+		};
+	};
+	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 715}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 363}";
+		};
 	};
 }
