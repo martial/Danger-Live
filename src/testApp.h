@@ -3,6 +3,10 @@
 
 
 #include "ofMain.h"
+#include "DangerScene.h"
+#include "dgVideoObject.h"
+#include "dgOscReceiver.h"
+#include "dgData.h"
 
 class testApp : public ofBaseApp{
 
@@ -18,7 +22,14 @@ class testApp : public ofBaseApp{
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
-
+	
+	
+		private :
+		
+		DangerScene			scene;
+		dgOscReceiver		oscReceiver;
+		dgVideoObject		video;
+		dgData				data;
 };
 
 #endif

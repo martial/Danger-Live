@@ -2,16 +2,30 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+	
+	printf("welcome\n");
+	
+	ofSetFrameRate(60);
+	scene.setup();
+	
+	oscReceiver.setup();
+	video.setup("videos/knob.mov", "video");
+	data.setup("layouts.xml");
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+	video.update();
+	oscReceiver.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
+	
+	scene.draw();
+	video.draw();
+	oscReceiver.debugDraw();
 
 }
 

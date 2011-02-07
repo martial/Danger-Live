@@ -1,0 +1,38 @@
+<scene>
+
+	<module name="">
+	
+		<component>
+			
+			<name>knob</name>
+			<osc_adress></osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="0"></position>			
+		
+		</component>
+		
+		<component>
+			
+			<name>knob</name>
+			<osc_adress></osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="0"></position>			
+		
+		</component>
+	
+	</module>
+	
+	<module name="">
+	
+		<component>
+			
+			<name>knob</name>
+			<osc_adress></osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="0"></position>			
+		
+		</component>
+	
+	</module>
+
+</scene>

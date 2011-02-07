@@ -1,0 +1,2 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgModuleView.cpp:12: error: prototype for 'void dgModuleView::setup(dgData&)' does not match any in class 'dgModuleView'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgModuleView.h:20: error: candidate is: void dgModuleView::setup(dgData*)
