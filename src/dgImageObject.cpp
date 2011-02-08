@@ -9,11 +9,21 @@
 
 #include "dgImageObject.h"
 
+dgImageObject::dgImageObject() {
+	
+}
+
+dgImageObject::~dgImageObject() {
+	
+}
+
 void dgImageObject::setup (string imgURL, string name) {
 	
 	dgSceneObject::setup(name);
 	
 	img.loadImage(imgURL);
+	this->width = img.width;
+	this->height = img.height;
 }
 
 void dgImageObject::update () {

@@ -17,11 +17,12 @@ class dgImageObject : public dgSceneObject {
 	
 public:
 	
+	
+							dgImageObject();
+							~dgImageObject();
 	void					setup(string imgURL, string name);
 	void					update();
 	void					draw();
-	
-	void					addMedia(string url, string type);
 		
 	private :
 	

@@ -7,7 +7,7 @@
 			<name>knob</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
+			<position x="500" y="0"></position>			
 		
 		</component>
 		
@@ -19,6 +19,26 @@
 			<position x="0" y="0"></position>			
 		
 		</component>
+		
+		
+		<component>
+			
+			<name>knob</name>
+			<osc_adress></osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="0"></position>			
+		
+		</component>
+		
+		<component>
+			
+			<name>knob2</name>
+			<osc_adress></osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="500"></position>			
+		
+		</component>
+
 	
 	</module>
 	
@@ -26,10 +46,10 @@
 	
 		<component>
 			
-			<name>knob</name>
+			<name>knob2</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
+			<position x="300" y="100"></position>			
 		
 		</component>
 	

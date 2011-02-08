@@ -16,7 +16,8 @@
 class dgVideoObject : public dgSceneObject {
 
 	public:
-	
+	dgVideoObject();
+	~dgVideoObject();
 	void					setup(string videoUrl, string name);
 	void					update();
 	void					draw();
@@ -25,7 +26,7 @@ class dgVideoObject : public dgSceneObject {
 	
 	private :
 	
-	ofxQTKitVideoPlayer		mainVideo;
+	ofxQTKitVideoPlayer		* mainVideo;
 	
 	
 	

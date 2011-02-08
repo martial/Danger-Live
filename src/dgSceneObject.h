@@ -9,20 +9,32 @@
 
 #pragma once
 #include "ofMain.h"
+#include "ofxQTKitVideoPlayer.h"
 
 class dgSceneObject {
 
 	public:
 	
-	virtual void setup(string name);
-	virtual void update();
-	virtual void draw();
+	dgSceneObject();
+	virtual ~dgSceneObject();
+	virtual void					setup(string name);
+	virtual void					update();
+	virtual void					draw();
 	
-	virtual void setPosition(ofPoint);
+			void					addMedia(string url, string mediaType);
+	
+	virtual void					setPosition(ofPoint);
+	virtual void					setPosition (int x, int y);
 	
 	
-	string			name;
-	ofPoint			pos;
 	
+	string							name;
+	ofPoint							pos;
+	
+	int								width, height;
+	
+	
+	vector<ofImage*>				images;
+	vector<ofxQTKitVideoPlayer*>	videos;
 	
 };

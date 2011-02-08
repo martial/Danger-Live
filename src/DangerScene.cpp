@@ -15,16 +15,26 @@ DangerScene::DangerScene() {
 
 }
 
-void DangerScene::setup() {
+void DangerScene::setup(dgData & layoutData, dgCompBuilder & compBuilder) {
 	background.setup();
+	
+	moduleView.setup(layoutData, compBuilder);
 }
 
 void DangerScene::update() {
-
+	moduleView.update();
 }
 
 void DangerScene::draw () {
 	
 	background.draw();
+	ofEnableAlphaBlending();
+	moduleView.draw();
+	ofDisableAlphaBlending();
 
+}
+
+void DangerScene::setCurrentView(int viewID) {
+	
+	moduleView.setCurrentView(viewID);
 }

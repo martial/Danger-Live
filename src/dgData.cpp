@@ -52,11 +52,15 @@ void dgData::setup (string xmlURL) {
 			data[i]->cpData[j]->name = XML.getValue("name", "");
 			data[i]->cpData[j]->adress = XML.getValue("adress", "");
 			
-			data[i]->cpData[j]->pos.x = XML.getAttribute("position", "x", 0, j);
-			data[i]->cpData[j]->pos.y = XML.getAttribute("position", "y", 0, j);
 			
-			data[i]->cpData[j]->range.x = XML.getAttribute("range", "min", 0, j);
-			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 127, j);
+			
+			data[i]->cpData[j]->pos.x = XML.getAttribute("position", "x", 0, 0);
+			data[i]->cpData[j]->pos.y = XML.getAttribute("position", "y", 0, 0);
+			
+			
+			
+			data[i]->cpData[j]->range.x = XML.getAttribute("range", "min", 0, 0);
+			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 127, 0);
 			
 			XML.popTag();
 		}

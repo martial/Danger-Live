@@ -9,20 +9,41 @@
 
 #include "dgVideoObject.h"
 
+dgVideoObject::dgVideoObject() {
+}
+
+
+dgVideoObject::~dgVideoObject() {
+	printf("adios from video object\n");
+	mainVideo->close();
+	delete mainVideo;
+	mainVideo = NULL;
+}
+
+
+
 void dgVideoObject::setup (string videoUrl, string name) {
 	
 	dgSceneObject::setup(name);
 	
 	int mode = OFXQTVIDEOPLAYER_MODE_TEXTURE_ONLY;
-	mainVideo.loadMovie(videoUrl, mode);
-	mainVideo.play();
+	mainVideo = new ofxQTKitVideoPlayer();
+	mainVideo->loadMovie(videoUrl, mode);
+	
+	this->width = mainVideo->width;
+	this->height = mainVideo->height;
+	
+	mainVideo->play();
+	
+	
+	
 }
 
 void dgVideoObject::update () {
 	
 	dgSceneObject::update();
 	
-	mainVideo.update();
+	mainVideo->update();
 	
 }
 
@@ -30,9 +51,9 @@ void dgVideoObject::draw () {
 	
 	dgSceneObject::draw();
 	
-	ofEnableAlphaBlending();
-	mainVideo.draw(pos.x, pos.y);
-	ofDisableAlphaBlending();
+	//ofEnableAlphaBlending();
+	mainVideo->draw(pos.x, pos.y);
+	//ofDisableAlphaBlending();
 }
 
 
@@ -45,7 +66,7 @@ void dgVideoObject::draw () {
 void dgVideoObject::setPct(float pct) {
 	
 	
-	mainVideo.setPosition(pct);
+	mainVideo->setPosition(pct);
 	
 	
 }

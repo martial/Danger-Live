@@ -1,0 +1,40 @@
+<components>
+
+	<comp>
+		
+		<name>knob</name>
+		<type>video</type>
+		<url>videos/knob.mov</url>
+		
+		<medias>
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+		</medias>
+		
+	</comp>
+	
+	<comp>
+		
+		<name>knob2</name>
+		<type>video</type>
+		<url>videos/knob2.mov</url>
+		
+		<medias>
+			
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+		</medias>
+		
+	</comp>
+	
+	
+
+</components>

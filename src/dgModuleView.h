@@ -13,21 +13,29 @@
 
 #include "ofMain.h"
 #include "dgData.h"
+#include "dgCompBuilder.h"
 
 class dgModuleView {
 	
 	public:
-	void setup(dgData & data);
+	void setup(dgData & layoutData, dgCompBuilder & compBuilder);
 	void update();
 	void draw();
-	
+		
 	void setCurrentView(int viewID);
 	
 	
 	private:
 	
-	dgData		*	data;
-	int			currentViewID;
+	void addSceneObjects();
+
+	
+	dgData					*	layoutData;
+	dgCompBuilder			*	compBuilder;
+	
+	int							currentViewID;
+	
+	vector<dgSceneObject*>		currentObjects;
 	
 };
 

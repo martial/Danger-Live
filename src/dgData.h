@@ -21,10 +21,12 @@ class dgData  {
 	void setup(string xmlURL);
 	void debug();
 	
+	vector <moduleData*>		data;
+	
 	private:
 	
 	ofxXmlSettings				XML;
-	vector <moduleData*>		data;
+	
 	
 };
 

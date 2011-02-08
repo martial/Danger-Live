@@ -36,6 +36,7 @@
 		833ACE0113004EB900B1EAF0 /* dgData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0013004EB900B1EAF0 /* dgData.cpp */; };
 		833ACE0413004ECF00B1EAF0 /* moduleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0313004ECF00B1EAF0 /* moduleData.cpp */; };
 		833ACE1B130054D800B1EAF0 /* componentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE1A130054D800B1EAF0 /* componentData.cpp */; };
+		83B7009313017B9100CDE6B4 /* dgCompBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */; };
 		83C2CC261300657D00146392 /* dgModuleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C2CC251300657D00146392 /* dgModuleView.cpp */; };
 		83C2CC291300671600146392 /* dgImageObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C2CC281300671600146392 /* dgImageObject.cpp */; };
 		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; };
@@ -215,6 +216,8 @@
 		833ACE0313004ECF00B1EAF0 /* moduleData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moduleData.cpp; sourceTree = "<group>"; };
 		833ACE19130054D800B1EAF0 /* componentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = componentData.h; sourceTree = "<group>"; };
 		833ACE1A130054D800B1EAF0 /* componentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = componentData.cpp; sourceTree = "<group>"; };
+		83B7009113017B9100CDE6B4 /* dgCompBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgCompBuilder.h; sourceTree = "<group>"; };
+		83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgCompBuilder.cpp; sourceTree = "<group>"; };
 		83C2CC241300657D00146392 /* dgModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgModuleView.h; sourceTree = "<group>"; };
 		83C2CC251300657D00146392 /* dgModuleView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgModuleView.cpp; sourceTree = "<group>"; };
 		83C2CC271300671600146392 /* dgImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgImageObject.h; sourceTree = "<group>"; };
@@ -522,6 +525,7 @@
 		833ACD401300403100B1EAF0 /* scene_objects */ = {
 			isa = PBXGroup;
 			children = (
+				83B7009013017B7B00CDE6B4 /* compBuilder */,
 				833ACD411300405600B1EAF0 /* dgSceneObject.h */,
 				833ACD421300405600B1EAF0 /* dgSceneObject.cpp */,
 				833ACD441300417700B1EAF0 /* dgVideoObject.h */,
@@ -636,6 +640,15 @@
 				833ACDBE1300480600B1EAF0 /* dgOscReceiver.cpp */,
 			);
 			name = osc;
+			sourceTree = "<group>";
+		};
+		83B7009013017B7B00CDE6B4 /* compBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				83B7009113017B9100CDE6B4 /* dgCompBuilder.h */,
+				83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */,
+			);
+			name = compBuilder;
 			sourceTree = "<group>";
 		};
 		83C2CC231300656D00146392 /* modules */ = {
@@ -1065,6 +1078,7 @@
 				833ACE1B130054D800B1EAF0 /* componentData.cpp in Sources */,
 				83C2CC261300657D00146392 /* dgModuleView.cpp in Sources */,
 				83C2CC291300671600146392 /* dgImageObject.cpp in Sources */,
+				83B7009313017B9100CDE6B4 /* dgCompBuilder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

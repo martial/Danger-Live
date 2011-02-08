@@ -5,32 +5,55 @@ void testApp::setup(){
 	
 	printf("welcome\n");
 	
-	ofSetFrameRate(60);
-	scene.setup();
+	//ofSetFrameRate(60);
+	ofSetVerticalSync(true);
 	
-	oscReceiver.setup();
-	video.setup("videos/knob.mov", "video");
+	
+	//oscReceiver.setup();
+	//video.setup("videos/knob.mov", "video");
 	data.setup("layouts.xml");
+	
+	builder.setup("components.xml");
 
+	
+	scene.setup(data, builder);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	video.update();
-	oscReceiver.update();
+	//video.update();
+	scene.update();
+	//oscReceiver.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 	
 	scene.draw();
-	video.draw();
-	oscReceiver.debugDraw();
+	//video.draw();
+	
+	//builder.draw();
+	//oscReceiver.debugDraw();
 
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+	
+	switch (key) {
+		case 'q':
+			scene.setCurrentView(1);
+			break;
+		
+		case 'w':
+			scene.setCurrentView(0);
+			break;
+		
+		default:
+			break;
+	}
+	
+	
 
 }
 

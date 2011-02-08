@@ -7,6 +7,7 @@
 #include "dgVideoObject.h"
 #include "dgOscReceiver.h"
 #include "dgData.h"
+#include "dgCompBuilder.h"
 
 class testApp : public ofBaseApp{
 
@@ -30,6 +31,7 @@ class testApp : public ofBaseApp{
 		dgOscReceiver		oscReceiver;
 		dgVideoObject		video;
 		dgData				data;
+		dgCompBuilder		builder;
 };
 
 #endif
