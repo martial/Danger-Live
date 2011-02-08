@@ -8,18 +8,21 @@
  */
 
 
-#pragma once
+#ifndef DGSCENE
+#define DGSCENE
+
 #include "ofMain.h"
 #include "DangerBackground.h"
 #include "dgModuleView.h"
 #include "dgCompBuilder.h"
+#include "OscReceiver.h"
 
 class DangerScene {
 
 	public:
 	
 	DangerScene();
-	void setup(dgData & layoutData, dgCompBuilder & compBuilder);
+	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver);
 	void update();
 	void draw();
 	
@@ -32,3 +35,5 @@ class DangerScene {
 	dgModuleView		moduleView;
 	
 };
+
+#endif

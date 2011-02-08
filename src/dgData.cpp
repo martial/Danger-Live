@@ -50,7 +50,7 @@ void dgData::setup (string xmlURL) {
 			
 			XML.pushTag("component", j);
 			data[i]->cpData[j]->name = XML.getValue("name", "");
-			data[i]->cpData[j]->adress = XML.getValue("adress", "");
+			data[i]->cpData[j]->adress = XML.getValue("osc_adress", "");
 			
 			
 			

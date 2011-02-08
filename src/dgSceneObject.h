@@ -25,16 +25,20 @@ class dgSceneObject {
 	
 	virtual void					setPosition(ofPoint);
 	virtual void					setPosition (int x, int y);
+	virtual void					setPct(float pct);
 	
 	
 	
 	string							name;
+	string							adress;
 	ofPoint							pos;
 	
 	int								width, height;
-	
+	float							pct;
 	
 	vector<ofImage*>				images;
 	vector<ofxQTKitVideoPlayer*>	videos;
+	
+	bool							active;
 	
 };

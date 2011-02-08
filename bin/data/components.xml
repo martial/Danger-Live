@@ -7,6 +7,7 @@
 		<url>videos/knob.mov</url>
 		
 		<medias>
+		<!--
 			<media>
 				<type>image</type>
 				<url>images/back.jpg</url>
@@ -15,6 +16,7 @@
 				<type>image</type>
 				<url>images/test.jpg</url>
 			</media>
+			-->
 		</medias>
 		
 	</comp>
@@ -26,11 +28,12 @@
 		<url>videos/knob2.mov</url>
 		
 		<medias>
-			
+			<!--
 			<media>
 				<type>image</type>
 				<url>images/test.jpg</url>
 			</media>
+			-->
 		</medias>
 		
 	</comp>

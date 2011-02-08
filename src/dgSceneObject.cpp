@@ -11,6 +11,8 @@
 
 dgSceneObject::dgSceneObject() {
 	
+	
+	
 }
 
 dgSceneObject::~dgSceneObject() {
@@ -33,7 +35,9 @@ void dgSceneObject::setup (string name) {
 	
 	width = 0;
 	height = 0;
-
+	
+	active = false;
+	
 }
 
 void dgSceneObject::update () {
@@ -46,6 +50,9 @@ void dgSceneObject::update () {
 
 void dgSceneObject::draw () {
 	
+	if ( active ) {
+		pos.x += ofRandom(0, 1);
+	}
 	
 	float xPos, yPos;
 	
@@ -81,6 +88,12 @@ void dgSceneObject::setPosition (int x, int y) {
 	this->pos.y = y;
 	
 	printf("set position %d\n ", x);
+}
+
+void dgSceneObject::setPct(float pct) {
+	
+	this->pct = pct;
+	
 }
 
 

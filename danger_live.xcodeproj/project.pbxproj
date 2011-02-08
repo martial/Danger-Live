@@ -32,11 +32,13 @@
 		833ACDB9130047B700B1EAF0 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACDB1130047B700B1EAF0 /* ofxOscMessage.cpp */; };
 		833ACDBA130047B700B1EAF0 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACDB3130047B700B1EAF0 /* ofxOscReceiver.cpp */; };
 		833ACDBB130047B700B1EAF0 /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACDB5130047B700B1EAF0 /* ofxOscSender.cpp */; };
-		833ACDBF1300480600B1EAF0 /* dgOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACDBE1300480600B1EAF0 /* dgOscReceiver.cpp */; };
+		833ACDBF1300480600B1EAF0 /* DgOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACDBE1300480600B1EAF0 /* DgOscReceiver.cpp */; };
 		833ACE0113004EB900B1EAF0 /* dgData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0013004EB900B1EAF0 /* dgData.cpp */; };
 		833ACE0413004ECF00B1EAF0 /* moduleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0313004ECF00B1EAF0 /* moduleData.cpp */; };
 		833ACE1B130054D800B1EAF0 /* componentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE1A130054D800B1EAF0 /* componentData.cpp */; };
 		83B7009313017B9100CDE6B4 /* dgCompBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */; };
+		83B704AD1301CCC400CDE6B4 /* customOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B704AC1301CCC400CDE6B4 /* customOscMessage.cpp */; };
+		83B7055B1301D55B00CDE6B4 /* OscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B7055A1301D55B00CDE6B4 /* OscReceiver.cpp */; };
 		83C2CC261300657D00146392 /* dgModuleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C2CC251300657D00146392 /* dgModuleView.cpp */; };
 		83C2CC291300671600146392 /* dgImageObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C2CC281300671600146392 /* dgImageObject.cpp */; };
 		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; };
@@ -208,8 +210,8 @@
 		833ACDB4130047B700B1EAF0 /* ofxOscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOscReceiver.h; sourceTree = "<group>"; };
 		833ACDB5130047B700B1EAF0 /* ofxOscSender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOscSender.cpp; sourceTree = "<group>"; };
 		833ACDB6130047B700B1EAF0 /* ofxOscSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOscSender.h; sourceTree = "<group>"; };
-		833ACDBD1300480600B1EAF0 /* dgOscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgOscReceiver.h; sourceTree = "<group>"; };
-		833ACDBE1300480600B1EAF0 /* dgOscReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgOscReceiver.cpp; sourceTree = "<group>"; };
+		833ACDBD1300480600B1EAF0 /* DgOscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgOscReceiver.h; sourceTree = "<group>"; };
+		833ACDBE1300480600B1EAF0 /* DgOscReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DgOscReceiver.cpp; sourceTree = "<group>"; };
 		833ACDFF13004EB900B1EAF0 /* dgData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgData.h; sourceTree = "<group>"; };
 		833ACE0013004EB900B1EAF0 /* dgData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgData.cpp; sourceTree = "<group>"; };
 		833ACE0213004ECF00B1EAF0 /* moduleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moduleData.h; sourceTree = "<group>"; };
@@ -218,6 +220,10 @@
 		833ACE1A130054D800B1EAF0 /* componentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = componentData.cpp; sourceTree = "<group>"; };
 		83B7009113017B9100CDE6B4 /* dgCompBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgCompBuilder.h; sourceTree = "<group>"; };
 		83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgCompBuilder.cpp; sourceTree = "<group>"; };
+		83B704AB1301CCC400CDE6B4 /* customOscMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customOscMessage.h; sourceTree = "<group>"; };
+		83B704AC1301CCC400CDE6B4 /* customOscMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = customOscMessage.cpp; sourceTree = "<group>"; };
+		83B705591301D55B00CDE6B4 /* OscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscReceiver.h; sourceTree = "<group>"; };
+		83B7055A1301D55B00CDE6B4 /* OscReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscReceiver.cpp; sourceTree = "<group>"; };
 		83C2CC241300657D00146392 /* dgModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgModuleView.h; sourceTree = "<group>"; };
 		83C2CC251300657D00146392 /* dgModuleView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgModuleView.cpp; sourceTree = "<group>"; };
 		83C2CC271300671600146392 /* dgImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgImageObject.h; sourceTree = "<group>"; };
@@ -636,8 +642,12 @@
 		833ACDBC130047C300B1EAF0 /* osc */ = {
 			isa = PBXGroup;
 			children = (
-				833ACDBD1300480600B1EAF0 /* dgOscReceiver.h */,
-				833ACDBE1300480600B1EAF0 /* dgOscReceiver.cpp */,
+				833ACDBD1300480600B1EAF0 /* DgOscReceiver.h */,
+				833ACDBE1300480600B1EAF0 /* DgOscReceiver.cpp */,
+				83B704AB1301CCC400CDE6B4 /* customOscMessage.h */,
+				83B704AC1301CCC400CDE6B4 /* customOscMessage.cpp */,
+				83B705591301D55B00CDE6B4 /* OscReceiver.h */,
+				83B7055A1301D55B00CDE6B4 /* OscReceiver.cpp */,
 			);
 			name = osc;
 			sourceTree = "<group>";
@@ -1072,13 +1082,15 @@
 				833ACDB9130047B700B1EAF0 /* ofxOscMessage.cpp in Sources */,
 				833ACDBA130047B700B1EAF0 /* ofxOscReceiver.cpp in Sources */,
 				833ACDBB130047B700B1EAF0 /* ofxOscSender.cpp in Sources */,
-				833ACDBF1300480600B1EAF0 /* dgOscReceiver.cpp in Sources */,
+				833ACDBF1300480600B1EAF0 /* DgOscReceiver.cpp in Sources */,
 				833ACE0113004EB900B1EAF0 /* dgData.cpp in Sources */,
 				833ACE0413004ECF00B1EAF0 /* moduleData.cpp in Sources */,
 				833ACE1B130054D800B1EAF0 /* componentData.cpp in Sources */,
 				83C2CC261300657D00146392 /* dgModuleView.cpp in Sources */,
 				83C2CC291300671600146392 /* dgImageObject.cpp in Sources */,
 				83B7009313017B9100CDE6B4 /* dgCompBuilder.cpp in Sources */,
+				83B704AD1301CCC400CDE6B4 /* customOscMessage.cpp in Sources */,
+				83B7055B1301D55B00CDE6B4 /* OscReceiver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

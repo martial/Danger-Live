@@ -5,7 +5,7 @@
 #include "ofMain.h"
 #include "DangerScene.h"
 #include "dgVideoObject.h"
-#include "dgOscReceiver.h"
+#include "OscReceiver.h"
 #include "dgData.h"
 #include "dgCompBuilder.h"
 
@@ -28,7 +28,7 @@ class testApp : public ofBaseApp{
 		private :
 		
 		DangerScene			scene;
-		dgOscReceiver		oscReceiver;
+		OscReceiver			oscReceiver;
 		dgVideoObject		video;
 		dgData				data;
 		dgCompBuilder		builder;

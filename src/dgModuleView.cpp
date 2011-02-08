@@ -9,14 +9,27 @@
 
 #include "dgModuleView.h"
 
-void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder) {
+void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver) {
 	
 	this->layoutData = &layoutData;
 	this->compBuilder = &compBuilder;
+	this->oscReceiver = &oscReceiver;
 	setCurrentView(0);
+	
+	// set osc events
+	
+	//ofAddListener(this->oscReceiver->oscEvent,this,&dgModuleView::processOsc);
 }
 
 void dgModuleView::update() {
+	
+	processOsc();
+	
+	
+	
+	
+	//printf ("Number of comps : %d\n", currentObjects.size());
+
 	
 	for ( int i = 0; i<currentObjects.size(); i++ ) {
 		dgSceneObject  * object = currentObjects[i];
@@ -38,9 +51,7 @@ void dgModuleView::draw () {
 
 void dgModuleView::addSceneObjects () {
 	
-	// clean vector
 	
-	//while(!currentObjects.empty()) delete currentObjects.front(), currentObjects.pop_front();
 	for ( int i = 0; i<currentObjects.size(); i++ ) {
 		delete currentObjects[i];
 	}
@@ -54,15 +65,53 @@ void dgModuleView::addSceneObjects () {
 		componentData * compData = currentModule->cpData[i];
 		dgSceneObject  * sceneObject = compBuilder->createCompByName(compData->name);
 		sceneObject->setPosition(compData->pos.x, compData->pos.y);
+		sceneObject->adress = compData->adress;
 		currentObjects.push_back(sceneObject); 
-		
-		
 			
 	}
 	
+}
+
+/*
+ 
+ */
+
+void dgModuleView::processOsc () {
+	
+	for ( int i = 0; i < oscReceiver->messages.size(); i++ ) {
+				
+		// first check adress
+		dgSceneObject * object;
+		object = getRelatedObject(oscReceiver->messages[i]->address);
+		if ( object ) {
+			//object->active = true;
+			continue;
+		}
+		
+		for ( int j=0; j < oscReceiver->messages[i]->stringArgs.size(); j++ ) {			
+				object =  getRelatedObject( oscReceiver->messages[i]->stringArgs[j]);
+				if ( object ) {
+					//object->active = true;
+					object->setPct(oscReceiver->messages[i]->value / 127);
+				}
+				continue;
+		}
+		
+		
+	}
 	
 }
 
+dgSceneObject  * dgModuleView::getRelatedObject (string val) {
+	
+	for ( int i = 0; i< currentObjects.size(); i++ ) {
+		if ( currentObjects[i]->adress == val  ) {
+			return currentObjects[i];
+		}
+	}
+	
+	return NULL;
+}
 
 
 

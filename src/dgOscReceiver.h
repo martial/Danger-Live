@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef DGOSCREVEIVER
-#define DGOSCRECEIVER
+#ifndef __AHDGOSCREVEIVERA
+#define __AHDGOSCRECEIVERA
 
 #include "ofMain.h"
 #include "ofxOsc.h"
@@ -16,7 +16,7 @@
 #define OSC_PORT 9001
 #define NUM_MSG_STRINGS 24
 
-class dgOscReceiver {
+class DgOscReceiver {
 	
 
 	public:
@@ -29,7 +29,7 @@ class dgOscReceiver {
 	ofxOscReceiver	receiver;
 	
 	int				current_msg_string;
-	string		msg_strings[NUM_MSG_STRINGS];
+	string			msg_strings[NUM_MSG_STRINGS];
 	float			timers[NUM_MSG_STRINGS];
 	
 	

@@ -26,14 +26,14 @@ void dgVideoObject::setup (string videoUrl, string name) {
 	
 	dgSceneObject::setup(name);
 	
-	int mode = OFXQTVIDEOPLAYER_MODE_TEXTURE_ONLY;
+	int mode = OFXQTVIDEOPLAYER_MODE_PIXELS_ONLY;
 	mainVideo = new ofxQTKitVideoPlayer();
 	mainVideo->loadMovie(videoUrl, mode);
 	
 	this->width = mainVideo->width;
 	this->height = mainVideo->height;
 	
-	mainVideo->play();
+	//mainVideo->play();
 	
 	
 	
@@ -42,7 +42,6 @@ void dgVideoObject::setup (string videoUrl, string name) {
 void dgVideoObject::update () {
 	
 	dgSceneObject::update();
-	
 	mainVideo->update();
 	
 }
@@ -64,9 +63,8 @@ void dgVideoObject::draw () {
 
 
 void dgVideoObject::setPct(float pct) {
-	
-	
+	//printf ("Number of pct : %f\n", pct);
+	dgSceneObject::setPct(pct);
 	mainVideo->setPosition(pct);
-	
 	
 }

@@ -14,11 +14,13 @@
 #include "ofMain.h"
 #include "dgData.h"
 #include "dgCompBuilder.h"
+#include "OscReceiver.h"
+#include "customOscMessage.h"
 
 class dgModuleView {
 	
 	public:
-	void setup(dgData & layoutData, dgCompBuilder & compBuilder);
+	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver);
 	void update();
 	void draw();
 		
@@ -28,10 +30,14 @@ class dgModuleView {
 	private:
 	
 	void addSceneObjects();
+	void processOsc ();
+	
+	dgSceneObject  * getRelatedObject(string val);
 
 	
 	dgData					*	layoutData;
 	dgCompBuilder			*	compBuilder;
+	OscReceiver			*	oscReceiver;
 	
 	int							currentViewID;
 	

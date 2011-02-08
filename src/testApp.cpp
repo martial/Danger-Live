@@ -9,21 +9,21 @@ void testApp::setup(){
 	ofSetVerticalSync(true);
 	
 	
-	//oscReceiver.setup();
+	oscReceiver.setup();
 	//video.setup("videos/knob.mov", "video");
 	data.setup("layouts.xml");
 	
 	builder.setup("components.xml");
 
 	
-	scene.setup(data, builder);
+	scene.setup(data, builder, oscReceiver);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 	//video.update();
 	scene.update();
-	//oscReceiver.update();
+	oscReceiver.update();
 }
 
 //--------------------------------------------------------------

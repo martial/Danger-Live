@@ -15,10 +15,10 @@ DangerScene::DangerScene() {
 
 }
 
-void DangerScene::setup(dgData & layoutData, dgCompBuilder & compBuilder) {
+void DangerScene::setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver) {
 	background.setup();
 	
-	moduleView.setup(layoutData, compBuilder);
+	moduleView.setup(layoutData, compBuilder, oscReceiver);
 }
 
 void DangerScene::update() {

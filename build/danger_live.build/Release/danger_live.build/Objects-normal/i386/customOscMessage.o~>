@@ -1,0 +1,6 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp:13: error: definition of implicitly-declared 'customOscMessage::customOscMessage()'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp:13: error: declaration of 'customOscMessage::customOscMessage()' throws different exceptions
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.h:16: error: from previous declaration 'customOscMessage::customOscMessage() throw ()'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp:17: error: definition of implicitly-declared 'customOscMessage::~customOscMessage()'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp:17: error: declaration of 'customOscMessage::~customOscMessage()' throws different exceptions
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.h:16: error: from previous declaration 'customOscMessage::~customOscMessage() throw ()'

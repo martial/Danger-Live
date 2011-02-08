@@ -5,7 +5,7 @@
 		<component>
 			
 			<name>knob</name>
-			<osc_adress></osc_adress>
+			<osc_adress>beatrep_</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="500" y="0"></position>			
 		
@@ -14,26 +14,19 @@
 		<component>
 			
 			<name>knob</name>
-			<osc_adress></osc_adress>
+			<osc_adress>pitchshift1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="0" y="0"></position>			
 		
 		</component>
 		
 		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress></osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
 		
-		</component>
 		
 		<component>
 			
 			<name>knob2</name>
-			<osc_adress></osc_adress>
+			<osc_adress>beatrep_onoff</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="0" y="500"></position>			
 		

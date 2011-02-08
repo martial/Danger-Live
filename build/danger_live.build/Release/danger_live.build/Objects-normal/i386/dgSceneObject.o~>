@@ -1,0 +1,3 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneObject.cpp:93: error: no 'void dgSceneObject::setPct(float)' member function declared in class 'dgSceneObject'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneObject.cpp: In member function 'void dgSceneObject::setPct(float)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneObject.cpp:95: error: 'class dgSceneObject' has no member named 'pct'
