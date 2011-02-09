@@ -13,13 +13,16 @@ void dgVideoModuleView::setup (dgVideoDataSet * videoSet) {
 	
 	this->videoSet = videoSet;
 	currentVideoID = 0;
+	currentVideoDuration = 0;
+	isWaitingForBeat = false;
 }
 
 void dgVideoModuleView::update() {
 	
-	if ( videoSet->videos[currentVideoID]->getIsMovieDone()) {
-		goNext();
-	}
+	// check for before beat
+	
+	
+	
 	videoSet->videos[currentVideoID]->update();
 
 }
@@ -52,9 +55,19 @@ void dgVideoModuleView::goNext() {
 	
 }
 
+/* Event for next video*/
+void dgVideoModuleView::goNext(int & f) {
+	printf("Shoot! \n");
+	goNext();
+	isWaitingForBeat = false;
+	ofRemoveListener(beatEvent,this,&dgVideoModuleView::goNext);
+	
+}
+
 void dgVideoModuleView::play() {
 	
 	
+	currentVideoDuration = videoSet->videos[currentVideoID]->getDuration() ;
 	videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
 	videoSet->videos[currentVideoID]->play();
 	
@@ -67,3 +80,42 @@ void dgVideoModuleView::stop() {
 	}
 	
 }
+
+void dgVideoModuleView::onBeatEvent (float beatTime) {
+
+	this->beatTime = beatTime;
+	
+	if (  currentVideoDuration - videoSet->videos[currentVideoID]->getPositionInSeconds() < beatTime ) {
+		goNext();
+	}
+	
+	
+	//goNext();
+	//printf("beat time %f\n", beatTime);
+	//printf("currentVideoDuration %f\n", currentVideoDuration);
+	//printf("pos %f\n", videoSet->videos[currentVideoID]->getPositionInSeconds());
+	//printf("beatTime * 2 %f\n", beatTime * 2);
+	
+	//int foo = 0;
+	//ofNotifyEvent(beatEvent,foo,this);
+	
+	//currentVideoDuration
+	
+}
+
+
+/*
+ Private
+ */
+
+
+void dgVideoModuleView::addBeatListener () {
+	
+	
+		printf("Add listener \n");
+	//ofAddListener(beatEvent,this,&dgVideoModuleView::goNext);
+	isWaitingForBeat = true;
+}
+
+
+

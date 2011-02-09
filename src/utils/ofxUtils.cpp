@@ -21,17 +21,11 @@ ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, int currw, int currh ) {
 	float r = (float)currw/(float)currh;
 	float wr = (float)maxw/(float)maxh;
 	
-	if (wr >= r) {
+	
 		w = (float)maxw;
 		h = (float)maxw / r;
 		
 
-	} else {
-		h = maxh;
-		w = maxh / r;
-		//printf("%f \n", .2);
-
-	}
 	
 	
 	return 	ofPoint (w,h);

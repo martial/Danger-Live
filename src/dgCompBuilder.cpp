@@ -59,6 +59,33 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 			
 			
 				}
+				
+				
+				if ( type == "switch" ) {
+					
+					
+					dgSwitchObject * switchObject = new dgSwitchObject();
+					switchObject->setup(url, compName);
+										
+					
+					
+						
+						XML.pushTag("extras_url", 0);
+						int numOfExtrasUrl = XML.getNumTags("extraurl");
+						for (int z=0; z<numOfExtrasUrl;z++ ) {
+							
+							string extraURL = XML.getValue("extraurl", "", z);
+							switchObject->addExtraImage(extraURL);
+							//printf("-----------------------------------------------------------------------\n");
+							//printf(extraURL.c_str());
+							//printf("\n");
+						}
+						XML.popTag();
+					
+					
+					component = switchObject;
+
+				}
 
 				// see if component has some extras
 				

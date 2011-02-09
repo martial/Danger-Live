@@ -23,6 +23,8 @@ void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuil
 	
 	currentMode = DGSCENEVIEWMODE_MODULE;
 	
+	currentView = 0;
+	
 }
 
 void DangerScene::update() {
@@ -49,15 +51,14 @@ void DangerScene::update() {
 
 void DangerScene::draw () {
 	
-	
+	ofEnableAlphaBlending();
 	switch (currentMode) {
 			
 		case DGSCENEVIEWMODE_MODULE:
 			
-			background.draw();
-			ofEnableAlphaBlending();
+			background.draw(currentView);
 			moduleView.draw();
-			ofDisableAlphaBlending();
+			
 			
 			break;
 			
@@ -70,12 +71,14 @@ void DangerScene::draw () {
 		default:
 			break;
 	}
-	
+	ofDisableAlphaBlending();
 	
 
 }
 
 void DangerScene::setCurrentView(int viewID) {
+	
+	this->currentView = viewID;
 	
 	switch (currentMode) {
 			
@@ -102,5 +105,15 @@ void DangerScene::changeMode (int mode) {
 	
 	currentMode = mode;
 	if ( mode == DGSCENEVIEWMODE_VIDEOS ) videoView.init();
+	
+}
+
+void DangerScene::onBeatEvent () {
+	
+	// calculate how many time btw one beat and another
+	beatTime = ofGetElapsedTimeMillis() - oldTime;
+	oldTime = ofGetElapsedTimeMillis();
+	
+	videoView.onBeatEvent(beatTime/1000);
 	
 }

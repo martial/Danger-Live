@@ -23,13 +23,22 @@ class dgVideoModuleView {
 	void update();
 	void draw();
 	
+	void onBeatEvent (float beatTime);
 	void goNext();
+	void goNext(int & f);
 	void play();
 	void stop();
 	
 	private:
+	
+	void addBeatListener();
+	
 	dgVideoDataSet	*	videoSet;
 	int					currentVideoID;
+	float				currentVideoDuration;
+	float				beatTime;
+	ofEvent<int>		beatEvent;
+	bool				isWaitingForBeat;
 	
 };
 

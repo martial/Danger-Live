@@ -1,4 +1,6 @@
 #include "testApp.h"
+#include "Poco/Delegate.h"
+#include "Poco/Timestamp.h"
 
 //--------------------------------------------------------------
 void testApp::setup(){
@@ -8,12 +10,21 @@ void testApp::setup(){
 	//ofSetFrameRate(60);
 	ofSetVerticalSync(true);
 	
+	/* Midi / OSC */
 	oscReceiver.setup();
-		
+	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
+	
+	midiListener.setup(scene);
+	midiIn.listPorts();
+	midiIn.openPort(0); 
+	midiIn.addListener(&midiListener);
+	
+	/* data */
 	builder.setup("components.xml");
 	data.setup("layouts.xml");
 	data.addSceneObjects(&builder);
 	
+	/* scene */
 	videoData.setup("videos.xml");
 	
 	scene.setup(data, videoData, builder, oscReceiver);
@@ -31,6 +42,7 @@ void testApp::update(){
 void testApp::draw(){
 	
 	scene.draw();
+	oscReceiver.debugDraw();
 	
 }
 
@@ -81,6 +93,13 @@ void testApp::keyPressed(int key){
 	
 
 }
+
+void testApp::onBeatEvent(int & f){
+	
+	scene.onBeatEvent();
+	
+}
+
 
 //--------------------------------------------------------------
 void testApp::keyReleased(int key){

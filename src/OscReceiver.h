@@ -14,6 +14,7 @@
 #include "ofMain.h";
 #include "ofxOscReceiver.h"
 #include "customOscMessage.h"
+//#include "ofEvents.h"
 #include "ofEvents.h"
 
 #define OSC_PORT 9001
@@ -28,8 +29,10 @@ public:
 	void debugDraw();
 	
 	vector<customOscMessage*> * getMessages();
-	
 	vector<customOscMessage*> messages;
+	
+	ofEvent<int>	beatEvent;
+	//ofEvent<float>	test;
 	
 private:
 	ofxOscReceiver	receiver;

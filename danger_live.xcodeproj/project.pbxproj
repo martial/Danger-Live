@@ -15,6 +15,7 @@
 		83163E6B1302B26900CBAF99 /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E5E1302B26900CBAF99 /* ofxMatrix3x3.cpp */; };
 		83163E6C1302B26900CBAF99 /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E601302B26900CBAF99 /* ofxMatrix4x4.cpp */; };
 		83163E6D1302B26900CBAF99 /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E651302B26900CBAF99 /* ofxQuaternion.cpp */; };
+		831640051302F34800CBAF99 /* dgSwitchObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831640041302F34800CBAF99 /* dgSwitchObject.cpp */; };
 		833ACC7F130036D600B1EAF0 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ACC7E130036D600B1EAF0 /* CoreMIDI.framework */; };
 		833ACC83130036EF00B1EAF0 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ACC82130036EF00B1EAF0 /* QTKit.framework */; };
 		833ACC951300370400B1EAF0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ACC941300370400B1EAF0 /* CoreVideo.framework */; };
@@ -144,6 +145,8 @@
 		83163E681302B26900CBAF99 /* ofxVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec3f.h; sourceTree = "<group>"; };
 		83163E691302B26900CBAF99 /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec4f.h; sourceTree = "<group>"; };
 		83163E6A1302B26900CBAF99 /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
+		831640031302F34800CBAF99 /* dgSwitchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgSwitchObject.h; sourceTree = "<group>"; };
+		831640041302F34800CBAF99 /* dgSwitchObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgSwitchObject.cpp; sourceTree = "<group>"; };
 		833ACC7E130036D600B1EAF0 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
 		833ACC82130036EF00B1EAF0 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		833ACC941300370400B1EAF0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
@@ -281,7 +284,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* danger_live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = danger_live.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* danger_liveDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = danger_liveDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -634,6 +637,8 @@
 				833ACD451300417700B1EAF0 /* dgVideoObject.cpp */,
 				83C2CC271300671600146392 /* dgImageObject.h */,
 				83C2CC281300671600146392 /* dgImageObject.cpp */,
+				831640031302F34800CBAF99 /* dgSwitchObject.h */,
+				831640041302F34800CBAF99 /* dgSwitchObject.cpp */,
 			);
 			name = scene_objects;
 			sourceTree = "<group>";
@@ -959,7 +964,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				E4B69B5B0A3A1756003C02F2 /* danger_live.app */,
+				E4B69B5B0A3A1756003C02F2 /* danger_liveDebug.app */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4C2422310CC54B6004149E2 /* openFrameworks */,
@@ -1092,7 +1097,7 @@
 			);
 			name = danger_live;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* danger_live.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* danger_liveDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1196,6 +1201,7 @@
 				83163E6B1302B26900CBAF99 /* ofxMatrix3x3.cpp in Sources */,
 				83163E6C1302B26900CBAF99 /* ofxMatrix4x4.cpp in Sources */,
 				83163E6D1302B26900CBAF99 /* ofxQuaternion.cpp in Sources */,
+				831640051302F34800CBAF99 /* dgSwitchObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

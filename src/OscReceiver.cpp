@@ -61,7 +61,10 @@ void OscReceiver::update () {
 			
 		 }
 		 
-		 
+		if ( msg->address == "beat" ) {
+			int foo = 0;
+			ofNotifyEvent(beatEvent,foo,this);
+		}
 		
 		
 		
@@ -69,7 +72,8 @@ void OscReceiver::update () {
 		
 		 // unrecognized message: display on the bottom of the screen
 		 string msg_string;
-		 msg_string = m.getAddress();
+		msg_string = "";
+		 msg_string += "adress : "+ m.getAddress();
 		 msg_string += ": ";
 		 for ( int i=0; i<m.getNumArgs(); i++ )
 		 {

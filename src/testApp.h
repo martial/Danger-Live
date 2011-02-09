@@ -8,6 +8,9 @@
 #include "dgData.h"
 #include "dgCompBuilder.h"
 #include "dgVideoData.h"
+#include "ofxMidiIn.h"
+#include "DangerMidiListener.h"
+#include "ofEvents.h"
 
 class testApp : public ofBaseApp{
 
@@ -15,7 +18,8 @@ class testApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
-
+		
+		void onBeatEvent(int & f);
 		void keyPressed  (int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
@@ -32,6 +36,9 @@ class testApp : public ofBaseApp{
 		dgData				data;
 		dgVideoData			videoData;
 		dgCompBuilder		builder;
+	
+		ofxMidiIn				midiIn;
+		DangerMidiListener		midiListener;
 };
 
 #endif

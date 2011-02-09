@@ -37,6 +37,26 @@
 		</medias>
 		
 	</comp>
+    
+    <comp>
+		
+		<name>simpleswitch</name>
+		<type>switch</type>
+		<url>images/SWITCHER_ANALOG/switcher-analog-gauche.png</url>
+		<extras_url>
+            <extraurl>images/SWITCHER_ANALOG/switcher-analog-centre.png</extraurl>
+            <extraurl>images/SWITCHER_ANALOG/switcher-analog-droite.png</extraurl>
+        </extrasurl>
+		<medias>
+			<!--
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
 	
 	
 

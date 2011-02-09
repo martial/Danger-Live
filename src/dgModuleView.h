@@ -29,18 +29,20 @@ class dgModuleView {
 	
 	private:
 	
+	/* Communication OSC*/
 	void processOsc ();
-	
 	dgSceneObject  * getRelatedObject(string val);
 
-	
+	/* Instances  */
 	dgData					*	layoutData;
 	dgCompBuilder			*	compBuilder;
 	OscReceiver			*	oscReceiver;
 	
 	int							currentViewID;
-	
 	vector<dgSceneObject*>		currentObjects;
+	
+	/* */
+	
 	
 };
 

@@ -17,11 +17,12 @@ class DangerBackground {
 	DangerBackground();
 	void setup();
 	void update();
-	void draw();
+	void draw(int viewID);
 	
 	private:
 	
-	ofImage		background;
+	ofImage				background;
+	vector<ofImage*>	digitalLeds;
 	
 	
 	

@@ -31,6 +31,9 @@ class DangerScene {
 	
 	void changeMode (int mode); 
 	
+	
+	void onBeatEvent();
+	
 	/* delete this later */
 	void setCurrentView(int viewID);
 	
@@ -41,6 +44,13 @@ class DangerScene {
 	dgVideoModule		videoView;
 	
 	int					currentMode;
+	int					currentView;
+	
+	
+	/* beat utils*/ 
+	
+	float				oldTime;
+	float				beatTime;
 	
 };
 

@@ -15,6 +15,7 @@
 #include "dgSceneObject.h"
 #include "dgVideoObject.h"
 #include "dgImageObject.h"
+#include "dgSwitchObject.h"
 
 class dgCompBuilder {
 	

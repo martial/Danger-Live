@@ -29,6 +29,7 @@ class dgVideoModule {
 	void init();
 	void setCurrentView (int viewID);
 	
+	void onBeatEvent(float beatTime);
 	
 	
 	private:

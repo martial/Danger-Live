@@ -49,3 +49,8 @@ void dgVideoModule::setCurrentView (int viewID) {
 	views[currentView]->play();
 	
 }
+
+void dgVideoModule::onBeatEvent (float beatTime) {
+
+	views[currentView]->onBeatEvent(beatTime);
+}
