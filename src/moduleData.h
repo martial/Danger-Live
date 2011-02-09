@@ -14,6 +14,7 @@
 
 #include "ofMain.h"
 #include "componentData.h"
+#include "dgSceneObject.h"
 
 class moduleData {
 
@@ -21,6 +22,7 @@ class moduleData {
 	void setup();
 	
 	vector <componentData*>	cpData;
+	vector <dgSceneObject*>	cpObjects;
 	
 	int						name;
 	

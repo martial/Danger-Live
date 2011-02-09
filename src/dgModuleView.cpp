@@ -16,6 +16,8 @@ void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscR
 	this->oscReceiver = &oscReceiver;
 	setCurrentView(0);
 	
+	//addSceneObjects();
+	
 	// set osc events
 	
 	//ofAddListener(this->oscReceiver->oscEvent,this,&dgModuleView::processOsc);
@@ -29,10 +31,10 @@ void dgModuleView::update() {
 	
 	
 	//printf ("Number of comps : %d\n", currentObjects.size());
-
+	moduleData * currentModule = layoutData->data[currentViewID];
 	
-	for ( int i = 0; i<currentObjects.size(); i++ ) {
-		dgSceneObject  * object = currentObjects[i];
+	for ( int i = 0; i<currentModule->cpObjects.size(); i++ ) {
+		dgSceneObject  * object = currentModule->cpObjects[i];
 		object->update();
 	}
 
@@ -40,8 +42,10 @@ void dgModuleView::update() {
 
 void dgModuleView::draw () {
 	
-	for ( int i = 0; i<currentObjects.size(); i++ ) {
-		dgSceneObject  * object = currentObjects[i];
+	moduleData * currentModule = layoutData->data[currentViewID];
+	
+	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
+		dgSceneObject  * object = currentModule->cpObjects[i];
 		object->draw();
 		
 		
@@ -49,28 +53,6 @@ void dgModuleView::draw () {
 
 }
 
-void dgModuleView::addSceneObjects () {
-	
-	
-	for ( int i = 0; i<currentObjects.size(); i++ ) {
-		delete currentObjects[i];
-	}
-	currentObjects.clear();
-	
-	moduleData * currentModule = layoutData->data[currentViewID];
-	int numOfComponents = currentModule->cpData.size();
-	
-	for ( int i = 0; i< numOfComponents; i++ ) {
-		
-		componentData * compData = currentModule->cpData[i];
-		dgSceneObject  * sceneObject = compBuilder->createCompByName(compData->name);
-		sceneObject->setPosition(compData->pos.x, compData->pos.y);
-		sceneObject->adress = compData->adress;
-		currentObjects.push_back(sceneObject); 
-			
-	}
-	
-}
 
 /*
  
@@ -103,10 +85,13 @@ void dgModuleView::processOsc () {
 }
 
 dgSceneObject  * dgModuleView::getRelatedObject (string val) {
+		
+	moduleData * currentModule = layoutData->data[currentViewID];
+
 	
-	for ( int i = 0; i< currentObjects.size(); i++ ) {
-		if ( currentObjects[i]->adress == val  ) {
-			return currentObjects[i];
+	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
+		if ( currentModule->cpObjects[i]->adress == val  ) {
+			return currentModule->cpObjects[i];
 		}
 	}
 	
@@ -126,6 +111,6 @@ void dgModuleView::setCurrentView(int viewID) {
 	if ( viewID < 0 || viewID > layoutData->data.size()-1 ) return;
 	
 	currentViewID = viewID;
-	addSceneObjects();
+	//addSceneObjects();
 	
 }

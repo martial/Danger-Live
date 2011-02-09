@@ -8,39 +8,43 @@ void testApp::setup(){
 	//ofSetFrameRate(60);
 	ofSetVerticalSync(true);
 	
-	
 	oscReceiver.setup();
-	//video.setup("videos/knob.mov", "video");
-	data.setup("layouts.xml");
-	
+		
 	builder.setup("components.xml");
-
+	data.setup("layouts.xml");
+	data.addSceneObjects(&builder);
 	
-	scene.setup(data, builder, oscReceiver);
+	videoData.setup("videos.xml");
+	
+	scene.setup(data, videoData, builder, oscReceiver);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	//video.update();
-	scene.update();
+	
 	oscReceiver.update();
+	scene.update();
+	
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 	
 	scene.draw();
-	//video.draw();
 	
-	//builder.draw();
-	//oscReceiver.debugDraw();
-
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 	
+	printf("key : %d\n", key);
+	
 	switch (key) {
+			
+		case 'f':
+			ofToggleFullscreen();
+			break;
+		
 		case 'q':
 			scene.setCurrentView(1);
 			break;
@@ -49,6 +53,27 @@ void testApp::keyPressed(int key){
 			scene.setCurrentView(0);
 			break;
 		
+		// up
+		case 357:
+			scene.changeMode(0);
+			break;
+		
+			//down
+		case 359:
+			scene.changeMode(1);
+			break;
+			
+		// left
+		case 356:
+			//scene.setCurrentView(<#int viewID#>))
+			break;
+			
+		// right
+		case 358:
+			scene.changeMode(1);
+			break;
+			
+			
 		default:
 			break;
 	}

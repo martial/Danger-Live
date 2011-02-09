@@ -1,0 +1,31 @@
+<videos>
+
+    <set>
+        
+        <video>1.avi</video>
+        <video>2.avi</video>
+        <video>3.avi</video>
+        <video>4.avi</video>
+        <video>5.avi</video>
+    
+    </set>
+    
+     <set>
+        
+        <video>6.avi</video>
+        <video>7.avi</video>
+        <video>8.avi</video>
+        <video>9.avi</video>
+        <video>10.avi</video>
+    
+    </set>
+    
+     <set>
+        
+        <video>11.avi</video>
+        <video>12.avi</video>
+    
+    </set>
+
+	
+</videos>

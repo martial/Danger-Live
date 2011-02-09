@@ -14,11 +14,13 @@
 #include "ofxXmlSettings.h"
 #include "dgData.h"
 #include "moduleData.h"
+#include "dgCompBuilder.h"
 
 class dgData  {
 
 	public:
 	void setup(string xmlURL);
+	void addSceneObjects (dgCompBuilder * compBuilder);
 	void debug();
 	
 	vector <moduleData*>		data;

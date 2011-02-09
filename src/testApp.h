@@ -4,10 +4,10 @@
 
 #include "ofMain.h"
 #include "DangerScene.h"
-#include "dgVideoObject.h"
 #include "OscReceiver.h"
 #include "dgData.h"
 #include "dgCompBuilder.h"
+#include "dgVideoData.h"
 
 class testApp : public ofBaseApp{
 
@@ -29,8 +29,8 @@ class testApp : public ofBaseApp{
 		
 		DangerScene			scene;
 		OscReceiver			oscReceiver;
-		dgVideoObject		video;
 		dgData				data;
+		dgVideoData			videoData;
 		dgCompBuilder		builder;
 };
 

@@ -12,78 +12,17 @@
 
 void dgCompBuilder::setup (string xmlURL) {
 	
+	
 	if ( XML.loadFile(xmlURL) ) {
 	} else {
 		printf("error");
 	}
-	
-	/*
-	
-	XML.pushTag("components", 0);
-	
-	int numOfComponents = XML.getNumTags("comp");
-	components.reserve(numOfComponents);
-	
-	dgSceneObject * component;
-	
-	for ( int i = 0; i<numOfComponents; i++ ) {
-		
-		// check type
-		XML.pushTag("comp", i);
-		
-		string type = XML.getValue("type", "");
-		string url = XML.getValue("url", "");
-		string name = XML.getValue("name", "");
-		
-		if ( type == "video") {
-			
-			dgVideoObject * videoObject = new dgVideoObject();
-			videoObject->setup(url, name);
-			component = videoObject;
-			
-			
-		}
-		
-		if ( type == "image" ) {
-			
-			
-			dgImageObject * imageObject = new dgImageObject();
-			imageObject->setup(url, name);
-			component = imageObject;
-			
-
-		}
-		
-		// see if component has some extras
-		
-		XML.pushTag("medias", 0);
-		int numOfMedias = XML.getNumTags("media");
-		//printf ("Number of numOfMedias : %d\n", numOfMedias);
-		for ( int j=0; j<numOfMedias; j++) {
-			
-			XML.pushTag("media", j);
-			string mediaUrl = XML.getValue("url", "");
-			string mediaType = XML.getValue("type", "");
-			
-			component->addMedia(mediaUrl, mediaType);
-			XML.popTag();
-		}
-		
-		
-		XML.popTag();
-		
-		XML.popTag();
-		components.push_back(component);
-		
-	}
-	 
-	 */
 
 }
 
 dgSceneObject * dgCompBuilder::createCompByName (string name) {
 	
-	XML.pushTag("components", 0);
+	if (XML.tagExists("components", 0)) XML.pushTag("components", 0);
 	
 	int numOfComponents = XML.getNumTags("comp");
 	components.reserve(numOfComponents);
@@ -122,27 +61,29 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 				}
 
 				// see if component has some extras
-		
-				XML.pushTag("medias", 0);
-				int numOfMedias = XML.getNumTags("media");
 				
-				//printf ("Number of numOfMedias : %d\n", numOfMedias);
-				
-				for ( int j=0; j<numOfMedias; j++) {
-			
-					XML.pushTag("media", j);
-					string mediaUrl = XML.getValue("url", "");
-					string mediaType = XML.getValue("type", "");
+				if (XML.tagExists("medias", 0)) {
 					
-					component->addMedia(mediaUrl, mediaType);
-					XML.popTag();
-				}
-				
-		
-				XML.popTag();
+					XML.pushTag("medias", 0);
+					int numOfMedias = XML.getNumTags("media");
+					
+					//printf ("Number of numOfMedias : %d\n", numOfMedias);
+					
+					for ( int j=0; j<numOfMedias; j++) {
 						
+						XML.pushTag("media", j);
+						string mediaUrl = XML.getValue("url", "");
+						string mediaType = XML.getValue("type", "");
+						
+						component->addMedia(mediaUrl, mediaType);
+						XML.popTag();
+					}					
+				}
+				XML.popTag();
 			}
 		XML.popTag();
+		
+		
 
 	}
 	return component;

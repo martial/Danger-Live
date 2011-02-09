@@ -29,7 +29,6 @@ class dgModuleView {
 	
 	private:
 	
-	void addSceneObjects();
 	void processOsc ();
 	
 	dgSceneObject  * getRelatedObject(string val);

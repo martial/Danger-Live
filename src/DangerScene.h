@@ -7,6 +7,8 @@
  *
  */
 
+#define DGSCENEVIEWMODE_MODULE 0
+#define DGSCENEVIEWMODE_VIDEOS 1
 
 #ifndef DGSCENE
 #define DGSCENE
@@ -16,15 +18,18 @@
 #include "dgModuleView.h"
 #include "dgCompBuilder.h"
 #include "OscReceiver.h"
+#include "dgVideoModule.h"
 
 class DangerScene {
 
 	public:
 	
 	DangerScene();
-	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver);
+	void setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver);
 	void update();
 	void draw();
+	
+	void changeMode (int mode); 
 	
 	/* delete this later */
 	void setCurrentView(int viewID);
@@ -33,6 +38,9 @@ class DangerScene {
 	
 	DangerBackground	background;
 	dgModuleView		moduleView;
+	dgVideoModule		videoView;
+	
+	int					currentMode;
 	
 };
 

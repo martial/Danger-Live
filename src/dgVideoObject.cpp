@@ -15,9 +15,12 @@ dgVideoObject::dgVideoObject() {
 
 dgVideoObject::~dgVideoObject() {
 	printf("adios from video object\n");
-	mainVideo->close();
+	
+	
+	//mainVideo->pause();
+	//mainVideo->closeMovie();
 	delete mainVideo;
-	mainVideo = NULL;
+	//mainVideo = NULL;
 }
 
 

@@ -16,8 +16,9 @@ void dgData::setup (string xmlURL) {
 	
 	if ( XML.loadFile(xmlURL) ) {
 	} else {
-			printf("error");
+		printf("error loading XML file");
 	}
+	
 	XML.pushTag("scene", 0);
 	
 	int numOfLayouts = XML.getNumTags("module");
@@ -42,7 +43,7 @@ void dgData::setup (string xmlURL) {
 		
 		data[i]->cpData.reserve(numOfComponents);
 		
-		printf ("Number of components : %d\n", numOfComponents);
+		//printf ("Number of components : %d\n", numOfComponents);
 		
 		for (int j=0; j<numOfComponents; j++ ) {
 			
@@ -72,18 +73,36 @@ void dgData::setup (string xmlURL) {
 }
 
 
+
+void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
+	
+	for ( int u=0; u< data.size(); u++ ) {
+		
+		moduleData * currentModule = data[u];
+		int numOfComponents = currentModule->cpData.size();
+		
+		for ( int i = 0; i< numOfComponents; i++ ) {
+			
+			componentData * compData = currentModule->cpData[i];
+			dgSceneObject  * sceneObject = compBuilder->createCompByName(compData->name);
+			sceneObject->setPosition(compData->pos.x, compData->pos.y);
+			sceneObject->adress = compData->adress;
+			currentModule->cpObjects.push_back(sceneObject);
+						
+		}
+		
+	}	
+	
+}
+
+
+
+
 void dgData::debug () {
 		
 	int numOfLayouts = data.size();
 	
 	for ( int i=0; i<numOfLayouts; i++ ) {
-		
-		
-		///printf(data[i]->name.c_str());
-		
-		// num of components
-		
-		//printf("ok");
 		
 		int numOfComponents = data[i]->cpData.size();
 		
