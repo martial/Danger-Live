@@ -17,9 +17,9 @@ dgImageObject::~dgImageObject() {
 	
 }
 
-void dgImageObject::setup (string imgURL, string name) {
+void dgImageObject::setup (string imgURL, string name, string type) {
 	
-	dgSceneObject::setup(name);
+	dgSceneObject::setup(name, type);
 	
 	img.loadImage(imgURL);
 	this->width = img.width;
@@ -36,7 +36,7 @@ void dgImageObject::draw () {
 	
 	dgSceneObject::draw();
 	
-	ofEnableAlphaBlending();
+	//ofEnableAlphaBlending();
 	img.draw(pos.x, pos.y);
-	ofDisableAlphaBlending();
+	//ofDisableAlphaBlending();
 }

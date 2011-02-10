@@ -18,9 +18,9 @@ dgSwitchObject::~dgSwitchObject() {
 }
 
 
-void dgSwitchObject::setup (string imgURL, string name) {
+void dgSwitchObject::setup (string imgURL, string name, string type) {
 	
-	dgSceneObject::setup(name);
+	dgSceneObject::setup(name, type);
 	
 	// first image is default state
 	addExtraImage(imgURL);
@@ -40,8 +40,6 @@ void dgSwitchObject::addExtraImage(string url) {
 	images.push_back(img);
 	
 	
-	//printf(url.c_str());
-	
 }
 
 void dgSwitchObject::update () {
@@ -51,10 +49,10 @@ void dgSwitchObject::update () {
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
 	currentIndex = floor((easePct * (images.size())) + 0.5);
 	if ( currentIndex > images.size()-1 ) currentIndex = images.size()-1;
-	printf("---- \n");
-	printf("pct %f\n", easePct);
-	printf("easePCt %f\n", easePct);
-	printf("currentIndex %d\n", currentIndex);
+	//printf("---- \n");
+	//printf("pct %f\n", easePct);
+	//printf("easePCt %f\n", easePct);
+	//printf("currentIndex %d\n", currentIndex);
 	
 }
 

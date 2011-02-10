@@ -18,7 +18,7 @@ class dgVideoObject : public dgSceneObject {
 	public:
 	dgVideoObject();
 	~dgVideoObject();
-	void					setup(string videoUrl, string name);
+	void					setup(string videoUrl, string name, string type);
 	void					update();
 	void					draw();
 	

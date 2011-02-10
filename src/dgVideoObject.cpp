@@ -25,11 +25,11 @@ dgVideoObject::~dgVideoObject() {
 
 
 
-void dgVideoObject::setup (string videoUrl, string name) {
+void dgVideoObject::setup (string videoUrl, string name, string type) {
 	
-	dgSceneObject::setup(name);
+	dgSceneObject::setup(name, type);
 	
-	int mode = OFXQTVIDEOPLAYER_MODE_PIXELS_ONLY;
+	int mode = OFXQTVIDEOPLAYER_MODE_TEXTURE_ONLY;
 	mainVideo = new ofxQTKitVideoPlayer();
 	mainVideo->loadMovie(videoUrl, mode);
 	
@@ -53,9 +53,9 @@ void dgVideoObject::draw () {
 	
 	dgSceneObject::draw();
 	
-	//ofEnableAlphaBlending();
+	ofEnableAlphaBlending();
 	mainVideo->draw(pos.x, pos.y);
-	//ofDisableAlphaBlending();
+	ofDisableAlphaBlending();
 }
 
 

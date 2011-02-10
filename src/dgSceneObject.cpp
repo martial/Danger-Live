@@ -25,10 +25,15 @@ dgSceneObject::~dgSceneObject() {
 	images.clear();
 }
 
+void dgSceneObject::init () {
+	
+}
 
-void dgSceneObject::setup (string name) {
+
+void dgSceneObject::setup (string name, string type) {
 	
 	this->name = name;
+	this->type = type;
 	
 	pos.x = 0;
 	pos.y = 0;
@@ -36,7 +41,11 @@ void dgSceneObject::setup (string name) {
 	width = 0;
 	height = 0;
 	
+	blurRate = 0;
+	
 	active = false;
+	
+	pct = 0;
 	
 }
 
@@ -119,4 +128,12 @@ void dgSceneObject::addMedia(string url, string mediaType) {
 		videos.push_back(video);
 	}
 				
+}
+
+void dgSceneObject::addConfig(float val) {
+	configValues.push_back(val);
+}
+
+void dgSceneObject::addSwitchObject(dgSceneObject * switchObj) {
+		// nothing
 }

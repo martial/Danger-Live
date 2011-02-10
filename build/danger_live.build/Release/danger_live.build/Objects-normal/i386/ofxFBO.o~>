@@ -1,0 +1,144 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:3: error: 'ofxFbo' has not been declared
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void push()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:4: error: 'levels' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:5: error: 'GL_FRAMEBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:5: error: 'fboId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:5: error: 'glBindFramebufferEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:6: error: 'levels' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:9: error: 'ofxFbo' has not been declared
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void pop()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:10: error: 'levels' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:12: error: 'GL_FRAMEBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:12: error: 'glBindFramebufferEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:15: error: expected constructor, destructor, or type conversion before '*' token
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:22: error: 'ofxFbo' has not been declared
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void checkAttachment()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:23: error: 'getAttachment' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:25: error: 'internalColor' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:25: error: 'width' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:25: error: 'height' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:25: error: 'GL_RGBA' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:26: error: 'attach' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:30: error: 'ofxFbo' has not been declared
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void setupScreenForFbo()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:31: error: 'width' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:32: error: 'height' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:33: error: 'PI' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:33: error: 'fov' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:40: error: 'GL_PROJECTION' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:40: error: 'glMatrixMode' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:41: error: 'glLoadIdentity' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:42: error: 'gluPerspective' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:44: error: 'GL_MODELVIEW' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:46: error: 'gluLookAt' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:48: error: 'glViewport' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:51: error: 'ofxFbo' has not been declared
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void setupScreenForWindow()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:52: error: 'ofSetupScreen' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:53: error: 'ofGetWidth' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:53: error: 'ofGetHeight' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:53: error: 'glViewport' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:56: error: 'ofxFbo' has not been declared
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:56: error: ISO C++ forbids declaration of 'ofxFbo' with no type
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'int ofxFbo()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:56: error: only constructors take base initializers
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:64: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void setup(int, int, bool, bool)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:65: error: invalid use of 'this' in non-member function
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:66: error: invalid use of 'this' in non-member function
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:68: error: 'fboId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:68: error: 'glGenFramebuffersEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:70: error: 'depthId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:70: error: 'glGenRenderbuffersEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:72: error: 'stencilId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:72: error: 'glGenRenderbuffersEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:76: error: 'GL_RENDERBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:76: error: 'depthId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:76: error: 'glBindRenderbufferEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:77: error: 'GL_DEPTH_COMPONENT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:77: error: 'glRenderbufferStorageEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:78: error: 'GL_FRAMEBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:78: error: 'GL_DEPTH_ATTACHMENT_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:78: error: 'glFramebufferRenderbufferEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:81: error: 'GL_RENDERBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:81: error: 'depthId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:81: error: 'glBindRenderbufferEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:82: error: 'GL_STENCIL_INDEX' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:82: error: 'glRenderbufferStorageEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:83: error: 'GL_FRAMEBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:83: error: 'GL_DEPTH_ATTACHMENT_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:83: error: 'glFramebufferRenderbufferEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:88: error: 'GL_MAX_COLOR_ATTACHMENTS_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:88: error: 'glGetIntegerv' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:89: error: 'attachments' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:89: error: 'ofTexture' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:89: error: expected primary-expression before ')' token
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:92: error: expected constructor, destructor, or type conversion before '::' token
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:101: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void setFov(float)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:102: error: invalid use of 'this' in non-member function
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:105: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:105: error: variable or field 'attach' declared void
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:105: error: 'ofTexture' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:105: error: 'target' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:105: error: expected primary-expression before 'int'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:117: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void detach(int)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:120: error: 'ofTexture' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:120: error: 'target' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:120: error: 'attachments' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:122: error: 'ofTextureData' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:122: error: 'texData' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:123: error: 'GL_FRAMEBUFFER_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:123: error: 'GL_COLOR_ATTACHMENT0_EXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:123: error: 'glFramebufferTexture2DEXT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:130: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void setBackground(float, float, float, float)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:134: error: 'glClearColor' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:136: error: 'GL_COLOR_BUFFER_BIT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:137: error: 'depthId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:137: error: 'GL_DEPTH_BUFFER_BIT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:138: error: 'stencilId' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:138: error: 'GL_STENCIL_BUFFER_BIT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:138: error: 'glClear' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:143: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void clearAlpha()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:146: error: 'glColorMask' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:147: error: 'glClearColor' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:148: error: 'GL_COLOR_BUFFER_BIT' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:148: error: 'glClear' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:154: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void begin()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:156: error: 'glPushMatrix' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:161: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void end()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:164: error: 'glPopMatrix' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:167: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void draw(float, float)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:168: error: 'width' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:168: error: 'height' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:171: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'void draw(float, float, float, float)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:173: error: 'getAttachment' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:176: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'int getWidth()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:177: error: 'width' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:180: error: 'ofxFbo' is not a class or namespace
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp: In function 'int getHeight()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBO.cpp:181: error: 'height' was not declared in this scope

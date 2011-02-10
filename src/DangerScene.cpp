@@ -51,7 +51,7 @@ void DangerScene::update() {
 
 void DangerScene::draw () {
 	
-	ofEnableAlphaBlending();
+	
 	switch (currentMode) {
 			
 		case DGSCENEVIEWMODE_MODULE:
@@ -71,7 +71,7 @@ void DangerScene::draw () {
 		default:
 			break;
 	}
-	ofDisableAlphaBlending();
+	//ofDisableAlphaBlending();
 	
 
 }
@@ -114,6 +114,6 @@ void DangerScene::onBeatEvent () {
 	beatTime = ofGetElapsedTimeMillis() - oldTime;
 	oldTime = ofGetElapsedTimeMillis();
 	
-	videoView.onBeatEvent(beatTime/1000);
+	if ( currentMode == DGSCENEVIEWMODE_VIDEOS ) videoView.onBeatEvent(beatTime/1000);
 	
 }

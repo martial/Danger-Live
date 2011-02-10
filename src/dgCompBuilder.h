@@ -16,6 +16,9 @@
 #include "dgVideoObject.h"
 #include "dgImageObject.h"
 #include "dgSwitchObject.h"
+#include "dgFaderObject.h"
+#include "dgMultipleLedObject.h"
+
 
 class dgCompBuilder {
 	

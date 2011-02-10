@@ -87,9 +87,31 @@ void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
 			dgSceneObject  * sceneObject = compBuilder->createCompByName(compData->name);
 			sceneObject->setPosition(compData->pos.x, compData->pos.y);
 			sceneObject->adress = compData->adress;
+			
+			printf("name : \n", sceneObject->name.c_str());
+			
 			currentModule->cpObjects.push_back(sceneObject);
 						
 		}
+		
+		
+		for ( int j = 0; j< currentModule->cpObjects.size(); j++ ) {
+			
+			dgSceneObject  * sceneObject =  currentModule->cpObjects[j];
+			if ( sceneObject->type == "meter") {
+				int numOfRows = (int)sceneObject->configValues[1];
+				printf("NUM OF ROWS %d\n", numOfRows);
+				for (int k=0; k<numOfRows; k++ ) {
+				dgSceneObject  * refSceneObject = compBuilder->createCompByName(sceneObject->sceneObjectRefName);
+				sceneObject->addSwitchObject(refSceneObject);
+				sceneObject->init();
+				}
+			}
+			
+			
+		}
+		 
+		 
 		
 	}	
 	

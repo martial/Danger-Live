@@ -20,7 +20,7 @@ public:
 	
 							dgImageObject();
 							~dgImageObject();
-	void					setup(string imgURL, string name);
+	void					setup(string imgURL, string name, string type);
 	void					update();
 	void					draw();
 		

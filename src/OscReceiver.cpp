@@ -42,7 +42,6 @@ void OscReceiver::update () {
 		 for (int i=0; i<messages.size(); i++ ) {
 			 delete messages[i];
 		 }
-		 
 		 messages.clear();
 		 
 		 customOscMessage * msg = new customOscMessage();
@@ -72,7 +71,7 @@ void OscReceiver::update () {
 		
 		 // unrecognized message: display on the bottom of the screen
 		 string msg_string;
-		msg_string = "";
+		 msg_string = "";
 		 msg_string += "adress : "+ m.getAddress();
 		 msg_string += ": ";
 		 for ( int i=0; i<m.getNumArgs(); i++ )

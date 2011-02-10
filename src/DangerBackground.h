@@ -21,8 +21,10 @@ class DangerBackground {
 	
 	private:
 	
+	ofTrueTypeFont		digitalFont;
 	ofImage				background;
-	vector<ofImage*>	digitalLeds;
+	ofImage				digitalPlaceholder;
+	//vector<ofImage*>	digitalLeds;
 	
 	
 	

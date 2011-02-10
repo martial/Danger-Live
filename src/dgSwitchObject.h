@@ -20,12 +20,14 @@ public:
 	dgSwitchObject();
 	~dgSwitchObject();
 	
-	void					setup(string imgURL, string name);
+	void					setup(string imgURL, string name, string type);
 	void					update();
 	void					draw();
 	
 	void					addExtraImage(string url);
 	void					setPct(float pct);
+	
+
 	
 	private :
 	
@@ -33,8 +35,7 @@ public:
 	vector<ofImage*>		images;
 	int						currentIndex;
 	float					easePct;
-	float					blurRate;
-	
+		
 	
 	
 };

@@ -19,10 +19,6 @@ void dgVideoModuleView::setup (dgVideoDataSet * videoSet) {
 
 void dgVideoModuleView::update() {
 	
-	// check for before beat
-	
-	
-	
 	videoSet->videos[currentVideoID]->update();
 
 }
@@ -46,21 +42,27 @@ void dgVideoModuleView::draw() {
 
 void dgVideoModuleView::goNext() {
 	
-	videoSet->videos[currentVideoID]->pause();
+	
+	int oldVideo = currentVideoID;
+	
 	currentVideoID++;
 	if ( currentVideoID > videoSet->videos.size() -1 ) {
 		currentVideoID = 0;
 	}
 	play();
 	
+	videoSet->videos[oldVideo]->setPosition(0);
+	videoSet->videos[oldVideo]->pause();
+
+	
 }
 
 /* Event for next video*/
 void dgVideoModuleView::goNext(int & f) {
-	printf("Shoot! \n");
+	//printf("Shoot! \n");
 	goNext();
 	isWaitingForBeat = false;
-	ofRemoveListener(beatEvent,this,&dgVideoModuleView::goNext);
+	//ofRemoveListener(beatEvent,this,&dgVideoModuleView::goNext);
 	
 }
 
@@ -68,7 +70,8 @@ void dgVideoModuleView::play() {
 	
 	
 	currentVideoDuration = videoSet->videos[currentVideoID]->getDuration() ;
-	videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
+	//videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
+	
 	videoSet->videos[currentVideoID]->play();
 	
 }
@@ -76,6 +79,7 @@ void dgVideoModuleView::play() {
 void dgVideoModuleView::stop() {
 	
 	for ( int i=0; i<videoSet->videos.size(); i++ ) {
+		videoSet->videos[i]->setPosition(0);
 		videoSet->videos[i]->pause();
 	}
 	
@@ -84,23 +88,9 @@ void dgVideoModuleView::stop() {
 void dgVideoModuleView::onBeatEvent (float beatTime) {
 
 	this->beatTime = beatTime;
-	
-	if (  currentVideoDuration - videoSet->videos[currentVideoID]->getPositionInSeconds() < beatTime ) {
+	if (  currentVideoDuration - videoSet->videos[currentVideoID]->getPositionInSeconds() < beatTime*2 && beatTime != 0  ) {
 		goNext();
-	}
-	
-	
-	//goNext();
-	//printf("beat time %f\n", beatTime);
-	//printf("currentVideoDuration %f\n", currentVideoDuration);
-	//printf("pos %f\n", videoSet->videos[currentVideoID]->getPositionInSeconds());
-	//printf("beatTime * 2 %f\n", beatTime * 2);
-	
-	//int foo = 0;
-	//ofNotifyEvent(beatEvent,foo,this);
-	
-	//currentVideoDuration
-	
+	}		
 }
 
 

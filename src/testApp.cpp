@@ -2,22 +2,26 @@
 #include "Poco/Delegate.h"
 #include "Poco/Timestamp.h"
 
+
+
 //--------------------------------------------------------------
 void testApp::setup(){
 	
 	printf("welcome\n");
 	
-	//ofSetFrameRate(60);
-	ofSetVerticalSync(true);
 	
+	ofSetVerticalSync(true);
+	ofSetFrameRate(60);
 	/* Midi / OSC */
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
+	
 	
 	midiListener.setup(scene);
 	midiIn.listPorts();
 	midiIn.openPort(0); 
 	midiIn.addListener(&midiListener);
+	//printf("ahou3\n");
 	
 	/* data */
 	builder.setup("components.xml");
@@ -28,6 +32,10 @@ void testApp::setup(){
 	videoData.setup("videos.xml");
 	
 	scene.setup(data, videoData, builder, oscReceiver);
+	
+	texture.allocate(ofGetWidth(), ofGetHeight(),GL_RGB);
+	fbo.setup(ofGetWidth(), ofGetHeight());
+	fbo.attach(texture);
 }
 
 //--------------------------------------------------------------
@@ -41,8 +49,16 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 	
+	//fbo.begin();
+	ofEnableAlphaBlending();
 	scene.draw();
+	ofDisableAlphaBlending();
+	//fbo.end();
+	
+	//fbo.draw(0, 0, 320, 240);
 	oscReceiver.debugDraw();
+	
+	ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
 	
 }
 

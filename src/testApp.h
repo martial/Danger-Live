@@ -11,6 +11,7 @@
 #include "ofxMidiIn.h"
 #include "DangerMidiListener.h"
 #include "ofEvents.h"
+#include "ofxFbo.h"
 
 class testApp : public ofBaseApp{
 
@@ -39,6 +40,9 @@ class testApp : public ofBaseApp{
 	
 		ofxMidiIn				midiIn;
 		DangerMidiListener		midiListener;
+	
+		ofxFbo						fbo;
+		ofTexture					texture;
 };
 
 #endif

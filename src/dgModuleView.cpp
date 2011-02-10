@@ -47,8 +47,6 @@ void dgModuleView::draw () {
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
 		object->draw();
-		
-		
 	}
 
 }

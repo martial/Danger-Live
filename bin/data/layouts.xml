@@ -2,14 +2,35 @@
 
 	<module name="">
 	
-		<component>
+		
+           
+        <component>
 			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
+			<name>CROSSFADER</name>
+			<osc_adress>pitchshift1</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
+			<position x="600" y="800"></position>			
 		
 		</component>
+        
+        <component>
+			
+			<name>METER</name>
+			<osc_adress>beatrep_</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="600" y="400"></position>			
+		
+		</component>
+        
+        <component>
+			
+			<name>METER_VU</name>
+			<osc_adress>reverb1</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="800" y="400"></position>			
+		
+		</component>
+		
 		
 		<component>
 			
@@ -20,15 +41,29 @@
 		
 		</component>
         
-        
-		<component>
+        <component>
 			
-			<name>simpleswitch</name>
-			<osc_adress>lowpass</osc_adress>
+			<name>SWITCHER_NOIR</name>
+			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="500" y="500"></position>			
+			<position x="0" y="300"></position>			
 		
 		</component>
+        
+        <component>
+			
+			<name>SWITCHER_ANALOG</name>
+			<osc_adress>pitchshift1</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="0"></position>			
+		
+		</component>
+        
+        
+     
+        
+        
+		
 		
 		
 		
@@ -47,6 +82,17 @@
 	</module>
 	
 	<module name="">
+    
+    <component>
+			
+			<name>CROSSFADER</name>
+			<osc_adress>ahou</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="200"></position>			
+		
+		</component>
+        
+
 	
 		<component>
 			
@@ -59,530 +105,6 @@
 	
 	</module>
 
-	<module name="">
 	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
-	<module name="">
-	
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>beatrep_</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="500" y="0"></position>			
-		
-		</component>
-		
-		<component>
-			
-			<name>knob</name>
-			<osc_adress>pitchshift1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="0"></position>			
-		
-		</component>
-		
-		
-		
-		
-		<component>
-			
-			<name>knob2</name>
-			<osc_adress>beatrep_onoff</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="0" y="500"></position>			
-		
-		</component>
-
-	
-	</module>
-
 
 </scene>

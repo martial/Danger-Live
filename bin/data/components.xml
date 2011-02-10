@@ -1,4 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
 <components>
+
+    
 
 	<comp>
 		
@@ -38,25 +41,117 @@
 		
 	</comp>
     
+    <!-- Switchs -->
+    
     <comp>
-		
-		<name>simpleswitch</name>
+		<name>B_POUSSOIR</name>
 		<type>switch</type>
-		<url>images/SWITCHER_ANALOG/switcher-analog-gauche.png</url>
+		<url>components/B_POUSSOIR/b-poussoir-off.png</url>
 		<extras_url>
-            <extraurl>images/SWITCHER_ANALOG/switcher-analog-centre.png</extraurl>
-            <extraurl>images/SWITCHER_ANALOG/switcher-analog-droite.png</extraurl>
-        </extrasurl>
-		<medias>
-			<!--
-			<media>
-				<type>image</type>
-				<url>images/test.jpg</url>
-			</media>
-			-->
-		</medias>
-		
+            <extraurl>components/B_POUSSOIR/b-poussoir-off.png</extraurl>
+        </extras_url>		
 	</comp>
+    
+    <comp>
+		<name>LED_INDE_02</name>
+		<type>switch</type>
+		<url>components/LED_INDE_02/LED-02-bas.png</url>
+		<extras_url>
+            <extraurl>components/LED_INDE_02/LED-02-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>SWITCHER_ANALOG</name>
+		<type>switch</type>
+		<url>components/SWITCHER_ANALOG/switcher-analog-gauche.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_ANALOG/switcher-analog-centre.png</extraurl>
+            <extraurl>components/SWITCHER_ANALOG/switcher-analog-droit.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>LED_VU</name>
+		<type>switch</type>
+		<url>components/LED_VU/LED-01-bas.png</url>
+		<extras_url>
+            <extraurl>components/LED_VU/LED-01-demi.png</extraurl>
+            <extraurl>components/LED_VU/LED-01-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>SWITCHER_NOIR</name>
+		<type>switch</type>
+		<url>components/SWITCHER_NOIR/switcher-noir-bas.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_ANALOG/switcher-analog-centre.png</extraurl>
+            <extraurl>components/SWITCHER_ANALOG/switcher-noir-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>SWITCHER_HORIZONTAL</name>
+		<type>switch</type>
+		<url>components/SWITCHER_HORIZONTAL/switcher-noir-bas.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_HORIZONTAL/switcher-horizontal-bas.png</extraurl>
+            <extraurl>components/SWITCHER_HORIZONTAL/switcher-horizontal-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>CROSSFADER</name>
+		<type>fader</type>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>215</item>
+        </config>
+		<url>components/CROSSFADER/crossfader-fader.png</url>
+		<medias>
+            <media>
+            <type>image</type>
+            <url>components/CROSSFADER/crossfader-socle.png</url>
+        </media>
+        </medias>		
+	</comp>
+    
+    <!-- CUSTOM COMPS ALWAYS KEEP AT END-->
+    
+    <comp>
+		<name>METER</name>
+		<type>meter</type>
+        <switch_id>LED_INDE_02</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>10</item>
+             <!-- blur rate-->
+            <item>.1</item>
+        </config>
+        
+			
+	</comp>
+    
+    <comp>
+		<name>METER_VU</name>
+		<type>meter</type>
+        <switch_id>LED_VU</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>10</item>
+            <!-- blur rate-->
+            <item>.8</item>
+        </config>
+        
+			
+	</comp>
+    
+    
 	
 	
 
