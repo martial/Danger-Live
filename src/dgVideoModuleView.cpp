@@ -9,6 +9,8 @@
 
 #include "dgVideoModuleView.h"
 
+//#define USEOFXQTKIT
+
 void dgVideoModuleView::setup (dgVideoDataSet * videoSet) {
 	
 	this->videoSet = videoSet;
@@ -19,8 +21,14 @@ void dgVideoModuleView::setup (dgVideoDataSet * videoSet) {
 
 void dgVideoModuleView::update() {
 	
-	videoSet->videos[currentVideoID]->update();
-
+	// weird.
+	#ifdef USEOFXQTKIT
+	#else
+	videoSet->videos[currentVideoID]->play();
+	#endif
+	
+	videoSet->videos[currentVideoID]->idleMovie();
+	
 }
 
 void dgVideoModuleView::draw() {
@@ -38,6 +46,10 @@ void dgVideoModuleView::draw() {
 	
 	
 	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
+	
+	//videoSet->videos[currentVideoID]->draw(0,0);
+	
+	
 }
 
 void dgVideoModuleView::goNext() {
@@ -45,14 +57,16 @@ void dgVideoModuleView::goNext() {
 	
 	int oldVideo = currentVideoID;
 	
+	stop();
+	
 	currentVideoID++;
 	if ( currentVideoID > videoSet->videos.size() -1 ) {
 		currentVideoID = 0;
 	}
 	play();
 	
-	videoSet->videos[oldVideo]->setPosition(0);
-	videoSet->videos[oldVideo]->pause();
+	//videoSet->videos[oldVideo]->setPosition(0);
+	//videoSet->videos[oldVideo]->stop();
 
 	
 }
@@ -69,9 +83,9 @@ void dgVideoModuleView::goNext(int & f) {
 void dgVideoModuleView::play() {
 	
 	
-	currentVideoDuration = videoSet->videos[currentVideoID]->getDuration() ;
-	//videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
-	
+	currentVideoDuration = videoSet->videos[currentVideoID]->getDuration();
+	videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
+	//videoSet->videos[currentVideoID]->setSpeed(1.0);
 	videoSet->videos[currentVideoID]->play();
 	
 }
@@ -80,15 +94,24 @@ void dgVideoModuleView::stop() {
 	
 	for ( int i=0; i<videoSet->videos.size(); i++ ) {
 		videoSet->videos[i]->setPosition(0);
+		
+		#ifdef USEOFXQTKIT
 		videoSet->videos[i]->pause();
+		#else 
+		videoSet->videos[i]->stop();
+		#endif
+		
+		
 	}
-	
 }
 
 void dgVideoModuleView::onBeatEvent (float beatTime) {
 
 	this->beatTime = beatTime;
-	if (  currentVideoDuration - videoSet->videos[currentVideoID]->getPositionInSeconds() < beatTime*2 && beatTime != 0  ) {
+	
+	float currentVideoPos = videoSet->videos[currentVideoID]->getPosition() * currentVideoDuration;
+	
+	if (  currentVideoDuration - currentVideoPos < beatTime*2 && beatTime != 0  ) {
 		goNext();
 	}		
 }
@@ -102,7 +125,7 @@ void dgVideoModuleView::onBeatEvent (float beatTime) {
 void dgVideoModuleView::addBeatListener () {
 	
 	
-		printf("Add listener \n");
+		
 	//ofAddListener(beatEvent,this,&dgVideoModuleView::goNext);
 	isWaitingForBeat = true;
 }

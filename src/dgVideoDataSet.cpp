@@ -19,8 +19,16 @@ dgVideoDataSet::~dgVideoDataSet() {
 
 void dgVideoDataSet::addVideo(string url) {
 	
+	
+#ifdef USEOFXQTKIT
 	ofxQTKitVideoPlayer * video = new ofxQTKitVideoPlayer();
-	video->loadMovie(url, OFXQTVIDEOPLAYER_MODE_PIXELS_ONLY);
+	video->loadMovie(url,1);
+#else 
+	ofVideoPlayer * video = new ofVideoPlayer();
+	video->loadMovie(url);
+#endif
+	
+	
 	videos.push_back(video);
 
 }

@@ -18,14 +18,24 @@ ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, int currw, int currh ) {
 	//int ofW = ofGetWidth();
 	//int ofH = ofGetHeight();
 	
-	float r = (float)currw/(float)currh;
-	float wr = (float)maxw/(float)maxh;
+	float stageAspectRatio = (float)maxw/(float)maxh;
+	float imageAspectRatio = (float)currw/(float)currh;
 	
 	
-		w = (float)maxw;
-		h = (float)maxw / r;
+	if ( stageAspectRatio >= imageAspectRatio ) {
+	
+	w = (float)maxw;
+	h = (float)maxw / imageAspectRatio;
 		
+	} else {
+		
+	w = (float)maxh * imageAspectRatio;
+	h = (float)maxh;
 
+		
+	}
+	
+	 
 	
 	
 	return 	ofPoint (w,h);

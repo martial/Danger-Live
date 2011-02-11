@@ -11,7 +11,12 @@
 #define _DGVIDEODATASET
 
 #include "ofMain.h"
+
+//#define USEOFXQTKIT
+
+#ifdef USEOFXQTKIT
 #include "ofxQTKitVideoPlayer.h"
+#endif
 
 class dgVideoDataSet {
 
@@ -20,7 +25,12 @@ class dgVideoDataSet {
 	dgVideoDataSet();
 	~dgVideoDataSet();
 	void addVideo(string url);
+	
+#ifdef USEOFXQTKIT
 	vector<ofxQTKitVideoPlayer*>	videos;
+#else 
+	vector<ofVideoPlayer*>	videos;
+#endif
 	
 	
 	

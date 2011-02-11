@@ -23,6 +23,20 @@
 		</medias>
 		
 	</comp>
+    
+    <comp>
+		<name>POT_PETIT_A</name>
+		<type>video</type>
+        <url>components/PETIT/A/potentiometre-petit-A.mov</url>
+      		                                
+	</comp>
+    
+    <comp>
+		<name>POT_PETIT_B</name>
+		<type>video</type>
+        <url>components/PETIT/B/bouton-rotatif-petit-B.mov</url>
+      		                                
+	</comp>
 	
 	<comp>
 		
@@ -117,6 +131,34 @@
         </medias>		
 	</comp>
     
+    
+    <comp>
+		<name>BTN_ROT</name>
+		<type>image_knob</type>
+        <url>components/PETIT/A/PNG/boutonrotatif-petit-A-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>-90</item>
+            <item>180</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            <media>
+                <type>image</type>
+                <url>components/PETIT/A/PNG/boutonrotatif-petit-A-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/PETIT/A/PNG/boutonrotatif-petit-A-front.png</extraurl>
+        </extras_url>	
+                        
+                                
+	</comp>
+    
     <!-- CUSTOM COMPS ALWAYS KEEP AT END-->
     
     <comp>
@@ -125,7 +167,7 @@
         <switch_id>LED_INDE_02</switch_id>
         <config>
             <!-- columns-->
-            <item>2</item>
+            <item>1</item>
             <!-- row-->
             <item>10</item>
              <!-- blur rate-->
@@ -141,9 +183,9 @@
         <switch_id>LED_VU</switch_id>
         <config>
             <!-- columns-->
-            <item>2</item>
+            <item>1</item>
             <!-- row-->
-            <item>10</item>
+            <item>14</item>
             <!-- blur rate-->
             <item>.8</item>
         </config>

@@ -21,7 +21,7 @@ void dgVideoData::setup(string xmlURL) {
 	int numOfSets = XML.getNumTags("set");
 	videoSets.reserve(numOfSets);
 	
-	printf("num of videos sets %d\n", numOfSets);
+	//printf("num of videos sets %d\n", numOfSets);
 	
 	
 	for ( int i=0; i<numOfSets; i++ ) {
@@ -30,7 +30,7 @@ void dgVideoData::setup(string xmlURL) {
 		
 		int numOfVideos = XML.getNumTags("video");
 		
-		printf("num of videos %d\n", numOfVideos);
+		//printf("num of videos %d\n", numOfVideos);
 		
 		dgVideoDataSet * videoSet = new dgVideoDataSet();
 		for ( int j=0; j<numOfVideos; j++ ) {

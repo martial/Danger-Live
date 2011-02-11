@@ -11,7 +11,7 @@
 
 void dgData::setup (string xmlURL) {
 	
-	printf("set up data \n");
+	//printf("set up data \n");
 	
 	
 	if ( XML.loadFile(xmlURL) ) {
@@ -59,9 +59,19 @@ void dgData::setup (string xmlURL) {
 			data[i]->cpData[j]->pos.y = XML.getAttribute("position", "y", 0, 0);
 			
 			
-			
 			data[i]->cpData[j]->range.x = XML.getAttribute("range", "min", 0, 0);
 			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 127, 0);
+			
+			
+			if (XML.tagExists("rotation", 0)) {
+				data[i]->cpData[j]->rotation = XML.getValue("rotation", 0);	
+			} else {
+				data[i]->cpData[j]->rotation = 0.0f;
+			}
+
+			
+
+			
 			
 			XML.popTag();
 		}
@@ -76,6 +86,9 @@ void dgData::setup (string xmlURL) {
 
 void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
 	
+	printf("\nSTARTING COMPONENT BUILD----------------------------------\n");
+	
+	
 	for ( int u=0; u< data.size(); u++ ) {
 		
 		moduleData * currentModule = data[u];
@@ -85,22 +98,39 @@ void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
 			
 			componentData * compData = currentModule->cpData[i];
 			dgSceneObject  * sceneObject = compBuilder->createCompByName(compData->name);
+			
+			printf("\ncomponent built : ");
+			printf(sceneObject->name.c_str());
+			printf("\n");
+			
 			sceneObject->setPosition(compData->pos.x, compData->pos.y);
+			sceneObject->rotation = compData->rotation;
 			sceneObject->adress = compData->adress;
-			
-			printf("name : \n", sceneObject->name.c_str());
-			
 			currentModule->cpObjects.push_back(sceneObject);
 						
 		}
 		
-		
+
+		printf("\n------------------------------------------------- BUILD 2 fase\n");
 		for ( int j = 0; j< currentModule->cpObjects.size(); j++ ) {
 			
+			
+			
 			dgSceneObject  * sceneObject =  currentModule->cpObjects[j];
+			
+			printf("\ndouble check object : ");
+			printf(sceneObject->name.c_str());
+			printf(" | ");
+			printf(sceneObject->type.c_str());
+			printf("\n");
+			
 			if ( sceneObject->type == "meter") {
 				int numOfRows = (int)sceneObject->configValues[1];
-				printf("NUM OF ROWS %d\n", numOfRows);
+				
+				printf("\nmeter object ");
+				printf(sceneObject->name.c_str());
+				printf("\n");
+				
 				for (int k=0; k<numOfRows; k++ ) {
 				dgSceneObject  * refSceneObject = compBuilder->createCompByName(sceneObject->sceneObjectRefName);
 				sceneObject->addSwitchObject(refSceneObject);

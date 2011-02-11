@@ -22,6 +22,7 @@ class componentData {
 	string		adress;
 	ofPoint		range;
 	ofPoint		pos;
+	float		rotation;
 	
 };
 

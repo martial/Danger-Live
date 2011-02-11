@@ -44,11 +44,14 @@ void dgFaderObject::draw () {
 
 	
 	
-		
 	
+	ofPushMatrix();
+	ofTranslate(pos.x, pos.y, 0);
+	ofRotate((int)this->rotation, 0, 0, 1);
 	ofEnableAlphaBlending();
-	img.draw(pos.x + xPos, pos.y );
+	img.draw(xPos, 0 );
 	ofDisableAlphaBlending();
+	ofPopMatrix();
 }
 
 void dgFaderObject::setPct(float pct) {

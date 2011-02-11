@@ -25,23 +25,38 @@ void dgCompBuilder::setup (string xmlURL) {
 
 dgSceneObject * dgCompBuilder::createCompByName (string name) {
 	
-	if (XML.tagExists("components", 0)) XML.pushTag("components", 0);
+		
+	XML.pushTag("components", 0);
 	
 	int numOfComponents = XML.getNumTags("comp");
-	components.reserve(numOfComponents);
+	//components.reserve(numOfComponents);
 	
 	dgSceneObject  * component;
 	
 	
-	printf("Check components %d\n :", numOfComponents);
+	printf("\ncheck for name : ");
+	printf(name.c_str());
+	printf("\n");
+	
+	printf("num of components: %d :", numOfComponents);
 	
 	for ( int i = 0; i<numOfComponents; i++ ) {
 		
-		// check type
-		XML.pushTag("comp", i);
+		//printf("level %d\n : ", XML.getPushLevel());
+		XML.pushTag("comp",i);
+	
+		
+		
+		
 		string compName = XML.getValue("name", "");
 		
+		
+
 			if ( compName == name ) {
+				
+				printf(" | name found");
+				printf("\n");
+				
 		
 				string type = XML.getValue("type", "");
 				string url = XML.getValue("url", "");
@@ -73,13 +88,16 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					faderObject->setup(url, compName, type);
 					
 					
-					XML.pushTag("config", 0);
-					int numOfConfigsValues = XML.getNumTags("item");
-					for (int x=0; x<numOfConfigsValues;x++ ) {
-						float val = ofToFloat(XML.getValue("item", "", x));
-						faderObject->addConfig(val);						
+					if (XML.tagExists("config", 0)) {
+						
+						XML.pushTag("config", 0);
+						int numOfConfigsValues = XML.getNumTags("item");
+						for (int x=0; x<numOfConfigsValues;x++ ) {
+							float val = ofToFloat(XML.getValue("item", "", x));
+							faderObject->addConfig(val);						
+						}
+						XML.popTag();
 					}
-					XML.popTag();
 					component = faderObject;
 					
 				}
@@ -93,17 +111,17 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					switchObject->setup(url, compName, type);
 										
 						
+					if (XML.tagExists("extras_url", 0)) {
+
 						XML.pushTag("extras_url", 0);
 						int numOfExtrasUrl = XML.getNumTags("extraurl");
 						for (int z=0; z<numOfExtrasUrl;z++ ) {
-							
 							string extraURL = XML.getValue("extraurl", "", z);
 							switchObject->addExtraImage(extraURL);
-							//printf("-----------------------------------------------------------------------\n");
-							//printf(extraURL.c_str());
-							//printf("\n");
 						}
 						XML.popTag();
+						
+					}
 					
 					component = switchObject;
 
@@ -126,11 +144,41 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					}
 					XML.popTag();
 					// ok. How many cols we have ?
-					
-					
-					
-					XML.popTag();
+				
 					component = multipleLed;
+					
+				}
+				
+				if ( type == "image_knob" ) {
+					
+					
+					dgRotationBtnObject * rotObject = new dgRotationBtnObject();
+					rotObject->setup( url, compName, type);
+					
+					if (XML.tagExists("config", 0)) {
+						
+						XML.pushTag("config", 0);
+						int numOfConfigsValues = XML.getNumTags("item");
+							for (int x=0; x<numOfConfigsValues;x++ ) {
+								float val = ofToFloat(XML.getValue("item", "", x));
+								rotObject->addConfig(val);	
+							}
+						XML.popTag();
+					}
+					
+					if (XML.tagExists("extras_url", 0)) {
+						
+						XML.pushTag("extras_url", 0);
+						int numOfExtrasUrl = XML.getNumTags("extraurl");
+						for (int z=0; z<numOfExtrasUrl;z++ ) {
+							string extraURL = XML.getValue("extraurl", "", z);
+							rotObject->addExtraImage(extraURL);
+						}
+						
+						XML.popTag();
+					}
+					
+					component = rotObject;
 					
 				}
 
@@ -151,13 +199,27 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 						
 						component->addMedia(mediaUrl, mediaType);
 						XML.popTag();
-					}					
+					}	
+					XML.popTag();
 				}
-				XML.popTag();
+			} else {
+					
 			}
+		
+		
 		XML.popTag();
 	}
-	//XML.level = 0;
+	
+	
+	
+	if ( component == NULL ) {
+		printf("\nname not found - empty object");
+		printf("\n");
+	}
+	
+	
+	
+	XML.popTag();
 	return component;
 }
 

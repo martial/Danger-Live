@@ -25,7 +25,7 @@ void dgMultipleLedObject::setup (string name, string type) {
 
 void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	
-	int yPos = switchObjects.size()* (switchObj->height + 3);
+	int yPos = switchObjects.size()* (switchObj->height -2);
 	this->height = yPos;
 	this->width = switchObj->width;
 	
@@ -40,16 +40,7 @@ void dgMultipleLedObject::init() {
 	
 	// get width and height for FBO
 	
-	int numOfCols = (int)this->configValues[0];
-	int numOfRows = (int)this->configValues[1];
-	
-	int fboW = (width + 3) * numOfCols;
-	int fboH = this->height;
-	
-	texture.allocate( fboW, fboH , GL_RGB);
-	fbo.setup(fboW, fboH, true);
-	fbo.attach(texture);
-	
+
 	
 }
 
@@ -77,6 +68,7 @@ void dgMultipleLedObject::update () {
 void dgMultipleLedObject::draw () {
 	
 	dgSceneObject::draw();
+	
 	
 	ofSetColor(255, 255, 255);
 	

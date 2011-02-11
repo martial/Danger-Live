@@ -40,12 +40,12 @@ void DangerBackground::draw (int viewID) {
 	
 	ofSetColor(255, 0, 0);
 	
-	
+	/*
 	if ( viewID < 10 ) {
 		digitalFont.drawString("0", digitalXPos +7, digitalYPos +40);
 	} 	
 	digitalFont.drawString(ofToString(viewID), digitalXPos + 37, digitalYPos +40);
-	
+	*/
 	ofSetColor(0xffffff);
 	// print 
 	

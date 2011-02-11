@@ -18,6 +18,7 @@
 #include "dgSwitchObject.h"
 #include "dgFaderObject.h"
 #include "dgMultipleLedObject.h"
+#include "dgRotationBtnObject.h"
 
 
 class dgCompBuilder {

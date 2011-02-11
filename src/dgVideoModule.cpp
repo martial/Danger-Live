@@ -42,6 +42,13 @@ void dgVideoModule::init () {
 	setCurrentView(currentView);
 }
 
+void dgVideoModule::stop () {
+	
+	views[currentView]->stop();
+	
+	
+}
+
 void dgVideoModule::setCurrentView (int viewID) {
 	
 	views[currentView]->stop();

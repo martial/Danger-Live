@@ -68,7 +68,7 @@ void OscReceiver::update () {
 		
 		
 		
-		
+		/*
 		 // unrecognized message: display on the bottom of the screen
 		 string msg_string;
 		 msg_string = "";
@@ -110,7 +110,7 @@ void OscReceiver::update () {
 		 current_msg_string = ( current_msg_string + 1 ) % NUM_MSG_STRINGS;
 		 // clear the next line
 		 msg_strings[current_msg_string] = "";
-		 
+		 */
 		
 	}
 	

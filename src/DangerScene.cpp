@@ -21,7 +21,7 @@ void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuil
 	moduleView.setup(layoutData, compBuilder, oscReceiver);
 	videoView.setup(&videoData);
 	
-	currentMode = DGSCENEVIEWMODE_MODULE;
+	currentMode = DGSCENEVIEWMODE_VIDEOS;
 	
 	currentView = 0;
 	
@@ -85,6 +85,7 @@ void DangerScene::setCurrentView(int viewID) {
 		case DGSCENEVIEWMODE_MODULE:
 			
 			moduleView.setCurrentView(viewID);
+			videoView.stop();
 			
 			break;
 			
@@ -104,6 +105,7 @@ void DangerScene::setCurrentView(int viewID) {
 void DangerScene::changeMode (int mode) {
 	
 	currentMode = mode;
+	setCurrentView(currentView);
 	if ( mode == DGSCENEVIEWMODE_VIDEOS ) videoView.init();
 	
 }

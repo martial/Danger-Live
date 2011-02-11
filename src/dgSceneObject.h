@@ -37,7 +37,8 @@ class dgSceneObject {
 	string							sceneObjectRefName;
 	ofPoint							pos;
 	
-	float					blurRate;
+	float							rotation;
+	float							blurRate;
 	
 	int								width, height;
 	float							pct;

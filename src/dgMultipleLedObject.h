@@ -15,7 +15,6 @@
 #include "ofMain.h";
 #include "dgSceneObject.h"
 #include "dgSwitchObject.h"
-#include "ofxFbo.h"
 
 class dgMultipleLedObject : public dgSceneObject {
 	
@@ -37,8 +36,7 @@ public:
 	private :
 	
 	vector<dgSceneObject*>			switchObjects;
-	ofxFbo						fbo;
-	ofTexture					texture;
+
 	
 	
 };

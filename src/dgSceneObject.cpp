@@ -16,7 +16,7 @@ dgSceneObject::dgSceneObject() {
 }
 
 dgSceneObject::~dgSceneObject() {
-	printf("adios from simple object\n");
+	//printf("adios from simple object\n");
 	
 	for (int i=0; i<images.size(); i++) {
 		images[i]->clear();
@@ -43,6 +43,8 @@ void dgSceneObject::setup (string name, string type) {
 	
 	blurRate = 0;
 	
+	rotation = 0;
+	
 	active = false;
 	
 	pct = 0;
@@ -59,26 +61,40 @@ void dgSceneObject::update () {
 
 void dgSceneObject::draw () {
 	
-	if ( active ) {
-		pos.x += ofRandom(0, 1);
-	}
+	
 	
 	float xPos, yPos;
 	
+		
+	ofEnableAlphaBlending();
 	for (int i=0; i<images.size(); i++) {
 		
 		// center pos
 		xPos = this->width * .5 - images[i]->width *.5;
 		yPos = this->height * .5 - images[i]->height *.5;
-		images[i]->draw(pos.x + xPos, pos.y + yPos);
+		
+		ofPushMatrix();
+		ofTranslate(pos.x +xPos, pos.y +yPos, 0);
+		ofRotate((int)rotation, 0, 0, 1);
+		images[i]->draw(0,0);
+		ofPopMatrix();
 	}
 	
 	// draw medias
 	for (int j=0; j<videos.size(); j++) {
 		xPos = this->width * .5 - videos[j]->width *.5;
 		yPos = this->height * .5 - videos[j]->height *.5;
-		videos[j]->draw(pos.x + xPos, pos.y + yPos);
+		ofPushMatrix();
+		ofTranslate(pos.x +xPos, pos.y +yPos, 0);
+		ofRotate(rotation, 0, 0, 1);
+		ofEnableAlphaBlending();
+		videos[j]->draw(0,0);
+		ofDisableAlphaBlending();
+		ofPopMatrix();
 	}
+	ofDisableAlphaBlending();
+	
+	
 	
 }
 
@@ -96,7 +112,7 @@ void dgSceneObject::setPosition (int x, int y) {
 	this->pos.x = x;
 	this->pos.y = y;
 	
-	printf("set position %d\n ", x);
+	//printf("set position %d\n ", x);
 }
 
 void dgSceneObject::setPct(float pct) {

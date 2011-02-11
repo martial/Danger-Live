@@ -16,13 +16,14 @@ void testApp::setup(){
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
 	
-	
+	/*
 	midiListener.setup(scene);
 	midiIn.listPorts();
 	midiIn.openPort(0); 
 	midiIn.addListener(&midiListener);
 	//printf("ahou3\n");
-	
+	*/
+	 
 	/* data */
 	builder.setup("components.xml");
 	data.setup("layouts.xml");
@@ -56,9 +57,9 @@ void testApp::draw(){
 	//fbo.end();
 	
 	//fbo.draw(0, 0, 320, 240);
-	oscReceiver.debugDraw();
+	//oscReceiver.debugDraw();
 	
-	ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
+	//ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
 	
 }
 

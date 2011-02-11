@@ -37,10 +37,12 @@ void dgModuleView::update() {
 		dgSceneObject  * object = currentModule->cpObjects[i];
 		object->update();
 	}
+	 
 
 }
 
 void dgModuleView::draw () {
+	
 	
 	moduleData * currentModule = layoutData->data[currentViewID];
 	
@@ -48,6 +50,7 @@ void dgModuleView::draw () {
 		dgSceneObject  * object = currentModule->cpObjects[i];
 		object->draw();
 	}
+	 
 
 }
 
