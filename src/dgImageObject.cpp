@@ -36,7 +36,7 @@ void dgImageObject::draw () {
 	
 	dgSceneObject::draw();
 	
-	//ofEnableAlphaBlending();
+	ofEnableAlphaBlending();
 	img.draw(pos.x, pos.y);
-	//ofDisableAlphaBlending();
+	ofDisableAlphaBlending();
 }

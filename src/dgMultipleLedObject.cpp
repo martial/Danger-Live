@@ -79,7 +79,7 @@ void dgMultipleLedObject::draw () {
 		//fbo.begin();
 		for ( int j=0; j<numOfCols; j++ ) {
 		glPushMatrix();
-		ofTranslate(j*35, 0, 0);
+		ofTranslate(j*switchObjects[i]->width, 0, 0);
 		switchObjects[i]->draw();
 		glPopMatrix();
 		//fbo.end();

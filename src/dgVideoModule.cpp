@@ -11,16 +11,17 @@
 
 
 
-void dgVideoModule::setup (dgVideoData * videoData) {
+void dgVideoModule::setup (dgVideoData & videoData) {
 
-	this->videoData = videoData;
+	this->videoData = &videoData;
 	currentView = 0;
 	
 	/* set up views */
 	
-	for ( int i = 0; i< videoData->videoSets.size(); i++ ) {
+	for ( int i = 0; i< this->videoData->videoSets.size(); i++ ) {
 		dgVideoModuleView * view = new dgVideoModuleView();
-		view->setup(videoData->videoSets[i]);
+		dgVideoDataSet * set  = this->videoData->videoSets[i];
+		view->setup(*set);
 		views.push_back(view);
 	}
 	

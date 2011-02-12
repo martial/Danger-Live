@@ -17,7 +17,7 @@ DangerBackground::DangerBackground(){
 void DangerBackground::setup () {
 	
 	// load bg
-	background.loadImage("assets/background.png");
+	background.loadImage("components/BACKGROUND/MODULE-background-00.png");
 	digitalPlaceholder.loadImage("components/DIGITAL/digital-off.png");
 	digitalFont.loadFont("fonts/digital-7_italic.ttf", 40);
 

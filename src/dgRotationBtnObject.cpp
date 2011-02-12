@@ -35,6 +35,10 @@ void dgRotationBtnObject::addExtraImage(string url) {
 	
 }
 
+void dgRotationBtnObject::addActivitySwitchObject(dgSceneObject * actSwitchObject) {
+	dgSceneObject::addActivitySwitchObject(actSwitchObject);
+}
+
 void dgRotationBtnObject::update () {
 	
 	dgSceneObject::update();

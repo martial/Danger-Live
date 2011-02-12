@@ -19,7 +19,7 @@
 class dgVideoModuleView {
 	
 	public :
-	void setup (dgVideoDataSet * videoSet);
+	void setup (dgVideoDataSet & videoSet);
 	void update();
 	void draw();
 	

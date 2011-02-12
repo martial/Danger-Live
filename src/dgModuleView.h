@@ -36,7 +36,7 @@ class dgModuleView {
 	/* Instances  */
 	dgData					*	layoutData;
 	dgCompBuilder			*	compBuilder;
-	OscReceiver			*	oscReceiver;
+	OscReceiver				*	oscReceiver;
 	
 	int							currentViewID;
 	vector<dgSceneObject*>		currentObjects;

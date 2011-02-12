@@ -51,11 +51,12 @@ void OscReceiver::update () {
 		 for ( int i=0; i<m.getNumArgs(); i++ ) {
 			 if ( m.getArgType( i ) == OFXOSC_TYPE_STRING ) {
 				 msg->stringArgs.push_back(m.getArgAsString(i));
+				 //printf (m.getArgAsString(i))
 			 }
 				
 			if( m.getArgType( i ) == OFXOSC_TYPE_FLOAT ){
 				msg->value = m.getArgAsFloat( i );
-				//printf ("Number of components : %f\n", msg->value);
+				printf ("yo! : %f\n", msg->value);
 			}
 			
 		 }
@@ -68,12 +69,13 @@ void OscReceiver::update () {
 		
 		
 		
-		/*
+		
 		 // unrecognized message: display on the bottom of the screen
 		 string msg_string;
 		 msg_string = "";
 		 msg_string += "adress : "+ m.getAddress();
-		 msg_string += ": ";
+		
+		// msg_string += ": ";
 		 for ( int i=0; i<m.getNumArgs(); i++ )
 		 {
 		 // get the argument type
@@ -110,9 +112,10 @@ void OscReceiver::update () {
 		 current_msg_string = ( current_msg_string + 1 ) % NUM_MSG_STRINGS;
 		 // clear the next line
 		 msg_strings[current_msg_string] = "";
-		 */
+		 
 		
 	}
+		 
 	
 }
 

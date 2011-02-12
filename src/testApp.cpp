@@ -27,7 +27,7 @@ void testApp::setup(){
 	/* data */
 	builder.setup("components.xml");
 	data.setup("layouts.xml");
-	data.addSceneObjects(&builder);
+	data.addSceneObjects(builder);
 	
 	/* scene */
 	videoData.setup("videos.xml");
@@ -57,7 +57,7 @@ void testApp::draw(){
 	//fbo.end();
 	
 	//fbo.draw(0, 0, 320, 240);
-	//oscReceiver.debugDraw();
+	oscReceiver.debugDraw();
 	
 	//ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
 	

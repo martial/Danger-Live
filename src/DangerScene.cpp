@@ -19,9 +19,9 @@ void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuil
 	
 	background.setup();
 	moduleView.setup(layoutData, compBuilder, oscReceiver);
-	videoView.setup(&videoData);
+	videoView.setup(videoData);
 	
-	currentMode = DGSCENEVIEWMODE_VIDEOS;
+	currentMode = DGSCENEVIEWMODE_MODULE;
 	
 	currentView = 0;
 	

@@ -15,12 +15,13 @@
 #include "dgData.h"
 #include "moduleData.h"
 #include "dgCompBuilder.h"
+#include "ofxDirList.h"
 
 class dgData  {
 
 	public:
 	void setup(string xmlURL);
-	void addSceneObjects (dgCompBuilder * compBuilder);
+	void addSceneObjects (dgCompBuilder & compBuilder);
 	void debug();
 	
 	vector <moduleData*>		data;
@@ -28,7 +29,7 @@ class dgData  {
 	private:
 	
 	ofxXmlSettings				XML;
-	
+	ofxDirList					DIR;
 	
 };
 

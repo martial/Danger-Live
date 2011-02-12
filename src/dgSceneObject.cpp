@@ -48,25 +48,53 @@ void dgSceneObject::setup (string name, string type) {
 	active = false;
 	
 	pct = 0;
+	oldPct = 0;
+	
+	activitySwitchObject = NULL;
 	
 }
 
 void dgSceneObject::update () {
 	
+	if ( activitySwitchObject ) {
+		float activityPct = ( oldPct != pct ) ? 1.0 : 0.0;
+		activitySwitchObject->setPct(activityPct);
+		activitySwitchObject->update();
+	}
+	
+	
 	for (int j=0; j<videos.size(); j++) {
 		videos[j]->update();
 	}
-
+	
+	this->oldPct = pct;
+	
+	//pct = ofClamp(abs(cos(ofGetFrameNum()/100)), 0, 1);
+	
 }
 
 void dgSceneObject::draw () {
 	
 	
 	
-	float xPos, yPos;
+		
+	
+	
+	if ( activitySwitchObject ) {
+		ofEnableAlphaBlending();
+
+		ofPushMatrix();
+		ofTranslate(pos.x, pos.y, 0);
+		ofRotate((int)rotation, 0, 0, 1);
+		activitySwitchObject->draw();
+		ofPopMatrix();
+		ofDisableAlphaBlending();
+	}
 	
 		
+	float xPos, yPos;
 	ofEnableAlphaBlending();
+
 	for (int i=0; i<images.size(); i++) {
 		
 		// center pos
@@ -117,6 +145,7 @@ void dgSceneObject::setPosition (int x, int y) {
 
 void dgSceneObject::setPct(float pct) {
 	
+	
 	this->pct = pct;
 	
 }
@@ -153,3 +182,8 @@ void dgSceneObject::addConfig(float val) {
 void dgSceneObject::addSwitchObject(dgSceneObject * switchObj) {
 		// nothing
 }
+
+void dgSceneObject::addActivitySwitchObject(dgSceneObject * actSwitchObject) {
+	this->activitySwitchObject = actSwitchObject;
+}
+

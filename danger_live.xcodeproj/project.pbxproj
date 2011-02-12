@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83099462130704DE009DBBF1 /* ofxDirList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83099460130704DE009DBBF1 /* ofxDirList.cpp */; };
 		83163E001302A5ED00CBAF99 /* dgVideoModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163DFF1302A5ED00CBAF99 /* dgVideoModule.cpp */; };
 		83163E031302A69F00CBAF99 /* dgVideoData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E021302A69F00CBAF99 /* dgVideoData.cpp */; };
 		83163E081302A72800CBAF99 /* dgVideoDataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E071302A72800CBAF99 /* dgVideoDataSet.cpp */; };
@@ -125,6 +126,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8309945D130704DE009DBBF1 /* Instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
+		8309945E130704DE009DBBF1 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		83099460130704DE009DBBF1 /* ofxDirList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxDirList.cpp; sourceTree = "<group>"; };
+		83099461130704DE009DBBF1 /* ofxDirList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxDirList.h; sourceTree = "<group>"; };
 		83163DFE1302A5ED00CBAF99 /* dgVideoModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgVideoModule.h; sourceTree = "<group>"; };
 		83163DFF1302A5ED00CBAF99 /* dgVideoModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgVideoModule.cpp; sourceTree = "<group>"; };
 		83163E011302A69F00CBAF99 /* dgVideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgVideoData.h; sourceTree = "<group>"; };
@@ -356,6 +361,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8309945B130704DE009DBBF1 /* ofxDirList */ = {
+			isa = PBXGroup;
+			children = (
+				8309945C130704DE009DBBF1 /* doc */,
+				8309945E130704DE009DBBF1 /* install.xml */,
+				8309945F130704DE009DBBF1 /* src */,
+			);
+			name = ofxDirList;
+			path = ../../../addons/ofxDirList;
+			sourceTree = SOURCE_ROOT;
+		};
+		8309945C130704DE009DBBF1 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				8309945D130704DE009DBBF1 /* Instructions.txt */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		8309945F130704DE009DBBF1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				83099460130704DE009DBBF1 /* ofxDirList.cpp */,
+				83099461130704DE009DBBF1 /* ofxDirList.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		83163DFD1302A5D400CBAF99 /* video */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +827,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				8309945B130704DE009DBBF1 /* ofxDirList */,
 				83163E5B1302B26900CBAF99 /* ofxVectorMath */,
 				833ACD95130047B700B1EAF0 /* ofxOsc */,
 				833ACCE71300376100B1EAF0 /* ofxQTKitMoviePlayer */,
@@ -1226,6 +1260,7 @@
 				83FC1BBE1304742000924527 /* dgFaderObject.cpp in Sources */,
 				83FC1CE2130480D700924527 /* dgMultipleLedObject.cpp in Sources */,
 				83CD762B1305987100DEB4B5 /* dgRotationBtnObject.cpp in Sources */,
+				83099462130704DE009DBBF1 /* ofxDirList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

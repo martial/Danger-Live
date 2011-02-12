@@ -100,8 +100,7 @@
 		<type>switch</type>
 		<url>components/SWITCHER_NOIR/switcher-noir-bas.png</url>
 		<extras_url>
-            <extraurl>components/SWITCHER_ANALOG/switcher-analog-centre.png</extraurl>
-            <extraurl>components/SWITCHER_ANALOG/switcher-noir-haut.png</extraurl>
+            <extraurl>components/SWITCHER_NOIR/switcher-noir-haut.png</extraurl>
         </extras_url>		
 	</comp>
     
@@ -116,6 +115,17 @@
 	</comp>
     
     <comp>
+		<name>VUMETRE_DIGITAL</name>
+		<type>switch</type>
+		<url>components/VUMETRE_DIGITAL/VUMETRE-DIGITAL-off.png</url>
+		<extras_url>
+            <extraurl>components/VUMETRE_DIGITAL/VUMETRE-DIGITAL-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    
+    
+    <comp>
 		<name>CROSSFADER</name>
 		<type>fader</type>
         <config>
@@ -127,6 +137,22 @@
             <media>
             <type>image</type>
             <url>components/CROSSFADER/crossfader-socle.png</url>
+        </media>
+        </medias>		
+	</comp>
+    
+    <comp>
+		<name>FADER</name>
+		<type>fader</type>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>192</item>
+        </config>
+		<url>components/FADER/fader-vertical-fader.png</url>
+		<medias>
+            <media>
+            <type>image</type>
+            <url>components/FADER/fader-vertical-reperes.png</url>
         </media>
         </medias>		
 	</comp>
@@ -147,6 +173,11 @@
 		<medias>
             <media>
                 <type>image</type>
+                <url>components/PETIT/SKIN/bouton-rotatif-skin-4.png</url>
+            </media>
+            
+            <media>
+                <type>image</type>
                 <url>components/PETIT/A/PNG/boutonrotatif-petit-A-back.png</url>
             </media>
         </medias>
@@ -154,10 +185,75 @@
         <!-- front -->
         <extras_url>
             <extraurl>components/PETIT/A/PNG/boutonrotatif-petit-A-front.png</extraurl>
-        </extras_url>	
+        </extras_url>
+        
+        <activity_switch>
+            <id>LED_INDE_02</id>
+            <position x="-10" y="-10"></position>
+        </activity_switch>		
                         
                                 
 	</comp>
+    
+    
+    <comp>
+		<name>BTN_ROT_RED</name>
+		<type>image_knob</type>
+        <url>components/ROTATIFS/PETIT/C/bouton-rotatif-petit-C-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>-90</item>
+            <item>180</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            <media>
+                <type>image</type>
+                <url>components/ROTATIFS/PETIT/C//bouton-rotatif-petit-C-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/ROTATIFS/PETIT/C/bouton-rotatif-petit-C-front.png</extraurl>
+        </extras_url>
+        
+        <!--
+        <activity_switch>
+            <id>LED_INDE_02</id>
+            <position x="-10" y="-10"></position>
+        </activity_switch>	
+        -->	
+                        
+                                
+	</comp>
+    
+    <!-- STATIC IMAGES -->
+    
+    <comp>
+		
+		<name>danger_logo</name>
+		<type>image</type>
+		<url>components/STATIC/DANGER-alluminium.png</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+    
     
     <!-- CUSTOM COMPS ALWAYS KEEP AT END-->
     
@@ -188,6 +284,20 @@
             <item>14</item>
             <!-- blur rate-->
             <item>.8</item>
+        </config>
+    </comp>
+    
+    <comp>
+		<name>METER_VU_DIGITAL</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_DIGITAL</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>12</item>
+            <!-- blur rate-->
+            <item>.1</item>
         </config>
         
 			

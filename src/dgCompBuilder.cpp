@@ -202,6 +202,22 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					}	
 					XML.popTag();
 				}
+				
+				
+				// chec kfor activity swtich 
+				
+				if (XML.tagExists("activity_switch", 0)) {
+					
+					XML.pushTag("activity_switch", 0);
+					
+					component->activityObjectRefName =  XML.getValue("id", "", 0);
+					component->activitySwitchObjPos.x = XML.getAttribute("position", "x", 0, 0);
+					component->activitySwitchObjPos.y= XML.getAttribute("position", "y", 0, 0);
+					XML.popTag();
+					
+				}
+				
+				
 			} else {
 					
 			}

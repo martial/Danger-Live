@@ -5,22 +5,79 @@
 	<module name="">
     
     
-    
-  
-    
-      <component>
+         <component>
 			
-			<name>CROSSFADER</name>
-			<osc_adress>reverb1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="130" y="575"></position>
-            <rotation>90.0</rotation>			
+			<name>danger_logo</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="475" y="180"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        
+        <!-- switcher noirs du bas -->
+        <component>
+			
+			<name>SWITCHER_NOIR</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="42" y="825"></position>
+            <rotation>0.0</rotation>
+            
 		
         </component>
         
         <component>
 			
-			<name>CROSSFADER</name>
+			<name>SWITCHER_NOIR</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="256" y="825"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_NOIR</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="986" y="825"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_NOIR</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="1230" y="825"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+    
+  
+     <!-- faders du bas -->
+      <component>
+			
+			<name>FADER</name>
+			<osc_adress>bitred1</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="130" y="575"></position>
+            <rotation>90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>FADER</name>
 			<osc_adress>reverb1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="340" y="575"></position>
@@ -30,29 +87,65 @@
         
            <component>
 			
-			<name>CROSSFADER</name>
+			<name>FADER</name>
 			<osc_adress>reverb1</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="1100" y="575"></position>
+			<position x="1074" y="575"></position>
             <rotation>90.0</rotation>			
 		
         </component>
         
            <component>
 			
-			<name>CROSSFADER</name>
+			<name>FADER</name>
 			<osc_adress>reverb1</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="1345" y="575"></position>
+			<position x="1318" y="575"></position>
             <rotation>90.0</rotation>			
 		
         </component>
+        
+        
+        <!-- deux potards noirs  -->
+        
+        <component>
+			
+			<name>POT_PETIT_B</name>
+			<osc_adress>sidechain1</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="430" y="450"></position>			
+		
+		</component>
+        
+         <component>
+			
+			<name>POT_PETIT_B</name>
+			<osc_adress>eqhi_mixer1</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="750" y="450"></position>			
+		
+		</component>
+        
+        <!-- potard du milieu  -->
+        
+        <component>
+			
+			<name>BTN_ROT_RED</name>
+			<osc_adress>eqhi_mixer1</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="574" y="386"></position>			
+		
+		</component>
+        
+        
+        
 
     
+    <!-- grille de knobs bas en haut gauche a droite,  -->
      <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>beatrep_</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="0" y="134"></position>			
 		
@@ -78,28 +171,7 @@
 		
 		</component>
     
-     <component>
-			
-			<name>POT_PETIT_B</name>
-			<osc_adress>sidechain1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="430" y="450"></position>			
-		
-		</component>
-        
-         <component>
-			
-			<name>POT_PETIT_B</name>
-			<osc_adress>eqhi_mixer1</osc_adress>
-			<range min="" max = "127"></range>
-			<position x="750" y="450"></position>			
-		
-		</component>
-	
-		
-           
-       
-        
+    
         <component>
 			
 			<name>METER_VU</name>
@@ -219,6 +291,17 @@
 			<position x="1145" y="470"></position>			
 		
 		</component>
+        
+        <!-- grand vu metre d'en bas -->
+        <component>
+			
+			<name>METER_VU_DIGITAL</name>
+			<osc_adress>hipass</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="560" y="975"></position>			
+		
+		</component>
+        
         
         
 			

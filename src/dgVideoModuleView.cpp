@@ -11,9 +11,9 @@
 
 //#define USEOFXQTKIT
 
-void dgVideoModuleView::setup (dgVideoDataSet * videoSet) {
+void dgVideoModuleView::setup (dgVideoDataSet & videoSet) {
 	
-	this->videoSet = videoSet;
+	this->videoSet = &videoSet;
 	currentVideoID = 0;
 	currentVideoDuration = 0;
 	isWaitingForBeat = false;

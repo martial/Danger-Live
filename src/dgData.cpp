@@ -13,21 +13,30 @@ void dgData::setup (string xmlURL) {
 	
 	//printf("set up data \n");
 	
+	DIR.setVerbose(false);
+    int numOfLayouts = DIR.listDir("layouts");
+
 	
-	if ( XML.loadFile(xmlURL) ) {
-	} else {
-		printf("error loading XML file");
-	}
 	
-	XML.pushTag("scene", 0);
+		
 	
-	int numOfLayouts = XML.getNumTags("module");
-	data.reserve(numOfLayouts);
+	//int numOfLayouts = XML.getNumTags("module");
+	//data.reserve(numOfLayouts);
 	
 	
 	printf ("Number of laouts : %d\n", numOfLayouts);
 	
 	for (int i=0; i<numOfLayouts; i++ ) {
+		
+		
+		if ( XML.loadFile(DIR.getPath(i)) ) {
+		} else {
+			printf("error loading XML file");
+		}
+		
+		
+		
+		XML.pushTag("scene", 0);
 		
 		// push layout data
 		data.push_back(new moduleData());
@@ -84,7 +93,7 @@ void dgData::setup (string xmlURL) {
 
 
 
-void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
+void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 	
 	printf("\nSTARTING COMPONENT BUILD----------------------------------\n");
 	
@@ -97,7 +106,7 @@ void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
 		for ( int i = 0; i< numOfComponents; i++ ) {
 			
 			componentData * compData = currentModule->cpData[i];
-			dgSceneObject  * sceneObject = compBuilder->createCompByName(compData->name);
+			dgSceneObject  * sceneObject = compBuilder.createCompByName(compData->name);
 			
 			printf("\ncomponent built : ");
 			printf(sceneObject->name.c_str());
@@ -124,15 +133,23 @@ void dgData::addSceneObjects (dgCompBuilder * compBuilder) {
 			printf(sceneObject->type.c_str());
 			printf("\n");
 			
+			if ( sceneObject->activityObjectRefName != "") {
+				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->activityObjectRefName);
+				refSceneObject->pos = sceneObject->activitySwitchObjPos;
+				sceneObject->addActivitySwitchObject(refSceneObject);
+				printf("add activity object : " );
+			}
+			
+			
 			if ( sceneObject->type == "meter") {
 				int numOfRows = (int)sceneObject->configValues[1];
 				
-				printf("\nmeter object ");
-				printf(sceneObject->name.c_str());
-				printf("\n");
+				//printf("\nmeter object ");
+				//printf(sceneObject->name.c_str());
+				//printf("\n");
 				
 				for (int k=0; k<numOfRows; k++ ) {
-				dgSceneObject  * refSceneObject = compBuilder->createCompByName(sceneObject->sceneObjectRefName);
+				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->sceneObjectRefName);
 				sceneObject->addSwitchObject(refSceneObject);
 				sceneObject->init();
 				}

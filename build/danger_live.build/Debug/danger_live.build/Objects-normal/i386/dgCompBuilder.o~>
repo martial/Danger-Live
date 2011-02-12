@@ -1,0 +1,4 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp: In member function 'dgSceneObject* dgCompBuilder::createCompByName(std::string)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:38: warning: format not a string literal and no format arguments
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:214: error: 'class dgSceneObject' has no member named 'activitySwitchObjPos'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:215: error: 'class dgSceneObject' has no member named 'activitySwitchObjPos'

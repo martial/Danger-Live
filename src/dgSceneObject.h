@@ -25,6 +25,7 @@ class dgSceneObject {
 			void					addMedia(string url, string mediaType);
 			void					addConfig(float val);
 	virtual void					addSwitchObject(dgSceneObject * switchObj);
+	virtual void					addActivitySwitchObject(dgSceneObject * actSwitchObject);
 	virtual void					setPosition(ofPoint);
 	virtual void					setPosition (int x, int y);
 	virtual void					setPct(float pct);
@@ -35,17 +36,22 @@ class dgSceneObject {
 	string							adress;
 	string							type;
 	string							sceneObjectRefName;
+	string							activityObjectRefName;
 	ofPoint							pos;
+	ofPoint							activitySwitchObjPos;
+	
+	
 	
 	float							rotation;
 	float							blurRate;
 	
 	int								width, height;
-	float							pct;
+	float							pct, oldPct;
 	vector<float>					configValues;
 	
 	vector<ofImage*>				images;
 	vector<ofxQTKitVideoPlayer*>	videos;
+	dgSceneObject			*		activitySwitchObject;
 	
 	bool							active;
 	

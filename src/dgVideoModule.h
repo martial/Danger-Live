@@ -22,7 +22,7 @@ class dgVideoModule {
 	
 	public :
 	
-	void setup(dgVideoData * videoData);
+	void setup(dgVideoData & videoData);
 	void update();
 	void draw();
 	
