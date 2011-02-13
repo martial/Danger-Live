@@ -1,0 +1,6 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp: In member function 'virtual void testApp::setup()':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp:18: error: 'onOscEvent' is not a member of 'testApp'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp: At global scope:
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp:121: error: no 'void testApp::onOscEvent(int&)' member function declared in class 'testApp'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp: In member function 'void testApp::onOscEvent(int&)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp:123: error: 'class DangerScene' has no member named 'onOscEvent'

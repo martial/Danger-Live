@@ -11,8 +11,10 @@
 #include "ofxMidiIn.h"
 #include "DangerMidiListener.h"
 #include "ofEvents.h"
-#include "ofxFbo.h"
+#include "ofxFBOTexture.h"
+#include "dgDebugView.h"
 
+#define EDITOR_MODE
 
 
 class testApp : public ofBaseApp{
@@ -22,7 +24,9 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
 		
+		void reset();
 		void onBeatEvent(int & f);
+		void onOscEvent(int & f ) ;
 		void keyPressed  (int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
@@ -43,8 +47,10 @@ class testApp : public ofBaseApp{
 		ofxMidiIn				midiIn;
 		DangerMidiListener		midiListener;
 	
-		ofxFbo						fbo;
-		ofTexture					texture;
+		dgDebugView				debugView;
+	
+		ofxFBOTexture						fbo;
+		//ofTexture					texture;
 };
 
 #endif

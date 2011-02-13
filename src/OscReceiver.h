@@ -32,6 +32,7 @@ public:
 	vector<customOscMessage*> messages;
 	
 	ofEvent<int>	beatEvent;
+	ofEvent<int>	oscEvent;
 	//ofEvent<float>	test;
 	
 private:

@@ -57,8 +57,10 @@ void DangerScene::draw () {
 		case DGSCENEVIEWMODE_MODULE:
 			
 			background.draw(currentView);
+			ofPushMatrix();
+			ofTranslate(1920*.5 - 1280*.5, 0, 0);
 			moduleView.draw();
-			
+			ofPopMatrix();
 			
 			break;
 			
@@ -108,6 +110,10 @@ void DangerScene::changeMode (int mode) {
 	setCurrentView(currentView);
 	if ( mode == DGSCENEVIEWMODE_VIDEOS ) videoView.init();
 	
+}
+
+void DangerScene::onOscEvent() {
+	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onOscEvent();
 }
 
 void DangerScene::onBeatEvent () {

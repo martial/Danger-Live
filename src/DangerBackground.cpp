@@ -29,8 +29,8 @@ void DangerBackground::update () {
 
 void DangerBackground::draw (int viewID) {
 	
-	int ofMidWidth = ofGetWidth() * .5;
-	int ofMidHeight = ofGetHeight()  * .5;
+	int ofMidWidth = 1920 * .5;
+	int ofMidHeight = 1080  * .5;
 	
 	background.draw(ofMidWidth - background.width  * .5 , ofMidHeight  - background.height  * .5 );
 	

@@ -29,6 +29,12 @@ void OscReceiver::update () {
 			msg_strings[i] = "";
 	}
 	
+	for (int i=0; i<messages.size(); i++ ) {
+		delete messages[i];
+	}
+	messages.clear();
+	
+	
 	// check for waiting messages
 	while( receiver.hasWaitingMessages() )
 	{
@@ -39,11 +45,7 @@ void OscReceiver::update () {
 		// clean vector 
 		
 		
-		 for (int i=0; i<messages.size(); i++ ) {
-			 delete messages[i];
-		 }
-		 messages.clear();
-		 
+				 
 		 customOscMessage * msg = new customOscMessage();
 		 messages.push_back(msg);
 		 msg->address = m.getAddress();
@@ -56,7 +58,7 @@ void OscReceiver::update () {
 				
 			if( m.getArgType( i ) == OFXOSC_TYPE_FLOAT ){
 				msg->value = m.getArgAsFloat( i );
-				printf ("yo! : %f\n", msg->value);
+				//printf ("yo! : %f\n", msg->value);
 			}
 			
 		 }
@@ -64,6 +66,9 @@ void OscReceiver::update () {
 		if ( msg->address == "beat" ) {
 			int foo = 0;
 			ofNotifyEvent(beatEvent,foo,this);
+		}else {
+			int foo = 0;
+			ofNotifyEvent(oscEvent,foo,this);
 		}
 		
 		

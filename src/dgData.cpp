@@ -9,7 +9,7 @@
 
 #include "dgData.h"
 
-void dgData::setup (string xmlURL) {
+void dgData::setup () {
 	
 	//printf("set up data \n");
 	
@@ -108,14 +108,20 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			componentData * compData = currentModule->cpData[i];
 			dgSceneObject  * sceneObject = compBuilder.createCompByName(compData->name);
 			
+			if (sceneObject) {
+				
+				/*
 			printf("\ncomponent built : ");
 			printf(sceneObject->name.c_str());
 			printf("\n");
-			
+			*/
+				
+				
 			sceneObject->setPosition(compData->pos.x, compData->pos.y);
 			sceneObject->rotation = compData->rotation;
 			sceneObject->adress = compData->adress;
 			currentModule->cpObjects.push_back(sceneObject);
+			}
 						
 		}
 		
@@ -127,17 +133,21 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			
 			dgSceneObject  * sceneObject =  currentModule->cpObjects[j];
 			
+			/*
 			printf("\ndouble check object : ");
 			printf(sceneObject->name.c_str());
 			printf(" | ");
 			printf(sceneObject->type.c_str());
 			printf("\n");
+			 */
 			
 			if ( sceneObject->activityObjectRefName != "") {
 				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->activityObjectRefName);
+				if(refSceneObject) {
 				refSceneObject->pos = sceneObject->activitySwitchObjPos;
 				sceneObject->addActivitySwitchObject(refSceneObject);
-				printf("add activity object : " );
+				}
+				//printf("add activity object : " );
 			}
 			
 			
@@ -150,8 +160,10 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 				
 				for (int k=0; k<numOfRows; k++ ) {
 				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->sceneObjectRefName);
-				sceneObject->addSwitchObject(refSceneObject);
-				sceneObject->init();
+				if ( refSceneObject) {
+					sceneObject->addSwitchObject(refSceneObject);
+					sceneObject->init();
+					}
 				}
 			}
 			
@@ -165,6 +177,16 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 }
 
 
+void dgData::clean() {
+
+	for ( int u=0; u< data.size(); u++ ) {
+		data[u]->clean();
+		delete data[u];
+		//data = NULL;
+	}
+	data.clear();
+	
+}
 
 
 void dgData::debug () {

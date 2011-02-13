@@ -9,3 +9,10 @@
 
 #include "componentData.h"
 
+componentData::componentData() {
+
+}
+
+componentData::~componentData() {
+
+}

@@ -10,8 +10,33 @@
 #include "moduleData.h"
 
 
+moduleData::moduleData() {
+	
+}
+
+moduleData::~moduleData() {
+	
+}
+
 void moduleData::setup() {
 
+	
+}
+
+void moduleData::clean () {
+	
+	
+	for ( int i=0; i<cpData.size(); i++ ) {
+		delete cpData[i];
+		//cpData[i] = NULL;		
+	}
+	cpData.clear();
+	
+	for ( int j=0; j<cpObjects.size(); j++ ) {
+		delete cpObjects[j];
+		cpObjects[j] = NULL;		
+	}
+	cpObjects.clear();
 	
 }
 

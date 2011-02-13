@@ -17,7 +17,9 @@
 class componentData {
 
 	public:
-		
+	
+	componentData();
+	~componentData();
 	string		name;
 	string		adress;
 	ofPoint		range;

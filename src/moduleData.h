@@ -19,12 +19,20 @@
 class moduleData {
 
 	public:
+	
+	moduleData();
+	~moduleData();
 	void setup();
 	
 	vector <componentData*>	cpData;
 	vector <dgSceneObject*>	cpObjects;
 	
 	int						name;
+	
+	void clean();
+	
+	private:
+	
 	
 	
 };

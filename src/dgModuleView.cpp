@@ -25,7 +25,7 @@ void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscR
 
 void dgModuleView::update() {
 	
-	processOsc();
+	
 	
 	
 	
@@ -43,7 +43,7 @@ void dgModuleView::update() {
 
 void dgModuleView::draw () {
 	
-	
+	printf("draw module\n");
 	moduleData * currentModule = layoutData->data[currentViewID];
 	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
@@ -69,17 +69,17 @@ void dgModuleView::processOsc () {
 		if ( object ) {
 			object->setPct(oscReceiver->messages[i]->value / 5);
 			//object->active = true;
-			continue;
+			//continue;
 		}
 		
 		for ( int j=0; j < oscReceiver->messages[i]->stringArgs.size(); j++ ) {			
 				object =  getRelatedObject( oscReceiver->messages[i]->stringArgs[j]);
 				if ( object ) {
 					//object->active = true;
-					printf("ptinnn");
+					//printf("ptinnn");
 					object->setPct(oscReceiver->messages[i]->value / 127);
 				}
-				continue;
+				//continue;
 		}
 		
 		
@@ -95,15 +95,16 @@ dgSceneObject  * dgModuleView::getRelatedObject (string val) {
 	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		
+		/*
 		printf("\ncheck module:: ");
 		printf(currentModule->cpObjects[i]->adress.c_str());
 		printf("\n");
 		printf("\nval :: ");
 		printf(val.c_str());
 		printf("\n");
+		*/
 		
 		if ( currentModule->cpObjects[i]->adress == val  ) {
-			printf("youpii");
 			return currentModule->cpObjects[i];
 		}
 	}
@@ -117,6 +118,9 @@ dgSceneObject  * dgModuleView::getRelatedObject (string val) {
 
 */
 
+void dgModuleView::onOscEvent() {
+	processOsc();
+}
 
 void dgModuleView::setCurrentView(int viewID) {
 	

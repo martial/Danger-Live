@@ -26,6 +26,7 @@ class dgModuleView {
 		
 	void setCurrentView(int viewID);
 	
+	void onOscEvent();
 	
 	private:
 	

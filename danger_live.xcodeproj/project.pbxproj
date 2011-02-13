@@ -46,6 +46,8 @@
 		833ACE0113004EB900B1EAF0 /* dgData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0013004EB900B1EAF0 /* dgData.cpp */; };
 		833ACE0413004ECF00B1EAF0 /* moduleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0313004ECF00B1EAF0 /* moduleData.cpp */; };
 		833ACE1B130054D800B1EAF0 /* componentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE1A130054D800B1EAF0 /* componentData.cpp */; };
+		83586CB6130814DF00465D1D /* dgDebugView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83586CB5130814DF00465D1D /* dgDebugView.cpp */; };
+		83586D7813081E9C00465D1D /* ofxFBOTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83586D7613081E9C00465D1D /* ofxFBOTexture.cpp */; };
 		83B7009313017B9100CDE6B4 /* dgCompBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */; };
 		83B704AD1301CCC400CDE6B4 /* customOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B704AC1301CCC400CDE6B4 /* customOscMessage.cpp */; };
 		83B7055B1301D55B00CDE6B4 /* OscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B7055A1301D55B00CDE6B4 /* OscReceiver.cpp */; };
@@ -262,6 +264,10 @@
 		833ACE0313004ECF00B1EAF0 /* moduleData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moduleData.cpp; sourceTree = "<group>"; };
 		833ACE19130054D800B1EAF0 /* componentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = componentData.h; sourceTree = "<group>"; };
 		833ACE1A130054D800B1EAF0 /* componentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = componentData.cpp; sourceTree = "<group>"; };
+		83586CB4130814DF00465D1D /* dgDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgDebugView.h; sourceTree = "<group>"; };
+		83586CB5130814DF00465D1D /* dgDebugView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgDebugView.cpp; sourceTree = "<group>"; };
+		83586D7613081E9C00465D1D /* ofxFBOTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFBOTexture.cpp; sourceTree = "<group>"; };
+		83586D7713081E9C00465D1D /* ofxFBOTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFBOTexture.h; sourceTree = "<group>"; };
 		83B7009113017B9100CDE6B4 /* dgCompBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgCompBuilder.h; sourceTree = "<group>"; };
 		83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgCompBuilder.cpp; sourceTree = "<group>"; };
 		83B704AB1301CCC400CDE6B4 /* customOscMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customOscMessage.h; sourceTree = "<group>"; };
@@ -301,7 +307,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* danger_liveDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = danger_liveDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* danger_live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = danger_live.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -666,6 +672,8 @@
 		833ACD2A13003E3100B1EAF0 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				83586D7613081E9C00465D1D /* ofxFBOTexture.cpp */,
+				83586D7713081E9C00465D1D /* ofxFBOTexture.h */,
 				83163E541302B22F00CBAF99 /* ofxUtils.cpp */,
 				83163E551302B22F00CBAF99 /* ofxUtils.h */,
 				83ED6E8D13031B3B0022FD58 /* ofxFbo.h */,
@@ -804,6 +812,15 @@
 				83B7055A1301D55B00CDE6B4 /* OscReceiver.cpp */,
 			);
 			name = osc;
+			sourceTree = "<group>";
+		};
+		83586CB3130814D400465D1D /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				83586CB4130814DF00465D1D /* dgDebugView.h */,
+				83586CB5130814DF00465D1D /* dgDebugView.cpp */,
+			);
+			name = debug;
 			sourceTree = "<group>";
 		};
 		83B7009013017B7B00CDE6B4 /* compBuilder */ = {
@@ -1018,7 +1035,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				E4B69B5B0A3A1756003C02F2 /* danger_liveDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* danger_live.app */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4C2422310CC54B6004149E2 /* openFrameworks */,
@@ -1033,6 +1050,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				83586CB3130814D400465D1D /* debug */,
 				833ACDBC130047C300B1EAF0 /* osc */,
 				833ACD401300403100B1EAF0 /* scene_objects */,
 				833ACD2A13003E3100B1EAF0 /* utils */,
@@ -1151,7 +1169,7 @@
 			);
 			name = danger_live;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* danger_liveDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* danger_live.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1261,6 +1279,8 @@
 				83FC1CE2130480D700924527 /* dgMultipleLedObject.cpp in Sources */,
 				83CD762B1305987100DEB4B5 /* dgRotationBtnObject.cpp in Sources */,
 				83099462130704DE009DBBF1 /* ofxDirList.cpp in Sources */,
+				83586CB6130814DF00465D1D /* dgDebugView.cpp in Sources */,
+				83586D7813081E9C00465D1D /* ofxFBOTexture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

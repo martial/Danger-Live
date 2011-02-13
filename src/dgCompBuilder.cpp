@@ -33,12 +33,13 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 	
 	dgSceneObject  * component;
 	
-	
+	/*
 	printf("\ncheck for name : ");
 	printf(name.c_str());
 	printf("\n");
 	
 	printf("num of components: %d :", numOfComponents);
+	 */
 	
 	for ( int i = 0; i<numOfComponents; i++ ) {
 		
@@ -54,8 +55,8 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 
 			if ( compName == name ) {
 				
-				printf(" | name found");
-				printf("\n");
+				//printf(" | name found");
+				//printf("\n");
 				
 		
 				string type = XML.getValue("type", "");

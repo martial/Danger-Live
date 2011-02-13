@@ -15,6 +15,7 @@ void testApp::setup(){
 	/* Midi / OSC */
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
+	ofAddListener(oscReceiver.oscEvent,this,&testApp::onOscEvent);
 	
 	/*
 	midiListener.setup(scene);
@@ -26,7 +27,7 @@ void testApp::setup(){
 	 
 	/* data */
 	builder.setup("components.xml");
-	data.setup("layouts.xml");
+	data.setup();
 	data.addSceneObjects(builder);
 	
 	/* scene */
@@ -34,9 +35,12 @@ void testApp::setup(){
 	
 	scene.setup(data, videoData, builder, oscReceiver);
 	
-	texture.allocate(ofGetWidth(), ofGetHeight(),GL_RGB);
-	fbo.setup(ofGetWidth(), ofGetHeight());
-	fbo.attach(texture);
+	
+	debugView.setup();
+	
+	fbo.allocate(1920, 1080,GL_RGB);
+	//fbo.setup(ofGetWidth(), ofGetHeight());
+	//fbo.attach(texture);
 }
 
 //--------------------------------------------------------------
@@ -50,15 +54,26 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 	
-	//fbo.begin();
+
+	
+	fbo.begin();
 	ofEnableAlphaBlending();
 	scene.draw();
 	ofDisableAlphaBlending();
-	//fbo.end();
+	fbo.end();
 	
-	//fbo.draw(0, 0, 320, 240);
-	oscReceiver.debugDraw();
 	
+	
+	if ( debugView.visible ) {
+		fbo.draw(ofGetWidth()*.5 - fbo.texData.width*.5, ofGetHeight()*.5-fbo.texData.height*.5);
+		debugView.draw();
+		debugView.drawSceneFbo(fbo);
+	} else {
+		
+		fbo.draw(0, 0);
+		oscReceiver.debugDraw();
+		
+	}
 	//ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
 	
 }
@@ -81,6 +96,15 @@ void testApp::keyPressed(int key){
 		case 'w':
 			scene.setCurrentView(0);
 			break;
+			
+		case 'p':
+			debugView.visible = !debugView.visible;
+			break;
+		
+		#ifdef EDITOR_MODE
+		case 'r':
+			reset();
+		#endif
 		
 		// up
 		case 357:
@@ -114,7 +138,19 @@ void testApp::keyPressed(int key){
 void testApp::onBeatEvent(int & f){
 	
 	scene.onBeatEvent();
+	debugView.onBeatEvent();
+}
+
+void testApp::onOscEvent(int & f ) {
+	scene.onOscEvent();
 	
+}
+
+void testApp::reset () {
+	builder.setup("components.xml");
+	data.clean();
+	data.setup();
+	data.addSceneObjects(builder);
 }
 
 

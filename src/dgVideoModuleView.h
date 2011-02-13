@@ -24,6 +24,7 @@ class dgVideoModuleView {
 	void draw();
 	
 	void onBeatEvent (float beatTime);
+	
 	void goNext();
 	void goNext(int & f);
 	void play();

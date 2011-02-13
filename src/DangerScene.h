@@ -32,6 +32,7 @@ class DangerScene {
 	void changeMode (int mode); 
 	
 	
+	void onOscEvent();
 	void onBeatEvent();
 	
 	/* delete this later */

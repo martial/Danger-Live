@@ -38,14 +38,17 @@ void dgVideoModuleView::draw() {
 	 */
 		
 	float x,y;
-	ofxVec2f videoSize = ofxUtils::getSizeRatio(ofGetWidth(), ofGetHeight(), videoSet->videos[currentVideoID]->width, videoSet->videos[currentVideoID]->height);
-	x = ofGetWidth() *.5 - videoSize.x*.5;
-	y = ofGetHeight() *.5 - videoSize.y*.5;
+	ofxVec2f videoSize = ofxUtils::getSizeRatio(1920, 1080, videoSet->videos[currentVideoID]->width, videoSet->videos[currentVideoID]->height);
+	x = 1920 *.5 - videoSize.x*.5;
+	y = 1080 *.5 - videoSize.y*.5;
 	float scalew = (videoSize.x  ) /  videoSet->videos[currentVideoID]->width;
 	float scaleh = (videoSize.y  ) / videoSet->videos[currentVideoID]->height;
 	
 	
 	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
+	
+	
+	printf("draw video\n");
 	
 	//videoSet->videos[currentVideoID]->draw(0,0);
 	

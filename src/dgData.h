@@ -20,13 +20,17 @@
 class dgData  {
 
 	public:
-	void setup(string xmlURL);
+	void setup();
 	void addSceneObjects (dgCompBuilder & compBuilder);
 	void debug();
+	void clean();
 	
 	vector <moduleData*>		data;
 	
 	private:
+	
+	
+	
 	
 	ofxXmlSettings				XML;
 	ofxDirList					DIR;
