@@ -1,0 +1,5 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp: In member function 'dgSceneObject* dgCompBuilder::createCompByName(std::string)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:189: error: 'dgImgSequenceObject' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:189: error: 'imgSeqObject' was not declared in this scope
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:189: error: expected type-specifier before 'dgImgSequenceObject'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgCompBuilder.cpp:189: error: expected `;' before 'dgImgSequenceObject'

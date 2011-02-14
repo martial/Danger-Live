@@ -24,7 +24,7 @@ void dgData::setup () {
 	//data.reserve(numOfLayouts);
 	
 	
-	printf ("Number of laouts : %d\n", numOfLayouts);
+	printf ("Number of layouts : %d\n", numOfLayouts);
 	
 	for (int i=0; i<numOfLayouts; i++ ) {
 		
@@ -46,7 +46,7 @@ void dgData::setup () {
 		
 		// go through components
 		
-		XML.pushTag("module", i);
+		XML.pushTag("module", 0);
 		
 		int numOfComponents = XML.getNumTags("component");
 		

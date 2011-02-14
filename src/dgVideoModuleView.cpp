@@ -48,7 +48,7 @@ void dgVideoModuleView::draw() {
 	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
 	
 	
-	printf("draw video\n");
+	//printf("draw video\n");
 	
 	//videoSet->videos[currentVideoID]->draw(0,0);
 	

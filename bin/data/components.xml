@@ -2,6 +2,69 @@
 <components>
 
     
+     <comp>
+		
+		<name>knob_mid_a</name>
+		<type>video</type>
+		<url>components/ROTATIFS/MOYEN/A/bouton-rotatif-moyen-A.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>knob_big_a_seq</name>
+		<type>image_sequence</type>
+		<url>videos/knob/</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>knob_big_a</name>
+		<type>video</type>
+		<url>components/ROTATIFS/GROS/A/bouton-rotatif-gros-A.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
 
 	<comp>
 		
@@ -10,7 +73,7 @@
 		<url>videos/knob.mov</url>
 		
 		<medias>
-		<!--
+		<!--r
 			<media>
 				<type>image</type>
 				<url>images/back.jpg</url>
@@ -297,11 +360,44 @@
             <!-- row-->
             <item>12</item>
             <!-- blur rate-->
+            <item>.001</item>
+        </config>
+        
+			
+	</comp>
+    
+     <comp>
+		<name>METER_VU_DIGITAL_4_2</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_DIGITAL</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>4</item>
+            <!-- blur rate-->
             <item>.1</item>
         </config>
         
 			
 	</comp>
+    
+    <comp>
+		<name>METER_VU_DIGITAL_6_2</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_DIGITAL</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>6</item>
+            <!-- blur rate-->
+            <item>.1</item>
+        </config>
+        
+			
+	</comp>
+
     
     
 	

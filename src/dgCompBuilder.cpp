@@ -182,6 +182,17 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					component = rotObject;
 					
 				}
+				
+				if ( type == "image_sequence" ) {
+					
+					
+					dgImgSequenceObject * imgSeqObject = new dgImgSequenceObject();
+					imgSeqObject->setup( url, compName, type);
+					
+										
+					component = imgSeqObject;
+					
+				}
 
 				// see if component has some extras
 				

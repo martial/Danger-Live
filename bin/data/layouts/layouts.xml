@@ -111,7 +111,7 @@
         <component>
 			
 			<name>POT_PETIT_B</name>
-			<osc_adress>sidechain1</osc_adress>
+			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
 			<position x="430" y="450"></position>			
 		
@@ -143,7 +143,7 @@
      <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>beatrep_</osc_adress>
+			<osc_adress>eqlow_mixer1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="0" y="134"></position>			
 		
@@ -163,7 +163,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqlow_mixer1</osc_adress>
+			<osc_adress>eqhi_mixer1</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="0" y="392"></position>			
 		
@@ -173,7 +173,7 @@
         <component>
 			
 			<name>METER_VU</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/signal/DRUM_LOOP/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="130" y="470"></position>
             			
@@ -183,7 +183,7 @@
          <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>pitchshift1</osc_adress>
+			<osc_adress>eqlow_mixer2</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="240" y="134"></position>			
 		
@@ -192,7 +192,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqmid_mixer1</osc_adress>
+			<osc_adress>eqmid_mixer2</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="240" y="264"></position>			
 		
@@ -201,7 +201,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqlow_mixer1</osc_adress>
+			<osc_adress>eqhi_mixer2</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="240" y="392"></position>			
 		
@@ -210,7 +210,7 @@
         <component>
 			
 			<name>METER_VU</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/signal/Danger_R1/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="355" y="470"></position>			
 		
@@ -221,7 +221,7 @@
             <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqhi_mixer1</osc_adress>
+			<osc_adress>eqlow_mixer3</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="960" y="134"></position>			
 		
@@ -230,7 +230,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqmid_mixer1</osc_adress>
+			<osc_adress>eqmid_mixer3</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="960" y="264"></position>			
 		
@@ -239,7 +239,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqlow_mixer1</osc_adress>
+			<osc_adress>eqhi_mixer3</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="960" y="392"></position>			
 		
@@ -257,7 +257,7 @@
          <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqhi_mixer1</osc_adress>
+			<osc_adress>eqlow_mixer4</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="1200" y="134"></position>			
 		
@@ -266,7 +266,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqmid_mixer1</osc_adress>
+			<osc_adress>eqmid_mixer4</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="1200" y="264"></position>			
 		
@@ -275,7 +275,7 @@
         <component>
 			
 			<name>BTN_ROT</name>
-			<osc_adress>eqlow_mixer1</osc_adress>
+			<osc_adress>eqhi_mixer4</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="1200" y="392"></position>			
 		
@@ -294,7 +294,7 @@
         <component>
 			
 			<name>METER_VU_DIGITAL</name>
-			<osc_adress>/track/signal</osc_adress>
+			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
 			<position x="560" y="975"></position>			
 		

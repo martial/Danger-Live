@@ -49,6 +49,8 @@ void dgRotationBtnObject::update () {
 	btnRotation = startingRot + (endingRot*pct);
 	
 	
+	
+	
 }
 
 void dgRotationBtnObject::draw () {
@@ -72,3 +74,9 @@ void dgRotationBtnObject::draw () {
 	
 	ofDisableAlphaBlending();
 }
+
+void dgRotationBtnObject::setPct(float pct ) {
+	dgSceneObject::setPct(pct);
+	
+	
+	}

@@ -11,19 +11,19 @@ void testApp::setup(){
 	
 	
 	ofSetVerticalSync(true);
-	ofSetFrameRate(60);
+	//ofSetFrameRate(60);
 	/* Midi / OSC */
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
 	ofAddListener(oscReceiver.oscEvent,this,&testApp::onOscEvent);
 	
-	/*
+	
 	midiListener.setup(scene);
 	midiIn.listPorts();
 	midiIn.openPort(0); 
 	midiIn.addListener(&midiListener);
-	//printf("ahou3\n");
-	*/
+	
+	
 	 
 	/* data */
 	builder.setup("components.xml");
@@ -59,21 +59,36 @@ void testApp::draw(){
 	fbo.begin();
 	ofEnableAlphaBlending();
 	scene.draw();
+	oscReceiver.debugDraw();
 	ofDisableAlphaBlending();
 	fbo.end();
 	
 	
 	
+	
+	ofSetColor(255, 255, 255);
+	debugView.draw();
+	debugView.drawSceneFbo(fbo);
+	// draw proj
+	//fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
+	fbo.draw(1440, 0);
+	
+	/*
 	if ( debugView.visible ) {
-		fbo.draw(ofGetWidth()*.5 - fbo.texData.width*.5, ofGetHeight()*.5-fbo.texData.height*.5);
+		fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
+		//fbo.draw(1440 + (1920 *.5)  - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
 		debugView.draw();
 		debugView.drawSceneFbo(fbo);
 	} else {
 		
-		fbo.draw(0, 0);
-		oscReceiver.debugDraw();
+		debugView.draw();
+		debugView.drawSceneFbo(fbo);
+		fbo.draw(1440, 0);
+		//oscReceiver.debugDraw();
 		
 	}
+	 
+	 */
 	//ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
 	
 }
@@ -98,7 +113,7 @@ void testApp::keyPressed(int key){
 			break;
 			
 		case 'p':
-			debugView.visible = !debugView.visible;
+			//debugView.visible = !debugView.visible;
 			break;
 		
 		#ifdef EDITOR_MODE
@@ -126,6 +141,9 @@ void testApp::keyPressed(int key){
 			scene.changeMode(1);
 			break;
 			
+		case 'o':
+			oscReceiver.setup();
+			break;
 			
 		default:
 			break;
@@ -141,8 +159,8 @@ void testApp::onBeatEvent(int & f){
 	debugView.onBeatEvent();
 }
 
-void testApp::onOscEvent(int & f ) {
-	scene.onOscEvent();
+void testApp::onOscEvent(customOscMessage & f ) {
+	scene.onOscEvent(f);
 	
 }
 

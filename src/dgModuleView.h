@@ -26,12 +26,12 @@ class dgModuleView {
 		
 	void setCurrentView(int viewID);
 	
-	void onOscEvent();
+	void onOscEvent(customOscMessage & msg);
 	
 	private:
 	
 	/* Communication OSC*/
-	void processOsc ();
+	void processOsc (customOscMessage & msg);
 	dgSceneObject  * getRelatedObject(string val);
 
 	/* Instances  */

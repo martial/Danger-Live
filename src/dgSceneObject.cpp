@@ -41,14 +41,14 @@ void dgSceneObject::setup (string name, string type) {
 	width = 0;
 	height = 0;
 	
-	blurRate = 0;
+	blurRate = 0.0;
 	
-	rotation = 0;
+	rotation = 0.0;
 	
 	active = false;
 	
-	pct = 0;
-	oldPct = 0;
+	pct = 0.0;
+	oldPct = 0.0;
 	
 	activitySwitchObject = NULL;
 	
@@ -145,8 +145,9 @@ void dgSceneObject::setPosition (int x, int y) {
 
 void dgSceneObject::setPct(float pct) {
 	
-	
+	if ( pct != this->pct   ) {
 	this->pct = pct;
+	}
 	
 }
 

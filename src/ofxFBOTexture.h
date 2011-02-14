@@ -51,7 +51,7 @@ public:
 	
 	float screenFov;
 	
-	void allocate(int w, int h, int internalGlDataType = GL_RGBA, int numSamples = 0);
+	void allocate(int w, int h, int internalGlDataType = GL_RGB, int numSamples = 0);
 	void begin();
 	void end();
 		

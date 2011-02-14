@@ -112,8 +112,8 @@ void DangerScene::changeMode (int mode) {
 	
 }
 
-void DangerScene::onOscEvent() {
-	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onOscEvent();
+void DangerScene::onOscEvent(customOscMessage & msg) {
+	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onOscEvent(msg);
 }
 
 void DangerScene::onBeatEvent () {

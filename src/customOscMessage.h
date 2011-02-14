@@ -12,8 +12,11 @@
 #define CUSTOMOSCMESSAGE
 
 #include "ofMain.h"
+//#include "OscReceiver.h"
 
-class customOscMessage {
+class OscReceiver;
+
+class customOscMessage : ofEventArgs {
 
 	
 	public : 

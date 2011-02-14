@@ -15,7 +15,7 @@ void dgDebugView::setup() {
 	digitalFont_tiny.loadFont("fonts/digital-7_italic.ttf", 18);
 	beatLatency = 200;
 	currentTime = 0;
-	visible = false;
+	visible = true;
 }
 
 void dgDebugView::draw() {
@@ -56,20 +56,22 @@ void dgDebugView::drawSceneFbo (ofxFBOTexture & texture) {
 	
 	float x,y;
 	ofxVec2f videoSize = ofxUtils::getSizeRatio(960, 540, texture.texData.width, texture.texData.height);
-	x = ofGetWidth() *.5 - videoSize.x*.5;
+	
+	//
+	x = 1440 *.5 - videoSize.x*.5;
 	//y = ofGetHeight() *.5 - videoSize.y*.5;
 	float scalew = (videoSize.x  ) /  texture.texData.width;
 	float scaleh = (videoSize.y  ) / texture.texData.height;
 	
 	
 	// little border ( qui va bien )
-	y =  90 + (ofGetHeight()-90) * .5 - videoSize.y * .5;
+	y =  90 + (900-90) * .5 - videoSize.y * .5;
 	
 	ofEnableAlphaBlending();
 	ofSetColor(255, 255, 255, 30);
 	ofRect(x-1, y-1, videoSize.x+2, videoSize.y+2);
 	ofDisableAlphaBlending();
-	
+	ofSetColor(255, 255, 255, 255);
 	texture.draw(x,y ,videoSize.x,videoSize.y);
 	
 	

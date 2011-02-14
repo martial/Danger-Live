@@ -13,6 +13,7 @@
 #include "ofEvents.h"
 #include "ofxFBOTexture.h"
 #include "dgDebugView.h"
+#include "customOscMessage.h"
 
 #define EDITOR_MODE
 
@@ -26,7 +27,7 @@ class testApp : public ofBaseApp{
 		
 		void reset();
 		void onBeatEvent(int & f);
-		void onOscEvent(int & f ) ;
+		void onOscEvent(customOscMessage & f ) ;
 		void keyPressed  (int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );

@@ -19,7 +19,7 @@
 #include "dgFaderObject.h"
 #include "dgMultipleLedObject.h"
 #include "dgRotationBtnObject.h"
-
+#include "dgImgSequenceObject.h"
 
 class dgCompBuilder {
 	

@@ -19,6 +19,7 @@
 #include "dgCompBuilder.h"
 #include "OscReceiver.h"
 #include "dgVideoModule.h"
+#include "customOscMessage.h"
 
 class DangerScene {
 
@@ -32,7 +33,7 @@ class DangerScene {
 	void changeMode (int mode); 
 	
 	
-	void onOscEvent();
+	void onOscEvent(customOscMessage & msg);
 	void onBeatEvent();
 	
 	/* delete this later */

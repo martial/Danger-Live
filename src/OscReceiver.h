@@ -17,7 +17,7 @@
 //#include "ofEvents.h"
 #include "ofEvents.h"
 
-#define OSC_PORT 9001
+#define OSC_PORT 12345
 #define NUM_MSG_STRINGS 24
 
 class OscReceiver {
@@ -29,10 +29,10 @@ public:
 	void debugDraw();
 	
 	vector<customOscMessage*> * getMessages();
-	vector<customOscMessage*> messages;
+	vector<customOscMessage> messages;
 	
 	ofEvent<int>	beatEvent;
-	ofEvent<int>	oscEvent;
+	ofEvent<customOscMessage>	oscEvent;
 	//ofEvent<float>	test;
 	
 private:

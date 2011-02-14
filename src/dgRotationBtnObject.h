@@ -24,6 +24,8 @@ class dgRotationBtnObject : public dgSceneObject {
 	void					update();
 	void					draw();
 	
+	
+	void					setPct(float pct);
 	void					addExtraImage(string url);
 	void					addActivitySwitchObject(dgSceneObject * actSwitchObject);
 	

@@ -30,9 +30,9 @@ void OscReceiver::update () {
 	}
 	
 	for (int i=0; i<messages.size(); i++ ) {
-		delete messages[i];
+		//delete messages[i];
 	}
-	messages.clear();
+	//messages.clear();
 	
 	
 	// check for waiting messages
@@ -46,35 +46,36 @@ void OscReceiver::update () {
 		
 		
 				 
-		 customOscMessage * msg = new customOscMessage();
+		 customOscMessage  msg;
 		 messages.push_back(msg);
-		 msg->address = m.getAddress();
+		 msg.address = m.getAddress();
 		 
 		 for ( int i=0; i<m.getNumArgs(); i++ ) {
 			 if ( m.getArgType( i ) == OFXOSC_TYPE_STRING ) {
-				 msg->stringArgs.push_back(m.getArgAsString(i));
+				 msg.stringArgs.push_back(m.getArgAsString(i));
 				 //printf (m.getArgAsString(i))
 			 }
 				
 			if( m.getArgType( i ) == OFXOSC_TYPE_FLOAT ){
-				msg->value = m.getArgAsFloat( i );
+				msg.value = m.getArgAsFloat( i );
 				//printf ("yo! : %f\n", msg->value);
 			}
 			
 		 }
 		 
-		if ( msg->address == "beat" ) {
+		if ( msg.address == "beat" ) {
 			int foo = 0;
 			ofNotifyEvent(beatEvent,foo,this);
 		}else {
-			int foo = 0;
-			ofNotifyEvent(oscEvent,foo,this);
+			//int foo = 0;
+			
+			ofNotifyEvent(oscEvent,msg,this);
 		}
 		
 		
 		
 		
-		
+		/*
 		 // unrecognized message: display on the bottom of the screen
 		 string msg_string;
 		 msg_string = "";
@@ -118,7 +119,7 @@ void OscReceiver::update () {
 		 // clear the next line
 		 msg_strings[current_msg_string] = "";
 		 
-		
+		*/
 	}
 		 
 	

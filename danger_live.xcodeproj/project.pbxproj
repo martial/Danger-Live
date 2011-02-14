@@ -54,6 +54,7 @@
 		83C2CC261300657D00146392 /* dgModuleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C2CC251300657D00146392 /* dgModuleView.cpp */; };
 		83C2CC291300671600146392 /* dgImageObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C2CC281300671600146392 /* dgImageObject.cpp */; };
 		83CD762B1305987100DEB4B5 /* dgRotationBtnObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83CD762A1305987100DEB4B5 /* dgRotationBtnObject.cpp */; };
+		83E8AFDC130964E400F4442E /* dgImgSequenceObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E8AFDB130964E400F4442E /* dgImgSequenceObject.cpp */; };
 		83ED6E8F13031B3B0022FD58 /* ofxFbo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83ED6E8E13031B3B0022FD58 /* ofxFbo.cpp */; };
 		83FC1BBE1304742000924527 /* dgFaderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83FC1BBD1304742000924527 /* dgFaderObject.cpp */; };
 		83FC1CE2130480D700924527 /* dgMultipleLedObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83FC1CE1130480D700924527 /* dgMultipleLedObject.cpp */; };
@@ -280,6 +281,8 @@
 		83C2CC281300671600146392 /* dgImageObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgImageObject.cpp; sourceTree = "<group>"; };
 		83CD76291305987100DEB4B5 /* dgRotationBtnObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgRotationBtnObject.h; sourceTree = "<group>"; };
 		83CD762A1305987100DEB4B5 /* dgRotationBtnObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgRotationBtnObject.cpp; sourceTree = "<group>"; };
+		83E8AFDA130964E400F4442E /* dgImgSequenceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgImgSequenceObject.h; sourceTree = "<group>"; };
+		83E8AFDB130964E400F4442E /* dgImgSequenceObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgImgSequenceObject.cpp; sourceTree = "<group>"; };
 		83ED6E8D13031B3B0022FD58 /* ofxFbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFbo.h; sourceTree = "<group>"; };
 		83ED6E8E13031B3B0022FD58 /* ofxFbo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFbo.cpp; sourceTree = "<group>"; };
 		83FC1BBC1304742000924527 /* dgFaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgFaderObject.h; sourceTree = "<group>"; };
@@ -685,6 +688,8 @@
 		833ACD401300403100B1EAF0 /* scene_objects */ = {
 			isa = PBXGroup;
 			children = (
+				83E8AFDA130964E400F4442E /* dgImgSequenceObject.h */,
+				83E8AFDB130964E400F4442E /* dgImgSequenceObject.cpp */,
 				83B7009013017B7B00CDE6B4 /* compBuilder */,
 				833ACD411300405600B1EAF0 /* dgSceneObject.h */,
 				833ACD421300405600B1EAF0 /* dgSceneObject.cpp */,
@@ -1281,6 +1286,7 @@
 				83099462130704DE009DBBF1 /* ofxDirList.cpp in Sources */,
 				83586CB6130814DF00465D1D /* dgDebugView.cpp in Sources */,
 				83586D7813081E9C00465D1D /* ofxFBOTexture.cpp in Sources */,
+				83E8AFDC130964E400F4442E /* dgImgSequenceObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
