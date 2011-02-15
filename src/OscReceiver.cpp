@@ -66,6 +66,8 @@ void OscReceiver::update () {
 		if ( msg.address == "beat" ) {
 			int foo = 0;
 			ofNotifyEvent(beatEvent,foo,this);
+			
+		
 		}else {
 			//int foo = 0;
 			
@@ -74,8 +76,8 @@ void OscReceiver::update () {
 		
 		
 		
+	
 		
-		/*
 		 // unrecognized message: display on the bottom of the screen
 		 string msg_string;
 		 msg_string = "";
@@ -119,7 +121,7 @@ void OscReceiver::update () {
 		 // clear the next line
 		 msg_strings[current_msg_string] = "";
 		 
-		*/
+		
 	}
 		 
 	

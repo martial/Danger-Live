@@ -14,6 +14,7 @@
 #include "ofxFBOTexture.h"
 #include "dgDebugView.h"
 #include "customOscMessage.h"
+#include "dgSceneEffects.h"
 
 #define EDITOR_MODE
 
@@ -50,7 +51,8 @@ class testApp : public ofBaseApp{
 	
 		dgDebugView				debugView;
 	
-		ofxFBOTexture						fbo;
+		ofxFBOTexture				fbo;
+		dgSceneEffects				sceneEffects;
 		//ofTexture					texture;
 };
 

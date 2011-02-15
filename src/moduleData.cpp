@@ -23,6 +23,15 @@ void moduleData::setup() {
 	
 }
 
+dgSceneObject * moduleData::getComponentByNameID (string nameId ) {
+	for ( int j=0; j<cpObjects.size(); j++ ) {
+		if ( cpObjects[j]->nameId == nameId ) {
+			return cpObjects[j];
+		}
+	}
+	return NULL;
+}
+
 void moduleData::clean () {
 	
 	

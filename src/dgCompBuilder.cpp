@@ -193,6 +193,25 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					component = imgSeqObject;
 					
 				}
+				
+				if ( type == "progress_bar" ) {
+					
+					
+					dgProgressBarObject * progressObject = new dgProgressBarObject();
+					progressObject->setup( compName, type);
+					
+					XML.pushTag("config", 0);
+					int numOfConfigsValues = XML.getNumTags("item");
+					for (int x=0; x<numOfConfigsValues;x++ ) {
+						float val = ofToFloat(XML.getValue("item", "", x));
+						progressObject->addConfig(val);	
+					}
+					XML.popTag();
+					// ok. How many cols we have ?
+					
+					component = progressObject;
+					
+				}
 
 				// see if component has some extras
 				

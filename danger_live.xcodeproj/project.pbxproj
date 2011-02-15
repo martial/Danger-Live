@@ -17,6 +17,12 @@
 		83163E6C1302B26900CBAF99 /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E601302B26900CBAF99 /* ofxMatrix4x4.cpp */; };
 		83163E6D1302B26900CBAF99 /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E651302B26900CBAF99 /* ofxQuaternion.cpp */; };
 		831640051302F34800CBAF99 /* dgSwitchObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831640041302F34800CBAF99 /* dgSwitchObject.cpp */; };
+		83265C2C130A98A2003C754A /* dgModuleIntroWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */; };
+		83265C2F130A9A6B003C754A /* dgAbstractModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265C2E130A9A6B003C754A /* dgAbstractModuleWrapper.cpp */; };
+		83265CD9130AC577003C754A /* dgProgressBarObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265CD8130AC577003C754A /* dgProgressBarObject.cpp */; };
+		83265E55130AE16B003C754A /* dgSceneEffects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265E54130AE16B003C754A /* dgSceneEffects.cpp */; };
+		83265E58130AE3BB003C754A /* dgAbstractEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265E57130AE3BB003C754A /* dgAbstractEffect.cpp */; };
+		83265E5B130AE4E2003C754A /* flickrEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265E5A130AE4E2003C754A /* flickrEffect.cpp */; };
 		833ACC7F130036D600B1EAF0 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ACC7E130036D600B1EAF0 /* CoreMIDI.framework */; };
 		833ACC83130036EF00B1EAF0 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ACC82130036EF00B1EAF0 /* QTKit.framework */; };
 		833ACC951300370400B1EAF0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833ACC941300370400B1EAF0 /* CoreVideo.framework */; };
@@ -159,6 +165,18 @@
 		83163E6A1302B26900CBAF99 /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
 		831640031302F34800CBAF99 /* dgSwitchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgSwitchObject.h; sourceTree = "<group>"; };
 		831640041302F34800CBAF99 /* dgSwitchObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgSwitchObject.cpp; sourceTree = "<group>"; };
+		83265C2A130A98A2003C754A /* dgModuleIntroWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgModuleIntroWrapper.h; sourceTree = "<group>"; };
+		83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgModuleIntroWrapper.cpp; sourceTree = "<group>"; };
+		83265C2D130A9A6B003C754A /* dgAbstractModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgAbstractModuleWrapper.h; sourceTree = "<group>"; };
+		83265C2E130A9A6B003C754A /* dgAbstractModuleWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgAbstractModuleWrapper.cpp; sourceTree = "<group>"; };
+		83265CD7130AC577003C754A /* dgProgressBarObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgProgressBarObject.h; sourceTree = "<group>"; };
+		83265CD8130AC577003C754A /* dgProgressBarObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgProgressBarObject.cpp; sourceTree = "<group>"; };
+		83265E53130AE16B003C754A /* dgSceneEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgSceneEffects.h; sourceTree = "<group>"; };
+		83265E54130AE16B003C754A /* dgSceneEffects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgSceneEffects.cpp; sourceTree = "<group>"; };
+		83265E56130AE3BB003C754A /* dgAbstractEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgAbstractEffect.h; sourceTree = "<group>"; };
+		83265E57130AE3BB003C754A /* dgAbstractEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgAbstractEffect.cpp; sourceTree = "<group>"; };
+		83265E59130AE4E2003C754A /* flickrEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flickrEffect.h; sourceTree = "<group>"; };
+		83265E5A130AE4E2003C754A /* flickrEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flickrEffect.cpp; sourceTree = "<group>"; };
 		833ACC7E130036D600B1EAF0 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
 		833ACC82130036EF00B1EAF0 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		833ACC941300370400B1EAF0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
@@ -463,6 +481,30 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		83265C29130A9889003C754A /* wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				83265C2A130A98A2003C754A /* dgModuleIntroWrapper.h */,
+				83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */,
+				83265C2D130A9A6B003C754A /* dgAbstractModuleWrapper.h */,
+				83265C2E130A9A6B003C754A /* dgAbstractModuleWrapper.cpp */,
+			);
+			name = wrappers;
+			sourceTree = "<group>";
+		};
+		83265E52130AE160003C754A /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				83265E53130AE16B003C754A /* dgSceneEffects.h */,
+				83265E54130AE16B003C754A /* dgSceneEffects.cpp */,
+				83265E56130AE3BB003C754A /* dgAbstractEffect.h */,
+				83265E57130AE3BB003C754A /* dgAbstractEffect.cpp */,
+				83265E59130AE4E2003C754A /* flickrEffect.h */,
+				83265E5A130AE4E2003C754A /* flickrEffect.cpp */,
+			);
+			name = effects;
+			sourceTree = "<group>";
+		};
 		833ACC981300370A00B1EAF0 /* fft */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +696,7 @@
 		833ACCF2130037DD00B1EAF0 /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				83265E52130AE160003C754A /* effects */,
 				83163DFD1302A5D400CBAF99 /* video */,
 				83C2CC231300656D00146392 /* modules */,
 				833ACCF3130037EA00B1EAF0 /* body */,
@@ -705,6 +748,8 @@
 				83FC1CE1130480D700924527 /* dgMultipleLedObject.cpp */,
 				83CD76291305987100DEB4B5 /* dgRotationBtnObject.h */,
 				83CD762A1305987100DEB4B5 /* dgRotationBtnObject.cpp */,
+				83265CD7130AC577003C754A /* dgProgressBarObject.h */,
+				83265CD8130AC577003C754A /* dgProgressBarObject.cpp */,
 			);
 			name = scene_objects;
 			sourceTree = "<group>";
@@ -840,6 +885,7 @@
 		83C2CC231300656D00146392 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				83265C29130A9889003C754A /* wrappers */,
 				83C2CC241300657D00146392 /* dgModuleView.h */,
 				83C2CC251300657D00146392 /* dgModuleView.cpp */,
 			);
@@ -1287,6 +1333,12 @@
 				83586CB6130814DF00465D1D /* dgDebugView.cpp in Sources */,
 				83586D7813081E9C00465D1D /* ofxFBOTexture.cpp in Sources */,
 				83E8AFDC130964E400F4442E /* dgImgSequenceObject.cpp in Sources */,
+				83265C2C130A98A2003C754A /* dgModuleIntroWrapper.cpp in Sources */,
+				83265C2F130A9A6B003C754A /* dgAbstractModuleWrapper.cpp in Sources */,
+				83265CD9130AC577003C754A /* dgProgressBarObject.cpp in Sources */,
+				83265E55130AE16B003C754A /* dgSceneEffects.cpp in Sources */,
+				83265E58130AE3BB003C754A /* dgAbstractEffect.cpp in Sources */,
+				83265E5B130AE4E2003C754A /* flickrEffect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,6 +33,7 @@ class dgSceneObject {
 	
 	
 	string							name;
+	string							nameId;
 	string							adress;
 	string							type;
 	string							sceneObjectRefName;

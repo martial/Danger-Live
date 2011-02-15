@@ -24,10 +24,14 @@ class moduleData {
 	~moduleData();
 	void setup();
 	
+	dgSceneObject * getComponentByNameID (string nameId );
+		
+	
+	
 	vector <componentData*>	cpData;
 	vector <dgSceneObject*>	cpObjects;
 	
-	int						name;
+	string						name;
 	
 	void clean();
 	

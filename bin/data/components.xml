@@ -1,6 +1,50 @@
 <?xml version="1.0" standalone="yes"?>
 <components>
 
+
+    <comp>
+		
+		<name>knob_mid_a</name>
+		<type>video</type>
+		<url>components/ROTATIFS/MOYEN/A/bouton-rotatif-moyen-A.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+    <comp>
+		
+		<name>knob_big_b</name>
+		<type>video</type>
+		<url>components/ROTATIFS/GROS/B/bouton-rotatif-gros-B.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+
     
      <comp>
 		
@@ -227,8 +271,8 @@
         <url>components/PETIT/A/PNG/boutonrotatif-petit-A-centre.png</url>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>-90</item>
-            <item>180</item>
+            <item>-30</item>
+            <item>235</item>
         </config>
 		
         
@@ -313,6 +357,23 @@
 			</media>
 			-->
 		</medias>
+		
+	</comp>
+    
+    <!-- PROGRESS BARR -->
+     <comp>
+		
+		<name>test_bar</name>
+		<type>progress_bar</type>
+		<url>null</url>
+		
+		<config>
+            <!-- width-->
+            <item>500</item>
+            <!-- height-->
+            <item>2</item>
+             
+        </config>
 		
 	</comp>
 

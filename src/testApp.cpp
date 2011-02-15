@@ -38,6 +38,9 @@ void testApp::setup(){
 	
 	debugView.setup();
 	
+	sceneEffects.setup();
+	//sceneEffects.setEffectByName("flickr");
+	
 	fbo.allocate(1920, 1080,GL_RGB);
 	//fbo.setup(ofGetWidth(), ofGetHeight());
 	//fbo.attach(texture);
@@ -48,7 +51,7 @@ void testApp::update(){
 	
 	oscReceiver.update();
 	scene.update();
-	
+	sceneEffects.update();
 }
 
 //--------------------------------------------------------------
@@ -59,7 +62,7 @@ void testApp::draw(){
 	fbo.begin();
 	ofEnableAlphaBlending();
 	scene.draw();
-	oscReceiver.debugDraw();
+	//oscReceiver.debugDraw();
 	ofDisableAlphaBlending();
 	fbo.end();
 	
@@ -71,7 +74,13 @@ void testApp::draw(){
 	debugView.drawSceneFbo(fbo);
 	// draw proj
 	//fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
-	fbo.draw(1440, 0);
+	
+	
+	ofPushMatrix();
+	glTranslated(1400, 0, 0);
+	sceneEffects.draw(fbo);
+	ofPopMatrix();
+	//fbo.draw(1440, 0);
 	
 	/*
 	if ( debugView.visible ) {

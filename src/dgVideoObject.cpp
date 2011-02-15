@@ -45,7 +45,7 @@ void dgVideoObject::setup (string videoUrl, string name, string type) {
 void dgVideoObject::update () {
 	
 	dgSceneObject::update();
-	//mainVideo->update();
+	mainVideo->update();
 	
 }
 
@@ -66,7 +66,7 @@ void dgVideoObject::draw () {
 
 
 void dgVideoObject::setPct(float pct) {
-	printf ("Number of pct : %f\n", pct);
+	//printf ("Number of pct : %f\n", pct);
 	if ( this->pct != pct ) {
 	dgSceneObject::setPct(pct);
 	mainVideo->setPosition(pct);

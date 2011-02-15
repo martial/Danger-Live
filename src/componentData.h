@@ -22,6 +22,9 @@ class componentData {
 	~componentData();
 	string		name;
 	string		adress;
+	
+	/* nameId is used to get one component in a wrapper */
+	string		nameId;
 	ofPoint		range;
 	ofPoint		pos;
 	float		rotation;

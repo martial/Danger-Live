@@ -35,6 +35,7 @@ class DangerScene {
 	
 	void onOscEvent(customOscMessage & msg);
 	void onBeatEvent();
+	void onMidiEvent(int adress, int val);
 	
 	/* delete this later */
 	void setCurrentView(int viewID);

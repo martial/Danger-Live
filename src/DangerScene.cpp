@@ -112,6 +112,11 @@ void DangerScene::changeMode (int mode) {
 	
 }
 
+void DangerScene::onMidiEvent(int adress, int val) {
+	moduleView.onMidiEvent(adress, val);
+	
+}
+
 void DangerScene::onOscEvent(customOscMessage & msg) {
 	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onOscEvent(msg);
 }

@@ -14,28 +14,36 @@ void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscR
 	this->layoutData = &layoutData;
 	this->compBuilder = &compBuilder;
 	this->oscReceiver = &oscReceiver;
+	
+	initModulesWrappers();
 	setCurrentView(0);
 	
-	//addSceneObjects();
+}
+
+void dgModuleView::initModulesWrappers () {
+
+	// intro 
+	dgModuleIntroWrapper * introWrapper = new dgModuleIntroWrapper();
+	introWrapper->setup(layoutData->getModuleByName("intro"), "intro");
+	modulesWrappers.push_back(introWrapper);
 	
-	// set osc events
 	
-	//ofAddListener(this->oscReceiver->oscEvent,this,&dgModuleView::processOsc);
 }
 
 void dgModuleView::update() {
 	
-	
-	
-	
-	
-	
 	//printf ("Number of comps : %d\n", currentObjects.size());
+	
+	// check for related module
+	
+	
+	if ( currentWrapper ) currentWrapper->update();
+	
 	moduleData * currentModule = layoutData->data[currentViewID];
 	
 	for ( int i = 0; i<currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
-		object->update();
+		if ( object ) object->update();
 	}
 	 
 
@@ -48,8 +56,11 @@ void dgModuleView::draw () {
 	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
-		object->draw();
+		if ( object )object->draw();
 	}
+	
+	
+	if ( currentWrapper ) currentWrapper->draw();
 	 
 
 }
@@ -92,13 +103,8 @@ void dgModuleView::processOsc (customOscMessage & msg) {
 
 dgSceneObject  * dgModuleView::getRelatedObject (string val) {
 		
-	
-	
-	
-	
 	moduleData * currentModule = layoutData->data[currentViewID];
 
-	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		
 		/*
@@ -118,6 +124,15 @@ dgSceneObject  * dgModuleView::getRelatedObject (string val) {
 	return NULL;
 }
 
+dgAbstractModuleWrapper * dgModuleView::getRelatedWrapper (string name) {
+	
+	
+	for ( int i=0; i<modulesWrappers.size(); i++) {
+		if ( modulesWrappers[i]->name == name) return modulesWrappers[i];
+	}
+	return NULL;
+}
+
 
 
 /*
@@ -128,12 +143,34 @@ void dgModuleView::onOscEvent(customOscMessage & msg) {
 	processOsc(msg);
 }
 
+void dgModuleView::onMidiEvent(int adress, int val) {
+	//moduleView.onMidiEvent(adress, val);
+	
+	if ( currentWrapper ) currentWrapper->onMidiEvent(adress, val);
+	
+	if ( adress == 15 ) nextView();
+	
+	
+}
+
+void dgModuleView::nextView () {
+	
+	int curViewID = currentViewID;
+	curViewID++;
+	if ( curViewID < 0 || curViewID > layoutData->data.size()-1 ) curViewID = 0;
+	setCurrentView(curViewID);
+	
+	//currentViewID = viewID;
+	
+	
+}
+
 void dgModuleView::setCurrentView(int viewID) {
 	
 	// check if current id is valid
-	if ( viewID < 0 || viewID > layoutData->data.size()-1 ) return;
-	
+	if (  viewID > layoutData->data.size()-1 ) return;
 	currentViewID = viewID;
+	currentWrapper = getRelatedWrapper(layoutData->data[currentViewID]->name);
 	//addSceneObjects();
 	
 }

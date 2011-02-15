@@ -1,0 +1,1 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractModuleWrapper.cpp:31: error: no 'void dgAbstractModuleWrapper::onMidiEvent(int, int)' member function declared in class 'dgAbstractModuleWrapper'

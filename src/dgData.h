@@ -25,6 +25,8 @@ class dgData  {
 	void debug();
 	void clean();
 	
+	moduleData * getModuleByName(string nameTarget);
+	
 	vector <moduleData*>		data;
 	
 	private:

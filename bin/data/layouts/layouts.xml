@@ -4,7 +4,7 @@
 
 	<module name="">
     
-    
+    <!--
          <component>
 			
 			<name>danger_logo</name>
@@ -15,7 +15,7 @@
             
 		
         </component>
-        
+        -->
         
         <!-- switcher noirs du bas -->
         <component>
@@ -67,7 +67,7 @@
       <component>
 			
 			<name>FADER</name>
-			<osc_adress></osc_adress>
+			<osc_adress>/live/track/volume/Danger_L1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="130" y="575"></position>
             <rotation>90.0</rotation>
@@ -78,7 +78,7 @@
         <component>
 			
 			<name>FADER</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/live/track/volume/Outside</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="340" y="575"></position>
             <rotation>90.0</rotation>			
@@ -88,7 +88,7 @@
            <component>
 			
 			<name>FADER</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/live/track/volume/Danger_R1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="1074" y="575"></position>
             <rotation>90.0</rotation>			
@@ -98,7 +98,7 @@
            <component>
 			
 			<name>FADER</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/live/track/volume/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="1318" y="575"></position>
             <rotation>90.0</rotation>			
@@ -173,7 +173,7 @@
         <component>
 			
 			<name>METER_VU</name>
-			<osc_adress>/signal/DRUM_LOOP/</osc_adress>
+			<osc_adress>/signal/Danger_L1/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="130" y="470"></position>
             			
@@ -210,7 +210,7 @@
         <component>
 			
 			<name>METER_VU</name>
-			<osc_adress>/signal/Danger_R1/</osc_adress>
+			<osc_adress>/signal/Outside/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="355" y="470"></position>			
 		
@@ -248,7 +248,7 @@
         <component>
 			
 			<name>METER_VU</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/signal/Danger_R1/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="905" y="470"></position>			
 		
@@ -284,7 +284,7 @@
         <component>
 			
 			<name>METER_VU</name>
-			<osc_adress>reverb1</osc_adress>
+			<osc_adress>/signal/Percus/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="1145" y="470"></position>			
 		
@@ -294,7 +294,7 @@
         <component>
 			
 			<name>METER_VU_DIGITAL</name>
-			<osc_adress></osc_adress>
+			<osc_adress>/signal/Master/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="560" y="975"></position>			
 		

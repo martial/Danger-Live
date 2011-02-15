@@ -41,13 +41,18 @@ void dgData::setup () {
 		// push layout data
 		data.push_back(new moduleData());
 		// set name
-		data[i]->name = XML.getAttribute("module", "name", 0, i);
+		
 		
 		
 		// go through components
 		
+		data[i]->name = XML.getAttribute("module", "name", "", 0);
+	
 		XML.pushTag("module", 0);
 		
+		//data[i]->name = XML.getAttribute("module", "name", "", 0);
+		
+				
 		int numOfComponents = XML.getNumTags("component");
 		
 		data[i]->cpData.reserve(numOfComponents);
@@ -60,6 +65,7 @@ void dgData::setup () {
 			
 			XML.pushTag("component", j);
 			data[i]->cpData[j]->name = XML.getValue("name", "");
+			data[i]->cpData[j]->nameId = XML.getValue("nameID", "");
 			data[i]->cpData[j]->adress = XML.getValue("osc_adress", "");
 			
 			
@@ -70,6 +76,7 @@ void dgData::setup () {
 			
 			data[i]->cpData[j]->range.x = XML.getAttribute("range", "min", 0, 0);
 			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 127, 0);
+			
 			
 			
 			if (XML.tagExists("rotation", 0)) {
@@ -110,16 +117,20 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			
 			if (sceneObject) {
 				
-				/*
-			printf("\ncomponent built : ");
-			printf(sceneObject->name.c_str());
+				
+			printf("\ncomponent nameid : ");
+			printf(compData->nameId.c_str());
 			printf("\n");
-			*/
+				printf(compData->adress.c_str());
+				printf("\n");
+
+			
 				
 				
 			sceneObject->setPosition(compData->pos.x, compData->pos.y);
 			sceneObject->rotation = compData->rotation;
 			sceneObject->adress = compData->adress;
+			sceneObject->nameId = compData->nameId;
 			currentModule->cpObjects.push_back(sceneObject);
 			}
 						
@@ -174,6 +185,16 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 		
 	}	
 	
+}
+
+moduleData * dgData::getModuleByName(string nameTarget) {
+	
+	int numOfLayouts = data.size();
+	for ( int i=0; i<numOfLayouts; i++ ) {
+		
+		if ( data[i]->name == nameTarget ) return data[i];
+	}
+	return NULL;
 }
 
 

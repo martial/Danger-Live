@@ -20,6 +20,7 @@
 #include "dgMultipleLedObject.h"
 #include "dgRotationBtnObject.h"
 #include "dgImgSequenceObject.h"
+#include "dgProgressBarObject.h"
 
 class dgCompBuilder {
 	
