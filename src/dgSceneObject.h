@@ -10,6 +10,7 @@
 #pragma once
 #include "ofMain.h"
 #include "ofxQTKitVideoPlayer.h"
+#include "imgAssetsManager.h"
 
 class dgSceneObject {
 
@@ -55,5 +56,7 @@ class dgSceneObject {
 	dgSceneObject			*		activitySwitchObject;
 	
 	bool							active;
+	
+	imgAssetsManager		*		imgAssets;
 	
 };

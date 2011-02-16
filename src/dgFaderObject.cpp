@@ -21,9 +21,9 @@ void dgFaderObject::setup (string imgURL, string name, string type) {
 	
 	dgSceneObject::setup(name, type);
 	
-	img.loadImage(imgURL);
-	this->width = img.width;
-	this->height = img.height;
+	img = imgAssets->addImage(imgURL);
+	this->width = img->width;
+	this->height = img->height;
 	
 }
 
@@ -46,10 +46,10 @@ void dgFaderObject::draw () {
 	
 	
 	ofPushMatrix();
-	ofTranslate(pos.x, pos.y, 0);
+	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
 	ofRotate((int)this->rotation, 0, 0, 1);
 	ofEnableAlphaBlending();
-	img.draw(xPos, 0 );
+	img->draw(xPos, 0 );
 	ofDisableAlphaBlending();
 	ofPopMatrix();
 }

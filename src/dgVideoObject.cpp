@@ -54,7 +54,10 @@ void dgVideoObject::draw () {
 	dgSceneObject::draw();
 	
 	ofEnableAlphaBlending();
-	mainVideo->draw(pos.x, pos.y);
+	ofPushMatrix();
+	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+	mainVideo->draw(0, 0);
+	ofPopMatrix();
 	ofDisableAlphaBlending();
 }
 

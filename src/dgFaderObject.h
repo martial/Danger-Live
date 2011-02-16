@@ -30,7 +30,7 @@ public:
 	
 	private :
 	
-	ofImage					img;
+	ofImage			*		img;
 	int						currentIndex;
 	float					easePct;
 	float					blurRate;

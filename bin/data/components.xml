@@ -22,6 +22,27 @@
 		</medias>
 		
 	</comp>
+    
+    <comp>
+		
+		<name>knob_big_c</name>
+		<type>video</type>
+		<url>components/ROTATIFS/GROS/C/bouton-rotatif-gros-C.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
 
     <comp>
 		
@@ -71,7 +92,7 @@
 		
 		<name>knob_big_a_seq</name>
 		<type>image_sequence</type>
-		<url>videos/knob/</url>
+		<url>components/ROTATIFS/GROS/A/bouton-rotatif-gros-A-sequence</url>
 		
 		<medias>
 		<!--
@@ -360,6 +381,21 @@
 		
 	</comp>
     
+     <!-- opacity switch -->
+     <comp>
+		
+		<name>danger_opacity</name>
+		<type>opacity_switch</type>
+		<url>components/DECOUPE_DANGER/decoupedanger0.png</url>
+		
+		 <extras_url>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger1.png</extraurl>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger2.png</extraurl>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger3.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
     <!-- PROGRESS BARR -->
      <comp>
 		
@@ -452,6 +488,22 @@
             <item>2</item>
             <!-- row-->
             <item>6</item>
+            <!-- blur rate-->
+            <item>.1</item>
+        </config>
+        
+			
+	</comp>
+    
+    <comp>
+		<name>METER_VU_6_4</name>
+		<type>meter</type>
+        <switch_id>LED_VU</switch_id>
+        <config>
+            <!-- columns-->
+            <item>12</item>
+            <!-- row-->
+            <item>4</item>
             <!-- blur rate-->
             <item>.1</item>
         </config>

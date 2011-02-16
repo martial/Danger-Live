@@ -47,7 +47,7 @@ void dgProgressBarObject::draw () {
 	ofEnableAlphaBlending();
 	
 	ofPushMatrix();
-	ofTranslate(pos.x, pos.y, 0);
+	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
 	ofRect(0, 0, barWidth*pct, barHeight);
 	ofPopMatrix();
 	ofSetColor(255, 255, 255);

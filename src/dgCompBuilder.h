@@ -11,6 +11,7 @@
 #define DGCOMPBUILDER
 
 #include "ofMain.h"
+#include "imgAssetsManager.h"
 #include "ofxXmlSettings.h"
 #include "dgSceneObject.h"
 #include "dgVideoObject.h"
@@ -21,6 +22,7 @@
 #include "dgRotationBtnObject.h"
 #include "dgImgSequenceObject.h"
 #include "dgProgressBarObject.h"
+#include "dgOpacitySwitchObject.h"
 
 class dgCompBuilder {
 	
@@ -38,7 +40,7 @@ class dgCompBuilder {
 	private:
 	
 	ofxXmlSettings		XML;
-	
+	imgAssetsManager	imgsAssets;
 	
 };
 

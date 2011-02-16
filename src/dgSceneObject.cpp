@@ -98,8 +98,8 @@ void dgSceneObject::draw () {
 	for (int i=0; i<images.size(); i++) {
 		
 		// center pos
-		xPos = this->width * .5 - images[i]->width *.5;
-		yPos = this->height * .5 - images[i]->height *.5;
+		xPos =  - images[i]->width *.5;
+		yPos =  - images[i]->height *.5;
 		
 		ofPushMatrix();
 		ofTranslate(pos.x +xPos, pos.y +yPos, 0);
@@ -110,8 +110,8 @@ void dgSceneObject::draw () {
 	
 	// draw medias
 	for (int j=0; j<videos.size(); j++) {
-		xPos = this->width * .5 - videos[j]->width *.5;
-		yPos = this->height * .5 - videos[j]->height *.5;
+		xPos =  - videos[j]->width *.5;
+		yPos =  - videos[j]->height *.5;
 		ofPushMatrix();
 		ofTranslate(pos.x +xPos, pos.y +yPos, 0);
 		ofRotate(rotation, 0, 0, 1);
@@ -162,9 +162,7 @@ void dgSceneObject::addMedia(string url, string mediaType) {
 	int currentIndex;
 	
 	if ( mediaType == "image" ) {
-		ofImage * img = new ofImage(); 
-		img->loadImage(url);
-		
+		ofImage * img = imgAssets->addImage(url);
 		images.push_back(img);
 	}
 	

@@ -66,6 +66,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 				if ( type == "video") {
 			
 					dgVideoObject * videoObject = new dgVideoObject();
+					videoObject->imgAssets = &imgsAssets;
 					videoObject->setup(url, compName, type);
 					component = videoObject;
 			
@@ -76,6 +77,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 			
 			
 					dgImageObject * imageObject = new dgImageObject();
+					imageObject->imgAssets = &imgsAssets;
 					imageObject->setup(url, compName, type);
 					component = imageObject;
 			
@@ -86,6 +88,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					
 					
 					dgFaderObject * faderObject = new dgFaderObject();
+					faderObject->imgAssets = &imgsAssets;
 					faderObject->setup(url, compName, type);
 					
 					
@@ -109,6 +112,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					
 					
 					dgSwitchObject * switchObject = new dgSwitchObject();
+					switchObject->imgAssets = &imgsAssets;
 					switchObject->setup(url, compName, type);
 										
 						
@@ -128,10 +132,35 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 
 				}
 				
+				if ( type == "opacity_switch" ) {
+					
+					
+					dgOpacitySwitchObject * switchObject = new dgOpacitySwitchObject();
+					switchObject->imgAssets = &imgsAssets;
+					switchObject->setup(url, compName, type);
+					
+					
+					if (XML.tagExists("extras_url", 0)) {
+						
+						XML.pushTag("extras_url", 0);
+						int numOfExtrasUrl = XML.getNumTags("extraurl");
+						for (int z=0; z<numOfExtrasUrl;z++ ) {
+							string extraURL = XML.getValue("extraurl", "", z);
+							switchObject->addExtraImage(extraURL);
+						}
+						XML.popTag();
+						
+					}
+					
+					component = switchObject;
+					
+				}
+				
 				if ( type == "meter" ) {
 					
 					
 					dgMultipleLedObject * multipleLed = new dgMultipleLedObject();
+					multipleLed->imgAssets = &imgsAssets;
 					multipleLed->setup( compName, type);
 					
 					string switchID = XML.getValue("switch_id", "");
@@ -141,7 +170,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					for (int x=0; x<numOfConfigsValues;x++ ) {
 						float val = ofToFloat(XML.getValue("item", "", x));
 						multipleLed->addConfig(val);	
-						printf("ADD WTF CONFIG");
+						//printf("ADD WTF CONFIG");
 					}
 					XML.popTag();
 					// ok. How many cols we have ?
@@ -154,6 +183,8 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					
 					
 					dgRotationBtnObject * rotObject = new dgRotationBtnObject();
+					rotObject->imgAssets = &imgsAssets;
+
 					rotObject->setup( url, compName, type);
 					
 					if (XML.tagExists("config", 0)) {
@@ -187,6 +218,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					
 					
 					dgImgSequenceObject * imgSeqObject = new dgImgSequenceObject();
+					imgSeqObject->imgAssets = &imgsAssets;
 					imgSeqObject->setup( url, compName, type);
 					
 										
@@ -198,6 +230,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					
 					
 					dgProgressBarObject * progressObject = new dgProgressBarObject();
+					progressObject->imgAssets = &imgsAssets;
 					progressObject->setup( compName, type);
 					
 					XML.pushTag("config", 0);

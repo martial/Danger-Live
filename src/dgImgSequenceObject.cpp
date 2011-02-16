@@ -45,7 +45,7 @@ void dgImgSequenceObject::setup (string folder, string name, string type) {
 	this->height = images[0]->height;
 	
 	easePct = pct;
-	blurRate = .5;
+	blurRate = .2;
 	setPct(0);
 }
 
@@ -53,9 +53,11 @@ void dgImgSequenceObject::setup (string folder, string name, string type) {
 
 void dgImgSequenceObject::addExtraImage(string url) {
 	
-	ofImage * img = new ofImage();
-	img->loadImage(url);
+	ofImage * img = imgAssets->addImage(url);
 	images.push_back(img);
+	
+	this->width = img->width*.5;
+	this->height = img->height * .5;
 	
 	
 }
@@ -82,7 +84,10 @@ void dgImgSequenceObject::draw () {
 	dgSceneObject::draw();
 	
 	ofEnableAlphaBlending();
-	images[currentIndex]->draw(pos.x, pos.y);
+	ofPushMatrix();
+	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+	images[currentIndex]->draw(0, 0);
+	ofPopMatrix();
 	ofDisableAlphaBlending();
 }
 

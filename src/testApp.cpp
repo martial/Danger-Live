@@ -39,7 +39,7 @@ void testApp::setup(){
 	debugView.setup();
 	
 	sceneEffects.setup();
-	//sceneEffects.setEffectByName("bloom");
+	sceneEffects.setEffectByName("bloom");
 	
 	fbo.allocate(1920, 1080,GL_RGB);
 	//fbo.setup(ofGetWidth(), ofGetHeight());
@@ -63,7 +63,7 @@ void testApp::draw(){
 	fbo.begin();
 	ofEnableAlphaBlending();
 	scene.draw();
-	//oscReceiver.debugDraw();
+	oscReceiver.debugDraw();
 	ofDisableAlphaBlending();
 	fbo.end();
 	

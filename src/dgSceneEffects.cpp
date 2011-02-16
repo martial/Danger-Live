@@ -12,7 +12,7 @@
 void dgSceneEffects::setup() {
 	
 	currentEffectID = -1;
-	
+	currentEffect = NULL;
 	color.setup("color");
 	
 	addEffect();

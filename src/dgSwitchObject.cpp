@@ -9,6 +9,8 @@
 
 #include "dgSwitchObject.h"
 
+#include "imgAssetsManager.h"
+
 dgSwitchObject::dgSwitchObject() {
 	
 }
@@ -35,8 +37,10 @@ void dgSwitchObject::setup (string imgURL, string name, string type) {
 
 void dgSwitchObject::addExtraImage(string url) {
 	
-	ofImage * img = new ofImage();
-	img->loadImage(url);
+	ofImage * img = imgAssets->addImage(url);
+	
+	//ofImage * img = new ofImage();
+	//img->loadImage(url);
 	images.push_back(img);
 	
 	
@@ -61,7 +65,10 @@ void dgSwitchObject::draw () {
 	dgSceneObject::draw();
 	
 	ofEnableAlphaBlending();
-	images[currentIndex]->draw(pos.x, pos.y);
+	ofPushMatrix();
+	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+	images[currentIndex]->draw(0, 0);
+	ofPopMatrix();
 	ofDisableAlphaBlending();
 }
 

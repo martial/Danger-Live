@@ -121,8 +121,8 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			printf("\ncomponent nameid : ");
 			printf(compData->nameId.c_str());
 			printf("\n");
-				printf(compData->adress.c_str());
-				printf("\n");
+			printf(compData->adress.c_str());
+			printf("\n");
 
 			
 				

@@ -58,7 +58,8 @@ void DangerScene::draw () {
 			
 			background.draw(currentView);
 			ofPushMatrix();
-			ofTranslate(1920*.5 - 1280*.5, 0, 0);
+			// push on the right and center axis
+			ofTranslate(1920*.5 - 1280*.5 + 1280*.5, 0, 0);
 			moduleView.draw();
 			ofPopMatrix();
 			

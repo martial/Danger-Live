@@ -21,9 +21,9 @@ void dgImageObject::setup (string imgURL, string name, string type) {
 	
 	dgSceneObject::setup(name, type);
 	
-	img.loadImage(imgURL);
-	this->width = img.width;
-	this->height = img.height;
+	img = imgAssets->addImage(imgURL);
+	this->width = img->width;
+	this->height = img->height;
 }
 
 void dgImageObject::update () {
@@ -37,6 +37,9 @@ void dgImageObject::draw () {
 	dgSceneObject::draw();
 	
 	ofEnableAlphaBlending();
-	img.draw(pos.x, pos.y);
+	ofPushMatrix();
+	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+	img->draw(0, 0);
+	ofPopMatrix();
 	ofDisableAlphaBlending();
 }

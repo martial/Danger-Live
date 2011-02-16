@@ -19,6 +19,8 @@
 		831640051302F34800CBAF99 /* dgSwitchObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831640041302F34800CBAF99 /* dgSwitchObject.cpp */; };
 		831725CF130BDD5300A97246 /* colorShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831725CE130BDD5300A97246 /* colorShader.cpp */; };
 		831725DC130BDE4D00A97246 /* colorEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831725DB130BDE4D00A97246 /* colorEffect.cpp */; };
+		83172788130C1E5A00A97246 /* dgOpacitySwitchObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83172787130C1E5A00A97246 /* dgOpacitySwitchObject.cpp */; };
+		831728E0130C342700A97246 /* imgAssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831728DF130C342700A97246 /* imgAssetsManager.cpp */; };
 		83265C2C130A98A2003C754A /* dgModuleIntroWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */; };
 		83265C2F130A9A6B003C754A /* dgAbstractModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265C2E130A9A6B003C754A /* dgAbstractModuleWrapper.cpp */; };
 		83265CD9130AC577003C754A /* dgProgressBarObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265CD8130AC577003C754A /* dgProgressBarObject.cpp */; };
@@ -175,6 +177,10 @@
 		831725CE130BDD5300A97246 /* colorShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorShader.cpp; sourceTree = "<group>"; };
 		831725DA130BDE4D00A97246 /* colorEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorEffect.h; sourceTree = "<group>"; };
 		831725DB130BDE4D00A97246 /* colorEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorEffect.cpp; sourceTree = "<group>"; };
+		83172786130C1E5A00A97246 /* dgOpacitySwitchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgOpacitySwitchObject.h; sourceTree = "<group>"; };
+		83172787130C1E5A00A97246 /* dgOpacitySwitchObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgOpacitySwitchObject.cpp; sourceTree = "<group>"; };
+		831728DE130C342700A97246 /* imgAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgAssetsManager.h; sourceTree = "<group>"; };
+		831728DF130C342700A97246 /* imgAssetsManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgAssetsManager.cpp; sourceTree = "<group>"; };
 		83265C2A130A98A2003C754A /* dgModuleIntroWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgModuleIntroWrapper.h; sourceTree = "<group>"; };
 		83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgModuleIntroWrapper.cpp; sourceTree = "<group>"; };
 		83265C2D130A9A6B003C754A /* dgAbstractModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgAbstractModuleWrapper.h; sourceTree = "<group>"; };
@@ -499,6 +505,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		831728DD130C340E00A97246 /* assetsManager */ = {
+			isa = PBXGroup;
+			children = (
+				831728DE130C342700A97246 /* imgAssetsManager.h */,
+				831728DF130C342700A97246 /* imgAssetsManager.cpp */,
+			);
+			name = assetsManager;
+			sourceTree = "<group>";
+		};
 		83265C29130A9889003C754A /* wrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -772,6 +787,8 @@
 				83CD762A1305987100DEB4B5 /* dgRotationBtnObject.cpp */,
 				83265CD7130AC577003C754A /* dgProgressBarObject.h */,
 				83265CD8130AC577003C754A /* dgProgressBarObject.cpp */,
+				83172786130C1E5A00A97246 /* dgOpacitySwitchObject.h */,
+				83172787130C1E5A00A97246 /* dgOpacitySwitchObject.cpp */,
 			);
 			name = sceneObjects;
 			sourceTree = "<group>";
@@ -1138,6 +1155,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				831728DD130C340E00A97246 /* assetsManager */,
 				834C2385130B375E009617D3 /* shaders */,
 				83586CB3130814D400465D1D /* debug */,
 				833ACDBC130047C300B1EAF0 /* osc */,
@@ -1383,6 +1401,8 @@
 				834C239A130B37FC009617D3 /* bloomSceneEffect.cpp in Sources */,
 				831725CF130BDD5300A97246 /* colorShader.cpp in Sources */,
 				831725DC130BDE4D00A97246 /* colorEffect.cpp in Sources */,
+				83172788130C1E5A00A97246 /* dgOpacitySwitchObject.cpp in Sources */,
+				831728E0130C342700A97246 /* imgAssetsManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

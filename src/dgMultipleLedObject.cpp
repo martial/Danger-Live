@@ -26,12 +26,14 @@ void dgMultipleLedObject::setup (string name, string type) {
 void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	
 	int yPos = switchObjects.size()* (switchObj->height -2);
-	this->height = yPos;
-	this->width = switchObj->width;
 	
-	switchObj->setPosition( pos.x, (int)(pos.y - yPos));
+	
+	switchObj->setPosition( 0, 0);
 	switchObj->blurRate = this->configValues[2];
 	switchObjects.push_back(switchObj);
+	
+	this->height = yPos;
+	this->width = switchObj->width * switchObjects.size();
 	
 	//printf(switchObj->name.c_str());
 }
@@ -73,22 +75,42 @@ void dgMultipleLedObject::draw () {
 	ofSetColor(255, 255, 255);
 	
 	ofEnableAlphaBlending();
+	
+	float xCentroid = - width*.5 - switchObjects[0]->width*.5;
+	float yCentroid = - height*.5;
+
+	
+	ofPushMatrix();
+	ofTranslate(pos.x + xCentroid, pos.y + yCentroid - switchObjects[0]->height*.5, 0);
+	
+	ofTranslate(-xCentroid, -yCentroid, 0);
+	ofRotate(rotation, 0, 0, 1);
+	
+	
+		//ofRotate(ofGetElapsedTimeMillis(), 0, 0, 1);
+	
+	
 	int numOfCols = (int)this->configValues[0];
+	int numOfRows = (int)this->configValues[1];
 	for ( int i=0; i<switchObjects.size(); i++ ) {
 		
 		//fbo.begin();
 		for ( int j=0; j<numOfCols; j++ ) {
-		glPushMatrix();
-		ofTranslate(j*switchObjects[i]->width, 0, 0);
-		switchObjects[i]->draw();
+		ofPushMatrix();
+		ofTranslate(j*switchObjects[i]->width+xCentroid, 0, 0);
+			
+			for ( int k=0; k<numOfRows; k++ ) {
+				ofPushMatrix();
+				ofTranslate(0, (k*switchObjects[i]->height-2) +yCentroid, 0);
+				switchObjects[i]->draw();
+				ofPopMatrix();
+			}
 		glPopMatrix();
-		//fbo.end();
 		}
 	}
 	
-	for ( int j=0; j<numOfCols; j++ ) {
-		//fbo.draw(pos.x + ( j*10), pos.y );
-	}
+	ofPopMatrix();
+
 
 	ofDisableAlphaBlending();
 	
