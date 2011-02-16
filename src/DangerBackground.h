@@ -9,6 +9,8 @@
 
 #pragma once
 #include "ofMain.h"
+#include "ofxUtils.h"
+#include "ofxVec2f.h"
 
 class DangerBackground {
 

@@ -1,0 +1,7 @@
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: error: new types may not be defined in a return type
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: note: (perhaps a semicolon is missing after the definition of 'colorSettingsShader')
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: error: two or more data types in declaration of 'setup'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp: In member function 'void colorSettingsShader::draw(float, float, float, float, bool)':
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:64: warning: deprecated conversion from string constant to 'char*'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:65: warning: deprecated conversion from string constant to 'char*'
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:66: warning: deprecated conversion from string constant to 'char*'

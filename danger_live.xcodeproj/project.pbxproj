@@ -17,6 +17,8 @@
 		83163E6C1302B26900CBAF99 /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E601302B26900CBAF99 /* ofxMatrix4x4.cpp */; };
 		83163E6D1302B26900CBAF99 /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83163E651302B26900CBAF99 /* ofxQuaternion.cpp */; };
 		831640051302F34800CBAF99 /* dgSwitchObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831640041302F34800CBAF99 /* dgSwitchObject.cpp */; };
+		831725CF130BDD5300A97246 /* colorShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831725CE130BDD5300A97246 /* colorShader.cpp */; };
+		831725DC130BDE4D00A97246 /* colorEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 831725DB130BDE4D00A97246 /* colorEffect.cpp */; };
 		83265C2C130A98A2003C754A /* dgModuleIntroWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */; };
 		83265C2F130A9A6B003C754A /* dgAbstractModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265C2E130A9A6B003C754A /* dgAbstractModuleWrapper.cpp */; };
 		83265CD9130AC577003C754A /* dgProgressBarObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83265CD8130AC577003C754A /* dgProgressBarObject.cpp */; };
@@ -52,6 +54,10 @@
 		833ACE0113004EB900B1EAF0 /* dgData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0013004EB900B1EAF0 /* dgData.cpp */; };
 		833ACE0413004ECF00B1EAF0 /* moduleData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE0313004ECF00B1EAF0 /* moduleData.cpp */; };
 		833ACE1B130054D800B1EAF0 /* componentData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833ACE1A130054D800B1EAF0 /* componentData.cpp */; };
+		834C238F130B3787009617D3 /* bloomShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834C2389130B3787009617D3 /* bloomShader.cpp */; };
+		834C2390130B3787009617D3 /* ofxShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834C238B130B3787009617D3 /* ofxShader.cpp */; };
+		834C2391130B3787009617D3 /* shaderBlur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834C238D130B3787009617D3 /* shaderBlur.cpp */; };
+		834C239A130B37FC009617D3 /* bloomSceneEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 834C2399130B37FC009617D3 /* bloomSceneEffect.cpp */; };
 		83586CB6130814DF00465D1D /* dgDebugView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83586CB5130814DF00465D1D /* dgDebugView.cpp */; };
 		83586D7813081E9C00465D1D /* ofxFBOTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83586D7613081E9C00465D1D /* ofxFBOTexture.cpp */; };
 		83B7009313017B9100CDE6B4 /* dgCompBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B7009213017B9100CDE6B4 /* dgCompBuilder.cpp */; };
@@ -165,6 +171,10 @@
 		83163E6A1302B26900CBAF99 /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
 		831640031302F34800CBAF99 /* dgSwitchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgSwitchObject.h; sourceTree = "<group>"; };
 		831640041302F34800CBAF99 /* dgSwitchObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgSwitchObject.cpp; sourceTree = "<group>"; };
+		831725CD130BDD5300A97246 /* colorShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorShader.h; sourceTree = "<group>"; };
+		831725CE130BDD5300A97246 /* colorShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorShader.cpp; sourceTree = "<group>"; };
+		831725DA130BDE4D00A97246 /* colorEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorEffect.h; sourceTree = "<group>"; };
+		831725DB130BDE4D00A97246 /* colorEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorEffect.cpp; sourceTree = "<group>"; };
 		83265C2A130A98A2003C754A /* dgModuleIntroWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgModuleIntroWrapper.h; sourceTree = "<group>"; };
 		83265C2B130A98A2003C754A /* dgModuleIntroWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgModuleIntroWrapper.cpp; sourceTree = "<group>"; };
 		83265C2D130A9A6B003C754A /* dgAbstractModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgAbstractModuleWrapper.h; sourceTree = "<group>"; };
@@ -283,6 +293,14 @@
 		833ACE0313004ECF00B1EAF0 /* moduleData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moduleData.cpp; sourceTree = "<group>"; };
 		833ACE19130054D800B1EAF0 /* componentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = componentData.h; sourceTree = "<group>"; };
 		833ACE1A130054D800B1EAF0 /* componentData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = componentData.cpp; sourceTree = "<group>"; };
+		834C2389130B3787009617D3 /* bloomShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bloomShader.cpp; path = shaders/bloomShader.cpp; sourceTree = "<group>"; };
+		834C238A130B3787009617D3 /* bloomShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bloomShader.h; path = shaders/bloomShader.h; sourceTree = "<group>"; };
+		834C238B130B3787009617D3 /* ofxShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxShader.cpp; path = shaders/ofxShader.cpp; sourceTree = "<group>"; };
+		834C238C130B3787009617D3 /* ofxShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxShader.h; path = shaders/ofxShader.h; sourceTree = "<group>"; };
+		834C238D130B3787009617D3 /* shaderBlur.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shaderBlur.cpp; path = shaders/shaderBlur.cpp; sourceTree = "<group>"; };
+		834C238E130B3787009617D3 /* shaderBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shaderBlur.h; path = shaders/shaderBlur.h; sourceTree = "<group>"; };
+		834C2398130B37FC009617D3 /* bloomSceneEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bloomSceneEffect.h; sourceTree = "<group>"; };
+		834C2399130B37FC009617D3 /* bloomSceneEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bloomSceneEffect.cpp; sourceTree = "<group>"; };
 		83586CB4130814DF00465D1D /* dgDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgDebugView.h; sourceTree = "<group>"; };
 		83586CB5130814DF00465D1D /* dgDebugView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgDebugView.cpp; sourceTree = "<group>"; };
 		83586D7613081E9C00465D1D /* ofxFBOTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFBOTexture.cpp; sourceTree = "<group>"; };
@@ -501,6 +519,10 @@
 				83265E57130AE3BB003C754A /* dgAbstractEffect.cpp */,
 				83265E59130AE4E2003C754A /* flickrEffect.h */,
 				83265E5A130AE4E2003C754A /* flickrEffect.cpp */,
+				834C2398130B37FC009617D3 /* bloomSceneEffect.h */,
+				834C2399130B37FC009617D3 /* bloomSceneEffect.cpp */,
+				831725DA130BDE4D00A97246 /* colorEffect.h */,
+				831725DB130BDE4D00A97246 /* colorEffect.cpp */,
 			);
 			name = effects;
 			sourceTree = "<group>";
@@ -728,7 +750,7 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
-		833ACD401300403100B1EAF0 /* scene_objects */ = {
+		833ACD401300403100B1EAF0 /* sceneObjects */ = {
 			isa = PBXGroup;
 			children = (
 				83E8AFDA130964E400F4442E /* dgImgSequenceObject.h */,
@@ -751,7 +773,7 @@
 				83265CD7130AC577003C754A /* dgProgressBarObject.h */,
 				83265CD8130AC577003C754A /* dgProgressBarObject.cpp */,
 			);
-			name = scene_objects;
+			name = sceneObjects;
 			sourceTree = "<group>";
 		};
 		833ACD95130047B700B1EAF0 /* ofxOsc */ = {
@@ -862,6 +884,21 @@
 				83B7055A1301D55B00CDE6B4 /* OscReceiver.cpp */,
 			);
 			name = osc;
+			sourceTree = "<group>";
+		};
+		834C2385130B375E009617D3 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				834C2389130B3787009617D3 /* bloomShader.cpp */,
+				834C238A130B3787009617D3 /* bloomShader.h */,
+				834C238B130B3787009617D3 /* ofxShader.cpp */,
+				834C238C130B3787009617D3 /* ofxShader.h */,
+				834C238D130B3787009617D3 /* shaderBlur.cpp */,
+				834C238E130B3787009617D3 /* shaderBlur.h */,
+				831725CD130BDD5300A97246 /* colorShader.h */,
+				831725CE130BDD5300A97246 /* colorShader.cpp */,
+			);
+			name = shaders;
 			sourceTree = "<group>";
 		};
 		83586CB3130814D400465D1D /* debug */ = {
@@ -1101,9 +1138,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				834C2385130B375E009617D3 /* shaders */,
 				83586CB3130814D400465D1D /* debug */,
 				833ACDBC130047C300B1EAF0 /* osc */,
-				833ACD401300403100B1EAF0 /* scene_objects */,
+				833ACD401300403100B1EAF0 /* sceneObjects */,
 				833ACD2A13003E3100B1EAF0 /* utils */,
 				833ACCF2130037DD00B1EAF0 /* scene */,
 				833ACCEE130037C700B1EAF0 /* data */,
@@ -1339,6 +1377,12 @@
 				83265E55130AE16B003C754A /* dgSceneEffects.cpp in Sources */,
 				83265E58130AE3BB003C754A /* dgAbstractEffect.cpp in Sources */,
 				83265E5B130AE4E2003C754A /* flickrEffect.cpp in Sources */,
+				834C238F130B3787009617D3 /* bloomShader.cpp in Sources */,
+				834C2390130B3787009617D3 /* ofxShader.cpp in Sources */,
+				834C2391130B3787009617D3 /* shaderBlur.cpp in Sources */,
+				834C239A130B37FC009617D3 /* bloomSceneEffect.cpp in Sources */,
+				831725CF130BDD5300A97246 /* colorShader.cpp in Sources */,
+				831725DC130BDE4D00A97246 /* colorEffect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

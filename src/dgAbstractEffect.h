@@ -24,6 +24,8 @@ public:
 	virtual void update();
 	virtual void draw(ofxFBOTexture & fbo);
 	
+	virtual ofxFBOTexture * draw(ofxFBOTexture & fbo, int x, int y);
+	
 	string name;
 	
 };

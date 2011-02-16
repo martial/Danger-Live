@@ -14,7 +14,8 @@
 #include "ofxFBOTexture.h"
 #include "dgAbstractEffect.h"
 #include "flickrEffect.h"
-
+#include "bloomSceneEffect.h"
+#include "colorEffect.h"
 class dgSceneEffects {
 
 	public :
@@ -22,9 +23,16 @@ class dgSceneEffects {
 	void addEffect();
 	void update();
 	void draw(ofxFBOTexture & fbo);
+	void draw(ofxFBOTexture & fbo, int x, int y);
 	
 	void setEffectByName(string name);
 	void reset();
+	
+	void setColorSettintgs(float brightness, float saturation, float contrast);
+	void setBrightness(float brightness);
+	void setSaturation( float saturation);
+	void setContrast(float contrast);
+
 	
 	dgAbstractEffect * getEffectByName(string name);
 	
@@ -34,6 +42,8 @@ class dgSceneEffects {
 	
 	int					currentEffectID;
 	dgAbstractEffect *	currentEffect;
+	
+	colorEffect			color;
 	
 	
 };

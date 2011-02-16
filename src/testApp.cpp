@@ -18,7 +18,7 @@ void testApp::setup(){
 	ofAddListener(oscReceiver.oscEvent,this,&testApp::onOscEvent);
 	
 	
-	midiListener.setup(scene);
+	midiListener.setup(scene, sceneEffects);
 	midiIn.listPorts();
 	midiIn.openPort(0); 
 	midiIn.addListener(&midiListener);
@@ -39,7 +39,7 @@ void testApp::setup(){
 	debugView.setup();
 	
 	sceneEffects.setup();
-	//sceneEffects.setEffectByName("flickr");
+	//sceneEffects.setEffectByName("bloom");
 	
 	fbo.allocate(1920, 1080,GL_RGB);
 	//fbo.setup(ofGetWidth(), ofGetHeight());
@@ -57,7 +57,8 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 	
-
+	
+	ofBackground(0, 0, 0);
 	
 	fbo.begin();
 	ofEnableAlphaBlending();
@@ -72,13 +73,14 @@ void testApp::draw(){
 	ofSetColor(255, 255, 255);
 	debugView.draw();
 	debugView.drawSceneFbo(fbo);
+	
 	// draw proj
 	//fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
 	
 	
 	ofPushMatrix();
-	glTranslated(1400, 0, 0);
-	sceneEffects.draw(fbo);
+	glTranslated(1440, 0, 0);
+	sceneEffects.draw(fbo,1440,0);
 	ofPopMatrix();
 	//fbo.draw(1440, 0);
 	

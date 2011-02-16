@@ -29,11 +29,19 @@ void DangerBackground::update () {
 
 void DangerBackground::draw (int viewID) {
 	
-	int ofMidWidth = 1920 * .5;
-	int ofMidHeight = 1080  * .5;
+	float x,y;
+	ofxVec2f imgSize = ofxUtils::getSizeRatio(1920, 1080, background.width, background.height);
+	x = 1920 *.5 - imgSize.x*.5;
+	y = 1080 *.5 - imgSize.y*.5;
+	float scalew = (imgSize.x  ) /  background.width;
+	float scaleh = (imgSize.y  ) / background.height;
 	
-	background.draw(ofMidWidth - background.width  * .5 , ofMidHeight  - background.height  * .5 );
 	
+	
+		
+	background.draw(x,y,imgSize.x, imgSize.y);
+	
+	float ofMidWidth = 1920 * .5;
 	int digitalXPos = ofMidWidth - digitalPlaceholder.width * .5;
 	int digitalYPos = 80;
 	digitalPlaceholder.draw(digitalXPos, digitalYPos);

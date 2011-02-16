@@ -61,7 +61,14 @@ public:
 	void bindAsTexture();
 	
 	void *getPixels();
-
+	
+	
+	void swapIn();
+	void swapOut();
+	
+	void setupScreenForMe();
+	void setupScreenForThem();
+	
 	
 protected:
 	static bool isExtensionSupported(const char *extension);
@@ -81,12 +88,7 @@ protected:
 	
 	int			numSamples;
 	
-	void swapIn();
-	void swapOut();
 	
-	void setupScreenForMe();
-	void setupScreenForThem();
-
 	bool bReading;
 	
 	static bool bSupportChecked;

@@ -24,3 +24,7 @@ void dgAbstractEffect::update() {
 void dgAbstractEffect::draw(ofxFBOTexture & fbo) {
 
 }
+
+ofxFBOTexture *  dgAbstractEffect::draw(ofxFBOTexture & fbo, int x, int y) {
+
+}

@@ -1,7 +1,7 @@
 Tdanger_live
 v7
 r0
-t319485730.706694
+t319550807.918745
 cCheck dependencies
 cProcessInfoPlistFile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/Info.plist openFrameworks-Info.plist
 cProcessPCH++ /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.gcc.4_2
@@ -61,6 +61,12 @@ cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/
 cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneEffects.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/flickrEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/shaderBlur.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomSceneEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 cLd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live normal i386
 cPhaseScriptExecution "Run Script" /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
 cPBXCp bin/danger_live.app/Contents/Frameworks/GLUT.framework ../../../libs/glut/lib/osx/GLUT.framework
@@ -220,12 +226,13 @@ t1237975610
 s1826
 
 N/Users/Martial/Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.h
-c000000004D52A1A500000000000001C3
-t1297260965
-s451
+c000000004D5BBC080000000000000222
+t1297857544
+s546
 i"ofMain.h"
 i"ofxMidi.h"
 i"DangerScene.h"
+i"dgSceneEffects.h"
 
 N/Users/Martial/Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/MyMidiListener.h
 c000000004D4F37EA000000000000023A
@@ -479,15 +486,15 @@ s4448
 i"FFTOctaveAnalyzer.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp
-c000000004D5A6664000000000000048E
-t1297770084
-s1166
+c000000004D5BBDAA0000000000000625
+t1297857962
+s1573
 i"DangerMidiListener.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.h
-c000000004D52A1A500000000000001C3
-t1297260965
-s451
+c000000004D5BBC080000000000000222
+t1297857544
+s546
 i"ofMain.h"
 i"ofxMidi.h"
 i"DangerScene.h"
@@ -874,7 +881,7 @@ i<vector>
 i<queue>
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app
-t1297792930
+t1297858007
 s102
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/Info.plist
@@ -882,8 +889,8 @@ t1297624193
 s615
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live
-t1297791887
-s4035608
+t1297858007
+s4053756
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/PkgInfo
 t1297624193
@@ -897,16 +904,20 @@ N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/danger_live.app/Conte
 t1297624214
 s631
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ColorSettingsShader.o
+t2
+s0
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerBackground.o
-t1297624197
-s4344
+t1297854972
+s5988
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerMidiListener.o
-t1297783089
-s3768
+t1297857964
+s4708
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerScene.o
-t1297783089
+t1297854973
 s5028
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DgOscReceiver.o
@@ -933,6 +944,30 @@ N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/R
 t1297624195
 s46808
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomSceneEffect.o
+t1297856771
+s3696
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomShader.o
+t1297809895
+s3520
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorEffect.o
+t1297857527
+s3936
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingEffect.o
+t2
+s0
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingsShader.o
+t2
+s0
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorShader.o
+t1297857837
+s4292
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/componentData.o
 t1297781078
 s3248
@@ -942,13 +977,13 @@ t1297683325
 s4648
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/danger_live.LinkFileList
-c000000004D5AAE600000000000001D82
-t1297788512
-s7554
+c000000004D5BA74B00000000000020C0
+t1297852235
+s8384
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractEffect.o
-t1297789647
-s2472
+t1297855508
+s2620
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractModuleWrapper.o
 t1297781082
@@ -963,7 +998,7 @@ t1297783091
 s16616
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgDebugView.o
-t1297676380
+t1297855169
 s7280
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgFaderObject.o
@@ -1003,8 +1038,8 @@ t1297781081
 s8572
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneEffects.o
-t1297790131
-s5428
+t1297857902
+s8600
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneObject.o
 t1297781077
@@ -1043,12 +1078,12 @@ t1297624200
 s2544
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/flickrEffect.o
-t1297790392
-s3328
+t1297855510
+s3400
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/main.o
-t1297790133
-s59060
+t1297857547
+s61184
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/moduleData.o
 t1297785410
@@ -1071,7 +1106,7 @@ t1297090010
 s16148
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFBOTexture.o
-t1297624213
+t1297809892
 s16148
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFbo.o
@@ -1118,6 +1153,10 @@ N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/R
 t1297624210
 s11256
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxShader.o
+t1297809775
+s9728
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxUtils.o
 t1297624210
 s2560
@@ -1126,9 +1165,13 @@ N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/R
 t1297624197
 s61816
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/shaderBlur.o
+t1297856381
+s4912
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/testApp.o
-t1297790918
-s56528
+t1297858007
+s57312
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/tinyxml.o
 t1297624195
@@ -1142,6 +1185,10 @@ N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/R
 t1297624196
 s40416
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/untitled.o
+t2
+s0
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
 c000000004D582C810000000000000113
 t1297624193
@@ -1152,17 +1199,30 @@ c000000004CE3AF760000000000000277
 t1289990006
 s631
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ColorSettingsShader.cpp
+c000000004D5B9EAC00000000000000C5
+t1297850028
+s197
+i"ColorSettingsShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ColorSettingsShader.h
+c000000004D5B9EAC00000000000000A1
+t1297850028
+s161
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp
-c000000004D57EC6E000000000000046C
-t1297607790
-s1132
+c000000004D5BB119000000000000052C
+t1297854745
+s1324
 i"DangerBackground.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.h
-c000000004D5428DC00000000000001C1
-t1297361116
-s449
+c000000004D5BB15D00000000000001ED
+t1297854813
+s493
 i"ofMain.h"
+i"ofxUtils.h"
+i"ofxVec2f.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp
 c000000004D5A60C6000000000000084F
@@ -1221,6 +1281,77 @@ c000000004D519DDB0000000000000099
 t1297194459
 s153
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp
+c000000004D5BB7E800000000000003FA
+t1297856488
+s1018
+i"bloomSceneEffect.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.h
+c000000004D5BB60A00000000000002AB
+t1297856010
+s683
+i"ofMain.h"
+i"ofxFBOTexture.h"
+i"dgAbstractEffect.h"
+i"flickrEffect.h"
+i"shaderBlur.h"
+i"bloomShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp
+c000000004D5BBB8F0000000000000458
+t1297857423
+s1112
+i"colorEffect.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.h
+c000000004D5BBB4E000000000000028E
+t1297857358
+s654
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp
+c000000004D5BA63E0000000000000244
+t1297851966
+s580
+i"colorSettingEffect.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.h
+c000000004D5BA6A10000000000000205
+t1297852065
+s517
+i"ofMain.h"
+i"ofxFBOTexture.h"
+i"dgAbstractEffect.h"
+i"colorShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp
+c000000004D5BA5A400000000000007CE
+t1297851812
+s1998
+i"colorSettingsShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.h
+c000000004D5BA4A9000000000000026E
+t1297851561
+s622
+i"ofMain.h"
+i"ofxShader.h"
+i"ofxFBOTexture.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp
+c000000004D5BBD1A00000000000007C3
+t1297857818
+s1987
+i"colorShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.h
+c000000004D5BB96A0000000000000260
+t1297856874
+s608
+i"ofMain.h"
+i"ofxShader.h"
+i"ofxFBOTexture.h"
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/componentData.cpp
 c000000004D57DBDF0000000000000102
 t1297603551
@@ -1246,15 +1377,17 @@ s448
 i"ofMain.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp
-c000000004D5AB21E0000000000000182
-t1297789470
-s386
+c000000004D5BB41100000000000001D3
+t1297855505
+s467
 i"dgAbstractEffect.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.h
-c000000004D5AB20E00000000000001C2
-t1297789454
-s450
+c000000004D5BB4080000000000000206
+t1297855496
+s518
+i"ofMain.h"
+i"ofxFBOTexture.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractModuleWrapper.cpp
 c000000004D5A88E60000000000000205
@@ -1309,8 +1442,8 @@ i"dgCompBuilder.h"
 i"ofxDirList.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp
-c000000004D58F8430000000000000709
-t1297676355
+c000000004D5BB2950000000000000709
+t1297855125
 s1801
 i"dgDebugView.h"
 
@@ -1448,19 +1581,21 @@ i"ofMain.h"
 i"dgSceneObject.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp
-c000000004D5AB0D900000000000003C8
-t1297789145
-s968
+c000000004D5BBD4B00000000000007EE
+t1297857867
+s2030
 i"dgSceneEffects.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.h
-c000000004D5AB0540000000000000296
-t1297789012
-s662
+c000000004D5BBB4700000000000003D5
+t1297857351
+s981
 i"ofMain.h"
 i"ofxFBOTexture.h"
 i"dgAbstractEffect.h"
 i"flickrEffect.h"
+i"bloomSceneEffect.h"
+i"colorEffect.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneObject.cpp
 c000000004D5935FF0000000000000C68
@@ -1569,10 +1704,13 @@ N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.h
 c000000004D5AB47200000000000001F8
 t1297790066
 s504
+i"ofMain.h"
+i"dgAbstractEffect.h"
+i"ofxFBOTexture.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp
-c000000004D58F7DD00000000000001B4
-t1297676253
+c000000004D5BAFC700000000000001B4
+t1297854407
 s436
 i"ofMain.h"
 i"testApp.h"
@@ -1611,9 +1749,9 @@ i"ofxFBOTexture.h"
 i"glu.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.h
-c000000004D581F550000000000000830
-t1297620821
-s2096
+c000000004D5B01E10000000000000836
+t1297809889
+s2102
 i"ofMain.h"
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFbo.cpp
@@ -1629,10 +1767,50 @@ s1745
 i"ofAppRunner.h"
 i"ofGraphics.h"
 
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp
+c000000004D5AFCA6000000000000035F
+t1297808550
+s863
+i"bloomShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.h
+c000000004C1013FE00000000000001DC
+t1276122110
+s476
+i"ofMain.h"
+i"ofxShader.h"
+i"ofxFBOTexture.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp
+c000000004AC7992A000000000000184C
+t1254594858
+s6220
+i"ofxShader.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.h
+c000000004AC7933A0000000000000575
+t1254593338
+s1397
+i"ofMain.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp
+c000000004D5BB75E000000000000089C
+t1297856350
+s2204
+i"shaderBlur.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.h
+c000000004D5BB62B000000000000026F
+t1297856043
+s623
+i"ofMain.h"
+i"ofxShader.h"
+i"ofxFBOTexture.h"
+
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp
-c000000004D5AB7C00000000000000ECB
-t1297790912
-s3787
+c000000004D5BBDD30000000000000EFA
+t1297858003
+s3834
 i"testApp.h"
 i"Poco/Delegate.h"
 i"Poco/Timestamp.h"
@@ -1654,6 +1832,17 @@ i"ofxFBOTexture.h"
 i"dgDebugView.h"
 i"customOscMessage.h"
 i"dgSceneEffects.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/untitled.cpp
+c000000004D5BA6BE00000000000000AF
+t1297852094
+s175
+i"untitled.h"
+
+N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/untitled.h
+c000000004D5BA6BE0000000000000096
+t1297852094
+s150
 
 N/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/utils/ofxUtils.cpp
 c000000004D554D00000000000000028A
@@ -2603,11 +2792,14 @@ s631
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies319485730#319485730#0(110"[WARN]Warning: The Copy Files build phase contains this target's Info.plist file 'openFrameworks-Info.plist'.1(22@103"Warning: The Copy Files build phase contains this target's Info.plist file 'openFrameworks-Info.plist'.319485730#18446744073709551615#0#0(1@0"0(0#1#0"8632736800#0"0#
+lSLF07#2@18"Check dependencies319550804#319550804#0(110"[WARN]Warning: The Copy Files build phase contains this target's Info.plist file 'openFrameworks-Info.plist'.1(22@103"Warning: The Copy Files build phase contains this target's Info.plist file 'openFrameworks-Info.plist'.319550804#18446744073709551615#0#0(1@0"0(0#1#0"8628264576#0"0#
+
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ColorSettingsShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ColorSettingsShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerBackground.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319316997.011953
-e319316997.879049
+s319547770.820859
+e319547772.267261
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerBackground.o
@@ -2617,11 +2809,11 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@86"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp319316997#319316997#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp8608879008#1742"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerBackground.o0#
+lSLF07#2@86"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp319547770#319547772#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp8640012704#1742"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerBackground.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerBackground.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerMidiListener.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319475887.087547
-e319475889.275648
+s319550763.703488
+e319550764.777933
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerMidiListener.o
@@ -2631,11 +2823,11 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@190"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp319475887#319475889#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#182"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp8642449184#1848"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerMidiListener.o0#
+lSLF07#2@190"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp319550763#319550764#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#182"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp8632284128#1848"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/midi/DangerMidiListener.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerMidiListener.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerScene.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319475887.089416
-e319475889.220412
+s319547772.268615
+e319547773.784271
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerScene.o
@@ -2645,7 +2837,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@81"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp319475887#319475889#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp8634736192#1732"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerScene.o0#
+lSLF07#2@81"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp319547772#319547773#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp8613855808#1732"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DangerScene.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DangerScene.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/DgOscReceiver.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/DgOscReceiver.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319317003.246913
@@ -2719,6 +2911,101 @@ xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
 lSLF07#2@93"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtMidi/RtMidi.cpp319316993#319316995#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#85"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtMidi/RtMidi.cpp8609032064#1739"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtMidi/RtMidi.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/RtMidi.o0#
 
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomSceneEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319549570.385303
+e319549571.680778
+r1
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomSceneEffect.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@86"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp319549570#319549571#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp8615060256#1742"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/bloomSceneEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomSceneEffect.o0#
+
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319502693.879472
+e319502695.204870
+r1
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomShader.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@89"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp319502693#319502695#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp8641605280#1740"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/bloomShader.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/bloomShader.o0#
+
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319550326.174718
+e319550327.202698
+r1
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorEffect.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@81"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp319550326#319550327#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp8613380032#1732"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorEffect.o0#
+
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319544867.169078
+e319544868.384919
+r0
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingEffect.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp:10:
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.h:31: error: multiple types in one declaration
+lSLF07#2@88"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp319544867#319544868#0(231"In file included from /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp:10:/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.h:31: error: multiple types in one declaration1(4@33"Multiple types in one declaration319544868#107#124#2(7@102"In file included from /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp319544868#18446744073709551615#0#0(6@80"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp319544766#10#0#10#0#0"0(13@115"Multiple types in one declaration in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.h319544868#18446744073709551615#0#0(6@78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.h319544865#31#0#31#0#0"0(6@78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.h319544865#31#0#31#0#0"0(0#0#80"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp8624076640#1746"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingEffect.o1#
+
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingsShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319544578.683423
+e319544580.050439
+r0
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingsShader.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: error: new types may not be defined in a return type
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: note: (perhaps a semicolon is missing after the definition of 'colorSettingsShader')
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: error: two or more data types in declaration of 'setup'
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp: In member function 'void colorSettingsShader::draw(float, float, float, float, bool)':
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:64: warning: deprecated conversion from string constant to 'char*'
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:65: warning: deprecated conversion from string constant to 'char*'
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:66: warning: deprecated conversion from string constant to 'char*'
+lSLF07#2@89"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544578#319544580#0(1069"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: error: new types may not be defined in a return type/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: note: (perhaps a semicolon is missing after the definition of 'colorSettingsShader')/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:14: error: two or more data types in declaration of 'setup'/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp: In member function 'void colorSettingsShader::draw(float, float, float, float, bool)':/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:64: warning: deprecated conversion from string constant to 'char*'/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:65: warning: deprecated conversion from string constant to 'char*'/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp:66: warning: deprecated conversion from string constant to 'char*'6(4@45"New types may not be defined in a return type319544580#0#139#0(6@81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544576#14#0#14#0#0"0(13@78"(perhaps a semicolon is missing after the definition of 'colorSettingsShader')319544580#139#171#0(6@81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544576#14#0#14#0#0"0(4@48"Two or more data types in declaration of 'setup'319544580#310#142#0(6@81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544576#14#0#14#0#0"0(22@53"Deprecated conversion from string constant to 'char*'319544580#622#149#0(6@81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544576#64#0#64#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'319544580#771#149#0(6@81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544576#65#0#65#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'319544580#920#149#0(6@81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp319544576#66#0#66#0#49"deprecated conversion from string constant to '*'0(0#0#81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp8614903680#1748"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorSettingsShader.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorSettingsShader.o1#
+
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319550636.430261
+e319550637.662066
+r1
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorShader.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp: In member function 'ofxFBOTexture* colorShader::getTexture(bool)':
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp:69: warning: deprecated conversion from string constant to 'char*'
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp:70: warning: deprecated conversion from string constant to 'char*'
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp:71: warning: deprecated conversion from string constant to 'char*'
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@81"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp319550636#319550637#0(657"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp: In member function 'ofxFBOTexture* colorShader::getTexture(bool)':/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp:69: warning: deprecated conversion from string constant to 'char*'/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp:70: warning: deprecated conversion from string constant to 'char*'/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp:71: warning: deprecated conversion from string constant to 'char*'i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done3(22@53"Deprecated conversion from string constant to 'char*'319550637#142#141#0(6@73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp319550618#69#0#69#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'319550637#283#141#0(6@73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp319550618#70#0#70#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'319550637#424#141#0(6@73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp319550618#71#0#71#0#49"deprecated conversion from string constant to '*'0(0#0#73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp8624126176#1732"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/colorShader.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorShader.o0#
+
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/componentData.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/componentData.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319473877.373084
 e319473878.763482
@@ -2748,8 +3035,8 @@ oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because link
 lSLF07#2@86"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp319376123#319376125#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp8624388096#1742"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/customOscMessage.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/customOscMessage.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319482446.213039
-e319482447.903507
+s319548307.547573
+e319548308.979606
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractEffect.o
@@ -2759,7 +3046,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@86"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp319482446#319482447#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp8636814560#1742"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractEffect.o0#
+lSLF07#2@86"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp319548307#319548308#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#78"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp8628685920#1742"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractEffect.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgAbstractModuleWrapper.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgAbstractModuleWrapper.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319473881.591055
@@ -2807,8 +3094,8 @@ oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because link
 lSLF07#2@76"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp319475889#319475891#0(499"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp: In member function 'void dgData::addSceneObjects(dgCompBuilder&)':/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp:122: warning: format not a string literal and no format arguments/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp:124: warning: format not a string literal and no format argumentsi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done2(22@51"Format not a string literal and no format arguments319475890#137#135#0(6@68"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp319474548#122#0#122#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments319475890#272#135#0(6@68"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp319474548#124#0#124#0#51"format not a string literal and no format arguments0(0#0#68"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp8645830528#1722"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgData.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgData.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgDebugView.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319369179.005009
-e319369180.162358
+s319547968.472924
+e319547969.393964
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgDebugView.o
@@ -2818,7 +3105,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@81"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp319369179#319369180#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp8610580032#1732"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgDebugView.o0#
+lSLF07#2@81"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp319547968#319547969#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#73"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp8620798208#1732"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgDebugView.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgDebugView.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgFaderObject.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgFaderObject.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319473879.401907
@@ -2947,8 +3234,8 @@ oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because link
 lSLF07#2@89"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgRotationBtnObject.cpp319473880#319473881#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#81"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgRotationBtnObject.cpp8622974400#1748"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgRotationBtnObject.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgRotationBtnObject.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneEffects.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319482929.932243
-e319482931.527357
+s319550701.618908
+e319550702.772337
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneEffects.o
@@ -2958,7 +3245,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@84"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp319482929#319482931#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#76"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp8632888704#1738"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneEffects.o0#
+lSLF07#2@84"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp319550701#319550702#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#76"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp8639355104#1738"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneEffects.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneEffects.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSceneObject.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/dgSceneObject.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319473875.434996
@@ -3092,8 +3379,8 @@ oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because link
 lSLF07#2@188"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/fft/fftOctaveAnalyzer.cpp319317000#319317000#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#180"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/fft/fftOctaveAnalyzer.cpp8608662880#1845"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../../../Desktop/work/openFrameWorks/of_preRelease_v0061_osxSL_FAT/apps/danger/danger_live/src/fft/fftOctaveAnalyzer.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/fftOctaveAnalyzer.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/flickrEffect.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319483191.408974
-e319483192.301287
+s319548308.979741
+e319548310.400273
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/flickrEffect.o
@@ -3103,11 +3390,11 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@82"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp319483191#319483192#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#74"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp8647169376#1734"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/flickrEffect.o0#
+lSLF07#2@82"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp319548308#319548310#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#74"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp8641130208#1734"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/flickrEffect.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/flickrEffect.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/main.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319482929.925161
-e319482933.159295
+s319550344.741315
+e319550347.698481
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/main.o
@@ -3117,7 +3404,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@74"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp319482929#319482933#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#66"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp8634937632#1718"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/main.o0#
+lSLF07#2@74"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp319550344#319550347#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#66"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp8640682944#1718"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/main.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/main.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/main.o /Users/Martial/Git/OF_62/apps/danger/danger_live/src/main.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 r0
@@ -3182,8 +3469,8 @@ oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because link
 lSLF07#2@113"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxFBOTexture/src/ofxFBOTexture.cpp318782808#318782810#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#105"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxFBOTexture/src/ofxFBOTexture.cpp8603098368#1783"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxFBOTexture/src/ofxFBOTexture.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFBOTexture-EA0CB80076879F59.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFBOTexture.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319317012.895493
-e319317013.951488
+s319502690.351650
+e319502692.072200
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFBOTexture.o
@@ -3193,7 +3480,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@83"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp319317012#319317013#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#75"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp8608781888#1736"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFBOTexture.o0#
+lSLF07#2@83"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp319502690#319502692#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#75"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp8635329408#1736"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFBOTexture.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFBOTexture.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFbo.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/ofxFbo.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319317010.354240
@@ -3349,6 +3636,20 @@ xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
 lSLF07#2@113"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxVectorMath/src/ofxQuaternion.cpp319317009#319317010#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#105"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxVectorMath/src/ofxQuaternion.cpp8608406528#1766"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxVectorMath/src/ofxQuaternion.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQuaternion.o0#
 
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxShader.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319502574.254363
+e319502576.121160
+r1
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxShader.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@87"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp319502574#319502576#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#79"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp8590101568#1736"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/ofxShader.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxShader.o0#
+
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxUtils.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/utils/ofxUtils.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 s319317009.076373
 e319317010.354002
@@ -3377,9 +3678,26 @@ xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
 lSLF07#2@115"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp319316995#319316998#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#107"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp8602559008#1769"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxXmlSettings.o0#
 
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/shaderBlur.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s319549180.263144
+e319549181.181235
+r1
+xCompileC
+xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/shaderBlur.o
+x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp: In member function 'ofxFBOTexture* shaderBlur::draw(float, float, float, float, bool)':
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp:64: warning: deprecated conversion from string constant to 'char*'
+o/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp:78: warning: deprecated conversion from string constant to 'char*'
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@88"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp319549180#319549181#0(558"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp: In member function 'ofxFBOTexture* shaderBlur::draw(float, float, float, float, bool)':/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp:64: warning: deprecated conversion from string constant to 'char*'/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp:78: warning: deprecated conversion from string constant to 'char*'i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done2(22@53"Deprecated conversion from string constant to 'char*'319549181#170#148#0(6@80"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp319549150#64#0#64#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'319549181#318#148#0(6@80"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp319549150#78#0#78#0#49"deprecated conversion from string constant to '*'0(0#0#80"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp8640865312#1738"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/shaders/shaderBlur.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/shaderBlur.o0#
+
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/testApp.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s319483716.567785
-e319483718.767367
+s319550804.580455
+e319550807.463179
 r1
 xCompileC
 xbuild/danger_live.build/Release/danger_live.build/Objects-normal/i386/testApp.o
@@ -3389,7 +3707,7 @@ xi386
 xc++
 xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
-lSLF07#2@77"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp319483716#319483718#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#69"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp8638046464#1724"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/testApp.o0#
+lSLF07#2@77"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp319550804#319550807#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#69"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp8640587264#1724"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/testApp.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/testApp.o0#
 
 CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/testApp.o /Users/Martial/Git/OF_62/apps/danger/danger_live/src/testApp.cpp normal i386 c++ com.apple.compilers.gcc.4_2
 r0
@@ -3436,9 +3754,12 @@ xcom.apple.compilers.gcc.4_2
 oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
 lSLF07#2@115"Compile /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp319316995#319316997#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#107"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp8604039776#1768"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -include /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/tinyxmlparser.o0#
 
+CCompileC build/danger_live.build/Release/danger_live.build/Objects-normal/i386/untitled.o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/src/untitled.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
 CLd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live normal i386
-s319483718.767586
-e319483719.233021
+s319550807.463303
+e319550807.898449
 r1
 xLd
 x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live
@@ -3446,7 +3767,7 @@ xnormal
 xi386
 old: warning: std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(IPTC.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxXmlSettings.o
 old: warning: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(PluginEXR.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQTKitVideoPlayer.o
-lSLF07#2@106"Link /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live319483718#319483719#0(1424"ld: warning: std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(IPTC.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxXmlSettings.old: warning: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(PluginEXR.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQTKitVideoPlayer.o2(22@851"Std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(IPTC.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxXmlSettings.o319483719#0#865#0(6@0"319483719#0#0#0#0#0"0(22@545"Std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(PluginEXR.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQTKitVideoPlayer.o319483719#865#559#0(6@0"319483719#0#0#0#0#0"0(0#0#0"8632213344#3073"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    /Developer/usr/bin/g++-4.2 -arch i386 -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freeimage/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/fmodex/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -filelist /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/danger_live.LinkFileList -dead_strip /Users/Martial/Git/OF_62/libs/openFrameworksCompiled/lib/osx/openFrameworks.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx/GLee.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx/rtAudio.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework GLUT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/CppUnit.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoFoundation.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoNet.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoUtil.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoXML.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx/freetype.a -lfmodex /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a -framework CoreMIDI -framework QTKit -framework CoreVideo /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib/aubioOSX.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx/osc.a -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live0#
+lSLF07#2@106"Link /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live319550807#319550807#0(1424"ld: warning: std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(IPTC.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxXmlSettings.old: warning: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(PluginEXR.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQTKitVideoPlayer.o2(22@851"Std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(IPTC.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxXmlSettings.o319550807#0#865#0(6@0"319550807#0#0#0#0#0"0(22@545"Std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)has different visibility (hidden) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a(PluginEXR.o-i386) and (default) in /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQTKitVideoPlayer.o319550807#865#559#0(6@0"319550807#0#0#0#0#0"0(0#0#0"8623478176#3073"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    /Developer/usr/bin/g++-4.2 -arch i386 -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freeimage/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/fmodex/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib -L/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -filelist /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/danger_live.LinkFileList -dead_strip /Users/Martial/Git/OF_62/libs/openFrameworksCompiled/lib/osx/openFrameworks.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx/GLee.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx/rtAudio.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework GLUT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/CppUnit.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoFoundation.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoNet.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoUtil.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx/PocoXML.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx/freetype.a -lfmodex /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx/freeimage.a -framework CoreMIDI -framework QTKit -framework CoreVideo /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib/aubioOSX.a /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx/osc.a -o /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app/Contents/MacOS/danger_live0#
 
 CLd /Users/Martial/Git/OF_62/apps/danger/danger_live/bin//danger_live.app/Contents/MacOS/danger_live normal i386
 r0
@@ -3470,13 +3791,13 @@ xopenFrameworks-Info.plist
 lSLF07#2@30"Copy openFrameworks-Info.plist319317014#319317014#0(0"0(0#0#79"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/openFrameworks-Info.plist8610499200#417"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/openFrameworks-Info.plist /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/danger_live.app/Contents/Resources0#
 
 CPhaseScriptExecution "Run Script" /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-s319485730.665766
-e319485730.704268
+s319550807.898554
+e319550807.916154
 r1
 xPhaseScriptExecution
 xRun Script
 x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-lSLF07#2@36"Run custom shell script 'Run Script'319485730#319485730#0(0"0(0#0#0"8647059232#20106"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER Martial    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386 ppc"    setenv ARCHS_STANDARD_32_BIT "i386 ppc"    setenv ARCHS_STANDARD_64_BIT x86_64    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv BUILD_ROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv BUILD_STYLE Release    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv CACHE_ROOT /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Release    setenv CONFIGURATION_BUILD_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv CONFIGURATION_TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release    setenv CONTENTS_FOLDER_PATH danger_live.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP YES    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH danger_live.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/danger_live.dst    setenv DWARF_DSYM_FILE_NAME danger_live.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH danger_live.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH danger_live.app/Contents/MacOS    setenv EXECUTABLE_NAME danger_live    setenv EXECUTABLE_PATH danger_live.app/Contents/MacOS/danger_live    setenv FILE_LIST /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH danger_live.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/\"  \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME danger_live.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC YES    setenv GCC_ENABLE_FIX_AND_CONTINUE NO    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING G4    setenv GCC_OPTIMIZATION_LEVEL 3    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_UNROLL_LOOPS YES    setenv GCC_VERSION 4.2    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS NO    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO NO    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_UNINITIALIZED_AUTOS NO    setenv GCC_WARN_UNUSED_VALUE NO    setenv GCC_WARN_UNUSED_VARIABLE NO    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//include\" ../../../libs/openFrameworks/** ../../../libs/freetype/include/ ../../../libs/freetype/include/freetype2 ../../../libs/poco/include ../../../addons/"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH danger_live.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH danger_live.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/danger_live.dst/Users/Martial/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER Martial    setenv INSTALL_PATH /Users/Martial/Applications    setenv INSTALL_ROOT /tmp/danger_live.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH danger_live.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/\"  \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freeimage/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx\"       \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/fmodex/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freeimage/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/fmodex/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/danger_live.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH danger_live.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MAC_OS_X_VERSION_ACTUAL 1066    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0606    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal    setenv OBJROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH danger_live.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS "objective-c c++ objective-c++"    setenv PKGINFO_FILE_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/PkgInfo    setenv PKGINFO_PATH danger_live.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_NAME macosx    setenv PLATFORM_PRODUCT_BUILD_VERSION 10M2423    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH danger_live.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH danger_live.app/Contents/PrivateHeaders    setenv PRODUCT_NAME danger_live    setenv PRODUCT_SETTINGS_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT danger_live    setenv PROJECT_DERIVED_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/DerivedSources    setenv PROJECT_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv PROJECT_FILE_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/danger_live.xcodeproj    setenv PROJECT_NAME danger_live    setenv PROJECT_TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build    setenv PUBLIC_HEADERS_FOLDER_PATH danger_live.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH danger_live.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT     setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH danger_live.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH danger_live.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv SRCROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SYMBOL_REPOSITORY_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/SymbolRepositories    setenv SYMROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME danger_live    setenv TARGET_BUILD_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv TARGET_NAME danger_live    setenv TARGET_TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_FILES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_ROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH danger_live.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER Martial    setenv USER_APPS_DIR /Users/Martial/Applications    setenv USER_LIBRARY_DIR /Users/Martial/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 ppc ppc64 ppc7400 ppc970 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH danger_live.app/Contents/version.plist    setenv VERSION_INFO_BUILDER Martial    setenv VERSION_INFO_FILE danger_live_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:danger_live  PROJECT:danger_live-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME danger_live.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2423    setenv XCODE_VERSION_ACTUAL 0325    setenv XCODE_VERSION_MAJOR 0300    setenv XCODE_VERSION_MINOR 0320    setenv YACC /Developer/usr/bin/yacc    setenv ZERO_LINK NO    /bin/sh -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh0#
+lSLF07#2@36"Run custom shell script 'Run Script'319550807#319550807#0(0"0(0#0#0"8621728000#20106"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER Martial    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386 ppc"    setenv ARCHS_STANDARD_32_BIT "i386 ppc"    setenv ARCHS_STANDARD_64_BIT x86_64    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv BUILD_ROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv BUILD_STYLE Release    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv CACHE_ROOT /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Release    setenv CONFIGURATION_BUILD_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv CONFIGURATION_TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release    setenv CONTENTS_FOLDER_PATH danger_live.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP YES    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH danger_live.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/danger_live.dst    setenv DWARF_DSYM_FILE_NAME danger_live.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn .git CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH danger_live.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH danger_live.app/Contents/MacOS    setenv EXECUTABLE_NAME danger_live    setenv EXECUTABLE_PATH danger_live.app/Contents/MacOS/danger_live    setenv FILE_LIST /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH danger_live.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/\"  \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME danger_live.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC YES    setenv GCC_ENABLE_FIX_AND_CONTINUE NO    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING G4    setenv GCC_OPTIMIZATION_LEVEL 3    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_UNROLL_LOOPS YES    setenv GCC_VERSION 4.2    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS NO    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO NO    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_UNINITIALIZED_AUTOS NO    setenv GCC_WARN_UNUSED_VALUE NO    setenv GCC_WARN_UNUSED_VARIABLE NO    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//include\" ../../../libs/openFrameworks/** ../../../libs/freetype/include/ ../../../libs/freetype/include/freetype2 ../../../libs/poco/include ../../../addons/"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH danger_live.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH danger_live.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/danger_live.dst/Users/Martial/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER Martial    setenv INSTALL_PATH /Users/Martial/Applications    setenv INSTALL_ROOT /tmp/danger_live.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH danger_live.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/\"  \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freeimage/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx\"       \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/fmodex/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib\" \"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freeimage/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/fmodex/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/freetype/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/FreeImage/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/aubio/lib\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/GLee/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/poco/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/rtAudio/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../addons/ofxOsc/libs/oscpack/lib/osx\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/danger_live.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH danger_live.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MAC_OS_X_VERSION_ACTUAL 1066    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0606    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal    setenv OBJROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH danger_live.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS "objective-c c++ objective-c++"    setenv PKGINFO_FILE_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/PkgInfo    setenv PKGINFO_PATH danger_live.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_NAME macosx    setenv PLATFORM_PRODUCT_BUILD_VERSION 10M2423    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH danger_live.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH danger_live.app/Contents/PrivateHeaders    setenv PRODUCT_NAME danger_live    setenv PRODUCT_SETTINGS_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT danger_live    setenv PROJECT_DERIVED_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/DerivedSources    setenv PROJECT_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv PROJECT_FILE_PATH /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/danger_live.xcodeproj    setenv PROJECT_NAME danger_live    setenv PROJECT_TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build    setenv PUBLIC_HEADERS_FOLDER_PATH danger_live.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH danger_live.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT     setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH danger_live.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH danger_live.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv SRCROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SYMBOL_REPOSITORY_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/SymbolRepositories    setenv SYMROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME danger_live    setenv TARGET_BUILD_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/    setenv TARGET_NAME danger_live    setenv TARGET_TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_FILES_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_FILE_DIR /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build    setenv TEMP_ROOT /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH danger_live.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER Martial    setenv USER_APPS_DIR /Users/Martial/Applications    setenv USER_LIBRARY_DIR /Users/Martial/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 ppc ppc64 ppc7400 ppc970 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH danger_live.app/Contents/version.plist    setenv VERSION_INFO_BUILDER Martial    setenv VERSION_INFO_FILE danger_live_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:danger_live  PROJECT:danger_live-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME danger_live.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 10M2423    setenv XCODE_VERSION_ACTUAL 0325    setenv XCODE_VERSION_MAJOR 0300    setenv XCODE_VERSION_MINOR 0320    setenv YACC /Developer/usr/bin/yacc    setenv ZERO_LINK NO    /bin/sh -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh0#
 
 CPhaseScriptExecution "Run Script" /Users/Martial/Git/OF_62/apps/danger/danger_live/build/danger_live.build/Release/danger_live.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
 r0
@@ -3538,12 +3859,12 @@ oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because link
 lSLF07#2@71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h318782802#318782806#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#60"/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h8601289120#1583"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O3 -mdynamic-no-pic -funroll-loops -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/danger_live.hmap -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin -F/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/../../../libs/glut/lib/osx -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources/i386 -I/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/DerivedSources -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/tX/tXvC9lCoFsGsNVKB4K3ixE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-hcmcmwoqipzttcfdcvhpugugosgj/Carbon.h.gch0#
 
 CTouch /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app
-s319485730.704597
-e319485730.706664
+s319550807.916383
+e319550807.918716
 r1
 xTouch
 x/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app
-lSLF07#2@80"Touch /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app319485730#319485730#0(0"0(0#0#0"8647878464#158"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    /usr/bin/touch -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app0#
+lSLF07#2@80"Touch /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app319550807#319550807#0(0"0(0#0#0"8616038688#158"    cd /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live    /usr/bin/touch -c /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/bin//danger_live.app0#
 
 CTouch /Users/Martial/Git/OF_62/apps/danger/danger_live/bin//danger_live.app
 r0
