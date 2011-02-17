@@ -25,6 +25,9 @@ void dgRotationBtnObject::setup (string imgURL, string name, string type) {
 	this->width = img->width;
 	this->height = img->height;
 	
+	easePct = pct;
+	blurRate = .3;
+	
 }
 
 void dgRotationBtnObject::addExtraImage(string url) {
@@ -43,11 +46,13 @@ void dgRotationBtnObject::update () {
 	
 	dgSceneObject::update();
 	
-	pct += .01;	
+	easePct = blurRate * easePct + (1 - blurRate) * pct;
+	
+	//pct += .01;	
 	// find good rotation
 	float startingRot = this->configValues[0];
 	float endingRot = this->configValues[1];
-	btnRotation = startingRot + (endingRot*pct);
+	btnRotation = startingRot + (endingRot*easePct);
 	
 	
 	

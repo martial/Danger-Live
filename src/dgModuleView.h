@@ -39,7 +39,7 @@ class dgModuleView {
 	
 	/* Communication OSC*/
 	void processOsc (customOscMessage & msg);
-	dgSceneObject  * getRelatedObject(string val);
+	void  getRelatedObject(string val, vector<dgSceneObject*> * objects, vector<dgSceneObject*> * statePctObjects);
 
 	/* Instances  */
 	dgData					*	layoutData;

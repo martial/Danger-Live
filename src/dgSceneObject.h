@@ -29,13 +29,16 @@ class dgSceneObject {
 	virtual void					addActivitySwitchObject(dgSceneObject * actSwitchObject);
 	virtual void					setPosition(ofPoint);
 	virtual void					setPosition (int x, int y);
+	
 	virtual void					setPct(float pct);
+	virtual void					setStatePct(float pct);
 	
 	
 	
 	string							name;
 	string							nameId;
 	string							adress;
+	string							adressState;
 	string							type;
 	string							sceneObjectRefName;
 	string							activityObjectRefName;
@@ -48,7 +51,7 @@ class dgSceneObject {
 	float							blurRate;
 	
 	int								width, height;
-	float							pct, oldPct;
+	float							pct, statePct, oldPct;
 	vector<float>					configValues;
 	
 	vector<ofImage*>				images;

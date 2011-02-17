@@ -72,8 +72,9 @@ ofxFBOTexture * colorShader::getTexture(bool useShader){
 			
 			dst->swapIn();
 			dst->setupScreenForMe();
-			
+			ofEnableAlphaBlending();		
 			src->draw(0, 0);
+			ofDisableAlphaBlending();
 			dst->swapOut();
 			dst->setupScreenForThem();
 			clrShader.setShaderActive(false);
@@ -82,7 +83,7 @@ ofxFBOTexture * colorShader::getTexture(bool useShader){
 		
 	
 	
-	ofEnableAlphaBlending();	
+	//ofEnableAlphaBlending();	
 	ofSetColor(255, 255, 255, 255);
 	//dst->draw(x, y, w, h);	
 	return dst;

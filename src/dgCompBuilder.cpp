@@ -132,29 +132,6 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 
 				}
 				
-				if ( type == "opacity_switch" ) {
-					
-					
-					dgOpacitySwitchObject * switchObject = new dgOpacitySwitchObject();
-					switchObject->imgAssets = &imgsAssets;
-					switchObject->setup(url, compName, type);
-					
-					
-					if (XML.tagExists("extras_url", 0)) {
-						
-						XML.pushTag("extras_url", 0);
-						int numOfExtrasUrl = XML.getNumTags("extraurl");
-						for (int z=0; z<numOfExtrasUrl;z++ ) {
-							string extraURL = XML.getValue("extraurl", "", z);
-							switchObject->addExtraImage(extraURL);
-						}
-						XML.popTag();
-						
-					}
-					
-					component = switchObject;
-					
-				}
 				
 				if ( type == "meter" ) {
 					
@@ -176,6 +153,31 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					// ok. How many cols we have ?
 				
 					component = multipleLed;
+					
+				}
+				
+				
+				if ( type == "opacity_switch" ) {
+					
+					
+					dgOpacitySwitchObject * opacityObj = new dgOpacitySwitchObject();
+					opacityObj->imgAssets = &imgsAssets;
+					opacityObj->setup(url, compName, type);
+					
+					
+					if (XML.tagExists("extras_url", 0)) {
+						
+						XML.pushTag("extras_url", 0);
+						int numOfExtrasUrl = XML.getNumTags("extraurl");
+						for (int z=0; z<numOfExtrasUrl;z++ ) {
+							string extraURL = XML.getValue("extraurl", "", z);
+							opacityObj->addExtraImage(extraURL);
+						}
+						XML.popTag();
+						
+					}
+					
+					component = opacityObj;
 					
 				}
 				
@@ -219,7 +221,9 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					
 					dgImgSequenceObject * imgSeqObject = new dgImgSequenceObject();
 					imgSeqObject->imgAssets = &imgsAssets;
-					imgSeqObject->setup( url, compName, type);
+					string urlOff = XML.getValue("url_off", "");
+					imgSeqObject->setup( url, urlOff, compName, type);
+					
 					
 										
 					component = imgSeqObject;
@@ -240,8 +244,6 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 						progressObject->addConfig(val);	
 					}
 					XML.popTag();
-					// ok. How many cols we have ?
-					
 					component = progressObject;
 					
 				}

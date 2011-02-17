@@ -30,11 +30,11 @@ public:
 	dgImgSequenceObject();
 	~dgImgSequenceObject();
 	
-	void					setup(string folder, string name, string type);
+	void					setup(string folderOn, string folderOff ="", string name ="", string type ="");
 	void					update();
 	void					draw();
 	
-	void					addExtraImage(string url);
+	void					addExtraImage(string url, string imgSet);
 	void					setPct(float pct);
 	
 	
@@ -43,6 +43,7 @@ public:
 	
 	//ofImage					img;
 	vector<ofImage*>		images;
+	vector<ofImage*>		imagesOff;
 	int						currentIndex;
 	float					easePct;
 	

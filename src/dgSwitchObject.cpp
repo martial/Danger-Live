@@ -51,7 +51,7 @@ void dgSwitchObject::update () {
 	dgSceneObject::update();
 	
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
-	currentIndex = floor((easePct * (images.size())) + 0.5);
+	currentIndex = floor((easePct * (images.size())));
 	if ( currentIndex > images.size()-1 ) currentIndex = images.size()-1;
 	//printf("---- \n");
 	//printf("pct %f\n", easePct);
@@ -64,12 +64,23 @@ void dgSwitchObject::draw () {
 	
 	dgSceneObject::draw();
 	
-	ofEnableAlphaBlending();
+	
+	
+	
+	
+	
+	
 	ofPushMatrix();
-	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
-	images[currentIndex]->draw(0, 0);
-	ofPopMatrix();
+	ofTranslate((int)pos.x, (int)pos.y, 0);
+	
+	
+	ofRotate(rotation, 0, 0, 1);
+	ofEnableAlphaBlending();
+	images[currentIndex]->draw((int)(-width * .5), (int)(-height * .5));
 	ofDisableAlphaBlending();
+	ofPopMatrix();
+	
+	ofSetColor(255, 255, 255, 255);
 }
 
 

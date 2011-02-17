@@ -22,6 +22,7 @@ class componentData {
 	~componentData();
 	string		name;
 	string		adress;
+	string		adressState;
 	
 	/* nameId is used to get one component in a wrapper */
 	string		nameId;

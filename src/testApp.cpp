@@ -11,7 +11,7 @@ void testApp::setup(){
 	
 	
 	ofSetVerticalSync(true);
-	//ofSetFrameRate(60);
+	ofSetFrameRate(60);
 	/* Midi / OSC */
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
@@ -39,9 +39,11 @@ void testApp::setup(){
 	debugView.setup();
 	
 	sceneEffects.setup();
-	sceneEffects.setEffectByName("bloom");
+	//sceneEffects.setEffectByName("bloom");
 	
-	fbo.allocate(1920, 1080,GL_RGB);
+	fbo.allocate(1920, 1080, GL_RGBA);
+	
+	oscDebugEnabled = false;
 	//fbo.setup(ofGetWidth(), ofGetHeight());
 	//fbo.attach(texture);
 }
@@ -59,11 +61,13 @@ void testApp::draw(){
 	
 	
 	ofBackground(0, 0, 0);
-	
+	//fbo.clear(0,0,0,0);
 	fbo.begin();
+	//fbo.clean();
 	ofEnableAlphaBlending();
+	ofSetColor(255, 255, 255);
 	scene.draw();
-	oscReceiver.debugDraw();
+	if(oscDebugEnabled)oscReceiver.debugDraw();
 	ofDisableAlphaBlending();
 	fbo.end();
 	
@@ -79,7 +83,8 @@ void testApp::draw(){
 	
 	
 	ofPushMatrix();
-	glTranslated(1440, 0, 0);
+	//glTranslated(1440, 0, 0);
+	//scene.draw();
 	sceneEffects.draw(fbo,1440,0);
 	ofPopMatrix();
 	//fbo.draw(1440, 0);
@@ -154,6 +159,10 @@ void testApp::keyPressed(int key){
 			
 		case 'o':
 			oscReceiver.setup();
+			break;
+			
+		case 'g':
+			oscDebugEnabled = !oscDebugEnabled;
 			break;
 			
 		default:

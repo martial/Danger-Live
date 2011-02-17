@@ -26,7 +26,7 @@ void shaderBlur::setup(int fboW, int fboH){
 	shaderV.loadShader("shaders/simpleBlurVertical");
 
 	noPasses = 2;
-	blurDistance = 1.0;
+	blurDistance = 0.2;
 }
 
 //--------------------------------------------------------------

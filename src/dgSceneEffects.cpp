@@ -62,14 +62,26 @@ void dgSceneEffects::draw(ofxFBOTexture & fbo, int x, int y) {
 	
 	// in all cases apply color effect
 	
+	
+	
 	ofxFBOTexture * filteredFbo =  color.draw(fbo, x, y);
 	
 	ofxFBOTexture * finalFbo;
 	if ( currentEffect ) {
+		//glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_COLOR);
+		
+		
+		fbo.draw(x, y);	
+		
 		finalFbo = currentEffect->draw(*filteredFbo,x,y);
 		finalFbo->draw(x, y);
+		
+		//ofSetupScreen();
 	} else {
+		//ofDisableAlphaBlending();
+		ofEnableAlphaBlending();
 		filteredFbo->draw(x,y);
+		ofDisableAlphaBlending();
 	}	
 	
 }

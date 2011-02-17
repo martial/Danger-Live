@@ -29,11 +29,7 @@ void OscReceiver::update () {
 			msg_strings[i] = "";
 	}
 	
-	for (int i=0; i<messages.size(); i++ ) {
-		//delete messages[i];
-	}
-	//messages.clear();
-	
+		
 	
 	// check for waiting messages
 	while( receiver.hasWaitingMessages() )

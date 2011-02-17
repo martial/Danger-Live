@@ -67,6 +67,8 @@ void dgData::setup () {
 			data[i]->cpData[j]->name = XML.getValue("name", "");
 			data[i]->cpData[j]->nameId = XML.getValue("nameID", "");
 			data[i]->cpData[j]->adress = XML.getValue("osc_adress", "");
+			data[i]->cpData[j]->adressState = XML.getValue("osc_adress_state", "");
+			
 			
 			
 			
@@ -130,6 +132,7 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			sceneObject->setPosition(compData->pos.x, compData->pos.y);
 			sceneObject->rotation = compData->rotation;
 			sceneObject->adress = compData->adress;
+			sceneObject->adressState = compData->adressState;
 			sceneObject->nameId = compData->nameId;
 			currentModule->cpObjects.push_back(sceneObject);
 			}

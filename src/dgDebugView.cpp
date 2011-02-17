@@ -72,8 +72,9 @@ void dgDebugView::drawSceneFbo (ofxFBOTexture & texture) {
 	ofRect(x-1, y-1, videoSize.x+2, videoSize.y+2);
 	ofDisableAlphaBlending();
 	ofSetColor(255, 255, 255, 255);
+	ofEnableAlphaBlending();
 	texture.draw(x,y ,videoSize.x,videoSize.y);
-	
+	ofDisableAlphaBlending();
 	
 	
 }

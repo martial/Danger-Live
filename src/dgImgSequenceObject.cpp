@@ -25,17 +25,27 @@ dgImgSequenceObject::~dgImgSequenceObject() {
 }
 
 
-void dgImgSequenceObject::setup (string folder, string name, string type) {
+void dgImgSequenceObject::setup (string folderOn, string folderOff, string name , string type ) {
 	
 	dgSceneObject::setup(name, type);
 	
 	// get imgs
 	
 	DIR.setVerbose(false);
-    int numfOfImgs = DIR.listDir(folder);
+    int numfOfImgs = DIR.listDir(folderOn);
 	
 	for (int i = 0; i<numfOfImgs; i++) {
-		addExtraImage(DIR.getPath(i));
+		addExtraImage(DIR.getPath(i), "");
+	}
+	
+	if ( folderOff != "") {
+			
+		DIR.reset();
+		numfOfImgs= DIR.listDir(folderOff);
+		for (int i = 0; i<numfOfImgs; i++) {
+			addExtraImage(DIR.getPath(i), "off_state");
+		}
+		
 	}
 
 	
@@ -51,16 +61,33 @@ void dgImgSequenceObject::setup (string folder, string name, string type) {
 
 
 
-void dgImgSequenceObject::addExtraImage(string url) {
+void dgImgSequenceObject::addExtraImage(string url, string imgSet) {
+	
+	
+	if ( imgSet =="off_state" ) {
 	
 	ofImage * img = imgAssets->addImage(url);
-	images.push_back(img);
+	imagesOff.push_back(img);
 	
 	this->width = img->width*.5;
 	this->height = img->height * .5;
 	
+	} else  {
+		
+	ofImage * img = imgAssets->addImage(url);
+	images.push_back(img);
+		
+	this->width = img->width*.5;
+	this->height = img->height * .5;
+		
+		
+	}
+	
+	
 	
 }
+
+
 
 void dgImgSequenceObject::update () {
 	
@@ -86,7 +113,17 @@ void dgImgSequenceObject::draw () {
 	ofEnableAlphaBlending();
 	ofPushMatrix();
 	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+	
+	if (imagesOff.size() == images.size()) {
+		imagesOff[currentIndex]->draw(0,0);
+	}
+	
+	if ( statePct > 0 ) { 
+	ofSetColor(255, 255, 255, statePct * 255);
 	images[currentIndex]->draw(0, 0);
+	}
+	
+	
 	ofPopMatrix();
 	ofDisableAlphaBlending();
 }

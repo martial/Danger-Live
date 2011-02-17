@@ -48,6 +48,7 @@ void dgSceneObject::setup (string name, string type) {
 	active = false;
 	
 	pct = 0.0;
+	statePct = 1.0;
 	oldPct = 0.0;
 	
 	activitySwitchObject = NULL;
@@ -147,6 +148,14 @@ void dgSceneObject::setPct(float pct) {
 	
 	if ( pct != this->pct   ) {
 	this->pct = pct;
+	}
+	
+}
+
+void dgSceneObject::setStatePct(float pct) {
+	
+	if ( pct != this->statePct   ) {
+		this->statePct = pct;
 	}
 	
 }

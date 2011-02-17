@@ -90,19 +90,26 @@ void dgOpacitySwitchObject::draw () {
 	ofSetColor(255, 255, 255, 255);
 	img->draw(0,0);
 	
-	if ( images.size() > 1 ) {
-	
-	ofSetColor(255, 255, 255, (1-alphaPct) * 255);
-	images[currentIndex]->draw(0, 0);
 	
 	
-	ofSetColor(255, 255, 255, alphaPct * 255);
-	images[currentIndex+1]->draw(0, 0);
 		
-	} else {
-		ofSetColor(255, 255, 255, (alphaPct) * 255);
-		images[currentIndex]->draw(0, 0);
-	}
+		if ( images.size() > 1 ) {
+	
+			ofSetColor(255, 255, 255, (1-alphaPct) * 255);
+			images[currentIndex]->draw(0, 0);
+	
+	
+			ofSetColor(255, 255, 255, alphaPct * 255);
+			images[currentIndex+1]->draw(0, 0);
+		
+		} else  {
+		//printf("ok");
+		ofSetColor(255, 255, 255, (easePct) * 255);
+		images[0]->draw(0, 0);
+
+		
+		}	
+	
 	
 	ofPopMatrix();
 	ofDisableAlphaBlending();

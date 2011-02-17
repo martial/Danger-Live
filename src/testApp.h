@@ -53,6 +53,9 @@ class testApp : public ofBaseApp{
 	
 		ofxFBOTexture				fbo;
 		dgSceneEffects				sceneEffects;
+	
+	
+		bool						oscDebugEnabled;
 		//ofTexture					texture;
 };
 
