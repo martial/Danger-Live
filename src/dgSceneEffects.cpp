@@ -15,6 +15,13 @@ void dgSceneEffects::setup() {
 	currentEffect = NULL;
 	color.setup("color");
 	
+	blur.setup("blur");
+	
+	saturationPct = 1.0;
+	contrastPct = 1.0;
+	brightnessPct = 1.0;
+	blurPct = 0.0;
+	
 	addEffect();
 	
 }
@@ -25,9 +32,9 @@ void dgSceneEffects::addEffect() {
 	flickr->setup("flickr");
 	effects.push_back(flickr);
 	
-	bloomSceneEffect * bloom = new bloomSceneEffect();
-	bloom->setup("bloom");
-	effects.push_back(bloom);
+	//bloomSceneEffect * bloom = new bloomSceneEffect();
+	//bloom->setup("bloom");
+	//effects.push_back(bloom);
 	
 	/*
 	colorEffect * color = new colorEffect();
@@ -38,15 +45,37 @@ void dgSceneEffects::addEffect() {
 }
 
 void dgSceneEffects::update() {
+	
+	//dgAbstractEffect * clrEffect = getEffectByName("color");
+	//clrEffect->update();
+	
+	//if ( color != NULL ) {
+		//printf("ok\n");
+		color.update();
+		color.brightnessPct = brightnessPct;
+		color.contrastPct = contrastPct;
+	
+		blur.update();
+		blur.blurPct = blurPct;
+	
+		
+	//}
+	
 	if ( currentEffect ) currentEffect->update();
 }
 
 void dgSceneEffects::draw(ofxFBOTexture & fbo) {
 	
-	
+	/*
 	// in all cases apply color effect
 	
 	dgAbstractEffect * clrEffect = getEffectByName("color");
+	
+	printf("brightnessPct from effects %f\n", brightnessPct );
+	
+	color.brightnessPct = brightnessPct;
+	color.contrastPct = contrastPct;
+	clrEffect->update();
 	clrEffect->draw(fbo);
 	
 	if ( currentEffect ) {
@@ -54,14 +83,19 @@ void dgSceneEffects::draw(ofxFBOTexture & fbo) {
 	} else {
 		//fbo.draw(0,0);
 	}	
+	 */
 	
 }
 
-void dgSceneEffects::draw(ofxFBOTexture & fbo, int x, int y) {
+ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture & fbo, int x, int y) {
 	
 	
 	// in all cases apply color effect
 	
+	
+//	color.brightnessPct = brightnessPct;
+	//color.contrastPct = contrastPct;
+	//clrEffect->update();
 	
 	
 	ofxFBOTexture * filteredFbo =  color.draw(fbo, x, y);
@@ -75,13 +109,16 @@ void dgSceneEffects::draw(ofxFBOTexture & fbo, int x, int y) {
 		
 		finalFbo = currentEffect->draw(*filteredFbo,x,y);
 		finalFbo->draw(x, y);
-		
+		return finalFbo;
 		//ofSetupScreen();
 	} else {
 		//ofDisableAlphaBlending();
 		ofEnableAlphaBlending();
-		filteredFbo->draw(x,y);
+		finalFbo = blur.draw(*filteredFbo,x,y);
+		finalFbo->draw(x, y);
+
 		ofDisableAlphaBlending();
+		return finalFbo;
 	}	
 	
 }

@@ -31,6 +31,8 @@ class shaderBlur{
 		ofxFBOTexture fbo1, fbo2;
 		
 		float blurDistance;
+		float blurPct;
+	
 		int noPasses;
 };
 

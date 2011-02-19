@@ -20,7 +20,19 @@ void DangerBackground::setup () {
 	background.loadImage("components/BACKGROUND/BackgroundTest.png");
 	digitalPlaceholder.loadImage("components/DIGITAL/digital-off.png");
 	digitalFont.loadFont("fonts/digital-7_italic.ttf", 40);
+	
+	
+	DIR.setVerbose(false);
+    int numfOfImgs = DIR.listDir("images/DIGITAL");
+	
+	for (int i = 0; i<numfOfImgs; i++) {
+		ofImage * img = new ofImage();
+		img->loadImage(DIR.getPath(i));
+		digitalLeds.push_back(img);
+		//printf("view ahou %d\n",i);
 
+	}
+	
 	
 }
 
@@ -43,10 +55,17 @@ void DangerBackground::draw (int viewID) {
 	
 	float ofMidWidth = 1920 * .5;
 	int digitalXPos = ofMidWidth - digitalPlaceholder.width * .5;
-	int digitalYPos = 80;
-	digitalPlaceholder.draw(digitalXPos, digitalYPos);
+	int digitalYPos = 40;
 	
-	ofSetColor(255, 0, 0);
+	//printf("view id %d\n",viewID);
+	if ( viewID >= 0 && viewID < digitalLeds.size() -1 ) {
+	digitalLeds[viewID]->draw(digitalXPos, digitalYPos);
+	}
+	
+	
+	// draw beat impulse
+	
+	
 	
 	/*
 	if ( viewID < 10 ) {

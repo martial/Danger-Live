@@ -13,6 +13,7 @@
 
 #include "ofMain.h"
 #include "moduleData.h"
+#include "customOscMessage.h"
 
 class dgAbstractModuleWrapper {
 	
@@ -24,6 +25,7 @@ public:
 	virtual void draw();
 	
 	virtual void onMidiEvent(int adress, int val);
+	virtual void onOscEvent(customOscMessage & m );
 	
 	string name;
 	moduleData	*	relatedModule;	

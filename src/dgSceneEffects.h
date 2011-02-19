@@ -23,7 +23,7 @@ class dgSceneEffects {
 	void addEffect();
 	void update();
 	void draw(ofxFBOTexture & fbo);
-	void draw(ofxFBOTexture & fbo, int x, int y);
+	ofxFBOTexture * draw(ofxFBOTexture & fbo, int x, int y);
 	
 	void setEffectByName(string name);
 	void reset();
@@ -38,12 +38,19 @@ class dgSceneEffects {
 	
 	vector<dgAbstractEffect*>	effects;
 	
+	float				brightnessPct;
+	float				saturationPct;
+	float				contrastPct;
+	float				blurPct;
+	
 	private:
 	
 	int					currentEffectID;
 	dgAbstractEffect *	currentEffect;
-	
 	colorEffect			color;
+	bloomSceneEffect	blur;
+	
+	
 	
 	
 };

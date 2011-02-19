@@ -30,6 +30,12 @@ public:
 	void setContrast(float contrast);
 	
 	
+	float				brightnessPct;
+	float				saturationPct;
+	float				contrastPct;
+	
+	
+	
 private:
 	
 	

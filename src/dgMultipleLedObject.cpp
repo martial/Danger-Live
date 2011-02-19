@@ -34,11 +34,14 @@ void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	
 	
 	switchObj->setPosition( 0, 0);
+	switchObj->rotation = -rotation;
 	switchObj->blurRate = .1;
 	switchObjects.push_back(switchObj);
 	
 	this->height = yPos;
 	this->width = switchObj->width * switchObjects.size();
+	
+	total = switchObjects.size();
 	
 	//printf(switchObj->name.c_str());
 }
@@ -47,8 +50,19 @@ void dgMultipleLedObject::init() {
 	
 	// get width and height for FBO
 	
-
+	 numOfCols = (int)this->configValues[0];
+	 numOfRows = (int)this->configValues[1];
+	 xPadding = this->configValues[3];
+	 yPadding = this->configValues[4];
 	
+	this->height = (int)(switchObjects.size()* (switchObjects[0]->height + yPadding));;
+	this->width = (switchObjects[0]->width + xPadding) * switchObjects.size();
+	
+	 xCentroid = - (int)(width*.5) - (int)(switchObjects[0]->width*.5);
+	 yCentroid = - (int)(height*.5);
+	
+	//xCentroid = 0;
+	//yCentroid = 0;
 }
 
 void dgMultipleLedObject::update () {
@@ -57,19 +71,18 @@ void dgMultipleLedObject::update () {
 	
 	// find current value
 	
-	int total = switchObjects.size();
+	
+	
 	int enabledLeds = round(total*pct);
 	
-	//printf("enabledLeds %d\n:", enabledLeds);
-	
-	
+		
 	for ( int i=(total-1); i>=0; i-- ) {
 		if ( i > (total - enabledLeds) ) {
-			switchObjects[i]->setPct(1);
+			switchObjects[i]->setPct(1 * statePct);
 		} else {
 			switchObjects[i]->setPct(0);
 		}
-		switchObjects[i]->rotation = -rotation;
+		
 		switchObjects[i]->update();
 	}
 	
@@ -82,30 +95,26 @@ void dgMultipleLedObject::draw () {
 	
 	ofSetColor(255, 255, 255, 255);
 	
+	//return;
 	
-	
-	int xCentroid = - (int)(width*.5) - (int)(switchObjects[0]->width*.5);
-	int yCentroid = - (int)(height*.5);
 
-	
+
+	ofEnableAlphaBlending();
 	ofPushMatrix();
 	ofTranslate(pos.x + xCentroid, pos.y + yCentroid - switchObjects[0]->height*.5, 0);
 	
 	ofTranslate(-xCentroid, -yCentroid, 0);
-	ofRotate((int)rotation, 0, 0, 1);
+	ofRotate(rotation, 0, 0, 1);
 	
 	
 		//ofRotate(ofGetElapsedTimeMillis(), 0, 0, 1);
 	
 	
-	int numOfCols = (int)this->configValues[0];
-	int numOfRows = (int)this->configValues[1];
-	float xPadding = (float)this->configValues[3];
-	float yPadding = (float)this->configValues[4];
+	
 	
 	//printf("ypadding %f\n", yPadding);
 	
-	for ( int i=0; i<switchObjects.size(); i++ ) {
+	for ( int i=0; i<total; i++ ) {
 		
 		//fbo.begin();
 		for ( int j=0; j<numOfCols; j++ ) {
@@ -115,9 +124,10 @@ void dgMultipleLedObject::draw () {
 			for ( int k=0; k<numOfRows; k++ ) {
 				ofPushMatrix();
 				ofTranslate(0, (int)(k*(switchObjects[k]->height + yPadding) +yCentroid), 0);
-				ofEnableAlphaBlending();
 				switchObjects[k]->draw();
-				ofDisableAlphaBlending();
+				
+				//switchObjects[k]->setPosition((int)(j*(switchObjects[i]->width + xPadding)+xCentroid),(int)(k*(switchObjects[k]->height + yPadding) +yCentroid));
+				
 				ofPopMatrix();
 			}
 		glPopMatrix();
@@ -125,7 +135,7 @@ void dgMultipleLedObject::draw () {
 	}
 	
 	ofPopMatrix();
-
+	ofDisableAlphaBlending();
 
 	
 	

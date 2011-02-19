@@ -31,3 +31,7 @@ void dgAbstractModuleWrapper::draw () {
 void dgAbstractModuleWrapper::onMidiEvent(int adress, int val) {
 
 }
+
+void dgAbstractModuleWrapper::onOscEvent(customOscMessage & m ) {
+
+}

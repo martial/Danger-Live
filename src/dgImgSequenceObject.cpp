@@ -55,7 +55,7 @@ void dgImgSequenceObject::setup (string folderOn, string folderOff, string name 
 	this->height = images[0]->height;
 	
 	easePct = pct;
-	blurRate = .2;
+	blurRate = .35;
 	setPct(0);
 }
 

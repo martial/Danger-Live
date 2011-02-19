@@ -1,12 +1,33 @@
 <?xml version="1.0" standalone="yes"?>
 <components>
+
+    <comp>
+		
+		<name>knob_big_c</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/GROS/C/bouton_rotatif_gros_C_sequence_on_beta</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
     
     
      <comp>
 		
 		<name>knob_mid_b</name>
-		<type>video</type>
-		<url>components/ROTATIFS/MOYEN/_B/bouton-rotatif-moyen-B2.mov</url>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/MOYEN/B/bouton-rotatif-moyen-small</url>
 		
 		<medias>
 		<!--
@@ -182,15 +203,15 @@
     
     <comp>
 		<name>POT_PETIT_B</name>
-		<type>video</type>
-        <url>components/PETIT/B/bouton-rotatif-petit-B.mov</url>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/B/bouton-rotatif-petit-B-sequences</url>
       		                                
 	</comp>
     
     <comp>
 		<name>POT_PETIT_B_LP</name>
-		<type>video</type>
-        <url>components/PETIT/B/bouton-rotatif-petit-B.mov</url>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/B/bouton-rotatif-petit-B-sequences</url>
         
         <activity_switch>
             <id>lp</id>
@@ -201,8 +222,8 @@
     
       <comp>
 		<name>POT_PETIT_B_HP</name>
-		<type>video</type>
-        <url>components/PETIT/B/bouton-rotatif-petit-B.mov</url>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/B/bouton-rotatif-petit-B-sequences</url>
         
         <activity_switch>
             <id>hp</id>
@@ -231,6 +252,15 @@
     <!-- Switchs -->
     
     <comp>
+		<name>B_POUSSOIR_2</name>
+		<type>switch</type>
+		<url>components/BOUTON_POUSSOIR_2/bouton-poussoir3-off.png</url>
+		<extras_url>
+            <extraurl>components/BOUTON_POUSSOIR_2/bouton-poussoir3-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
 		<name>B_POUSSOIR</name>
 		<type>switch</type>
 		<url>components/B_POUSSOIR/b-poussoir-off.png</url>
@@ -249,6 +279,16 @@
 	</comp>
     
     <comp>
+		<name>LED_03_SQUARE</name>
+		<type>switch</type>
+		<url>components/LED_03_SQUARE/led-03-off.png</url>
+		<extras_url>
+            <extraurl>components/LED_03_SQUARE/led-03-centre.png</extraurl>
+            <extraurl>components/LED_03_SQUARE/led-03-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
 		<name>LED-square</name>
 		<type>switch</type>
 		<url>components/LED-square/LED-square0.png</url>
@@ -256,6 +296,8 @@
             <extraurl>components/LED-square/LED-square1.png</extraurl>
         </extras_url>		
 	</comp>
+    
+    
     
      <comp>
 		<name>LED_INDE_02</name>
@@ -729,13 +771,13 @@
             <!-- row-->
             <item>12</item>
             <!-- blur rate-->
-            <item>.1</item>
+            <item>.4</item>
             
             <!-- xpadding rate-->
             <item>1</item>
             
              <!-- yPadding rate-->
-            <item>3</item>
+            <item>14</item>
         </config>
         
 			
@@ -747,7 +789,7 @@
         <switch_id>LED-square</switch_id>
         <config>
             <!-- columns-->
-            <item>2</item>
+            <item>1</item>
             <!-- row-->
             <item>52</item>
             <!-- blur rate-->

@@ -27,6 +27,9 @@ dgSceneObject::~dgSceneObject() {
 
 void dgSceneObject::init () {
 	
+	
+	
+	
 }
 
 
@@ -77,7 +80,7 @@ void dgSceneObject::update () {
 void dgSceneObject::draw () {
 	
 	
-	
+	//if (!active ) return;
 		
 	
 	
@@ -122,6 +125,9 @@ void dgSceneObject::draw () {
 		ofPopMatrix();
 	}
 	ofDisableAlphaBlending();
+	
+	// draw beat 
+	
 	
 	
 	

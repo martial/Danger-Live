@@ -259,7 +259,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Danger_L1/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="-92" y="320"></position>
+			<position x="-92" y="340"></position>
             			
 		
 		</component>
@@ -334,7 +334,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Outside/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="118" y="320"></position>
+			<position x="118" y="340"></position>
             			
 		
 		</component>
@@ -342,7 +342,7 @@
         <component>
 			
 			<name>FADER</name>
-			<osc_adress>/live/track/volume/Danger_L1</osc_adress>
+			<osc_adress>/live/track/volume/Outside</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-0" y="640"></position>
             <rotation>90.0</rotation>
@@ -406,7 +406,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Danger_R1/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="262" y="320"></position>
+			<position x="262" y="340"></position>
             			
 		
 		</component>
@@ -414,7 +414,7 @@
          <component>
 			
 			<name>FADER</name>
-			<osc_adress></osc_adress>
+			<osc_adress>/live/track/volume/Danger_R1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="316" y="640"></position>
             <rotation>90.0</rotation>
@@ -480,7 +480,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Percus/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="456" y="320"></position>
+			<position x="456" y="340"></position>
             			
 		
 		</component>
@@ -488,7 +488,7 @@
          <component>
 			
 			<name>FADER</name>
-			<osc_adress>/live/track/volume/Percus/</osc_adress>
+			<osc_adress>/live/track/volume/Percus</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="506" y="640"></position>
             <rotation>90.0</rotation>
@@ -524,7 +524,7 @@
 			<name>METER_LED_03_2_128</name>
 			<osc_adress>/signal/Master/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="572" y="266"></position>
+			<position x="1322" y="335"></position>
             
 		
         </component>

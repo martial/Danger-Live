@@ -24,7 +24,7 @@ void dgData::setup () {
 	//data.reserve(numOfLayouts);
 	
 	
-	printf ("Number of layouts : %d\n", numOfLayouts);
+	//printf ("Number of layouts : %d\n", numOfLayouts);
 	
 	for (int i=0; i<numOfLayouts; i++ ) {
 		
@@ -104,7 +104,7 @@ void dgData::setup () {
 
 void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 	
-	printf("\nSTARTING COMPONENT BUILD----------------------------------\n");
+	//printf("\nSTARTING COMPONENT BUILD----------------------------------\n");
 	
 	
 	for ( int u=0; u< data.size(); u++ ) {
@@ -118,17 +118,7 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			dgSceneObject  * sceneObject = compBuilder.createCompByName(compData->name);
 			
 			if (sceneObject) {
-				
-				
-			printf("\ncomponent nameid : ");
-			printf(compData->nameId.c_str());
-			printf("\n");
-			printf(compData->adress.c_str());
-			printf("\n");
-
-			
-				
-				
+						
 			sceneObject->setPosition(compData->pos.x, compData->pos.y);
 			sceneObject->rotation = compData->rotation;
 			sceneObject->adress = compData->adress;
@@ -136,16 +126,26 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			sceneObject->nameId = compData->nameId;
 			currentModule->cpObjects.push_back(sceneObject);
 			}
+			
+			dgSceneObject  * beatObject = compBuilder.createCompByName("LED_VU");
+			beatObject->setPosition(0, 120);
+			beatObject->nameId = "beatObject";
+			beatObject->blurRate = 0.0;
+			currentModule->cpObjects.push_back(beatObject);
+			
 						
 		}
 		
 
-		printf("\n------------------------------------------------- BUILD 2 fase\n");
+		//printf("\n------------------------------------------------- BUILD 2 fase\n");
 		for ( int j = 0; j< currentModule->cpObjects.size(); j++ ) {
 			
 			
 			
 			dgSceneObject  * sceneObject =  currentModule->cpObjects[j];
+			
+			
+			
 			
 			/*
 			printf("\ndouble check object : ");
@@ -176,18 +176,12 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->sceneObjectRefName);
 				if ( refSceneObject) {
 					sceneObject->addSwitchObject(refSceneObject);
-					sceneObject->init();
 					}
 				}
 			}
-			
-			
+			sceneObject->init();
 		}
-		 
-		 
-		
 	}	
-	
 }
 
 moduleData * dgData::getModuleByName(string nameTarget) {

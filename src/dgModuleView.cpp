@@ -9,14 +9,22 @@
 
 #include "dgModuleView.h"
 
-void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver) {
+void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects) {
 	
 	this->layoutData = &layoutData;
 	this->compBuilder = &compBuilder;
 	this->oscReceiver = &oscReceiver;
+	this->effects = &effects;
+	
+	currentModule = NULL;
 	
 	initModulesWrappers();
 	setCurrentView(0);
+	
+	beatLatency = 100;
+	currentTime = 0;
+	
+	globalOpacity = 255;
 	
 }
 
@@ -27,10 +35,16 @@ void dgModuleView::initModulesWrappers () {
 	introWrapper->setup(layoutData->getModuleByName("intro"), "intro");
 	modulesWrappers.push_back(introWrapper);
 	
+	dgStyleSwitchIntroWrapper * switchWrapper = new dgStyleSwitchIntroWrapper();
+	switchWrapper->setup(layoutData->getModuleByName("styleswitch"), "styleswitch");
+	modulesWrappers.push_back(switchWrapper);
+	
 	
 }
 
 void dgModuleView::update() {
+	
+	if (!currentModule) return;
 	
 	//printf ("Number of comps : %d\n", currentObjects.size());
 	
@@ -39,7 +53,6 @@ void dgModuleView::update() {
 	
 	if ( currentWrapper ) currentWrapper->update();
 	
-	moduleData * currentModule = layoutData->data[currentViewID];
 	
 	for ( int i = 0; i<currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
@@ -51,8 +64,7 @@ void dgModuleView::update() {
 
 void dgModuleView::draw () {
 	
-	//printf("draw module\n");
-	moduleData * currentModule = layoutData->data[currentViewID];
+	if (!currentModule) return;;
 	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
@@ -61,6 +73,18 @@ void dgModuleView::draw () {
 	
 	
 	if ( currentWrapper ) currentWrapper->draw();
+	
+	if ( beatObject ) {
+		
+		float time = ofGetElapsedTimeMillis() - currentTime;
+		if ( time < beatLatency ) {
+			beatObject->setPct(1.0);
+		} else {
+			beatObject->setPct(0.0);
+		}
+	} else {
+			//printf("error");
+	}
 	 
 
 }
@@ -87,8 +111,21 @@ void dgModuleView::processOsc (customOscMessage & msg) {
 		int total = objects.size();
 		
 		string splitString = msg.address.substr(0, 7);
-		float div = (splitString == "/signal" ) ? 1 : 127.0;
+		float div = (splitString == "/signal" ) ? 1.0 : 127.0;
+		
 	
+	if ( splitString != "/signal" ) {
+		splitString = msg.address.substr(0, 19);
+		div = (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
+		if ( splitString =="/live/track/volume/" ) {
+				
+			//printf("ok\n");
+			//printf("val : %f\n", div);
+			//printf("val msg : %f\n", msg.value);
+			
+			
+		}
+	}
 	//printf(splitString.c_str());
 	
 		for ( int i=0; i<total; i++) {
@@ -135,7 +172,6 @@ void dgModuleView::processOsc (customOscMessage & msg) {
 
 void dgModuleView::getRelatedObject (string val, vector<dgSceneObject*> * pctObjects, vector<dgSceneObject*> * statePctObjects) {
 		
-	moduleData * currentModule = layoutData->data[currentViewID];
 	
 	int total = currentModule->cpObjects.size();
 	for ( int i = 0; i< total; i++ ) {
@@ -173,6 +209,15 @@ dgAbstractModuleWrapper * dgModuleView::getRelatedWrapper (string name) {
 
 void dgModuleView::onOscEvent(customOscMessage & msg) {
 	processOsc(msg);
+	if ( currentWrapper ) currentWrapper->onOscEvent(msg);
+}
+
+void dgModuleView::onBeatEvent() {
+	
+	
+		currentTime = ofGetElapsedTimeMillis();	
+	
+	
 }
 
 void dgModuleView::onMidiEvent(int adress, int val) {
@@ -189,6 +234,7 @@ void dgModuleView::nextView () {
 	
 	int curViewID = currentViewID;
 	curViewID++;
+	
 	if ( curViewID < 0 || curViewID > layoutData->data.size()-1 ) curViewID = 0;
 	setCurrentView(curViewID);
 	
@@ -197,12 +243,25 @@ void dgModuleView::nextView () {
 	
 }
 
+
+
 void dgModuleView::setCurrentView(int viewID) {
 	
 	// check if current id is valid
 	if (  viewID > layoutData->data.size()-1 ) return;
 	currentViewID = viewID;
+	
+	currentModule = layoutData->data[currentViewID];
 	currentWrapper = getRelatedWrapper(layoutData->data[currentViewID]->name);
+	
+	// get beat object
+	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
+		if ( currentModule->cpObjects[i]->nameId == "beatObject" ) {
+			beatObject = currentModule->cpObjects[i];
+		}
+	}
+	
+	
 	//addSceneObjects();
 	
 }

@@ -9,6 +9,8 @@ void testApp::setup(){
 	
 	printf("welcome\n");
 	
+	float time = ofGetElapsedTimeMillis();
+	
 	
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
@@ -33,17 +35,20 @@ void testApp::setup(){
 	/* scene */
 	videoData.setup("videos.xml");
 	
-	scene.setup(data, videoData, builder, oscReceiver);
+	scene.setup(data, videoData, builder, oscReceiver,sceneEffects);
 	
 	
 	debugView.setup();
 	
 	sceneEffects.setup();
-	//sceneEffects.setEffectByName("bloom");
+	sceneEffects.setEffectByName("bloom");
 	
 	fbo.allocate(1920, 1080, GL_RGBA);
 	
 	oscDebugEnabled = false;
+	
+	printf("loaded in %f milliseconds \n",  ofGetElapsedTimeMillis() - time);
+	
 	//fbo.setup(ofGetWidth(), ofGetHeight());
 	//fbo.attach(texture);
 }
@@ -76,7 +81,8 @@ void testApp::draw(){
 	
 	ofSetColor(255, 255, 255);
 	debugView.draw();
-	debugView.drawSceneFbo(fbo);
+		
+	//debugView.drawSceneFbo(fbo, 960, 540);
 	
 	// draw proj
 	//fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
@@ -85,7 +91,10 @@ void testApp::draw(){
 	ofPushMatrix();
 	//glTranslated(1440, 0, 0);
 	//scene.draw();
-	sceneEffects.draw(fbo,1440,0);
+	
+	debugView.drawSceneFbo(sceneEffects.draw(fbo,1440,0), 960, 540);
+	
+	//sceneEffects.draw(fbo,1440,0);
 	ofPopMatrix();
 	//fbo.draw(1440, 0);
 	
@@ -112,7 +121,7 @@ void testApp::draw(){
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 	
-	printf("key : %d\n", key);
+	//printf("key : %d\n", key);
 	
 	switch (key) {
 			

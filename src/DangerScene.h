@@ -20,13 +20,14 @@
 #include "OscReceiver.h"
 #include "dgVideoModule.h"
 #include "customOscMessage.h"
+#include "dgSceneEffects.h"
 
 class DangerScene {
 
 	public:
 	
 	DangerScene();
-	void setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver);
+	void setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects);
 	void update();
 	void draw();
 	
@@ -37,14 +38,18 @@ class DangerScene {
 	void onBeatEvent();
 	void onMidiEvent(int adress, int val);
 	
+	void fade();	
 	/* delete this later */
 	void setCurrentView(int viewID);
+	
+	float				globalOpacity,globalOpacityDown;
 	
 	private:
 	
 	DangerBackground	background;
 	dgModuleView		moduleView;
 	dgVideoModule		videoView;
+	dgSceneEffects	*	effects;
 	
 	int					currentMode;
 	int					currentView;
@@ -54,6 +59,13 @@ class DangerScene {
 	
 	float				oldTime;
 	float				beatTime;
+	
+	/*		*/
+	
+
+	bool				isfading;
+	bool				isFadeIn;
+	int				sens;
 	
 };
 

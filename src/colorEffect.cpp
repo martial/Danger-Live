@@ -13,6 +13,11 @@ void colorEffect::setup(string name) {
 	this->name = name;
 	clrShader.setup(1920, 1080);
 	
+	saturationPct = 1.0;
+	contrastPct = 1.0;
+	brightnessPct = 1.0;
+	
+	
 }
 
 void colorEffect::init() {
@@ -20,9 +25,18 @@ void colorEffect::init() {
 
 void colorEffect::update() {
 	
+	
+	
+	//clrShader.saturation *= saturationPct;
+	//clrShader.contrast *= contrastPct;
+	//clrShader.brightness *= brightnessPct;
+	
 }
 
 void colorEffect::draw(ofxFBOTexture & fbo) {
+	
+	//printf("brightnessPct %f\n", brightnessPct );
+	
 	
 	
 	clrShader.beginRender();
@@ -36,6 +50,11 @@ void colorEffect::draw(ofxFBOTexture & fbo) {
 
 ofxFBOTexture * colorEffect::draw(ofxFBOTexture & fbo, int x, int y) {
 	
+	//printf("brightnessPct %f\n", brightnessPct );
+	
+	clrShader.saturationPct = saturationPct;
+	clrShader.contrastPct = contrastPct;
+	clrShader.brightnessPct = brightnessPct;
 	
 	clrShader.beginRender();
 	fbo.draw(0, 0);

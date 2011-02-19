@@ -22,17 +22,25 @@ class dgDebugView {
 	
 	void setup();
 	void draw();
-	void drawSceneFbo (ofxFBOTexture & texture);
+	void drawSceneFbo (ofxFBOTexture * texture, int width, int height);
 	void onBeatEvent();
 	
 	bool	visible;
 	
 	private:
 	
+	ofImage			logo;
+	
 	ofTrueTypeFont	digitalFont;
 	ofTrueTypeFont	digitalFont_tiny;
 	float	beatLatency;
 	float	currentTime;
+	
+	/* fps */
+	
+	int			fpsHistory[1440];
+	int			numOfFps;
+	int			fpsCounter;
 	
 	
 };

@@ -1,0 +1,39 @@
+<scene>
+
+  
+
+	<module name="">
+    
+        <component>
+			
+			<name>knob_big_c</name>
+            <nameID>switch_off</nameID>
+			<osc_adress>hipass1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-450" y="550"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_big_b</name>
+            <nameID>switch_off</nameID>
+			<osc_adress>hipass1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="450" y="550"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+         
+         
+         
+       			
+	</module>
+	
+	
+	
+
+</scene>

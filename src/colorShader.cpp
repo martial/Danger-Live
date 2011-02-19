@@ -29,6 +29,12 @@ void colorShader::setup(int fboW, int fboH){
 	brightness = 1.0;
 	saturation = 1.0;
 	contrast = 1.0;
+	
+	saturationPct = 1.0;
+	contrastPct = 1.0;
+	brightnessPct = 1.0;
+	
+	
 }
 
 //--------------------------------------------------------------
@@ -55,6 +61,9 @@ void colorShader::setColorSettings(float brightness, float saturation, float con
 //--------------------------------------------------------------
 ofxFBOTexture * colorShader::getTexture(bool useShader){
 	
+	
+	//printf("brightness shader %f\n", brightness );
+	
 	ofxFBOTexture * src, * dst;
 	src = &fbo1;
 	dst = &fbo2;
@@ -66,9 +75,9 @@ ofxFBOTexture * colorShader::getTexture(bool useShader){
 			
 			//first the horizontal shader 
 			clrShader.setShaderActive(true);
-			clrShader.setUniformVariable1f("brightness", brightness);
-			clrShader.setUniformVariable1f("saturation", saturation);
-			clrShader.setUniformVariable1f("contrast", contrast);
+			clrShader.setUniformVariable1f("brightness", brightness * brightnessPct);
+			clrShader.setUniformVariable1f("saturation", saturation * saturationPct);
+			clrShader.setUniformVariable1f("contrast", contrast * contrastPct);
 			
 			dst->swapIn();
 			dst->setupScreenForMe();

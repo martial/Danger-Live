@@ -40,10 +40,10 @@ void dgFaderObject::draw () {
 	
 	
 	float total = this->configValues[0];
-	float xPos = -( total * .5)  +  (total*pct );
+	float xPos = total + (-( total * .5)  +  (total*-pct*127 ));
 
 	
-	
+	//printf("pct fader: %f\n", pct);
 	
 	ofPushMatrix();
 	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);

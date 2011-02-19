@@ -18,11 +18,13 @@
 #include "customOscMessage.h"
 #include "dgAbstractModuleWrapper.h"
 #include "dgModuleIntroWrapper.h"
+#include "dgStyleSwitchIntroWrapper.h"
+#include "dgSceneEffects.h"
 
 class dgModuleView {
 	
 	public:
-	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver);
+	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects);
 	void update();
 	void draw();
 	
@@ -30,12 +32,17 @@ class dgModuleView {
 		
 	void setCurrentView(int viewID);
 	
+	void onBeatEvent();
 	void onOscEvent(customOscMessage & msg);
 	void onMidiEvent(int adress, int val);
 	
-	private:
+	int							currentViewID;
 	
 	void nextView();
+	
+	private:
+	
+	
 	
 	/* Communication OSC*/
 	void processOsc (customOscMessage & msg);
@@ -45,15 +52,28 @@ class dgModuleView {
 	dgData					*	layoutData;
 	dgCompBuilder			*	compBuilder;
 	OscReceiver				*	oscReceiver;
+	dgSceneEffects			*	effects;
 	
 	/* current stuff*/
-	int							currentViewID;
+	
 	vector<dgSceneObject*>		currentObjects;
 	
 	/* wrappers for custom layout actions */
 	dgAbstractModuleWrapper * getRelatedWrapper (string name);
 	vector<dgAbstractModuleWrapper*>	modulesWrappers;
 	dgAbstractModuleWrapper		*		currentWrapper;
+	
+	moduleData * currentModule;
+	
+	dgSceneObject		*			beatObject;
+	
+	
+	// beat stuff
+	
+	float	beatLatency, currentTime;
+	
+	// fade stuff
+	float						globalOpacity;
 	
 	
 };

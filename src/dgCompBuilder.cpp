@@ -15,7 +15,7 @@ void dgCompBuilder::setup (string xmlURL) {
 	
 	if ( XML.loadFile(xmlURL) ) {
 		
-		printf("ok build xml\n");
+		//printf("ok build xml\n");
 	} else {
 		//exit();
 		printf("error build xml\n");

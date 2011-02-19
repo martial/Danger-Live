@@ -60,6 +60,7 @@ class dgSceneObject {
 	
 	bool							active;
 	
+	
 	imgAssetsManager		*		imgAssets;
 	
 };

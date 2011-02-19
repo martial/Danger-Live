@@ -43,13 +43,27 @@ void dgProgressBarObject::draw () {
 	this->width = this->configValues[0];
 	this->height = this->configValues[1];
 	
-	ofSetColor(255, 0, 0);
+	
 	ofEnableAlphaBlending();
 	
-	ofPushMatrix();
-	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
-	ofRect(0, 0, barWidth*pct, barHeight);
-	ofPopMatrix();
+	// back
+	
+	ofSetColor(0, 0, 0);
+	ofRect(pos.x- width *.5 -2, pos.y- height * .5-2, barWidth+4, barHeight+2);
+	
+	int current = (int) barWidth*pct;
+	for ( int i=0; i< current; i++ ) {
+		
+		ofSetColor(55 + ((i*100/barWidth)), 0, 0);
+		ofPushMatrix();
+		ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+		ofRect(i, 0, 1, barHeight);
+		ofPopMatrix();
+		
+		
+	}
+	
+	
 	ofSetColor(255, 255, 255);
 	
 	ofDisableAlphaBlending();

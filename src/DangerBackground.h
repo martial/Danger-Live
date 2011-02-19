@@ -11,6 +11,8 @@
 #include "ofMain.h"
 #include "ofxUtils.h"
 #include "ofxVec2f.h"
+#include "ofxDirList.h"
+#include "dgSceneEffects.h"
 
 class DangerBackground {
 
@@ -26,9 +28,9 @@ class DangerBackground {
 	ofTrueTypeFont		digitalFont;
 	ofImage				background;
 	ofImage				digitalPlaceholder;
-	//vector<ofImage*>	digitalLeds;
+	vector<ofImage*>	digitalLeds;
 	
-	
+	ofxDirList			DIR;
 	
 	
 };

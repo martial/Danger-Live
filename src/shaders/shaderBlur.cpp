@@ -25,8 +25,9 @@ void shaderBlur::setup(int fboW, int fboH){
 	shaderH.loadShader("shaders/simpleBlurHorizontal");
 	shaderV.loadShader("shaders/simpleBlurVertical");
 
-	noPasses = 2;
-	blurDistance = 0.2;
+	noPasses = 1;
+	blurDistance = 2.0;
+	blurPct = 0.0;
 }
 
 //--------------------------------------------------------------
@@ -53,7 +54,9 @@ ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useSha
 	ofxFBOTexture * src, * dst;
 	src = &fbo1;
 	dst = &fbo2;
-
+	
+	if ( blurPct*blurDistance == 0 ) useShader = false; 
+	
 	if( useShader ){
 				
 		for(int i = 0; i < noPasses; i++){
@@ -61,7 +64,7 @@ ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useSha
 			
 			//first the horizontal shader 
 			shaderH.setShaderActive(true);
-			shaderH.setUniformVariable1f("blurAmnt", blurDistance);
+			shaderH.setUniformVariable1f("blurAmnt", blurDistance*blurPct);
 			
 			dst->swapIn();
 			dst->setupScreenForMe();
@@ -75,7 +78,7 @@ ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useSha
 			
 			//now the vertical shader
 			shaderV.setShaderActive(true);	
-			shaderV.setUniformVariable1f("blurAmnt", blurDistance);
+			shaderV.setUniformVariable1f("blurAmnt", blurDistance*blurPct);
 					
 			src->swapIn();
 			src->setupScreenForMe();

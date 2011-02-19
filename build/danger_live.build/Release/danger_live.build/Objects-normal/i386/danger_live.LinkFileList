@@ -38,7 +38,6 @@
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxMatrix4x4.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxQuaternion.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgSwitchObject.o
-/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxFbo.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgFaderObject.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgMultipleLedObject.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgRotationBtnObject.o
@@ -60,3 +59,9 @@
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/colorEffect.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgOpacitySwitchObject.o
 /Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/imgAssetsManager.o
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/AppDelegate.o
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/AppWindow.o
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/GLView.o
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/GLWindow.o
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/ofxCocoa.o
+/Users/Martial/Git/OF_62/apps/Danger_Live/danger_live/build/danger_live.build/Release/danger_live.build/Objects-normal/i386/dgStyleSwitchIntroWrapper.o

@@ -16,6 +16,8 @@
 #include "dgSceneObject.h"
 #include "dgSwitchObject.h"
 
+
+
 class dgMultipleLedObject : public dgSceneObject {
 	
 public:
@@ -36,8 +38,11 @@ public:
 	private :
 	
 	vector<dgSceneObject*>			switchObjects;
-
+	int								total;
 	
+	int	numOfCols, numOfRows;
+	float xPadding, yPadding;
+	int xCentroid, yCentroid;
 	
 };
 

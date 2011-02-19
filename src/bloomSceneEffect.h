@@ -27,6 +27,9 @@ public:
 	void draw(ofxFBOTexture & fbo);
 	ofxFBOTexture * draw(ofxFBOTexture & fbo, int x, int y);
 	
+	
+	float		blurPct;
+	
 private:
 	
 	float		counter;

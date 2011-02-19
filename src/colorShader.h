@@ -32,6 +32,8 @@ public:
 	
 	float brightness, saturation, contrast;
 	
+	float saturationPct, contrastPct, brightnessPct;
+	
 	
 	
 };

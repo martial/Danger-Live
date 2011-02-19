@@ -1,0 +1,74 @@
+<scene>
+
+  
+
+	<module name="styleswitch">
+    
+        <component>
+			
+			<name>SWITCHER_ANALOG</name>
+            <nameID>/live/clip/play/4H30A</nameID>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="-320" y="500"></position>
+            <rotation>-90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_ANALOG</name>
+            <nameID>/live/clip/play/4H30B</nameID>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="-160" y="500"></position>
+            <rotation>-90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_ANALOG</name>
+            <nameID>switch_3</nameID>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="500"></position>
+            <rotation>-90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_ANALOG</name>
+            <nameID>switch_4</nameID>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="160" y="500"></position>
+            <rotation>-90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_ANALOG</name>
+            <nameID>switch_5</nameID>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="320" y="500"></position>
+            <rotation>-90.0</rotation>
+            
+		
+        </component>
+ 
+                
+       			
+	</module>
+	
+	
+	
+
+</scene>

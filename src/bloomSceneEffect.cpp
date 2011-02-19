@@ -18,6 +18,8 @@ void bloomSceneEffect::setup(string name) {
 	blur.setup(1920, 1080);
 	bloom.setup(1920, 1080);
 	
+	blurPct = 0.0;
+	
 }
 
 void bloomSceneEffect::init() {
@@ -26,6 +28,8 @@ void bloomSceneEffect::init() {
 }
 
 void bloomSceneEffect::update() {
+	
+	blur.blurPct = blurPct;
 	
 }
 

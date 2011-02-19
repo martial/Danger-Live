@@ -33,6 +33,7 @@ public:
 	
 	//ofImage					img;
 	vector<ofImage*>		images;
+	int						imagesSize;
 	int						currentIndex;
 	float					easePct;
 		

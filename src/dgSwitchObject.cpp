@@ -30,19 +30,22 @@ void dgSwitchObject::setup (string imgURL, string name, string type) {
 	this->width = images[0]->width;
 	this->height = images[0]->height;
 	
+	active = true;
+	
 	easePct = pct;
-	blurRate = .8;
+	blurRate = 0.0;
 	setPct(0);
 }
 
 void dgSwitchObject::addExtraImage(string url) {
 	
 	ofImage * img = imgAssets->addImage(url);
+	//img->setUseTexture(true);
 	
 	//ofImage * img = new ofImage();
 	//img->loadImage(url);
 	images.push_back(img);
-	
+	imagesSize = images.size();
 	
 }
 
@@ -51,32 +54,25 @@ void dgSwitchObject::update () {
 	dgSceneObject::update();
 	
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
-	currentIndex = floor((easePct * (images.size())));
-	if ( currentIndex > images.size()-1 ) currentIndex = images.size()-1;
-	//printf("---- \n");
-	//printf("pct %f\n", easePct);
-	//printf("easePCt %f\n", easePct);
-	//printf("currentIndex %d\n", currentIndex);
-	
+	currentIndex = floor((pct * (imagesSize)));
+	if ( currentIndex > imagesSize-1 ) currentIndex = imagesSize-1;
+		
 }
 
 void dgSwitchObject::draw () {
 	
 	dgSceneObject::draw();
 	
-	
-	
-	
-	
-	
+	if (!active ) return;
 	
 	ofPushMatrix();
-	ofTranslate((int)pos.x, (int)pos.y, 0);
+	ofTranslate(pos.x, pos.y, 0);
 	
 	
 	ofRotate(rotation, 0, 0, 1);
 	ofEnableAlphaBlending();
-	images[currentIndex]->draw((int)(-width * .5), (int)(-height * .5));
+	images[currentIndex]->draw((-width * .5), (-height * .5));
+	
 	ofDisableAlphaBlending();
 	ofPopMatrix();
 	

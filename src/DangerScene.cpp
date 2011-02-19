@@ -15,15 +15,21 @@ DangerScene::DangerScene() {
 
 }
 
-void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver) {
+void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects) {
 	
 	background.setup();
-	moduleView.setup(layoutData, compBuilder, oscReceiver);
+	moduleView.setup(layoutData, compBuilder, oscReceiver,effects);
 	videoView.setup(videoData);
+	
+	this->effects = &effects;
 	
 	currentMode = DGSCENEVIEWMODE_MODULE;
 	
 	currentView = 0;
+	globalOpacity = 1.0;
+	globalOpacityDown = 1.0;
+	isfading = false;
+	sens = 1;
 	
 }
 
@@ -51,12 +57,44 @@ void DangerScene::update() {
 
 void DangerScene::draw () {
 	
+	if(isfading && currentMode == DGSCENEVIEWMODE_MODULE ) {
+		
+		globalOpacity += .25 * (float)sens;
+		globalOpacityDown -= .25 * (float)sens;
+					
+		if (sens == -1 && globalOpacity<.25 ) {
+			sens = 1;
+			moduleView.nextView();
+			return;
+		} 
+		
+		if (sens == 1 && globalOpacity > 1 ) {
+			globalOpacityDown = 1.0;
+			isfading = false;
+			//continue;
+			
+		} 
+		
+		//printf("globalOpacityDown %f\n :",globalOpacityDown);
+		
+		if ( globalOpacity > 1.0 ) globalOpacity = 1.0;
+		//if ( globalOpacityDown < 0.0 ) globalOpacityDown = 0.0;
+		
+		effects->brightnessPct = globalOpacity;
+		effects->saturationPct = globalOpacity;
+		effects->contrastPct = globalOpacityDown;
+		//effects->blurPct = abs(1-globalOpacity);
+		
+	}
+	
+	ofEnableAlphaBlending();
+	//ofSetColor(255, 255, 255, globalOpacity);
 	
 	switch (currentMode) {
 			
 		case DGSCENEVIEWMODE_MODULE:
 			
-			background.draw(currentView);
+			background.draw(moduleView.currentViewID);
 			ofPushMatrix();
 			// push on the right and center axis
 			ofTranslate(1920*.5 - 1280*.5 + 1280*.5, 0, 0);
@@ -77,6 +115,14 @@ void DangerScene::draw () {
 	//ofDisableAlphaBlending();
 	
 
+}
+
+void DangerScene::fade () {
+	
+	isfading = true;
+	sens = -1;
+
+	
 }
 
 void DangerScene::setCurrentView(int viewID) {
@@ -116,6 +162,10 @@ void DangerScene::changeMode (int mode) {
 void DangerScene::onMidiEvent(int adress, int val) {
 	moduleView.onMidiEvent(adress, val);
 	
+	if ( adress == 27 && val == 127 ) {
+		fade();
+	}
+	
 }
 
 void DangerScene::onOscEvent(customOscMessage & msg) {
@@ -129,5 +179,6 @@ void DangerScene::onBeatEvent () {
 	oldTime = ofGetElapsedTimeMillis();
 	
 	if ( currentMode == DGSCENEVIEWMODE_VIDEOS ) videoView.onBeatEvent(beatTime/1000);
+	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onBeatEvent();
 	
 }

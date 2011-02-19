@@ -14,7 +14,7 @@ dgVideoObject::dgVideoObject() {
 
 
 dgVideoObject::~dgVideoObject() {
-	printf("adios from video object\n");
+	//printf("adios from video object\n");
 	
 	
 	//mainVideo->pause();
