@@ -18,6 +18,11 @@ dgMultipleLedObject::dgMultipleLedObject() {
 
 dgMultipleLedObject::~dgMultipleLedObject() {
 	
+	for (int i= 0; i<switchObjects.size(); i++ ) {
+		delete switchObjects[i];
+		switchObjects[i] = NULL;
+	}
+	switchObjects.clear();
 }
 
 void dgMultipleLedObject::setup (string name, string type) {

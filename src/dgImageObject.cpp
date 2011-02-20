@@ -15,6 +15,9 @@ dgImageObject::dgImageObject() {
 
 dgImageObject::~dgImageObject() {
 	
+	img->clear();
+	delete img;
+	
 }
 
 void dgImageObject::setup (string imgURL, string name, string type) {

@@ -20,9 +20,23 @@ dgSceneObject::~dgSceneObject() {
 	
 	for (int i=0; i<images.size(); i++) {
 		images[i]->clear();
-		delete images[i];
+		//delete images[i];
 	}
 	images.clear();
+	
+	for (int i=0; i<videos.size(); i++) {
+		//videos[i]->clear();
+		//delete videos[i];
+	}
+	videos.clear();
+	
+	if ( activitySwitchObject ) {
+		//delete activitySwitchObject;
+		activitySwitchObject = NULL;
+	}
+	
+	configValues.clear();
+	
 }
 
 void dgSceneObject::init () {

@@ -31,7 +31,7 @@ void dgImgSequenceObject::setup (string folderOn, string folderOff, string name 
 	
 	// get imgs
 	
-	DIR.setVerbose(false);
+	//DIR.setLogLevel();
     int numfOfImgs = DIR.listDir(folderOn);
 	
 	for (int i = 0; i<numfOfImgs; i++) {

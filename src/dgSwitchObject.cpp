@@ -17,6 +17,16 @@ dgSwitchObject::dgSwitchObject() {
 
 dgSwitchObject::~dgSwitchObject() {
 	
+	//~dgSceneObject();
+	//images.clear();
+	
+	
+	for (int i=0; i<imageSet.size(); i++) {
+		imageSet[i]->clear();
+		//delete imageSet[i];
+	}
+	imageSet.clear();
+	
 }
 
 
@@ -27,8 +37,8 @@ void dgSwitchObject::setup (string imgURL, string name, string type) {
 	// first image is default state
 	addExtraImage(imgURL);
 	
-	this->width = images[0]->width;
-	this->height = images[0]->height;
+	this->width = imageSet[0]->width;
+	this->height = imageSet[0]->height;
 	
 	active = true;
 	
@@ -44,8 +54,8 @@ void dgSwitchObject::addExtraImage(string url) {
 	
 	//ofImage * img = new ofImage();
 	//img->loadImage(url);
-	images.push_back(img);
-	imagesSize = images.size();
+	imageSet.push_back(img);
+	imagesSize = imageSet.size();
 	
 }
 
@@ -71,7 +81,7 @@ void dgSwitchObject::draw () {
 	
 	ofRotate(rotation, 0, 0, 1);
 	ofEnableAlphaBlending();
-	images[currentIndex]->draw((-width * .5), (-height * .5));
+	imageSet[currentIndex]->draw((-width * .5), (-height * .5));
 	
 	ofDisableAlphaBlending();
 	ofPopMatrix();

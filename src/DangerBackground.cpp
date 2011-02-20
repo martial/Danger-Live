@@ -22,7 +22,7 @@ void DangerBackground::setup () {
 	digitalFont.loadFont("fonts/digital-7_italic.ttf", 40);
 	
 	
-	DIR.setVerbose(false);
+	//DIR.setVerbose(false);
     int numfOfImgs = DIR.listDir("images/DIGITAL");
 	
 	for (int i = 0; i<numfOfImgs; i++) {

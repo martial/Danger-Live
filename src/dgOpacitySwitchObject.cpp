@@ -14,7 +14,16 @@ dgOpacitySwitchObject::dgOpacitySwitchObject() {
 }
 
 dgOpacitySwitchObject::~dgOpacitySwitchObject() {
+		
 	
+	for (int i=0; i<imageSet.size(); i++) {
+		imageSet[i]->clear();
+		delete imageSet[i];
+	}
+	imageSet.clear();
+	
+	img->clear();
+	delete img;
 }
 
 
@@ -43,7 +52,7 @@ void dgOpacitySwitchObject::setup (string imgURL, string name, string type) {
 void dgOpacitySwitchObject::addExtraImage(string url) {
 	
 	ofImage * img = imgAssets->addImage(url);
-	images.push_back(img);
+	imageSet.push_back(img);
 	
 	
 }
@@ -54,11 +63,11 @@ void dgOpacitySwitchObject::update () {
 	
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
 	
-	int fakeTotal = images.size();
+	int fakeTotal = imageSet.size();
 	fakeTotal -=1;
 	currentIndex = floor(easePct * (fakeTotal) );
 	
-	if ( currentIndex > images.size()-2 ) currentIndex = images.size()-2;
+	if ( currentIndex > imageSet.size()-2 ) currentIndex = imageSet.size()-2;
 	//printf("---- \n");
 	//printf("pct %f\n", easePct);
 	//printf("easePCt %f\n", easePct);
@@ -72,7 +81,7 @@ void dgOpacitySwitchObject::draw () {
 	
 	// find pct between each step
 	
-	int fakeTotal = images.size();
+	int fakeTotal = imageSet.size();
 	fakeTotal -=1;
 	float stepValue = 1 / ( (float)fakeTotal);
 
@@ -96,16 +105,16 @@ void dgOpacitySwitchObject::draw () {
 		if ( images.size() > 1 ) {
 	
 			ofSetColor(255, 255, 255, (1-alphaPct) * 255);
-			images[currentIndex]->draw(0, 0);
+			imageSet[currentIndex]->draw(0, 0);
 	
 	
 			ofSetColor(255, 255, 255, alphaPct * 255);
-			images[currentIndex+1]->draw(0, 0);
+			imageSet[currentIndex+1]->draw(0, 0);
 		
 		} else  {
 		//printf("ok");
 		ofSetColor(255, 255, 255, (easePct) * 255);
-		images[0]->draw(0, 0);
+		imageSet[0]->draw(0, 0);
 
 		
 		}	

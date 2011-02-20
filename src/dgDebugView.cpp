@@ -103,7 +103,7 @@ void dgDebugView::draw() {
 
 }
 
-void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, int width, int height) {
+void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, float width, float height) {
 	
 	
 	float x,y;

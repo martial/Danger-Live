@@ -15,6 +15,8 @@ dgFaderObject::dgFaderObject() {
 
 dgFaderObject::~dgFaderObject() {
 	
+	delete img;
+	
 }
 
 void dgFaderObject::setup (string imgURL, string name, string type) {

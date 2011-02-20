@@ -9,11 +9,20 @@ void testApp::setup(){
 	
 	printf("welcome\n");
 	
+	
+	
 	float time = ofGetElapsedTimeMillis();
 	
+	screen1Size.x = 1440;
+	screen1Size.y = 900;
+	screen2Size.x = 1900;
+	screen2Size.y = 1200;
 	
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
+	ofSetLogLevel(OF_LOG_WARNING);
+	
+	
 	/* Midi / OSC */
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&testApp::onBeatEvent);
@@ -43,7 +52,7 @@ void testApp::setup(){
 	sceneEffects.setup();
 	sceneEffects.setEffectByName("bloom");
 	
-	fbo.allocate(1920, 1080, GL_RGBA);
+	fbo.allocate(screen2Size.x, screen2Size.y, GL_RGBA);
 	
 	oscDebugEnabled = false;
 	
@@ -66,11 +75,10 @@ void testApp::draw(){
 	
 	
 	ofBackground(0, 0, 0);
-	//fbo.clear(0,0,0,0);
-	fbo.begin();
-	//fbo.clean();
-	ofEnableAlphaBlending();
 	ofSetColor(255, 255, 255);
+	fbo.begin();
+	ofSetColor(255, 255, 255);
+	ofEnableAlphaBlending();
 	scene.draw();
 	if(oscDebugEnabled)oscReceiver.debugDraw();
 	ofDisableAlphaBlending();
@@ -78,44 +86,15 @@ void testApp::draw(){
 	
 	
 	
-	
 	ofSetColor(255, 255, 255);
 	debugView.draw();
 		
-	//debugView.drawSceneFbo(fbo, 960, 540);
 	
-	// draw proj
-	//fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
+	ofxFBOTexture * sceneFbo =  sceneEffects.draw(fbo, screen1Size.x,0);
+	debugView.drawSceneFbo(sceneFbo, screen1Size.x * .5, screen1Size.y * .5);
 	
 	
-	ofPushMatrix();
-	//glTranslated(1440, 0, 0);
-	//scene.draw();
-	
-	debugView.drawSceneFbo(sceneEffects.draw(fbo,1440,0), 960, 540);
-	
-	//sceneEffects.draw(fbo,1440,0);
-	ofPopMatrix();
-	//fbo.draw(1440, 0);
-	
-	/*
-	if ( debugView.visible ) {
-		fbo.draw(1440*.5 - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
-		//fbo.draw(1440 + (1920 *.5)  - fbo.texData.width*.5, 900*.5-fbo.texData.height*.5);
-		debugView.draw();
-		debugView.drawSceneFbo(fbo);
-	} else {
 		
-		debugView.draw();
-		debugView.drawSceneFbo(fbo);
-		fbo.draw(1440, 0);
-		//oscReceiver.debugDraw();
-		
-	}
-	 
-	 */
-	//ofDrawBitmapString( ofToString(ofGetFrameRate()), 10, 10 );
-	
 }
 
 //--------------------------------------------------------------

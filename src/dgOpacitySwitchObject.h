@@ -32,7 +32,7 @@ public:
 	private :
 	
 	ofImage			*		img;
-	vector<ofImage*>		images;
+	vector<ofImage*>		imageSet;
 	int						currentIndex;
 	float					easePct;
 	

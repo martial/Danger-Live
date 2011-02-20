@@ -15,6 +15,9 @@ dgProgressBarObject::dgProgressBarObject() {
 
 dgProgressBarObject::~dgProgressBarObject() {
 	
+	
+	
+	
 }
 
 void dgProgressBarObject::setup (string name, string type) {

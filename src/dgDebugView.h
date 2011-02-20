@@ -22,7 +22,7 @@ class dgDebugView {
 	
 	void setup();
 	void draw();
-	void drawSceneFbo (ofxFBOTexture * texture, int width, int height);
+	void drawSceneFbo (ofxFBOTexture * texture, float width, float height);
 	void onBeatEvent();
 	
 	bool	visible;

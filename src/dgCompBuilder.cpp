@@ -12,6 +12,7 @@
 
 void dgCompBuilder::setup (string xmlURL) {
 	
+	components.clear();
 	
 	if ( XML.loadFile(xmlURL) ) {
 		

@@ -13,18 +13,8 @@ void dgData::setup () {
 	
 	//printf("set up data \n");
 	
-	DIR.setVerbose(false);
+	//DIR.setVerbose(false);
     int numOfLayouts = DIR.listDir("layouts");
-
-	
-	
-		
-	
-	//int numOfLayouts = XML.getNumTags("module");
-	//data.reserve(numOfLayouts);
-	
-	
-	//printf ("Number of layouts : %d\n", numOfLayouts);
 	
 	for (int i=0; i<numOfLayouts; i++ ) {
 		

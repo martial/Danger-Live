@@ -19,6 +19,7 @@
 #define EDITOR_MODE
 
 
+
 class testApp : public ofBaseApp{
 
 	public:
@@ -53,6 +54,8 @@ class testApp : public ofBaseApp{
 	
 		ofxFBOTexture				fbo;
 		dgSceneEffects				sceneEffects;
+	
+		ofPoint						screen1Size, screen2Size;
 	
 	
 		bool						oscDebugEnabled;

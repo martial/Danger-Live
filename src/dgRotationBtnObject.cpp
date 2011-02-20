@@ -15,6 +15,15 @@ dgRotationBtnObject::dgRotationBtnObject() {
 
 dgRotationBtnObject::~dgRotationBtnObject() {
 	
+	img->clear();
+	//delete img;
+	
+	for (int i=0; i<frontImages.size(); i++) {
+		frontImages[i]->clear();
+		//delete frontImages[i];
+	}
+	frontImages.clear();
+	
 }
 
 void dgRotationBtnObject::setup (string imgURL, string name, string type) {
