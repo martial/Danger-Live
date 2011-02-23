@@ -14,7 +14,10 @@ void bloomShader::setup(int fboW, int fboH){
 	ofBackground(255,255,255);	
 	ofSetVerticalSync(true);
 	
-	fbo.allocate(fboW, fboH, GL_RGBA);
+	fbo = new ofxFBOTexture();
+	fbo->allocate(fboW, fboH, GL_RGBA);
+	fbo->clear(0,0,0,0);
+	
 	
 	shader.loadShader("shaders/bloom");
 	
@@ -22,11 +25,11 @@ void bloomShader::setup(int fboW, int fboH){
 }
 
 void bloomShader::beginRender(){
-	fbo.swapIn();
+	fbo->swapIn();
 }
 
 void bloomShader::endRender(){
-	fbo.swapOut();
+	fbo->swapOut();
 }
 
 void bloomShader::setParams(float _bloomSize){
@@ -41,10 +44,10 @@ void bloomShader::draw(float x, float y, float w, float h, bool useShader){
 		shader.setShaderActive(true);
 		//shader.setUniformVariable2f("sampleDivisor", divisor.x, divisor.y);
 		ofSetColor(255, 255, 255);
-		fbo.draw(0, 0);
+		fbo->draw(0, 0);
 		shader.setShaderActive(false);
 	}
 	else{
-		fbo.draw(0, 0);
+		fbo->draw(0, 0);
 	}
 }

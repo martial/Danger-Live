@@ -15,11 +15,15 @@ void shaderBlur::setup(int fboW, int fboH){
 	ofBackground(255,255,255);	
 	ofSetVerticalSync(true);
 	
-	fbo1.allocate(fboW, fboH, GL_RGBA);
-	fbo2.allocate(fboW, fboH, GL_RGBA);
+	fbo1 = new ofxFBOTexture();
+	fbo1->allocate(fboW, fboH, GL_RGBA);
+	fbo1->clear(0,0,0,0);
 	
-	fbo1.clear(0,0,0,0);
-	fbo2.clear(0,0,0,0);
+	fbo2 = new ofxFBOTexture();
+	fbo2->allocate(fboW, fboH, GL_RGBA);
+	fbo2->clear(0,0,0,0);
+	
+	
 	
 	
 	shaderH.loadShader("shaders/simpleBlurHorizontal");
@@ -32,14 +36,14 @@ void shaderBlur::setup(int fboW, int fboH){
 
 //--------------------------------------------------------------
 void shaderBlur::beginRender(){
-	fbo1.swapIn();
-	fbo1.setupScreenForMe();
+	fbo1->swapIn();
+	fbo1->setupScreenForMe();
 }
 
 //--------------------------------------------------------------
 void shaderBlur::endRender(){
-	fbo1.swapOut();
-	fbo1.setupScreenForThem();
+	fbo1->swapOut();
+	fbo1->setupScreenForThem();
 }
 
 //--------------------------------------------------------------
@@ -52,8 +56,8 @@ void shaderBlur::setBlurParams(int numPasses, float blurDist){
 ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useShader){
 	
 	ofxFBOTexture * src, * dst;
-	src = &fbo1;
-	dst = &fbo2;
+	src = fbo1;
+	dst = fbo2;
 	
 	if ( blurPct*blurDistance == 0 ) useShader = false; 
 	

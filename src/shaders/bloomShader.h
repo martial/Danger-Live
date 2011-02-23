@@ -20,7 +20,7 @@ public:
 	void draw(float x, float y, float w, float h, bool useShader);
 	
 	ofxShader shader;
-	ofxFBOTexture fbo;
+	ofxFBOTexture * fbo;
 	
 	float bloomSize;
 };

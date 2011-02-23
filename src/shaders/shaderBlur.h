@@ -28,7 +28,9 @@ class shaderBlur{
 		ofxShader shaderH;
 		ofxShader shaderV;
 
-		ofxFBOTexture fbo1, fbo2;
+		ofxFBOTexture * fbo1;
+		ofxFBOTexture * fbo2;
+
 		
 		float blurDistance;
 		float blurPct;
