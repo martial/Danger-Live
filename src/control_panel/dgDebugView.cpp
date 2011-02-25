@@ -16,14 +16,14 @@ void dgDebugView::setup() {
 	
 	logo.loadImage("assets/logo.png");
 	
+	fps.setup(1440, 900, 30);
+	
 	beatLatency = 100;
 	currentTime = 0;
 	visible = true;
 	
 	
-	//fps
-	numOfFps = 1440;
-	fpsCounter = 0;
+	
 }
 
 void dgDebugView::draw() {
@@ -32,10 +32,7 @@ void dgDebugView::draw() {
 	 */
 	
 	
-	int posInArray =   fpsCounter % numOfFps;
-    fpsHistory[posInArray] = (int)ofGetFrameRate();
-    fpsCounter++;
-	//if (fpsCounter > 256 ) fpsCounter = 0;
+	
 	
 	// draw rect
 	ofEnableAlphaBlending();
@@ -52,40 +49,12 @@ void dgDebugView::draw() {
 	ofSetColor(255, 255, 255);
 	logo.draw(1440*.5 - logo.width *.5, 45 - logo.height * .5);
 	
-	int fpsxPos = 1;
-	int fpsyPos = 90;
-	int fpsWidth = numOfFps;
-	int fpsHeight = 60;
-	ofSetColor(255, 255, 255, 120);
-	/*
-	ofLine(fpsxPos, fpsyPos, fpsWidth, fpsyPos);
-	ofLine(fpsWidth, fpsyPos, fpsWidth, fpsyPos+fpsHeight);
-	ofLine(fpsWidth, fpsyPos+fpsHeight, fpsxPos, fpsyPos+fpsHeight);
-	ofLine(fpsxPos, fpsyPos+fpsHeight, fpsxPos, fpsyPos);
-	 */
-	
-	ofSetColor(255, 255, 255, 255);
-	 if (fpsCounter < numOfFps){
-		 for (int i = 0; i < fpsCounter; i++){
-			// ofVertex(i, fpsHistory[i]);
-			 ofSetColor(255, (int)fpsHistory[i] * 255 / 60, (int)fpsHistory[i] * 255 / 60);
-			 ofRect(fpsxPos + i, fpsyPos + fpsHeight  - fpsHistory[i], 1, 1);
-		 }
-	 } else {
-		 int start = fpsCounter;
-		 int end   = fpsCounter + numOfFps;
-		 for (int i = start; i < end; i++){
-			 int posInArray = i % numOfFps;              // this is tricky, it's how we deal with the "jump" in the ring buffer
-			 //ofVertex(i, fpsHistory[i]);
-			 ofSetColor(255, (int)fpsHistory[posInArray] * 255 / 60 ,(int)fpsHistory[posInArray] * 255 / 60);
-			 ofRect(fpsxPos + i-start, fpsyPos+fpsHeight  - fpsHistory[posInArray], 1, 1);
-		 }
-		 
-	 }
-	
-	string fps = "fps : ";
-	fps += ofToString((int)ofGetFrameRate());
-	digitalFont_tiny.drawString(fps, fpsxPos, fpsyPos  - 14 );
+	fps.update();
+	fps.draw(0,90);
+		
+	//string fps = "fps : ";
+	//fps += ofToString((int)ofGetFrameRate());
+	//digitalFont_tiny.drawString(fps, fpsxPos, fpsyPos  - 14 );
 	
 	// draw beat man
 	float time = ofGetElapsedTimeMillis() - currentTime;

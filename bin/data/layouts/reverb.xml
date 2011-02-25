@@ -65,7 +65,7 @@
             <osc_adress_state>hipass1_onoff</osc_adress_state>
 
 			<range min="" max = ""></range>
-			<position x="-580" y="394"></position>
+			<position x="-580" y="500"></position>
             <rotation>270.0</rotation>
             
 		
@@ -78,7 +78,7 @@
             <osc_adress_state>hipass1_onoff</osc_adress_state>
 
 			<range min="" max = ""></range>
-			<position x="580" y="638"></position>
+			<position x="580" y="500"></position>
             <rotation>90.0</rotation>
             
 		

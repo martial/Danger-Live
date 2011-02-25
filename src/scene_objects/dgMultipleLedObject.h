@@ -42,7 +42,7 @@ public:
 	
 	int	numOfCols, numOfRows;
 	float xPadding, yPadding;
-	int xCentroid, yCentroid;
+	float xCentroid, yCentroid;
 	
 };
 

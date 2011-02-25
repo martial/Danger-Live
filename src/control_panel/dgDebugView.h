@@ -13,7 +13,7 @@
 #include "ofMain.h"
 #include "ofxFBOTexture.h"
 #include "ofxUtils.h"
-
+#include "fpsViewer.h"
 
 class dgDebugView {
 
@@ -33,14 +33,13 @@ class dgDebugView {
 	
 	ofTrueTypeFont	digitalFont;
 	ofTrueTypeFont	digitalFont_tiny;
-	float	beatLatency;
-	float	currentTime;
 	
-	/* fps */
+	fpsViewer		fps;
 	
-	int			fpsHistory[1440];
-	int			numOfFps;
-	int			fpsCounter;
+	float			beatLatency;
+	float			currentTime;
+	
+	
 	
 	
 };

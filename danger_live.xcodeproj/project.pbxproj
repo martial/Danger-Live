@@ -12,6 +12,7 @@
 		27CE63BE12CA90E200FB70D1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CE63BD12CA90E200FB70D1 /* CoreVideo.framework */; };
 		8300EB801317C52A00525F70 /* oscObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EB7F1317C52A00525F70 /* oscObjectManager.cpp */; };
 		8300EB831317C53400525F70 /* oscObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EB821317C53400525F70 /* oscObject.cpp */; };
+		8300EBB21317D76200525F70 /* fpsViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EBB11317D76200525F70 /* fpsViewer.cpp */; };
 		8307DDEB1316605700E5CA59 /* .cproject in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDC91316605700E5CA59 /* .cproject */; };
 		8307DDEC1316605700E5CA59 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCA1316605700E5CA59 /* .gitignore */; };
 		8307DDED1316605700E5CA59 /* .project in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCB1316605700E5CA59 /* .project */; };
@@ -160,6 +161,8 @@
 		8300EB7F1317C52A00525F70 /* oscObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oscObjectManager.cpp; sourceTree = "<group>"; };
 		8300EB811317C53400525F70 /* oscObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oscObject.h; sourceTree = "<group>"; };
 		8300EB821317C53400525F70 /* oscObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oscObject.cpp; sourceTree = "<group>"; };
+		8300EBB01317D76200525F70 /* fpsViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fpsViewer.h; sourceTree = "<group>"; };
+		8300EBB11317D76200525F70 /* fpsViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fpsViewer.cpp; sourceTree = "<group>"; };
 		8307DDC91316605700E5CA59 /* .cproject */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .cproject; sourceTree = "<group>"; };
 		8307DDCA1316605700E5CA59 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8307DDCB1316605700E5CA59 /* .project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .project; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 			children = (
 				8330156C13156A3D00BFEF00 /* dgDebugView.cpp */,
 				8330156D13156A3D00BFEF00 /* dgDebugView.h */,
+				8300EBB01317D76200525F70 /* fpsViewer.h */,
+				8300EBB11317D76200525F70 /* fpsViewer.cpp */,
 			);
 			path = control_panel;
 			sourceTree = "<group>";
@@ -1461,6 +1466,7 @@
 				8307DF431316B03F00E5CA59 /* bloomEffect.cpp in Sources */,
 				8300EB801317C52A00525F70 /* oscObjectManager.cpp in Sources */,
 				8300EB831317C53400525F70 /* oscObject.cpp in Sources */,
+				8300EBB21317D76200525F70 /* fpsViewer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

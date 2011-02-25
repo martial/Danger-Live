@@ -57,6 +57,10 @@ void dgSwitchObject::addExtraImage(string url) {
 	imageSet.push_back(img);
 	imagesSize = imageSet.size();
 	
+	if ( img->width > width ) this->width = img->width;
+	if ( img->height > height ) this->height = img->height;
+	
+	
 }
 
 void dgSwitchObject::update () {
@@ -86,7 +90,7 @@ void dgSwitchObject::draw () {
 	if ( currentIndex < 0 ) currentIndex = 0;
 	if ( currentIndex > imagesSize-1 ) currentIndex = imagesSize-1;
 
-	imageSet[currentIndex]->draw((-width * .5), (-height * .5));
+	imageSet[currentIndex]->draw(-width * .5, -height * .5);
 	
 	
 	ofDisableAlphaBlending();

@@ -27,7 +27,7 @@ void dangerApp::setup(){
 
 	
 	//ofSetVerticalSync(true);
-	ofSetFrameRate(0);
+	ofSetFrameRate(30);
 	ofSetLogLevel(OF_LOG_WARNING);
 	
 	

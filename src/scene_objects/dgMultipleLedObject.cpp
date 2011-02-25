@@ -35,7 +35,7 @@ void dgMultipleLedObject::setup (string name, string type) {
 
 void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	
-	int yPos = (int)(switchObjects.size()* (switchObj->height -2));
+	//int yPos = (int)(switchObjects.size()* (switchObj->height -2));
 	
 	
 	switchObj->setPosition( 0, 0);
@@ -43,8 +43,8 @@ void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	switchObj->blurRate = .1;
 	switchObjects.push_back(switchObj);
 	
-	this->height = yPos;
-	this->width = switchObj->width * switchObjects.size();
+	//this->height = yPos;
+	//this->width = switchObj->width * switchObjects.size();
 	
 	total = switchObjects.size();
 	
@@ -60,16 +60,22 @@ void dgMultipleLedObject::init() {
 	 xPadding = this->configValues[3];
 	 yPadding = this->configValues[4];
 	
-	if ( numOfCols < 2 )  xPadding = 0;
+	//if ( numOfCols < 2 )  xPadding = 0;
+	//if ( numOfRows < 2 )  yPadding = 0;
 	
-	this->height = (int)(numOfRows* (switchObjects[0]->height + yPadding));;
-	this->width = (int)((switchObjects[0]->width + xPadding) * numOfCols);
 	
-	 xCentroid = - (int)(width*.5);
-	 yCentroid = (int)(height*.5);
+		
 	
-	//xCentroid = 0;
-	//yCentroid = 0;
+	this->width		= (int) ((numOfCols-1) * (switchObjects[0]->width + xPadding));
+	this->height	= (int) ((numOfRows-1) * (switchObjects[0]->height + yPadding));
+	
+	//width  -= xPadding;
+	//height -= yPadding;
+	xCentroid = width * .5;
+	yCentroid = height *.5;
+	
+
+
 }
 
 void dgMultipleLedObject::update () {
@@ -77,9 +83,7 @@ void dgMultipleLedObject::update () {
 	dgSceneObject::update();
 	
 	// find current value
-	
-	
-	
+		
 	int enabledLeds = round(total*pct);
 	
 		
@@ -104,38 +108,38 @@ void dgMultipleLedObject::draw () {
 	
 	//return;
 	
-
+	
+	
 
 	
 	ofPushMatrix();
-	ofTranslate(pos.x, pos.y + yCentroid, 0);
+	ofTranslate(-xCentroid, -yCentroid, 0);
+	
+	ofPushMatrix();
+	ofTranslate(pos.x + xCentroid, pos.y +yCentroid, 0);
 	
 	ofRotate(rotation, 0, 0, 1);
 	
-			for ( int j=0; j<numOfCols; j++ ) {
-		ofPushMatrix();
-		ofTranslate((int)(j*(switchObjects[j]->width + xPadding)), 0, 0);
-			
+		for ( int j=0; j<numOfCols; j++ ) {
 			for ( int k=0; k<numOfRows; k++ ) {
+				
 				ofPushMatrix();
-				ofTranslate(0, (int)(k*(switchObjects[k]->height + yPadding)) - yCentroid, 0);
+				ofTranslate( j * (switchObjects[j]->width +xPadding ) - xCentroid, k * (switchObjects[k]->height + yPadding ) -yCentroid , 0);
 				ofEnableAlphaBlending();
 				switchObjects[k]->draw();
 				ofDisableAlphaBlending();
-				
-				//switchObjects[k]->setPosition((int)(j*(switchObjects[i]->width + xPadding)+xCentroid),(int)(k*(switchObjects[k]->height + yPadding) +yCentroid));
-				
 				ofPopMatrix();
+				
 			}
-		glPopMatrix();
+			
+		
 		}
-	//}
-	
+		
 	
 	
 	
 	ofPopMatrix();
-	
+	ofPopMatrix();
 	
 	
 	

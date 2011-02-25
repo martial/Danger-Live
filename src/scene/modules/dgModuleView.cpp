@@ -139,7 +139,7 @@ dgAbstractModuleWrapper * dgModuleView::getRelatedWrapper (string name) {
 */
 
 void dgModuleView::onOscEvent(customOscMessage & msg) {
-	processOsc(msg);
+	//processOsc(msg);
 	if ( currentWrapper ) currentWrapper->onOscEvent(msg);
 }
 
@@ -187,6 +187,8 @@ void dgModuleView::setCurrentView(int viewID) {
 	currentViewID = viewID;
 	
 	currentModule = layoutData->data[currentViewID];
+	
+	currentWrapper = NULL;
 	currentWrapper = getRelatedWrapper(layoutData->data[currentViewID]->name);
 	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
