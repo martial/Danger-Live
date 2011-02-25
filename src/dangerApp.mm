@@ -135,6 +135,10 @@ void dangerApp::keyPressed(int key){
 			sceneEffects.initBloom();
 			break;
 			
+		case 'n':
+			sceneEffects.quitBloom();
+			break;
+			
 		case 'p':
 			//debugView.visible = !debugView.visible;
 			break;

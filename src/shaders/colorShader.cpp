@@ -42,14 +42,15 @@ void colorShader::setup(int fboW, int fboH){
 //--------------------------------------------------------------
 void colorShader::beginRender(){
 	fbo1->clear(0, 0, 0, 0);
-	fbo1->swapIn();
-	fbo1->setupScreenForMe();
+	fbo1->begin();
+	//glEnable(GL_BLEND);
+	//glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 }
 
 //--------------------------------------------------------------
 void colorShader::endRender(){
-	fbo1->swapOut();
-	fbo1->setupScreenForThem();
+	//glDisable(GL_BLEND);
+	fbo1->end();
 }
 
 //--------------------------------------------------------------
@@ -81,15 +82,18 @@ ofxFBOTexture * colorShader::getTexture(bool useShader){
 			clrShader.setUniformVariable1f("brightness", brightness * brightnessPct);
 			clrShader.setUniformVariable1f("saturation", saturation * saturationPct);
 			clrShader.setUniformVariable1f("contrast", contrast * contrastPct);
+		
+		
 			
 			dst->clear(0, 0, 0, 0);
-			dst->swapIn();
-			dst->setupScreenForMe();
-			ofEnableAlphaBlending();		
+			dst->begin();
+			//ofEnableAlphaBlending();
+			glEnable(GL_BLEND);
+			glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 			src->draw(0, 0);
-			ofDisableAlphaBlending();
-			dst->swapOut();
-			dst->setupScreenForThem();
+			glDisable(GL_BLEND);
+		//	ofDisableAlphaBlending();
+			dst->end();
 			clrShader.setShaderActive(false);
 			
 		}		

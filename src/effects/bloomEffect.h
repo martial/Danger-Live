@@ -28,11 +28,14 @@ public:
 	ofxFBOTexture * getFbo(ofxFBOTexture * originalFbo,  int x, int y);	
 		
 	void setIntensity(float val, float duration );
+	void onIntensityComplete(int & e);
 	
+	ofEvent<int>			intensityEnd;
 	
 private:
 	
 	
+	colorEffect				transformedColor;
 	blurEffect		*		blur;
 	colorEffect		*		color;
 	ofxFBOTexture	*		filteredFbo;

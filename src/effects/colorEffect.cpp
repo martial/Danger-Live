@@ -11,6 +11,7 @@
 
 void colorEffect::setup(string name) {
 	this->name = name;
+	
 	clrShader.setup(1920, 1080);
 	
 	saturationPct = 1.0;
@@ -29,11 +30,9 @@ void colorEffect::init() {
 
 void colorEffect::update() {
 	
-	
-	
-	clrShader.saturationPct = saturationPctTween.update();
-	clrShader.contrastPct = contrastPctTween.update();
-	clrShader.brightnessPct = brightnessPctTween.update();
+	saturationPct = clrShader.saturationPct = saturationPctTween.update();
+	contrastPct = clrShader.contrastPct = contrastPctTween.update();
+	brightnessPct = clrShader.brightnessPct = brightnessPctTween.update();
 	
 }
 
@@ -79,13 +78,18 @@ void colorEffect::onFadeInOuAlltComplete (int & e) {
 
 ofxFBOTexture * colorEffect::getFbo(ofxFBOTexture & fbo, int x, int y, float alphaPct) {
 	
-	clrShader.beginRender();
+	
 	ofEnableAlphaBlending();
 	ofSetColor(255, 255, 255, alphaPct*255);
+	clrShader.beginRender();
+	ofEnableAlphaBlending();
+	
+	ofSetColor(255, 255, 255, alphaPct*255);
 	fbo.draw(0, 0);
+	
 	ofDisableAlphaBlending();
 	clrShader.endRender();
-	
+	ofDisableAlphaBlending();
 	return clrShader.getTexture(true);
 	
 	

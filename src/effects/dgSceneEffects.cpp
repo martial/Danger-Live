@@ -63,6 +63,8 @@ ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 	// apply color filter
 	ofxFBOTexture * filteredFbo =  color.getFbo(*fbo, x, y);	
 	ofxFBOTexture * finalFbo;
+	
+	
 	if ( currentEffect ) {
 		
 		
@@ -76,8 +78,8 @@ ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 		//ofSetupScreen();
 	} else {
 		//ofDisableAlphaBlending();
-		ofEnableAlphaBlending();
-		finalFbo = blur.getFbo(*filteredFbo,x,y);
+		
+		finalFbo = (blur.blurPct > 0 ) ? filteredFbo : blur.getFbo(*filteredFbo,x,y);
 		return finalFbo;
 	}	
 	 
@@ -85,14 +87,48 @@ ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 	
 }
 
+/*  ----- -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  */
+
+/*  Bloom */
+
 void dgSceneEffects::initBloom () {
+	
 	setEffectByName("bloom");
-	setBrightness(.8, 1200);
-	setContrast(1.2, 1500);
-	blur.setBlurPct(2.0, 1000);
-	bloom.setIntensity(1.0, 1800);
-	//blur.setup(<#string name#>)
+	
+	setBrightness(.95, 500);
+	setContrast(1.05, 500);
+	setSaturation(.75, 600);
+	
+	blur.setBlurPct(2.0, 500);
+	bloom.setIntensity(1.0, 500);
+	
+	ofRemoveListener(bloom.intensityEnd, this, &dgSceneEffects::removeBloom);
 }
+
+void dgSceneEffects::quitBloom () {
+	
+	setEffectByName("bloom");
+	
+	setBrightness(1.0, 1200);
+	setContrast(1.0, 1500);
+	setSaturation(1.0, 600);
+	
+	blur.setBlurPct(0.0, 1000);
+	bloom.setIntensity(0.0, 1800);
+	ofAddListener(bloom.intensityEnd, this, &dgSceneEffects::removeBloom);
+}
+
+void dgSceneEffects::removeBloom (int & e) {
+	ofRemoveListener(bloom.intensityEnd, this, &dgSceneEffects::removeBloom);
+	reset();
+}
+
+
+
+/*  ----- -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  */
+
+
+
 
 void dgSceneEffects::blurFadeInOut (float duration) {
 	blur.fadeIn(duration);
@@ -111,10 +147,11 @@ void dgSceneEffects:: onBrigthnessBlackEvent(int & e) {
 }
 
 
-/* transitions */
 
 
+/*  ----- -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  */
 
+/* color settings */
 
 void dgSceneEffects::setColorSettintgs(float brightness, float saturation, float contrast) {
 	
@@ -140,7 +177,6 @@ void dgSceneEffects::setEffectByName(string name) {
 
 dgAbstractEffect * dgSceneEffects::getEffectByName(string name) {
 	for ( int i=0; i<effects.size(); i++) {
-	
 		if ( name == effects[i]->name) return effects[i];
 	}
 	return NULL;

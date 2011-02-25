@@ -46,11 +46,6 @@ void dgModuleView::update() {
 	
 	if (!currentModule) return;
 	
-	//printf ("Number of comps : %d\n", currentObjects.size());
-	
-	// check for related module
-	
-	
 	if ( currentWrapper ) currentWrapper->update();
 	
 	

@@ -67,7 +67,7 @@ ofxFBOTexture * blurEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
 	fbo.draw(0, 0, 1920, 1080);
 	blur.endRender();
 	
-	return blur.draw(0, 0, 0, 0, true);
+	return blur.getFbo(0, 0, 0, 0, true);
 	//blur.draw(0, 0, 1440, 900, true);
 	
 	

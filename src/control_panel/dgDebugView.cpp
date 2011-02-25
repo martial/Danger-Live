@@ -91,11 +91,13 @@ void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, float width, float heig
 	ofEnableAlphaBlending();
 	ofSetColor(255, 255, 255, 30);
 	ofRect(x-1, y-1, videoSize.x+2, videoSize.y+2);
-	
-	ofSetColor(255, 255, 255, 255);
-	
-	texture->draw(x,y ,videoSize.x,videoSize.y);
 	ofDisableAlphaBlending();
+	ofSetColor(255, 255, 255, 255);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
+	texture->draw(x,y ,videoSize.x,videoSize.y);
+	glDisable(GL_BLEND);
+	
 	
 	
 }

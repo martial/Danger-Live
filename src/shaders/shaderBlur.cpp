@@ -35,14 +35,15 @@ void shaderBlur::setup(int fboW, int fboH){
 //--------------------------------------------------------------
 void shaderBlur::beginRender(){
 	fbo1->clear(0,0,0,0);
-	fbo1->swapIn();
-	fbo1->setupScreenForMe();
+	fbo1->begin();
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 }
 
 //--------------------------------------------------------------
 void shaderBlur::endRender(){
-	fbo1->swapOut();
-	fbo1->setupScreenForThem();
+	fbo1->end();
+	glDisable(GL_BLEND);
 }
 
 //--------------------------------------------------------------
@@ -52,13 +53,13 @@ void shaderBlur::setBlurParams(int numPasses, float blurDist){
 }
 
 //--------------------------------------------------------------
-ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useShader){
+ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useShader){
 	
 	ofxFBOTexture * src, * dst;
 	src = fbo1;
 	dst = fbo2;
 	
-	if ( blurPct*blurDistance == 0 ) useShader = false; 
+	if ( blurPct*blurDistance <= 0.0 ) useShader = false; 
 	
 	
 	
@@ -72,12 +73,13 @@ ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useSha
 			shaderH.setShaderActive(true);
 			shaderH.setUniformVariable1f("blurAmnt", blurDistance*blurPct);
 			
-			dst->swapIn();
-			dst->setupScreenForMe();
-						
+			dst->clear(0,0,0,0);
+			dst->begin();
+			glEnable(GL_BLEND);
+			glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 			src->draw(0, 0);
-			dst->swapOut();
-			dst->setupScreenForThem();
+			glDisable(GL_BLEND);
+			dst->end();
 			
 			
 			shaderH.setShaderActive(false);
@@ -87,15 +89,17 @@ ofxFBOTexture * shaderBlur::draw(float x, float y, float w, float h, bool useSha
 			shaderV.setUniformVariable1f("blurAmnt", blurDistance*blurPct);
 			
 			src->clear(0, 0, 0, 0);
-			src->swapIn();
-			src->setupScreenForMe();
+			src->begin();
+			glEnable(GL_BLEND);
+			glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 			dst->draw(0,0);
-			src->swapOut();
-			src->setupScreenForThem();
+			glDisable(GL_BLEND);
+			src->end();
 			
 			shaderV.setShaderActive(false);
 			 
-			 
+			printf("woks");
+			
 		}		
 		
 	}

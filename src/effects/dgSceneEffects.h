@@ -40,6 +40,8 @@ class dgSceneEffects {
 
 	
 	void initBloom();
+	void quitBloom();
+	void removeBloom (int & e);
 	
 	dgAbstractEffect * getEffectByName(string name);
 	

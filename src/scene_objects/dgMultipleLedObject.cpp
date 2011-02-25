@@ -129,14 +129,9 @@ void dgMultipleLedObject::draw () {
 				switchObjects[k]->draw();
 				ofDisableAlphaBlending();
 				ofPopMatrix();
-				
 			}
 			
-		
 		}
-		
-	
-	
 	
 	ofPopMatrix();
 	ofPopMatrix();

@@ -25,11 +25,11 @@ void bloomShader::setup(int fboW, int fboH){
 }
 
 void bloomShader::beginRender(){
-	fbo->swapIn();
+	fbo->begin();
 }
 
 void bloomShader::endRender(){
-	fbo->swapOut();
+	fbo->end();
 }
 
 void bloomShader::setParams(float _bloomSize){
