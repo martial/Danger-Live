@@ -19,6 +19,10 @@ void bloomEffect::setup(string name) {
 	filteredFbo->allocate(1920, 1080, GL_RGBA);
 	filteredFbo->clear(0, 0, 0, 0);
 	
+	intensityPct = 0.0;
+	intensityPctTween.setParameters( 0,easeQuint, ofxTween::easeInOut, intensityPct, 0, 0, 0);
+	intensityPctTween.start();
+	
 }
 
 void bloomEffect::init(blurEffect * blur, colorEffect * color) {
@@ -28,6 +32,12 @@ void bloomEffect::init(blurEffect * blur, colorEffect * color) {
 
 void bloomEffect::update() {
 	
+	intensityPct = intensityPctTween.update();
+}
+
+void bloomEffect::setIntensity(float val, float duration ) {
+	intensityPctTween.setParameters( 0,easeQuint, ofxTween::easeInOut, intensityPct, val, duration, 0);
+	intensityPctTween.start();
 	
 }
 
@@ -35,8 +45,10 @@ void bloomEffect::update() {
 
 ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) {
 	
+	
+	
 	ofxFBOTexture * blurredFbo = blur->getFbo(*originalFbo,x,y);	
-	ofxFBOTexture * coloredFbo =  color->getFbo(*blurredFbo, x, y);
+	ofxFBOTexture * coloredFbo =  color->getFbo(*blurredFbo, x, y,intensityPct);
 	
 	filteredFbo->clear(0, 0, 0, 0);
 	filteredFbo->begin();
@@ -49,12 +61,13 @@ ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) 
 	glBlendFunc(GL_ONE_MINUS_DST_COLOR, GL_ONE);
 	
 	coloredFbo->draw(0, 0);
+	//ofDisableAlphaBlending();
 	
 	glDisable(GL_BLEND);
 	
 	filteredFbo->end();
 	//filteredFbo->clear(0, 0, 0, 0);
-
+	ofSetColor(255, 255, 255, 255);
 	
 	return filteredFbo;
 	 

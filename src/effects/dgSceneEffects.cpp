@@ -19,6 +19,8 @@ void dgSceneEffects::setup() {
 	bloom.setup("bloom");
 	
 	bloom.init(&blur, &color);
+	effects.push_back(&bloom);
+	
 	
 	saturationPct = 1.0;
 	contrastPct = 1.0;
@@ -58,11 +60,6 @@ void dgSceneEffects::update() {
 
 ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 	
-	
-	
-	
-	
-	
 	// apply color filter
 	ofxFBOTexture * filteredFbo =  color.getFbo(*fbo, x, y);	
 	ofxFBOTexture * finalFbo;
@@ -86,6 +83,15 @@ ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 	 
 	 
 	
+}
+
+void dgSceneEffects::initBloom () {
+	setEffectByName("bloom");
+	setBrightness(.8, 1200);
+	setContrast(1.2, 1500);
+	blur.setBlurPct(2.0, 1000);
+	bloom.setIntensity(1.0, 1800);
+	//blur.setup(<#string name#>)
 }
 
 void dgSceneEffects::blurFadeInOut (float duration) {

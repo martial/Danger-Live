@@ -77,10 +77,13 @@ void colorEffect::onFadeInOuAlltComplete (int & e) {
 
 
 
-ofxFBOTexture * colorEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
+ofxFBOTexture * colorEffect::getFbo(ofxFBOTexture & fbo, int x, int y, float alphaPct) {
 	
 	clrShader.beginRender();
+	ofEnableAlphaBlending();
+	ofSetColor(255, 255, 255, alphaPct*255);
 	fbo.draw(0, 0);
+	ofDisableAlphaBlending();
 	clrShader.endRender();
 	
 	return clrShader.getTexture(true);
@@ -93,17 +96,17 @@ ofxFBOTexture * colorEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
 
 void colorEffect::setBrightness(float brightness, int duration) {
 	//clrShader.setColorSettings(brightness, clrShader.saturation, clrShader.contrast);
-	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.brightnessPct, brightness, duration, 0);
+	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeInOut, clrShader.brightnessPct, brightness, duration, 0);
 	brightnessPctTween.start();
 }
 
 void colorEffect::setContrast(float contrast, int duration) {
 	//clrShader.setColorSettings(clrShader.brightness, clrShader.saturation, contrast);
-	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, contrast, duration, 0);
+	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeInOut, clrShader.contrastPct, contrast, duration, 0);
 	contrastPctTween.start();
 }
 
 void colorEffect::setSaturation(float saturation, int duration) {
-	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.saturationPct, saturation, duration, 0);
+	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeInOut, clrShader.saturationPct, saturation, duration, 0);
 	saturationPctTween.start();
 }

@@ -10,6 +10,8 @@
 		277D051C12CA9549003A5BD5 /* NoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277D051B12CA9549003A5BD5 /* NoWindow.xib */; };
 		27CE63AD12CA8E3800FB70D1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27CE63AA12CA8DEF00FB70D1 /* Info.plist */; };
 		27CE63BE12CA90E200FB70D1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CE63BD12CA90E200FB70D1 /* CoreVideo.framework */; };
+		8300EB801317C52A00525F70 /* oscObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EB7F1317C52A00525F70 /* oscObjectManager.cpp */; };
+		8300EB831317C53400525F70 /* oscObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EB821317C53400525F70 /* oscObject.cpp */; };
 		8307DDEB1316605700E5CA59 /* .cproject in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDC91316605700E5CA59 /* .cproject */; };
 		8307DDEC1316605700E5CA59 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCA1316605700E5CA59 /* .gitignore */; };
 		8307DDED1316605700E5CA59 /* .project in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCB1316605700E5CA59 /* .project */; };
@@ -119,7 +121,7 @@
 		E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
 		E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
 		E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
-		E4C2422B10CC554B004149E2 /* openFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2421E10CC549C004149E2 /* openFrameworks.a */; };
+		E4C2422B10CC554B004149E2 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2421E10CC549C004149E2 /* openFrameworksDebug.a */; };
 		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
@@ -154,6 +156,10 @@
 		277D051B12CA9549003A5BD5 /* NoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NoWindow.xib; path = nib/NoWindow.xib; sourceTree = SOURCE_ROOT; };
 		27CE63AA12CA8DEF00FB70D1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		27CE63BD12CA90E200FB70D1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		8300EB7E1317C52A00525F70 /* oscObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oscObjectManager.h; sourceTree = "<group>"; };
+		8300EB7F1317C52A00525F70 /* oscObjectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oscObjectManager.cpp; sourceTree = "<group>"; };
+		8300EB811317C53400525F70 /* oscObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oscObject.h; sourceTree = "<group>"; };
+		8300EB821317C53400525F70 /* oscObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oscObject.cpp; sourceTree = "<group>"; };
 		8307DDC91316605700E5CA59 /* .cproject */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .cproject; sourceTree = "<group>"; };
 		8307DDCA1316605700E5CA59 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8307DDCB1316605700E5CA59 /* .project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .project; sourceTree = "<group>"; };
@@ -399,7 +405,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C2422B10CC554B004149E2 /* openFrameworks.a in Frameworks */,
+				E4C2422B10CC554B004149E2 /* openFrameworksDebug.a in Frameworks */,
 				E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */,
 				E45BE2E40E8CC69C009D7055 /* rtAudio.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
@@ -547,6 +553,10 @@
 				8330157613156A3D00BFEF00 /* dgVideoDataSet.h */,
 				8330157713156A3D00BFEF00 /* moduleData.cpp */,
 				8330157813156A3D00BFEF00 /* moduleData.h */,
+				8300EB7E1317C52A00525F70 /* oscObjectManager.h */,
+				8300EB7F1317C52A00525F70 /* oscObjectManager.cpp */,
+				8300EB811317C53400525F70 /* oscObject.h */,
+				8300EB821317C53400525F70 /* oscObject.cpp */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -1206,7 +1216,7 @@
 		E4C2421710CC549C004149E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4C2421E10CC549C004149E2 /* openFrameworks.a */,
+				E4C2421E10CC549C004149E2 /* openFrameworksDebug.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1313,10 +1323,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E4C2421E10CC549C004149E2 /* openFrameworks.a */ = {
+		E4C2421E10CC549C004149E2 /* openFrameworksDebug.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = openFrameworks.a;
+			path = openFrameworksDebug.a;
 			remoteRef = E4C2421D10CC549C004149E2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1449,6 +1459,8 @@
 				8307DDFC1316605700E5CA59 /* ofxEasingSine.cpp in Sources */,
 				8307DDFD1316605700E5CA59 /* ofxTween.cpp in Sources */,
 				8307DF431316B03F00E5CA59 /* bloomEffect.cpp in Sources */,
+				8300EB801317C52A00525F70 /* oscObjectManager.cpp in Sources */,
+				8300EB831317C53400525F70 /* oscObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

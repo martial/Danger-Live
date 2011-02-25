@@ -96,78 +96,7 @@ void dgModuleView::draw () {
 
 void dgModuleView::processOsc (customOscMessage & msg) {
 	
-	// TODO double loop and filter signals for values
-	
 		
-	//for ( int i = 0; i < oscReceiver->messages.size(); i++ ) {
-	
-		//printf("process : \n");
-				
-		// first check adress
-		vector<dgSceneObject*>  objects;
-		vector<dgSceneObject*>  stateObjects;
-	
-		getRelatedObject(msg.address, &objects, &stateObjects);
-		int total = objects.size();
-		
-		string splitString = msg.address.substr(0, 7);
-		float div = (splitString == "/signal" ) ? 1.0 : 127.0;
-		
-	
-	if ( splitString != "/signal" ) {
-		splitString = msg.address.substr(0, 19);
-		div = (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
-		if ( splitString =="/live/track/volume/" ) {
-				
-			//printf("ok\n");
-			//printf("val : %f\n", div);
-			//printf("val msg : %f\n", msg.value);
-			
-			
-		}
-	}
-	//printf(splitString.c_str());
-	
-		for ( int i=0; i<total; i++) {
-			objects[i]->setPct(msg.value/div);
-			
-		}
-		
-		total = stateObjects.size();
-		for ( int i=0; i<total; i++) {
-			stateObjects[i]->setStatePct(msg.value/127);
-		
-		}
-		
-		
-		
-		for ( int j=0; j < msg.stringArgs.size(); j++ ) {	
-			
-			getRelatedObject( msg.stringArgs[j], &objects, &stateObjects);
-			
-			
-			string splitString = msg.stringArgs[j].substr(0, 7);
-			float div = (splitString == "/signal" ) ? 1 : 127.0;
-			
-			total = objects.size();
-			for ( int k=0; k<total; k++) {
-				objects[k]->setPct(msg.value/div);
-			}
-			
-			total = stateObjects.size();
-			for ( int k=0; k<total; k++) {
-				stateObjects[k]->setStatePct(msg.value/127);
-			}
-				
-		}
-	
-	//printf("objects size : %d\n", total);
-		
-	objects.clear();
-	stateObjects.clear();
-		
-	//}
-	
 }
 
 void dgModuleView::getRelatedObject (string val, vector<dgSceneObject*> * pctObjects, vector<dgSceneObject*> * statePctObjects) {
@@ -203,6 +132,8 @@ dgAbstractModuleWrapper * dgModuleView::getRelatedWrapper (string name) {
 
 
 
+
+
 /*
 
 */
@@ -224,7 +155,6 @@ void dgModuleView::onMidiEvent(int adress, int val) {
 	//moduleView.onMidiEvent(adress, val);
 	
 	if ( currentWrapper ) currentWrapper->onMidiEvent(adress, val);
-	
 	if ( adress == 15 ) nextView();
 	
 	
@@ -259,7 +189,12 @@ void dgModuleView::setCurrentView(int viewID) {
 	currentModule = layoutData->data[currentViewID];
 	currentWrapper = getRelatedWrapper(layoutData->data[currentViewID]->name);
 	
+	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
+		currentModule->cpObjects[i]->initValues();
+	}
+	
 	// get beat object
+	beatObject = NULL;
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		if ( currentModule->cpObjects[i]->nameId == "beatObject" ) {
 			beatObject = currentModule->cpObjects[i];

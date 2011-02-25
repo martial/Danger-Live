@@ -30,6 +30,9 @@ class blurEffect : public dgAbstractEffect {
 	ofxFBOTexture * getFbo(ofxFBOTexture & fbo, int x, int y);	
 	float		blurPct;
 	
+	
+	void setBlurPct (float pct, float duration);
+	
 	void fadeIn(float duration = 500.0);
 	void fadeOut(int & e);
 	void onFadeInOutComplete(int & e);

@@ -106,7 +106,7 @@ void dgMultipleLedObject::draw () {
 	
 
 
-	ofEnableAlphaBlending();
+	
 	ofPushMatrix();
 	ofTranslate(pos.x, pos.y + yCentroid, 0);
 	
@@ -119,7 +119,9 @@ void dgMultipleLedObject::draw () {
 			for ( int k=0; k<numOfRows; k++ ) {
 				ofPushMatrix();
 				ofTranslate(0, (int)(k*(switchObjects[k]->height + yPadding)) - yCentroid, 0);
+				ofEnableAlphaBlending();
 				switchObjects[k]->draw();
+				ofDisableAlphaBlending();
 				
 				//switchObjects[k]->setPosition((int)(j*(switchObjects[i]->width + xPadding)+xCentroid),(int)(k*(switchObjects[k]->height + yPadding) +yCentroid));
 				
@@ -133,7 +135,7 @@ void dgMultipleLedObject::draw () {
 	
 	
 	ofPopMatrix();
-	ofDisableAlphaBlending();
+	
 	
 	
 	

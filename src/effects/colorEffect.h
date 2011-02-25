@@ -23,7 +23,7 @@ public:
 	void setup(string name);
 	void init();
 	void update();
-	ofxFBOTexture * getFbo(ofxFBOTexture & fbo, int x, int y);
+	ofxFBOTexture * getFbo(ofxFBOTexture & fbo, int x, int y, float alphaPct = 1.0);
 	
 	void fadeInAll (float duration, float brightVal = 0.0, float contrastVal = 1.5, float saturationVal = 0.0 );
 	void fadeOutAll(int & e);

@@ -39,6 +39,8 @@ class dgSceneEffects {
 	void setContrast(float contrast, int duration = 0);
 
 	
+	void initBloom();
+	
 	dgAbstractEffect * getEffectByName(string name);
 	
 	vector<dgAbstractEffect*>	effects;

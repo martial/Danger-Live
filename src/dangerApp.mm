@@ -1,7 +1,4 @@
 #include "dangerApp.h"
-#include "Poco/Delegate.h"
-#include "Poco/Timestamp.h"
-
 #include "ofxCocoa.h"
 
 
@@ -20,17 +17,14 @@ void dangerApp::setup(){
 	MSA::ofxCocoa::setSyncToDisplayLink(false);
 	//ofSetFrameRate(0);			// run as fast as you can
 	
-	//MSA::ofxCocoa::showSystemUI(kUIModeNormal);
-	//MSA::ofxCocoa::setTransparent(true);
-	//	MSA::ofxCocoa::setWindowLevel(NSScreenSaverWindowLevel);
-	
-	
+	screen1Size = MSA::ofxCocoa::getSizeForScreen(0);
+	if ( MSA::ofxCocoa::getNumberOfScreen() > 1 ) {
+		screen2Size = MSA::ofxCocoa::getSizeForScreen(1);
+	}
+		
 	float time = ofGetElapsedTimeMillis();
 	
-	screen1Size.x = 1440;
-	screen1Size.y = 900;
-	screen2Size.x = 1920;
-	screen2Size.y = 1080;
+
 	
 	//ofSetVerticalSync(true);
 	ofSetFrameRate(0);
@@ -58,16 +52,16 @@ void dangerApp::setup(){
 	/* scene */
 	videoData.setup(ofToDataPath("videos.xml"));
 	
-	scene.setup(data, videoData, builder, oscReceiver,sceneEffects);
+	scene.setup(data, videoData, builder, oscReceiver, sceneEffects);
 	
 	
 	debugView.setup();
 	
 	sceneEffects.setup();
-	sceneEffects.setEffectByName("bloom");
+	//sceneEffects.setEffectByName("bloom");
 	
 	fbo = new ofxFBOTexture();
-	fbo->allocate(screen2Size.x, screen2Size.y, GL_RGBA);
+	fbo->allocate(1920, 1080, GL_RGBA);
 	fbo->clear(0,0,0,0);
 	
 	oscDebugEnabled = false;
@@ -137,6 +131,10 @@ void dangerApp::keyPressed(int key){
 			scene.setCurrentView(0);
 			break;
 			
+		case 'b':
+			sceneEffects.initBloom();
+			break;
+			
 		case 'p':
 			//debugView.visible = !debugView.visible;
 			break;
@@ -194,6 +192,7 @@ void dangerApp::onBeatEvent(int & f){
 }
 
 void dangerApp::onOscEvent(customOscMessage & f ) {
+	data.onOscEvent(f);
 	scene.onOscEvent(f);
 	
 }

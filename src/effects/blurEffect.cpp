@@ -53,6 +53,12 @@ void blurEffect::onFadeInOutComplete (int & e) {
 }
 
 
+void blurEffect::setBlurPct (float pct, float duration) {
+	blurPctTween.setParameters( 1, easeQuint, ofxTween::easeInOut, blur.blurPct, pct, duration, 0);
+	blurPctTween.start();
+	
+}
+
 
 ofxFBOTexture * blurEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
 	

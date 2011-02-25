@@ -13,9 +13,7 @@
 #include "ofMain.h"
 #include "ofxFBOTexture.h"
 #include "dgAbstractEffect.h"
-
 #include "ofxTween.h"
-
 #include "blurEffect.h"
 #include "colorEffect.h"
 
@@ -28,12 +26,9 @@ public:
 	void init(blurEffect * blur, colorEffect * color);
 	void update();
 	ofxFBOTexture * getFbo(ofxFBOTexture * originalFbo,  int x, int y);	
+		
+	void setIntensity(float val, float duration );
 	
-	float		blurPct;
-	
-	void fadeIn(float duration = 500.0);
-	void fadeOut(int & e);
-	void onFadeInOutComplete(int & e);
 	
 private:
 	
@@ -42,6 +37,9 @@ private:
 	colorEffect		*		color;
 	ofxFBOTexture	*		filteredFbo;
 	
+	float					intensityPct;
+	ofxEasingQuint			easeQuint;
+	ofxTween				intensityPctTween;
 	
 };
 
