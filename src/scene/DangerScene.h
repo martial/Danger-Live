@@ -39,6 +39,7 @@ class DangerScene {
 	void onMidiEvent(int adress, int val);
 	
 	void fade();	
+	void onFadeChangeComplete (int & e);
 	/* delete this later */
 	void setCurrentView(int viewID);
 	

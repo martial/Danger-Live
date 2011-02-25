@@ -45,7 +45,6 @@ public:
 	vector<ofImage*>		images;
 	vector<ofImage*>		imagesOff;
 	int						currentIndex;
-	float					easePct;
 	
 	ofxDirList				DIR;
 	

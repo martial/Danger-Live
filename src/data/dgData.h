@@ -10,12 +10,15 @@
 
 #ifndef DGDATA
 #define DGDATA
+
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
 #include "dgData.h"
 #include "moduleData.h"
 #include "dgCompBuilder.h"
 #include "ofxDirList.h"
+#include "oscObjectManager.h"
+#include "customOscMessage.h"
 
 class dgData  {
 
@@ -25,7 +28,11 @@ class dgData  {
 	void debug();
 	void clean();
 	
+	void onOscEvent (customOscMessage & msg );
+	
 	moduleData * getModuleByName(string nameTarget);
+	
+	
 	
 	vector <moduleData*>		data;
 	
@@ -33,7 +40,7 @@ class dgData  {
 	
 	
 	
-	
+	oscObjectManager			oscObjManager;
 	ofxXmlSettings				XML;
 	ofxDirList					DIR;
 	

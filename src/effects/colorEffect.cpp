@@ -17,7 +17,11 @@ void colorEffect::setup(string name) {
 	contrastPct = 1.0;
 	brightnessPct = 1.0;
 	
+	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.saturationPct, 1.0, 0, 0);
+	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, 1.0, 0, 0);
+	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.brightnessPct, 1.0, 0, 0);
 	
+
 }
 
 void colorEffect::init() {
@@ -27,34 +31,53 @@ void colorEffect::update() {
 	
 	
 	
-	//clrShader.saturation *= saturationPct;
-	//clrShader.contrast *= contrastPct;
-	//clrShader.brightness *= brightnessPct;
+	clrShader.saturationPct = saturationPctTween.update();
+	clrShader.contrastPct = contrastPctTween.update();
+	clrShader.brightnessPct = brightnessPctTween.update();
 	
 }
 
-void colorEffect::draw(ofxFBOTexture & fbo) {
+void colorEffect::fadeInAll (float duration, float brightVal, float contrastVal, float saturationVal) {
 	
-	//printf("brightnessPct %f\n", brightnessPct );
-	
-	
-	
-	clrShader.beginRender();
-	fbo.draw(0, 0);
-	clrShader.endRender();
-	
-	
-	//clrShader.draw(0, 0, 1920, 1080, true);
+	fadeDuration = duration;
+	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.saturationPct, saturationVal, fadeDuration*.25, 0);
+	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, contrastVal, fadeDuration*.3, 0);
+	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.brightnessPct, brightVal, fadeDuration*.5, 0);
+
+	ofAddListener(brightnessPctTween.end_E,this,&colorEffect::fadeOutAll);
+		
+	saturationPctTween.start();
+	contrastPctTween.start();
+	brightnessPctTween.start();
 	
 }
 
-ofxFBOTexture * colorEffect::draw(ofxFBOTexture & fbo, int x, int y) {
+void colorEffect::fadeOutAll (int & e) {
 	
-	//printf("brightnessPct %f\n", brightnessPct );
+	ofRemoveListener(brightnessPctTween.end_E,this,&colorEffect::fadeOutAll);
 	
-	clrShader.saturationPct = saturationPct;
-	clrShader.contrastPct = contrastPct;
-	clrShader.brightnessPct = brightnessPct;
+		
+	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.saturationPct, 1.0, fadeDuration*.8, 0);
+	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.contrastPct, 1.0, fadeDuration*.3, 0);
+	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.brightnessPct, 1.0, fadeDuration*.5, 0);
+		
+	saturationPctTween.start();
+	contrastPctTween.start();
+	brightnessPctTween.start();
+	
+	int temp = 0;
+	ofNotifyEvent(completeBrightnessEvent, temp);
+
+	
+}
+
+void colorEffect::onFadeInOuAlltComplete (int & e) {
+	
+}
+
+
+
+ofxFBOTexture * colorEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
 	
 	clrShader.beginRender();
 	fbo.draw(0, 0);
@@ -68,14 +91,19 @@ ofxFBOTexture * colorEffect::draw(ofxFBOTexture & fbo, int x, int y) {
 
 /* */
 
-void colorEffect::setBrightness(float brightness) {
-	clrShader.setColorSettings(brightness, clrShader.saturation, clrShader.contrast);
+void colorEffect::setBrightness(float brightness, int duration) {
+	//clrShader.setColorSettings(brightness, clrShader.saturation, clrShader.contrast);
+	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.brightnessPct, brightness, duration, 0);
+	brightnessPctTween.start();
 }
 
-void colorEffect::setContrast(float contrast) {
-	clrShader.setColorSettings(clrShader.brightness, clrShader.saturation, contrast);
+void colorEffect::setContrast(float contrast, int duration) {
+	//clrShader.setColorSettings(clrShader.brightness, clrShader.saturation, contrast);
+	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, contrast, duration, 0);
+	contrastPctTween.start();
 }
 
-void colorEffect::setSaturation(float saturation) {
-	clrShader.setColorSettings(clrShader.brightness, saturation, clrShader.contrast);
+void colorEffect::setSaturation(float saturation, int duration) {
+	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.saturationPct, saturation, duration, 0);
+	saturationPctTween.start();
 }

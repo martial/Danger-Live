@@ -78,7 +78,10 @@ void dgData::setup () {
 			}
 
 			
-
+			/* osc object manager */
+			
+			oscObjManager.addObject(data[i]->cpData[j]->adress, false);
+			oscObjManager.addObject(data[i]->cpData[j]->adressState, true);
 			
 			
 			XML.popTag();
@@ -134,9 +137,7 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			
 			dgSceneObject  * sceneObject =  currentModule->cpObjects[j];
 			
-			
-			
-			
+						
 			/*
 			printf("\ndouble check object : ");
 			printf(sceneObject->name.c_str());
@@ -169,6 +170,9 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 					}
 				}
 			}
+			
+			// finally add the reference object
+			sceneObject->setPctObjectsReference(oscObjManager.getObjectsByAdress(sceneObject->adress), oscObjManager.getObjectsByAdress(sceneObject->adressState));
 			sceneObject->init();
 		}
 	}	
@@ -182,6 +186,99 @@ moduleData * dgData::getModuleByName(string nameTarget) {
 		if ( data[i]->name == nameTarget ) return data[i];
 	}
 	return NULL;
+}
+
+
+void dgData::onOscEvent (customOscMessage & msg ) {
+	
+	vector<oscObject*>  objects;
+	oscObjManager.getRelatedObjects(msg.address, &objects);
+	int total = objects.size();
+	
+	for ( int i=0; i<total; i++) {
+		objects[i]->setPct(msg.value);
+		
+	}
+	
+	objects.clear();
+	
+	for ( int j=0; j < msg.stringArgs.size(); j++ ) {	
+		oscObjManager.getRelatedObjects(msg.stringArgs[j], &objects);
+		
+		total = objects.size();
+		for ( int k=0; k<total; k++) {
+			objects[k]->setPct(msg.value);
+		}
+		
+	}
+	
+	objects.clear();
+	
+	
+	
+	/*
+	getRelatedObject(msg.address, &objects, &stateObjects);
+	int total = objects.size();
+	
+	string splitString = msg.address.substr(0, 7);
+	float div = (splitString == "/signal" ) ? 1.0 : 127.0;
+	
+	
+	if ( splitString != "/signal" ) {
+		splitString = msg.address.substr(0, 19);
+		div = (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
+		if ( splitString =="/live/track/volume/" ) {
+			
+			//printf("ok\n");
+			//printf("val : %f\n", div);
+			//printf("val msg : %f\n", msg.value);
+			
+			
+		}
+	}
+	//printf(splitString.c_str());
+	 
+	
+	
+	for ( int i=0; i<total; i++) {
+		objects[i]->setPct(msg.value/div);
+		
+	}
+	
+	total = stateObjects.size();
+	for ( int i=0; i<total; i++) {
+		stateObjects[i]->setStatePct(msg.value/127);
+		
+	}
+	
+	
+	
+	for ( int j=0; j < msg.stringArgs.size(); j++ ) {	
+		
+		getRelatedObject( msg.stringArgs[j], &objects, &stateObjects);
+		
+		
+		string splitString = msg.stringArgs[j].substr(0, 7);
+		float div = (splitString == "/signal" ) ? 1 : 127.0;
+		
+		total = objects.size();
+		for ( int k=0; k<total; k++) {
+			objects[k]->setPct(msg.value/div);
+		}
+		
+		total = stateObjects.size();
+		for ( int k=0; k<total; k++) {
+			stateObjects[k]->setStatePct(msg.value/127);
+		}
+		
+	}
+	
+	//printf("objects size : %d\n", total);
+	
+	objects.clear();
+	stateObjects.clear();
+	
+	 */
 }
 
 

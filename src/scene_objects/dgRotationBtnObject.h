@@ -35,7 +35,6 @@ class dgRotationBtnObject : public dgSceneObject {
 	ofImage			*		img;
 	vector<ofImage*>		frontImages;
 	float					btnRotation;
-	float					easePct;
 	
 	
 	

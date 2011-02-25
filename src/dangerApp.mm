@@ -75,17 +75,15 @@ void dangerApp::setup(){
 	printf("loaded in %f milliseconds \n",  ofGetElapsedTimeMillis() - time);
 	
 	
-	MSA::ofxCocoa::setSyncToDisplayLink(true);
-	//fbo.setup(ofGetWidth(), ofGetHeight());
-	//fbo.attach(texture);
-}
+	//MSA::ofxCocoa::setSyncToDisplayLink(true);
+	}
 
 //--------------------------------------------------------------
 void dangerApp::update(){
 	
 	oscReceiver.update();
-	scene.update();
 	sceneEffects.update();
+	scene.update();
 }
 
 //--------------------------------------------------------------
@@ -94,6 +92,7 @@ void dangerApp::draw(){
 	//fbo.clear();
 	fbo->clear(0,0,0,0);
 	ofBackground(0, 0, 0);
+	
 	ofSetColor(255, 255, 255);
 	fbo->begin();
 	ofSetColor(255, 255, 255);
@@ -111,9 +110,10 @@ void dangerApp::draw(){
 	//fbo.draw(0, 0, 320, 240);
 	
 	
-	ofxFBOTexture * sceneFbo =  sceneEffects.draw(fbo, screen1Size.x,0);
-	debugView.drawSceneFbo(sceneFbo, screen1Size.x * .5, screen1Size.y * .5);
+	ofxFBOTexture * sceneFbo =  sceneEffects.draw(fbo, 0,0);
+	debugView.drawSceneFbo(sceneFbo, screen1Size.x * .7, screen1Size.y * .7);
 	
+	sceneFbo->draw( screen1Size.x, 0);
 	
 	
 }
@@ -141,11 +141,11 @@ void dangerApp::keyPressed(int key){
 			//debugView.visible = !debugView.visible;
 			break;
 			
-#ifdef EDITOR_MODE
+		#ifdef EDITOR_MODE
 		case 'r':
 			MSA::ofxCocoa::setSyncToDisplayLink(false);
 			reset();
-#endif
+		#endif
 			
 			// up
 		case 357:

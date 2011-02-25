@@ -13,9 +13,12 @@ void dgSceneEffects::setup() {
 	
 	currentEffectID = -1;
 	currentEffect = NULL;
-	color.setup("color");
 	
+	color.setup("color");
 	blur.setup("blur");
+	bloom.setup("bloom");
+	
+	bloom.init(&blur, &color);
 	
 	saturationPct = 1.0;
 	contrastPct = 1.0;
@@ -32,112 +35,95 @@ void dgSceneEffects::addEffect() {
 	flickr->setup("flickr");
 	effects.push_back(flickr);
 	
-	//bloomSceneEffect * bloom = new bloomSceneEffect();
-	//bloom->setup("bloom");
-	//effects.push_back(bloom);
-	
-	/*
-	colorEffect * color = new colorEffect();
-	color->setup("color");
-	effects.push_back(color);
-	 */
-	
+		
 }
 
 void dgSceneEffects::update() {
-	
-	//dgAbstractEffect * clrEffect = getEffectByName("color");
-	//clrEffect->update();
-	
-	//if ( color != NULL ) {
-		//printf("ok\n");
-		color.update();
+		
 		color.brightnessPct = brightnessPct;
 		color.contrastPct = contrastPct;
+		color.update();
+		
 	
-		blur.update();
+		
 		blur.blurPct = blurPct;
-	
+		blur.update();
 		
 	//}
 	
 	if ( currentEffect ) currentEffect->update();
 }
 
-void dgSceneEffects::draw(ofxFBOTexture & fbo) {
-	
-	/*
-	// in all cases apply color effect
-	
-	dgAbstractEffect * clrEffect = getEffectByName("color");
-	
-	printf("brightnessPct from effects %f\n", brightnessPct );
-	
-	color.brightnessPct = brightnessPct;
-	color.contrastPct = contrastPct;
-	clrEffect->update();
-	clrEffect->draw(fbo);
-	
-	if ( currentEffect ) {
-		//currentEffect->draw(fbo);
-	} else {
-		//fbo.draw(0,0);
-	}	
-	 */
-	
-}
+
 
 ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 	
 	
-	// in all cases apply color effect
 	
 	
-//	color.brightnessPct = brightnessPct;
-	//color.contrastPct = contrastPct;
-	//clrEffect->update();
 	
 	
-	ofxFBOTexture * filteredFbo =  color.draw(*fbo, x, y);
-	
+	// apply color filter
+	ofxFBOTexture * filteredFbo =  color.getFbo(*fbo, x, y);	
 	ofxFBOTexture * finalFbo;
 	if ( currentEffect ) {
-		//glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_COLOR);
 		
 		
-		fbo->draw(x, y);	
+		if ( currentEffect->name == "bloom" ) {
+			return bloom.getFbo(fbo, x, y);
+		}
 		
-		finalFbo = currentEffect->draw(*filteredFbo,x,y);
-		finalFbo->draw(x, y);
+		finalFbo = currentEffect->getFbo(*filteredFbo,x,y);
 		return finalFbo;
+		
 		//ofSetupScreen();
 	} else {
 		//ofDisableAlphaBlending();
 		ofEnableAlphaBlending();
-		finalFbo = blur.draw(*filteredFbo,x,y);
-		finalFbo->draw(x, y);
-
-		ofDisableAlphaBlending();
+		finalFbo = blur.getFbo(*filteredFbo,x,y);
 		return finalFbo;
 	}	
+	 
+	 
 	
 }
+
+void dgSceneEffects::blurFadeInOut (float duration) {
+	blur.fadeIn(duration);
+}
+
+void dgSceneEffects::colorFadeInOut (float duration, float brightVal, float contrastVal, float saturationVal ) {
+	
+	color.fadeInAll(duration, brightVal, contrastVal, saturationVal);
+	ofAddListener(color.completeBrightnessEvent, this, &dgSceneEffects::onBrigthnessBlackEvent);
+}
+
+void dgSceneEffects:: onBrigthnessBlackEvent(int & e) {
+	ofRemoveListener(color.completeBrightnessEvent, this, &dgSceneEffects::onBrigthnessBlackEvent);
+	int ahou = 0;
+	ofNotifyEvent(onFadeChangeEvent, ahou);
+}
+
+
+/* transitions */
+
+
 
 
 void dgSceneEffects::setColorSettintgs(float brightness, float saturation, float contrast) {
 	
 }
 
-void dgSceneEffects::setBrightness(float brightness) {
-		color.setBrightness(brightness);
+void dgSceneEffects::setBrightness(float brightness, int duration) {
+		color.setBrightness(brightness,duration);
 }
 
-void dgSceneEffects::setContrast(float contrast) {
-	color.setContrast(contrast);
+void dgSceneEffects::setContrast(float contrast, int duration) {
+		color.setContrast(contrast,duration);
 }
 
-void dgSceneEffects::setSaturation(float saturation) {
-	color.setSaturation(saturation);
+void dgSceneEffects::setSaturation(float saturation, int duration) {
+		color.setSaturation(saturation,duration);
 }
 
 void dgSceneEffects::setEffectByName(string name) {

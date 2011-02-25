@@ -11,6 +11,7 @@
 #include "ofMain.h"
 #include "ofxQTKitVideoPlayer.h"
 #include "imgAssetsManager.h"
+#include "oscObject.h"
 
 class dgSceneObject {
 
@@ -19,7 +20,9 @@ class dgSceneObject {
 	dgSceneObject();
 	virtual ~dgSceneObject();
 	virtual void					setup(string name, string type);
+	virtual void					setPctObjectsReference(oscObject * pctRef, oscObject * pctStateRef);
 	virtual void					init();
+	virtual void					initValues();
 	virtual void					update();
 	virtual void					draw();
 	
@@ -32,7 +35,8 @@ class dgSceneObject {
 	
 	virtual void					setPct(float pct);
 	virtual void					setStatePct(float pct);
-	
+	virtual void					onPctChangeHandler(float & pct);
+	virtual void					onPctStateChangeHandler(float & pct);
 	
 	
 	string							name;
@@ -51,7 +55,7 @@ class dgSceneObject {
 	float							blurRate;
 	
 	int								width, height;
-	float							pct, statePct, oldPct;
+	float							pct, statePct, easePct, oldPct;
 	vector<float>					configValues;
 	
 	vector<ofImage*>				images;
@@ -60,7 +64,8 @@ class dgSceneObject {
 	
 	bool							active;
 	
-	
 	imgAssetsManager		*		imgAssets;
+	oscObject				*		pctRef;
+	oscObject				*		pctStateRef;
 	
 };

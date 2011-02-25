@@ -37,6 +37,11 @@ dgSceneObject::~dgSceneObject() {
 	
 	configValues.clear();
 	
+	if ( pctRef ) ofRemoveListener(pctRef->onPctChangeEvent, this, &dgSceneObject::onPctChangeHandler);
+	if ( pctStateRef ) ofRemoveListener(pctStateRef->onPctChangeEvent, this, &dgSceneObject::onPctStateChangeHandler);
+	pctRef = NULL;
+	pctStateRef = NULL;
+	
 }
 
 void dgSceneObject::init () {
@@ -45,6 +50,18 @@ void dgSceneObject::init () {
 	
 	
 }
+
+void dgSceneObject::initValues () {
+
+	if ( pctRef ) {
+		setPct(pctRef->pct);
+		easePct = pct;
+	}
+	if ( pctStateRef ) {
+		setPct(pctStateRef->pct);
+	}
+}
+
 
 
 void dgSceneObject::setup (string name, string type) {
@@ -65,11 +82,24 @@ void dgSceneObject::setup (string name, string type) {
 	active = false;
 	
 	pct = 0.0;
+	easePct = 0.0;
 	statePct = 1.0;
 	oldPct = 0.0;
 	
 	activitySwitchObject = NULL;
+	pctRef = NULL;
+	pctStateRef = NULL;
 	
+}
+
+void dgSceneObject::setPctObjectsReference(oscObject * pctRef, oscObject * pctStateRef) {
+	
+	this->pctRef = pctRef;
+	this->pctStateRef = pctStateRef;
+	
+	if ( pctRef ) ofAddListener(pctRef->onPctChangeEvent, this, &dgSceneObject::onPctChangeHandler);
+	if ( pctStateRef ) ofAddListener(pctStateRef->onPctChangeEvent, this, &dgSceneObject::onPctStateChangeHandler);
+	//if ( pctStateRef ) 
 }
 
 void dgSceneObject::update () {
@@ -178,6 +208,15 @@ void dgSceneObject::setStatePct(float pct) {
 		this->statePct = pct;
 	}
 	
+}
+
+void dgSceneObject::onPctChangeHandler(float & pct) {
+	setPct(pct);
+	//printf("pct change ! %f\n", pct);
+}
+
+void dgSceneObject::onPctStateChangeHandler(float & pct) {
+	setStatePct(pct);
 }
 
 

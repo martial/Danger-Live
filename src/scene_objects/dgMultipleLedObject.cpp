@@ -110,19 +110,9 @@ void dgMultipleLedObject::draw () {
 	ofPushMatrix();
 	ofTranslate(pos.x, pos.y + yCentroid, 0);
 	
-	
-	//ofRotate(ro, <#float vecX#>, <#float vecY#>, <#float vecZ#>)
 	ofRotate(rotation, 0, 0, 1);
 	
-	
-	
-	
-	//printf("ypadding %f\n", yPadding);
-	
-	//for ( int i=0; i<total; i++ ) {
-		
-		//fbo.begin();
-		for ( int j=0; j<numOfCols; j++ ) {
+			for ( int j=0; j<numOfCols; j++ ) {
 		ofPushMatrix();
 		ofTranslate((int)(j*(switchObjects[j]->width + xPadding)), 0, 0);
 			
@@ -140,12 +130,7 @@ void dgMultipleLedObject::draw () {
 	//}
 	
 	
-	ofSetColor(255, 255, 0);
-	ofRect( -5, -5 + height*.5, 10, 10);
-	ofSetColor(255, 0, 0);
-	ofRect(-5 + width, -5 + height*.5, 10, 10);
-	ofRect(-5 + width*.5, -5 + height*.5, 10, 10);
-	ofSetColor(255, 255, 255);
+	
 	
 	ofPopMatrix();
 	ofDisableAlphaBlending();

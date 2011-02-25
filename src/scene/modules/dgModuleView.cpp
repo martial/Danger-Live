@@ -19,7 +19,7 @@ void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscR
 	currentModule = NULL;
 	
 	initModulesWrappers();
-	setCurrentView(0);
+	setCurrentView(1);
 	
 	beatLatency = 100;
 	currentTime = 0;
@@ -215,7 +215,7 @@ void dgModuleView::onOscEvent(customOscMessage & msg) {
 void dgModuleView::onBeatEvent() {
 	
 	
-		currentTime = ofGetElapsedTimeMillis();	
+	currentTime = ofGetElapsedTimeMillis();	
 	
 	
 }
@@ -232,10 +232,15 @@ void dgModuleView::onMidiEvent(int adress, int val) {
 
 void dgModuleView::nextView () {
 	
+	printf("next view \n");
+	
 	int curViewID = currentViewID;
 	curViewID++;
 	
 	if ( curViewID < 0 || curViewID > layoutData->data.size()-1 ) curViewID = 0;
+	
+	
+	printf("curViewID: %d \n", curViewID);
 	setCurrentView(curViewID);
 	
 	//currentViewID = viewID;

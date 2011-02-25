@@ -41,6 +41,7 @@ void colorShader::setup(int fboW, int fboH){
 
 //--------------------------------------------------------------
 void colorShader::beginRender(){
+	fbo1->clear(0, 0, 0, 0);
 	fbo1->swapIn();
 	fbo1->setupScreenForMe();
 }
@@ -81,6 +82,7 @@ ofxFBOTexture * colorShader::getTexture(bool useShader){
 			clrShader.setUniformVariable1f("saturation", saturation * saturationPct);
 			clrShader.setUniformVariable1f("contrast", contrast * contrastPct);
 			
+			dst->clear(0, 0, 0, 0);
 			dst->swapIn();
 			dst->setupScreenForMe();
 			ofEnableAlphaBlending();		

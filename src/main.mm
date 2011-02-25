@@ -17,7 +17,7 @@ int main() {
 	initSettings.isOpaque				= true;
 	initSettings.windowLevel			= NSMainMenuWindowLevel + 1;
 	initSettings.hasWindowShadow		= false;
-	initSettings.numFSAASamples			= 1;
+	initSettings.numFSAASamples			= 4;
 	initSettings.initRect.size.width	= 3360;
 	initSettings.initRect.size.height	= 1080;
 	initSettings.windowMode				= OF_WINDOW;

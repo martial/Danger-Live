@@ -50,43 +50,12 @@ void DangerScene::update() {
 		default:
 			break;
 	}
-	
-	
-	
+		
 }
 
 void DangerScene::draw () {
 	
-	if(isfading && currentMode == DGSCENEVIEWMODE_MODULE ) {
 		
-		globalOpacity += .25 * (float)sens;
-		globalOpacityDown -= .25 * (float)sens;
-					
-		if (sens == -1 && globalOpacity<.25 ) {
-			sens = 1;
-			moduleView.nextView();
-			return;
-		} 
-		
-		if (sens == 1 && globalOpacity > 1 ) {
-			globalOpacityDown = 1.0;
-			isfading = false;
-			//continue;
-			
-		} 
-		
-		//printf("globalOpacityDown %f\n :",globalOpacityDown);
-		
-		if ( globalOpacity > 1.0 ) globalOpacity = 1.0;
-		//if ( globalOpacityDown < 0.0 ) globalOpacityDown = 0.0;
-		
-		effects->brightnessPct = globalOpacity;
-		effects->saturationPct = globalOpacity;
-		effects->contrastPct = globalOpacityDown;
-		//effects->blurPct = abs(1-globalOpacity);
-		
-	}
-	
 	ofEnableAlphaBlending();
 	//ofSetColor(255, 255, 255, globalOpacity);
 	
@@ -119,10 +88,18 @@ void DangerScene::draw () {
 
 void DangerScene::fade () {
 	
-	isfading = true;
-	sens = -1;
-
+	effects->blurFadeInOut(600);
+	effects->colorFadeInOut(500, 0.2, 3, 0);
+	ofAddListener(effects->onFadeChangeEvent, this, &DangerScene::onFadeChangeComplete);
 	
+	
+}
+
+
+void DangerScene::onFadeChangeComplete (int & e) {
+	printf(" / fade complete");
+	ofRemoveListener(effects->onFadeChangeEvent, this, &DangerScene::onFadeChangeComplete);
+	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.nextView();
 }
 
 void DangerScene::setCurrentView(int viewID) {

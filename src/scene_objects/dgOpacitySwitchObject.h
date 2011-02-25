@@ -34,7 +34,6 @@ public:
 	ofImage			*		img;
 	vector<ofImage*>		imageSet;
 	int						currentIndex;
-	float					easePct;
 	
 	
 	

@@ -22,9 +22,11 @@ public:
 	virtual void setup(string name);
 	virtual void init();
 	virtual void update();
-	virtual void draw(ofxFBOTexture & fbo);
+	virtual void getFbo(ofxFBOTexture & fbo);
 	
-	virtual ofxFBOTexture * draw(ofxFBOTexture & fbo, int x, int y);
+	
+	
+	virtual ofxFBOTexture * getFbo(ofxFBOTexture & fbo, int x, int y);
 	
 	string name;
 	

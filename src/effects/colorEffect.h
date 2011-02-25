@@ -15,6 +15,7 @@
 #include "ofMain.h"
 #include "colorShader.h"
 #include "dgAbstractEffect.h"
+#include "ofxTween.h"
 
 class colorEffect : public dgAbstractEffect {
 	
@@ -22,24 +23,35 @@ public:
 	void setup(string name);
 	void init();
 	void update();
-	void draw(ofxFBOTexture & fbo);
-	ofxFBOTexture * draw(ofxFBOTexture & fbo, int x, int y);
+	ofxFBOTexture * getFbo(ofxFBOTexture & fbo, int x, int y);
 	
-	void setBrightness(float brightness);
-	void setSaturation( float saturation);
-	void setContrast(float contrast);
+	void fadeInAll (float duration, float brightVal = 0.0, float contrastVal = 1.5, float saturationVal = 0.0 );
+	void fadeOutAll(int & e);
+	void onFadeInOuAlltComplete(int & e);
+	
+	void setBrightness(float brightness, int duration);
+	void setSaturation( float saturation, int duration);
+	void setContrast(float contrast, int duration);
 	
 	
 	float				brightnessPct;
 	float				saturationPct;
 	float				contrastPct;
 	
-	
+	ofEvent<int>		completeBrightnessEvent;
 	
 private:
 	
 	
-		
+	
+	
+	ofxTween			saturationPctTween;
+	ofxTween			contrastPctTween;
+	ofxTween			brightnessPctTween;
+	ofxEasingQuint		easeQuint;
+	
+	float				fadeDuration;
+	
 	colorShader			clrShader;
 	
 	
