@@ -19,7 +19,7 @@ dgMultipleLedObject::dgMultipleLedObject() {
 dgMultipleLedObject::~dgMultipleLedObject() {
 	
 	for (int i= 0; i<switchObjects.size(); i++ ) {
-		//delete switchObjects[i];
+		delete switchObjects[i];
 		switchObjects[i] = NULL;
 	}
 	switchObjects.clear();
@@ -39,7 +39,7 @@ void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	
 	
 	switchObj->setPosition( 0, 0);
-	switchObj->rotation = -rotation;
+	
 	switchObj->blurRate = .1;
 	switchObjects.push_back(switchObj);
 	
@@ -63,8 +63,12 @@ void dgMultipleLedObject::init() {
 	//if ( numOfCols < 2 )  xPadding = 0;
 	//if ( numOfRows < 2 )  yPadding = 0;
 	
+	if ( this->configValues[5] ) {
+		for ( int k=0; k<total; k++ ) {
+		switchObjects[k]->rotation = -rotation;
+		}
+	}
 	
-		
 	
 	this->width		= (int) ((numOfCols-1) * (switchObjects[0]->width + xPadding));
 	this->height	= (int) ((numOfRows-1) * (switchObjects[0]->height + yPadding));
@@ -83,6 +87,7 @@ void dgMultipleLedObject::update () {
 	dgSceneObject::update();
 	
 	// find current value
+	
 		
 	int enabledLeds = round(total*pct);
 	
@@ -113,21 +118,24 @@ void dgMultipleLedObject::draw () {
 
 	
 	ofPushMatrix();
-	ofTranslate(-xCentroid, -yCentroid, 0);
+	ofTranslate((int)(-xCentroid), (int)(-yCentroid), 0);
 	
 	ofPushMatrix();
-	ofTranslate(pos.x + xCentroid, pos.y +yCentroid, 0);
+	ofTranslate((int)(pos.x + xCentroid), (int)(pos.y +yCentroid), 0);
 	
+	
+	
+	//rotation += 0.1;
 	ofRotate(rotation, 0, 0, 1);
 	
 		for ( int j=0; j<numOfCols; j++ ) {
-			for ( int k=0; k<numOfRows; k++ ) {
+			for ( int k=0; k<total; k++ ) {
 				
 				ofPushMatrix();
-				ofTranslate( j * (switchObjects[j]->width +xPadding ) - xCentroid, k * (switchObjects[k]->height + yPadding ) -yCentroid , 0);
-				ofEnableAlphaBlending();
+				ofTranslate( (int) (j * (switchObjects[j]->width +xPadding ) - xCentroid), int(k * (switchObjects[k]->height + yPadding ) -yCentroid) , 0);
+				//ofEnableAlphaBlending();
 				switchObjects[k]->draw();
-				ofDisableAlphaBlending();
+				//ofDisableAlphaBlending();
 				ofPopMatrix();
 			}
 			

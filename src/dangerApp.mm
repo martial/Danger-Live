@@ -7,29 +7,20 @@
 void dangerApp::setup(){
 	
 	printf("welcome\n");
+	float time = ofGetElapsedTimeMillis();
+		
 	
-
-	
-	doVSync			= true;
-	doDisplayLink	= true;
-	
-	ofSetVerticalSync(doVSync);	
+	/* Screen */
+	ofSetVerticalSync(true);	
 	MSA::ofxCocoa::setSyncToDisplayLink(false);
-	//ofSetFrameRate(0);			// run as fast as you can
+	ofSetFrameRate(35);
+	ofSetLogLevel(OF_LOG_NOTICE);
 	
 	screen1Size = MSA::ofxCocoa::getSizeForScreen(0);
 	if ( MSA::ofxCocoa::getNumberOfScreen() > 1 ) {
 		screen2Size = MSA::ofxCocoa::getSizeForScreen(1);
 	}
 		
-	float time = ofGetElapsedTimeMillis();
-	
-
-	
-	//ofSetVerticalSync(true);
-	ofSetFrameRate(30);
-	ofSetLogLevel(OF_LOG_WARNING);
-	
 	
 	/* Midi / OSC */
 	oscReceiver.setup();
@@ -46,31 +37,34 @@ void dangerApp::setup(){
 	
 	/* data */
 	builder.setup(ofToDataPath("components.xml"));
+	//builder.init();
 	data.setup();
 	data.addSceneObjects(builder);
-	
-	/* scene */
 	videoData.setup(ofToDataPath("videos.xml"));
 	
-	scene.setup(data, videoData, builder, oscReceiver, sceneEffects);
 	
+	/* scene */
+	scene.setup(data, videoData, builder, oscReceiver, sceneEffects);
 	
 	debugView.setup();
 	
 	sceneEffects.setup();
 	//sceneEffects.setEffectByName("bloom");
 	
+	/* Scene main FBO */
 	fbo = new ofxFBOTexture();
-	fbo->allocate(1920, 1080, GL_RGBA);
+	fbo->allocate(1920, 1080, GL_RGB);
 	fbo->clear(0,0,0,0);
 	
 	oscDebugEnabled = false;
 	
+	panelViewScale = .5;
+	
 	printf("loaded in %f milliseconds \n",  ofGetElapsedTimeMillis() - time);
 	
 	
-	//MSA::ofxCocoa::setSyncToDisplayLink(true);
-	}
+	MSA::ofxCocoa::setSyncToDisplayLink(true);
+}
 
 //--------------------------------------------------------------
 void dangerApp::update(){
@@ -84,31 +78,36 @@ void dangerApp::update(){
 void dangerApp::draw(){
 	
 	//fbo.clear();
-	fbo->clear(0,0,0,0);
+	fbo->clear(0,0,0,1);
+	//ofSetupGraphicDefaults();
 	ofBackground(0, 0, 0);
 	
 	ofSetColor(255, 255, 255);
 	fbo->begin();
-	ofSetColor(255, 255, 255);
 	ofEnableAlphaBlending();
 	scene.draw();
 	if(oscDebugEnabled)oscReceiver.debugDraw();
 	ofDisableAlphaBlending();
+	glPopAttrib();
 	fbo->end();
 	
-	
+
 	
 	ofSetColor(255, 255, 255);
 	debugView.draw();
 	
-	//fbo.draw(0, 0, 320, 240);
 	
 	
 	ofxFBOTexture * sceneFbo =  sceneEffects.draw(fbo, 0,0);
-	debugView.drawSceneFbo(sceneFbo, screen1Size.x * .7, screen1Size.y * .7);
 	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
+	debugView.drawSceneFbo(sceneFbo, screen1Size.x, screen1Size.y, panelViewScale);
 	sceneFbo->draw( screen1Size.x, 0);
+	//scene.draw();
+	glDisable(GL_BLEND);
 	
+		
 	
 }
 
@@ -150,6 +149,15 @@ void dangerApp::keyPressed(int key){
 		#endif
 			
 			// up
+		case 63233:
+			scene.changeMode(0);
+			break;
+			
+			//down
+		case 63232:
+			scene.changeMode(1);
+			break;
+			
 		case 357:
 			scene.changeMode(0);
 			break;
@@ -169,6 +177,11 @@ void dangerApp::keyPressed(int key){
 			scene.fade();
 			break;
 			
+			
+		case 358:
+			scene.fade();
+			break;
+			
 		case 'o':
 			oscReceiver.setup();
 			break;
@@ -179,6 +192,16 @@ void dangerApp::keyPressed(int key){
 			
 		case 'h':
 			MSA::ofxCocoa::setSyncToDisplayLink(true);
+			break;
+			
+		case 'z':
+			panelViewScale -= 0.1;
+			if ( panelViewScale < 0 ) panelViewScale = 0;
+			break;
+			
+		case 'x':
+			panelViewScale += 0.1;
+			
 			break;
 			
 		default:

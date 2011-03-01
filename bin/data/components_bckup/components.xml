@@ -1,0 +1,818 @@
+<?xml version="1.0" standalone="yes"?>
+<components>
+    
+    
+    
+    <comp>
+		
+		<name>knob_big_c</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/GROS/C/bouton_rotatif_gros_C_sequence_on_beta</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    
+     <comp>
+		
+		<name>knob_mid_b</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/MOYEN/B/bouton-rotatif-moyen-small</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+    <comp>
+		
+		<name>knob_mid_a</name>
+		<type>video</type>
+		<url>components/ROTATIFS/MOYEN/A/bouton-rotatif-moyen-A.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>knob_big_c</name>
+		<type>video</type>
+		<url>components/ROTATIFS/GROS/C/bouton-rotatif-gros-C.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+    <comp>
+		
+		<name>knob_big_b</name>
+		<type>video</type>
+		<url>components/ROTATIFS/GROS/B/bouton-rotatif-gros-B.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+
+    
+     <comp>
+		
+		<name>knob_mid_a</name>
+		<type>video</type>
+		<url>components/ROTATIFS/MOYEN/A/bouton-rotatif-moyen-A.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>knob_big_a_seq</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/GROS/A/bouton-rotatif-gros-A-sequence-on</url>
+		<url_off>components/ROTATIFS/GROS/A/bouton-rotatif-gros-A-sequence-off</url_off>
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>knob_big_a</name>
+		<type>video</type>
+		<url>components/ROTATIFS/GROS/A/bouton-rotatif-gros-A.mov</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>r
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+
+
+	<comp>
+		
+		<name>knob</name>
+		<type>video</type>
+		<url>videos/knob.mov</url>
+		
+		<medias>
+		<!--r
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <comp>
+		<name>POT_PETIT_A</name>
+		<type>video</type>
+        <url>components/PETIT/A/potentiometre-petit-A.mov</url>
+      		                                
+	</comp>
+    
+    <comp>
+		<name>POT_PETIT_B</name>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/B/bouton-rotatif-petit-B-sequences</url>
+      		                                
+	</comp>
+    
+    <comp>
+		<name>POT_PETIT_B_LP</name>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/B/bouton-rotatif-petit-B-sequences</url>
+        
+        <activity_switch>
+            <id>lp</id>
+            <position x="0" y="80"></position>
+        </activity_switch>
+      		                                
+	</comp>
+    
+      <comp>
+		<name>POT_PETIT_B_HP</name>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/B/bouton-rotatif-petit-B-sequences</url>
+        
+        <activity_switch>
+            <id>hp</id>
+            <position x="0" y="80"></position>
+        </activity_switch>
+      		                                
+	</comp>
+	
+	<comp>
+		
+		<name>knob2</name>
+		<type>video</type>
+		<url>videos/knob2.mov</url>
+		
+		<medias>
+			<!--
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+    <!-- Switchs -->
+    
+    <comp>
+		<name>B_POUSSOIR_2</name>
+		<type>switch</type>
+		<url>components/BOUTON_POUSSOIR_2/bouton-poussoir3-off.png</url>
+		<extras_url>
+            <extraurl>components/BOUTON_POUSSOIR_2/bouton-poussoir3-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>B_POUSSOIR</name>
+		<type>switch</type>
+		<url>components/B_POUSSOIR/b-poussoir-off.png</url>
+		<extras_url>
+            <extraurl>components/B_POUSSOIR/b-poussoir-off.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>LED_03</name>
+		<type>switch</type>
+		<url>components/LED_03/led-03-off.png</url>
+		<extras_url>
+            <extraurl>components/LED_03/led-03-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>LED_03_SQUARE</name>
+		<type>switch</type>
+		<url>components/LED_03_SQUARE/led-03-off.png</url>
+		<extras_url>
+            <extraurl>components/LED_03_SQUARE/led-03-centre.png</extraurl>
+            <extraurl>components/LED_03_SQUARE/led-03-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>LED-square</name>
+		<type>switch</type>
+		<url>components/LED-square/LED-square0.png</url>
+		<extras_url>
+            <extraurl>components/LED-square/LED-square1.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    
+    
+     <comp>
+		<name>LED_INDE_02</name>
+		<type>switch</type>
+		<url>components/LED_INDE_02/LED-02-bas.png</url>
+		<extras_url>
+            <extraurl>components/LED_INDE_02/LED-02-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>SWITCHER_ANALOG</name>
+		<type>switch</type>
+		<url>components/SWITCHER_ANALOG/switcher-analog-gauche.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_ANALOG/switcher-analog-centre.png</extraurl>
+            <extraurl>components/SWITCHER_ANALOG/switcher-analog-droit.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>LED_VU</name>
+		<type>switch</type>
+		<url>components/LED_VU/LED-01-bas.png</url>
+		<extras_url>
+            <extraurl>components/LED_VU/LED-01-demi.png</extraurl>
+            <extraurl>components/LED_VU/LED-01-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>SWITCHER_NOIR</name>
+		<type>switch</type>
+		<url>components/SWITCHER_NOIR/switcher-noir-bas.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_NOIR/switcher-noir-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>SWITCHER_HORIZONTAL</name>
+		<type>switch</type>
+		<url>components/SWITCHER_HORIZONTAL/switcher-noir-bas.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_HORIZONTAL/switcher-horizontal-bas.png</extraurl>
+            <extraurl>components/SWITCHER_HORIZONTAL/switcher-horizontal-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>VUMETRE_DIGITAL</name>
+		<type>switch</type>
+		<url>components/VUMETRE_DIGITAL/VUMETRE-DIGITAL-off.png</url>
+		<extras_url>
+            <extraurl>components/VUMETRE_DIGITAL/VUMETRE-DIGITAL-on.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    
+    
+    <comp>
+		<name>CROSSFADER</name>
+		<type>fader</type>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>215</item>
+        </config>
+		<url>components/CROSSFADER/crossfader-fader.png</url>
+		<medias>
+            <media>
+            <type>image</type>
+            <url>components/CROSSFADER/crossfader-socle.png</url>
+        </media>
+        </medias>		
+	</comp>
+    
+    <comp>
+		<name>FADER</name>
+		<type>fader</type>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>192</item>
+        </config>
+		<url>components/FADER/fader-vertical-fader.png</url>
+		<medias>
+            <media>
+            <type>image</type>
+            <url>components/FADER/fader-vertical-reperes.png</url>
+        </media>
+        </medias>		
+	</comp>
+    
+    
+    <comp>
+		<name>BTN_ROT_LEFT</name>
+		<type>image_knob</type>
+        <url>components/PETIT/A/PNG/boutonrotatif-petit-A-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>-30</item>
+            <item>235</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            <media>
+                <type>image</type>
+                <url>components/PETIT/SKIN/bouton-rotatif-skin-4.png</url>
+            </media>
+            
+            <media>
+                <type>image</type>
+                <url>components/PETIT/A/PNG/boutonrotatif-petit-A-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/PETIT/A/PNG/boutonrotatif-petit-A-front.png</extraurl>
+        </extras_url>
+        
+        <activity_switch>
+            <id>LED_VU</id>
+            <position x="-50" y="-50"></position>
+        </activity_switch>		
+                        
+                                
+	</comp>
+    
+    
+    <comp>
+		<name>BTN_ROT_RIGHT</name>
+		<type>image_knob</type>
+        <url>components/PETIT/A/PNG/boutonrotatif-petit-A-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>-30</item>
+            <item>235</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            <media>
+                <type>image</type>
+                <url>components/PETIT/SKIN/bouton-rotatif-skin-4.png</url>
+            </media>
+            
+            <media>
+                <type>image</type>
+                <url>components/PETIT/A/PNG/boutonrotatif-petit-A-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/PETIT/A/PNG/boutonrotatif-petit-A-front.png</extraurl>
+        </extras_url>
+        
+        <activity_switch>
+            <id>LED_VU</id>
+            <position x="50" y="-50"></position>
+        </activity_switch>		
+                        
+                                
+	</comp>
+    
+    
+    <comp>
+		<name>BTN_ROT_RED</name>
+		<type>image_knob</type>
+        <url>components/ROTATIFS/PETIT/C/bouton-rotatif-petit-C-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>-90</item>
+            <item>180</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            <media>
+                <type>image</type>
+                <url>components/ROTATIFS/PETIT/C//bouton-rotatif-petit-C-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/ROTATIFS/PETIT/C/bouton-rotatif-petit-C-front.png</extraurl>
+        </extras_url>
+        
+        <!--
+        <activity_switch>
+            <id>LED_INDE_02</id>
+            <position x="-10" y="-10"></position>
+        </activity_switch>	
+        -->	
+                        
+                                
+	</comp>
+    
+    <comp>
+		<name>BTN_ROT_RED_SWITCH</name>
+		<type>image_knob</type>
+        <url>components/ROTATIFS/PETIT/C/bouton-rotatif-petit-C-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>-90</item>
+            <item>180</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            <media>
+                <type>image</type>
+                <url>components/ROTATIFS/PETIT/C//bouton-rotatif-petit-C-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/ROTATIFS/PETIT/C/bouton-rotatif-petit-C-front.png</extraurl>
+        </extras_url>
+        
+        
+        <activity_switch>
+            <id>LED_INDE_02</id>
+            <position x="0" y="-60"></position>
+        </activity_switch>	
+        
+                        
+                                
+	</comp>
+    
+    <!-- STATIC IMAGES -->
+    
+    <comp>
+		
+		<name>danger_logo</name>
+		<type>image</type>
+		<url>components/STATIC/DANGER-alluminium.png</url>
+		
+		<medias>
+		<!--
+			<media>
+				<type>image</type>
+				<url>images/back.jpg</url>
+			</media>
+			<media>
+				<type>image</type>
+				<url>images/test.jpg</url>
+			</media>
+			-->
+		</medias>
+		
+	</comp>
+    
+     <!-- opacity switch -->
+     <comp>
+		
+		<name>danger_opacity</name>
+		<type>opacity_switch</type>
+		<url>components/DECOUPE_DANGER/decoupedanger0.png</url>
+		
+		 <extras_url>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger1.png</extraurl>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger2.png</extraurl>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger3.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
+     <comp>
+		
+		<name>skin_big_a</name>
+		<type>opacity_switch</type>
+		<url>components/ROTATIFS/GROS/SKIN/cathedral-dome-graduation/cathedraldome-gradation-off.png</url>
+		
+		 <extras_url>
+            <extraurl>components/ROTATIFS/GROS/SKIN/cathedral-dome-graduation/cathedraldome-gradation-on.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>hp</name>
+		<type>opacity_switch</type>
+		<url>components/B_POUSSOIR/hp-bas.png</url>
+		
+		 <extras_url>
+            <extraurl>components/B_POUSSOIR/hp-haut.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
+    <comp>
+		
+		<name>lp</name>
+		<type>opacity_switch</type>
+		<url>components/B_POUSSOIR/lp-bas.png</url>
+		
+		 <extras_url>
+            <extraurl>components/B_POUSSOIR/lp-haut.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
+    <!-- PROGRESS BARR -->
+     <comp>
+		
+		<name>test_bar</name>
+		<type>progress_bar</type>
+		<url>null</url>
+		
+		<config>
+            <!-- width-->
+            <item>500</item>
+            <!-- height-->
+            <item>2</item>
+             
+        </config>
+		
+	</comp>
+    
+     <!-- images -->
+
+    <comp>
+		<name>numero-multipistes_1</name>
+		<type>image</type>
+        <url>components/MODULES_HABILLAGES/MIXER/numero-multipistes/1.png</url>
+
+	</comp>
+    
+    <comp>
+		<name>numero-multipistes_2</name>
+		<type>image</type>
+        <url>components/MODULES_HABILLAGES/MIXER/numero-multipistes/2.png</url>
+
+	</comp>
+    
+    <comp>
+		<name>numero-multipistes_3</name>
+		<type>image</type>
+        <url>components/MODULES_HABILLAGES/MIXER/numero-multipistes/3.png</url>
+
+	</comp>
+    
+    <comp>
+		<name>numero-multipistes_4</name>
+		<type>image</type>
+        <url>components/MODULES_HABILLAGES/MIXER/numero-multipistes/4.png</url>
+
+	</comp>
+    
+    <!-- CUSTOM COMPS ALWAYS KEEP AT END-->
+    
+    <comp>
+		<name>METER</name>
+		<type>meter</type>
+        <switch_id>LED_INDE_02</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>10</item>
+             <!-- blur rate-->
+            <item>.1</item>
+            <!-- xpadding rate-->
+            <item>0</item>
+            
+             <!-- yPadding rate-->
+            <item>1</item>
+        </config>
+        
+			
+	</comp>
+    
+    <comp>
+		<name>METER_VU</name>
+		<type>meter</type>
+        <switch_id>LED_VU</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>14</item>
+            <!-- blur rate-->
+            <item>.8</item>
+            <!-- xpadding rate-->
+            <item>0</item>
+            
+             <!-- yPadding rate-->
+            <item>1</item>
+        </config>
+    </comp>
+    
+    <comp>
+		<name>METER_VU_DIGITAL</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_DIGITAL</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>12</item>
+            <!-- blur rate-->
+            <item>.001</item>
+            <!-- xpadding rate-->
+            <item>0</item>
+            
+             <!-- yPadding rate-->
+            <item>1</item>
+        </config>
+        
+			
+	</comp>
+    
+     <comp>
+		<name>METER_VU_DIGITAL_4_2</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_DIGITAL</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>4</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            <!-- xpadding rate-->
+            <item>0</item>
+            
+             <!-- yPadding rate-->
+            <item>1</item>
+        </config>
+        
+			
+	</comp>
+    
+    <comp>
+		<name>METER_VU_DIGITAL_6_2</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_DIGITAL</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>6</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            <!-- xpadding rate-->
+            <item>0</item>
+            
+             <!-- yPadding rate-->
+            <item>1</item>
+        </config>
+        
+			
+	</comp>
+    
+    <comp>
+		<name>METER_VU_4_12</name>
+		<type>meter</type>
+        <switch_id>LED_VU</switch_id>
+        <config>
+            <!-- columns-->
+            <item>4</item>
+            <!-- row-->
+            <item>12</item>
+            <!-- blur rate-->
+            <item>.4</item>
+            
+            <!-- xpadding rate-->
+            <item>1</item>
+            
+             <!-- yPadding rate-->
+            <item>14</item>
+        </config>
+        
+			
+	</comp>
+    
+     <comp>
+		<name>METER_LED_03_2_128</name>
+		<type>meter</type>
+        <switch_id>LED-square</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>52</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>2</item>
+            
+             <!-- yPadding -->
+            <item>1</item>
+            
+        </config>
+        
+			
+	</comp>
+    
+    
+
+    
+    
+	
+	
+
+</components>

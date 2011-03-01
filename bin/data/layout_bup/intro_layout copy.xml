@@ -1,0 +1,33 @@
+<scene>
+
+  
+
+	<module name="">
+    
+       <component>
+			
+			<name>METER_LED_03_2_128</name>
+			<osc_adress>/signal/Master/</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="0" y="0"></position>
+            
+		
+        </component>
+    
+       <component>
+			
+			<name>METER_VU</name>
+			<osc_adress>/signal/Danger_L1/</osc_adress>
+			<range min="" max = "127"></range>
+			<position x="-92" y="340"></position>
+            			
+		
+		</component>         
+         
+       			
+	</module>
+	
+	
+	
+
+</scene>

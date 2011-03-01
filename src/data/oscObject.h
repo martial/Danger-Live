@@ -17,7 +17,13 @@ class oscObject {
 		
 	public:
 	
+	oscObject();
+	
+	void setMultiplierReferent(oscObject * referent);
+	oscObject	* multiplierReferent;
+	
 	string oscAdress;
+	string oscMultiplier;
 	//string oscAdressSwitch;
 	float  pct;
 	bool   isStateAdress;
@@ -26,6 +32,9 @@ class oscObject {
 	void setPct(float val);
 	
 	ofEvent<float>	onPctChangeEvent;
+	
+	
+	
 	
 	private:
 	

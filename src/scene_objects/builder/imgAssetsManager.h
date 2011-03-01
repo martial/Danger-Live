@@ -15,13 +15,15 @@
 class imgAssetsManager  {
 	
 	public:
-	
+		
+	imgAssetsManager();
 	 ofImage * addImage(string url);
 	 ofImage * getImage(string url);
 	 bool  checkIfImageExist(string url);
 	
 private:
 	 vector<ofImage*>		imageSet;
+	int numOfImgs;
 	
 };
 	

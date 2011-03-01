@@ -43,6 +43,9 @@ class dgSceneObject {
 	string							nameId;
 	string							adress;
 	string							adressState;
+	string							adressMultiplier;
+	
+	
 	string							type;
 	string							sceneObjectRefName;
 	string							activityObjectRefName;

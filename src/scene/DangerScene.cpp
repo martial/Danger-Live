@@ -66,7 +66,7 @@ void DangerScene::draw () {
 			background.draw(moduleView.currentViewID);
 			ofPushMatrix();
 			// push on the right and center axis
-			ofTranslate(1920*.5 - 1280*.5 + 1280*.5, 0, 0);
+			ofTranslate((int)(1920*.5 - 1280*.5 + 1280*.5), 0, 0);
 			moduleView.draw();
 			ofPopMatrix();
 			
@@ -129,6 +129,9 @@ void DangerScene::setCurrentView(int viewID) {
 }
 
 void DangerScene::changeMode (int mode) {
+	
+	if ( mode == currentMode ) return;
+	
 	
 	currentMode = mode;
 	setCurrentView(currentView);

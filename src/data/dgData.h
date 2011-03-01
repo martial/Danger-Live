@@ -28,6 +28,8 @@ class dgData  {
 	void debug();
 	void clean();
 	
+	float getPctByAdress(string address);
+	
 	void onOscEvent (customOscMessage & msg );
 	
 	moduleData * getModuleByName(string nameTarget);

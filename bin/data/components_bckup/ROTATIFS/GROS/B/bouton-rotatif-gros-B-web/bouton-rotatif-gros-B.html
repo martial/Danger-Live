@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>QuickTime Player - Export pour le web - bouton-rotatif-gros-B</title>
+	<script src="http://www.apple.com/library/quicktime/2.0/scripts/prototype.js" language="JavaScript" type="text/javascript"></script>
+	<script src="http://www.apple.com/library/quicktime/2.0/scripts/qtp_poster.js" language="JavaScript" type="text/javascript"></script>
+	<script language="JavaScript" type="text/javascript">
+		var setJSControllerEnabled = function(enabled) {
+			var poster = document.getElementsByClassName("QTP")[0].poster;
+			if(enabled)
+				poster.controller.element.style.display = "";
+			else
+				poster.controller.element.style.display = "none";
+			poster.attributes.controller = enabled ? "false" : "true";
+			document.getElementById(enabled ? "jscontrollerenabled" : "jscontrollerdisabled").style.display = "";
+			document.getElementById(enabled ? "jscontrollerdisabled" : "jscontrollerenabled").style.display = "none";
+			if(poster.movie)
+				poster.movie.element.SetControllerVisible(!enabled);
+		}		
+	</script>
+	<script language="JavaScript" type="text/javascript">QTP.Poster.prototype.clickText = "Cliquer ici pour lire la séquence";</script>
+	<link href="http://www.apple.com/library/quicktime/2.0/stylesheets/qtp_poster.css" rel="StyleSheet" type="text/css" />
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><img src="http://images.apple.com/downloads/images/essentials_quicktime20070611.png" /></td>
+		<td><h1>Instructions pour la publication de <i>bouton-rotatif-gros-B</i> sur votre site web</h1></td>
+	</tr>
+</table>
+
+<div id="summary">
+	<p>Vous avez exporté <i>bouton-rotatif-gros-B</i> à l’aide de QuickTime Player. Les informations qui suivent vous aideront à publier cette séquence sur votre site web.</p>
+	<p>Dans le même dossier que le présent fichier HTML d’instructions, QuickTime Player a placé différentes versions de votre séquence optimisées pour la publication sur le web. Vous trouverez aussi dans ce dossier une séquence de référence qui sélectionne la version idéale en fonction des périphériques et vitesses de connexion de vos visiteurs. En publiant aussi cette séquence de référence dans votre page HTML, vous pouvez vous assurer que les visiteurs visionneront toujours, sur votre site, la vidéo de la qualité idéale.</p>
+	<p>Voici un aperçu (une connexion à Internet est requise) :</p>
+</div>
+
+<a href="bouton-rotatif-gros-B.mov" rel="qtposter">
+	<img src="bouton-rotatif-gros-B.jpg" width="456" height="472" />
+</a>
+
+<div id="textembed">
+	<p>Utilisez le code HTML qui suit pour incorporer votre séquence dans votre page web.</p>
+	<h3>Remarques importantes :</h3>
+	<ul>
+		<li>Pour que vos données puissent être visionnées sur Internet, vos fichiers de données (séquences, affiche) doivent être placés sur un serveur accessible publiquement.</li>
+		<li>Les paramètres d’URL doivent être modifiés si vos données sont servies à partir d’un autre emplacement que votre page web.</li>
+		<li>Les paramètres d’URL de votre séquence doivent toujours pointer vers une séquence de référence (<a href="bouton-rotatif-gros-B.mov">bouton-rotatif-gros-B.mov</a>) plutôt que vers une séquence source.</li>
+		<li>La séquence de référence doit se trouver dans le même dossier que les séquences source.</li>
+		<li>Les noms des séquences source ne peuvent pas être modifiés, mais vous pouvez modifier le nom de la séquence de référence (n’oubliez pas de le modifier aussi dans le code HTML).</li>
+		<li>Pour être validés correctement comme du XHTML, la balise <code>&lt;style&gt;</code> et la première balise <code>&lt;script&gt;</code> doivent être placées dans la balise <code>&lt;head&gt;</code> de votre page.</li>
+	</ul>
+
+	<p>Vous pouvez choisir si vous préférez utiliser un contrôleur de séquences JavaScript, comprenant un bouton Lecture/Pause et une timeline cliquable, ou le contrôleur de séquences QuickTime d’origine :</p>
+	<div id="controllerswitch">
+	<select onchange="setJSControllerEnabled(this.options[this.selectedIndex].value == 'true');">
+		<option value="true" selected>Contrôleur JavaScript</option>
+		<option value="false">Contrôleur QuickTime</option>
+	</select>
+	</div>
+
+
+<p>Utilisez le code suivant dans la balise <code>&lt;head&gt;</code> de votre page web :</p>
+<textarea rows="5" cols="80">
+&lt;script src="http://www.apple.com/library/quicktime/2.0/scripts/prototype.js" language="JavaScript" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://www.apple.com/library/quicktime/2.0/scripts/qtp_poster.js" language="JavaScript" type="text/javascript"&gt;&lt;/script&gt;
+&lt;link href="http://www.apple.com/library/quicktime/2.0/stylesheets/qtp_poster.css" rel="StyleSheet" type="text/css" /&gt;
+</textarea>
+
+<p>Utilisez le code suivant dans la balise <code>&lt;body&gt;</code> de votre page web :</p>
+<textarea rows="5" cols="80" id="jscontrollerenabled">
+&lt;a href="bouton-rotatif-gros-B.mov" rel="qtposter"&gt;
+	&lt;img src="bouton-rotatif-gros-B.jpg" width="456" height="472" /&gt;
+&lt;/a&gt;
+</textarea>
+<textarea rows="5" cols="80" id="jscontrollerdisabled" style="display:none">
+&lt;a href="bouton-rotatif-gros-B.mov" rel="qtposter" jscontroller="false"&gt;
+	&lt;img src="bouton-rotatif-gros-B.jpg" width="456" height="472"/&gt;
+&lt;/a&gt;
+</textarea>
+</div>
+
+<div id="exportlog">
+<h3>Sont exportés :</h3>
+<ul>
+	<li>Séquence de référence :
+		<ul><li><a href="bouton-rotatif-gros-B.mov">bouton-rotatif-gros-B.mov</a></li></ul>
+	</li>
+	<li>Affiche :
+		<ul><li><a href="bouton-rotatif-gros-B.jpg">bouton-rotatif-gros-B.jpg</a></li></ul>
+	</li>
+	<li>Versions :
+		<ul>
+		<li><a href="bouton-rotatif-gros-B%20-%20Ordinateur.m4v">bouton-rotatif-gros-B - Ordinateur.m4v</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+</body>
+</html>

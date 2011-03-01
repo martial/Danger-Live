@@ -1,0 +1,187 @@
+<scene>
+
+  
+
+	<module name="">
+    
+  
+        <!-- switcher central du bas -->
+        <component>
+			
+			<name>knob_big_a</name>
+			<osc_adress multiplier="beatrep_">reverb1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="540"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-gros-c-onoff</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="8" y="510"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        <!-- red center-->
+        
+        
+        
+         <component>
+			
+			<name>METER_LED_C_2_10</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-600" y="510"></position>
+            <rotation>-90.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>METER_LED_C_2_10</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="600" y="510"></position>
+            <rotation>90.0</rotation>
+            
+        </component>
+       
+       <!-- deux mediums -->
+        
+         <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress>sidechain1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-500" y="300"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="500" y="300"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>skin-bouton-rotatif-moyen-d-onoff</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-500" y="264"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>skin-bouton-rotatif-moyen-d-onoff</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="500" y="264"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        <!-- little LP & hp-->
+                
+        
+         <component>
+			
+			<name>knob_tiny_b_lp</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-350" y="700"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>knob_tiny_b_hp</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="350" y="700"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+         <!-- little left  & right-->
+         
+         <component>
+			
+			<name>knob_tiny_b_hp</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="350" y="700"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-650" y="900"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="650" y="900"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <!-- red center-->
+        
+        <component>
+			
+			<name>knob_tiny_c_skin_eq</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="820"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        
+			
+	</module>
+	
+	
+	
+
+</scene>

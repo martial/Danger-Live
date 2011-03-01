@@ -19,7 +19,7 @@ void bloomEffect::setup(string name) {
 	
 	
 	filteredFbo = new ofxFBOTexture();
-	filteredFbo->allocate(1920, 1080, GL_RGBA, 2);
+	filteredFbo->allocate(1920, 1080, GL_RGBA);
 	filteredFbo->clear(0, 0, 0, 0);
 	
 	intensityPct = 0.0;
@@ -75,9 +75,12 @@ ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) 
 	filteredFbo->clear(0, 0, 0, 0);
 	filteredFbo->begin();
 	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 
 	coloredFbo->draw(0, 0);
 	
+	glDisable(GL_BLEND);
 	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE_MINUS_DST_COLOR, GL_ONE);

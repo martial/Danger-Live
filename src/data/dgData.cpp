@@ -57,7 +57,11 @@ void dgData::setup () {
 			data[i]->cpData[j]->name = XML.getValue("name", "");
 			data[i]->cpData[j]->nameId = XML.getValue("nameID", "");
 			data[i]->cpData[j]->adress = XML.getValue("osc_adress", "");
+			
+			data[i]->cpData[j]->adressMultiplier = XML.getAttribute("osc_adress", "multiplier", "", 0);
+			
 			data[i]->cpData[j]->adressState = XML.getValue("osc_adress_state", "");
+			
 			
 			
 			
@@ -68,9 +72,7 @@ void dgData::setup () {
 			
 			data[i]->cpData[j]->range.x = XML.getAttribute("range", "min", 0, 0);
 			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 127, 0);
-			
-			
-			
+						
 			if (XML.tagExists("rotation", 0)) {
 				data[i]->cpData[j]->rotation = XML.getValue("rotation", 0);	
 			} else {
@@ -80,7 +82,7 @@ void dgData::setup () {
 			
 			/* osc object manager */
 			
-			oscObjManager.addObject(data[i]->cpData[j]->adress, false);
+			oscObjManager.addObject(data[i]->cpData[j]->adress, false, data[i]->cpData[j]->adressMultiplier);
 			oscObjManager.addObject(data[i]->cpData[j]->adressState, true);
 			
 			
@@ -116,17 +118,12 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			sceneObject->rotation = compData->rotation;
 			sceneObject->adress = compData->adress;
 			sceneObject->adressState = compData->adressState;
+			sceneObject->adressMultiplier = compData->adressMultiplier;
 			sceneObject->nameId = compData->nameId;
 			currentModule->cpObjects.push_back(sceneObject);
 			}
 			
-			dgSceneObject  * beatObject = compBuilder.createCompByName("LED_VU");
-			beatObject->setPosition(0, 120);
-			beatObject->nameId = "beatObject";
-			beatObject->blurRate = 0.0;
-			currentModule->cpObjects.push_back(beatObject);
-			
-						
+									
 		}
 		
 
@@ -172,10 +169,24 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			}
 			
 			// finally add the reference object
-			sceneObject->setPctObjectsReference(oscObjManager.getObjectsByAdress(sceneObject->adress), oscObjManager.getObjectsByAdress(sceneObject->adressState));
+			sceneObject->setPctObjectsReference(oscObjManager.getObjectsByAdress(sceneObject->adress, sceneObject->adressMultiplier), oscObjManager.getObjectsByAdress(sceneObject->adressState, sceneObject->adressMultiplier));
 			sceneObject->init();
 		}
+		
+		dgSceneObject  * beatObject = compBuilder.createCompByName("LED_VU");
+		if ( beatObject != NULL) {
+			beatObject->setPosition(0, 120);
+			beatObject->nameId = "beatObject";
+			beatObject->blurRate = 0.0;
+			currentModule->cpObjects.push_back(beatObject);
+		}
+		
+		
 	}	
+	
+	// link referents
+	oscObjManager.addReferents();
+	
 }
 
 moduleData * dgData::getModuleByName(string nameTarget) {
@@ -195,8 +206,11 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 	oscObjManager.getRelatedObjects(msg.address, &objects);
 	int total = objects.size();
 	
+	
+	
+	
 	for ( int i=0; i<total; i++) {
-		objects[i]->setPct(msg.value);
+		objects[i]->setPct(msg.value / getPctByAdress(msg.address));
 		
 	}
 	
@@ -207,7 +221,10 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 		
 		total = objects.size();
 		for ( int k=0; k<total; k++) {
-			objects[k]->setPct(msg.value);
+			
+			
+			
+			objects[k]->setPct(msg.value / getPctByAdress(msg.stringArgs[j]));
 		}
 		
 	}
@@ -281,7 +298,22 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 	 */
 }
 
-
+float dgData::getPctByAdress(string address) {
+	
+	float div = 127.0;
+	
+	string splitString = address.substr(0, 7);
+	
+	
+	if ( splitString == "/signal" ) return 1.0;
+	
+	splitString = address.substr(0, 19);
+	if (splitString == "/live/track/volume/" ) return 1.0;
+	return 127.0;
+	//return (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
+	
+}
+		
 void dgData::clean() {
 
 	for ( int u=0; u< data.size(); u++ ) {

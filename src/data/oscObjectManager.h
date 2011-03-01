@@ -22,8 +22,10 @@ class oscObjectManager {
 	void update();
 	void draw();
 	
-	void addObject(string adress, bool isStateAdress);
-	oscObject * getObjectsByAdress(string adress) ;
+	void addReferents();
+	
+	void addObject(string adress, bool isStateAdress, string multiplier = "");
+	oscObject * getObjectsByAdress(string adress, string multiplier) ;
 	void getRelatedObjects (string val, vector<oscObject*> * oscObjects);
 	
 	private:

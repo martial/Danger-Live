@@ -20,7 +20,8 @@ dgRotationBtnObject::~dgRotationBtnObject() {
 	
 	for (int i=0; i<frontImages.size(); i++) {
 		frontImages[i]->clear();
-		//delete frontImages[i];
+		delete frontImages[i];
+		frontImages[i] = NULL;
 	}
 	frontImages.clear();
 	

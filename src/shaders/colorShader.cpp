@@ -43,13 +43,13 @@ void colorShader::setup(int fboW, int fboH){
 void colorShader::beginRender(){
 	fbo1->clear(0, 0, 0, 0);
 	fbo1->begin();
-	//glEnable(GL_BLEND);
-	//glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 }
 
 //--------------------------------------------------------------
 void colorShader::endRender(){
-	//glDisable(GL_BLEND);
+	glDisable(GL_BLEND);
 	fbo1->end();
 }
 
@@ -71,6 +71,8 @@ ofxFBOTexture * colorShader::getTexture(bool useShader){
 	ofxFBOTexture * src, * dst;
 	src = fbo1;
 	dst = fbo2;
+	
+	
 	
 	if( useShader ){
 		

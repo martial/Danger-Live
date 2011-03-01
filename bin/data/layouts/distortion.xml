@@ -1,0 +1,196 @@
+<scene>
+
+  
+
+	<module name="">
+    
+  
+        <!-- switcher central du bas -->
+        <component>
+			
+			<name>knob_big_b</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="540"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-gros-a</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="478"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_red</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="200" y="700"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <!-- deux mediums -->
+        
+         <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-600" y="540"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="600" y="540"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-moyen-e-onoff</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-600" y="500"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>skin-bouton-rotatif-moyen-e-onoff</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="600" y="500"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+
+            
+            
+        <!-- VU METRES -->
+        
+        <component>
+			
+			<name>VUMETRE_C_2_24</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-400" y="320"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>VUMETRE_C_2_24</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-400" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        <component>
+			
+			<name>VUMETRE_C_2_24</name>
+			<osc_adress>reverb1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="400" y="320"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>VUMETRE_C_2_24</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="400" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        <!--  potards noirs-->
+        
+        
+        
+        <component>
+			
+			<name>knob_tiny_b_led_a_left</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-500" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>knob_tiny_b_led_a_right</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="500" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>SWITCHER_HORIZONTAL_LP</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-500" y="870"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>SWITCHER_HORIZONTAL_LP</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="500" y="870"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        
+        
+        
+            
+	</module>
+	
+	
+	
+
+</scene>

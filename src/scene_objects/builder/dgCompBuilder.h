@@ -30,6 +30,7 @@ class dgCompBuilder {
 	
 	void setup(string xmlURL);
 	void draw();
+	void init();
 	
 	dgSceneObject   getCopyObjectByName (string name); 
 	dgSceneObject * createCompByName (string name);

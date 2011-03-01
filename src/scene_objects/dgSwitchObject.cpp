@@ -23,7 +23,8 @@ dgSwitchObject::~dgSwitchObject() {
 	
 	for (int i=0; i<imageSet.size(); i++) {
 		imageSet[i]->clear();
-		//delete imageSet[i];
+		delete imageSet[i];
+		imageSet[i] = NULL;
 	}
 	imageSet.clear();
 	
@@ -81,18 +82,15 @@ void dgSwitchObject::draw () {
 	
 		
 	ofPushMatrix();
-	ofTranslate(pos.x, pos.y, 0);
-	
+	ofTranslate((int)pos.x, (int)pos.y, 0);
 	
 	ofRotate(rotation, 0, 0, 1);
-	ofEnableAlphaBlending();
 	
 	if ( currentIndex < 0 ) currentIndex = 0;
 	if ( currentIndex > imagesSize-1 ) currentIndex = imagesSize-1;
-
-	imageSet[currentIndex]->draw(-width * .5, -height * .5);
 	
-	
+	ofEnableAlphaBlending();
+	imageSet[currentIndex]->draw((int)(-width * .5), (int)( -height * .5));
 	ofDisableAlphaBlending();
 	ofPopMatrix();
 	

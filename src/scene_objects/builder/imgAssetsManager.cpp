@@ -9,13 +9,17 @@
 
 #include "imgAssetsManager.h"
 
-
+imgAssetsManager::imgAssetsManager () {
+		
+	numOfImgs = 0;
+}
 
 ofImage * imgAssetsManager::addImage(string url) {
 	
 	//printf("yo");
 	
-	
+	//printf("size : %d\n", numOfImgs);
+	//numOfImgs++;
 	
 	if (!checkIfImageExist(url)) {
 		ofImage * img = new ofImage();
@@ -25,7 +29,7 @@ ofImage * imgAssetsManager::addImage(string url) {
 		return img;
 		
 	} else {
-		
+		//printf("exist");
 		return  getImage(url);
 		
 	}
@@ -43,7 +47,7 @@ ofImage *  imgAssetsManager::getImage(string url){
 
 bool  imgAssetsManager::checkIfImageExist(string url) {
 	
-	//printf("ahouy");
+	//printf("size : %d\n", imageSet.size());
 	
 	for ( int i=0; i<imageSet.size(); i++) {
 		if (imageSet[i]->fileName == url) return true;

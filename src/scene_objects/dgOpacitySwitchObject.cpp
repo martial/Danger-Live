@@ -18,7 +18,8 @@ dgOpacitySwitchObject::~dgOpacitySwitchObject() {
 	
 	for (int i=0; i<imageSet.size(); i++) {
 		imageSet[i]->clear();
-		//delete imageSet[i];
+		delete imageSet[i];
+		imageSet[i] = NULL;
 	}
 	imageSet.clear();
 	

@@ -49,10 +49,10 @@ void dgFaderObject::draw () {
 	//printf("pct fader: %f\n", pct);
 	
 	ofPushMatrix();
-	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
+	ofTranslate((int)(pos.x - width *.5), (int)(pos.y - height * .5), 0);
 	ofRotate((int)this->rotation, 0, 0, 1);
 	ofEnableAlphaBlending();
-	img->draw(xPos, 0 );
+	img->draw((int)xPos, 0 );
 	ofDisableAlphaBlending();
 	ofPopMatrix();
 }

@@ -6,7 +6,7 @@
     
         <component>
 			
-			<name>knob_big_a_seq</name>
+			<name>knob_big_b</name>
             <nameID></nameID>
 			<osc_adress>pitchshift1</osc_adress>
 			<range min="" max = ""></range>
@@ -17,7 +17,7 @@
         
         <component>
 			
-			<name>knob_big_a_seq</name>
+			<name>knob_big_b</name>
             <nameID></nameID>
 			<osc_adress>bitred1</osc_adress>
 			<range min="" max = ""></range>
@@ -28,18 +28,18 @@
         
           <component>
 			
-			<name>knob_big_a_seq</name>
+			<name>knob_big_c</name>
             <nameID></nameID>
 			<osc_adress>reverb1</osc_adress>
 			<range min="" max = ""></range>
-			<position x="0" y="670"></position>
+			<position x="0" y="760"></position>
             
 		
         </component>
         
         <component>
 			
-			<name>knob_big_a_seq</name>
+			<name>knob_big_a</name>
             <nameID></nameID>
 			<osc_adress>lowpass1</osc_adress>
 			<range min="" max = ""></range>
@@ -50,7 +50,7 @@
         
         <component>
 			
-			<name>knob_big_a_seq</name>
+			<name>knob_big_a</name>
             <nameID></nameID>
 			<osc_adress>hipass1</osc_adress>
 			<range min="" max = ""></range>
@@ -62,7 +62,7 @@
         
         <component>
 			
-			<name>SWITCHER_ANALOG</name>
+			<name>SWITCHER_ANALOG_H</name>
             <nameID></nameID>
 			<osc_adress></osc_adress>
 			<range min="" max = ""></range>

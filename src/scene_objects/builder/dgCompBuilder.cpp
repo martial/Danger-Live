@@ -32,7 +32,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 	int numOfComponents = XML.getNumTags("comp");
 	//components.reserve(numOfComponents);
 	
-	dgSceneObject  * component;
+	dgSceneObject  * component = NULL;
 	
 	/*
 	printf("\ncheck for name : ");
@@ -296,7 +296,8 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 	
 	
 	if ( component == NULL ) {
-		printf("\nname not found - empty object");
+		printf("\nname not found - empty object : ");
+		printf(name.c_str());
 		printf("\n");
 	}
 	
@@ -304,6 +305,10 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 	
 	XML.popTag();
 	return component;
+}
+
+void dgCompBuilder::init () {
+	//imgsAssets.init();
 }
 
 dgSceneObject  dgCompBuilder::getCopyObjectByName (string name) {

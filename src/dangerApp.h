@@ -39,26 +39,27 @@ public:
 	
 	private :
 	
-	DangerScene			scene;
-	OscReceiver			oscReceiver;
-	dgData				data;
-	dgVideoData			videoData;
-	dgCompBuilder		builder;
+	DangerScene					scene;
+	OscReceiver					oscReceiver;
+	dgData						data;
+	dgVideoData					videoData;
+	dgCompBuilder				builder;
 	
-	ofxMidiIn				midiIn;
-	DangerMidiListener		midiListener;
-	
-	dgDebugView				debugView;
-	
+	ofxMidiIn					midiIn;
+	DangerMidiListener			midiListener;
+		
+	dgDebugView					debugView;
+		
 	ofxFBOTexture		*		fbo;
 	dgSceneEffects				sceneEffects;
 	
 	ofPoint						screen1Size, screen2Size;
 	
-	
 	bool						oscDebugEnabled;
-	bool						doVSync;
-	bool						doDisplayLink;
+	
+	
+	float						panelViewScale;
+	
 	//ofTexture					texture;
 };
 

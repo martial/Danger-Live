@@ -16,7 +16,7 @@
 
 class ofxUtils {
 public:
-	static ofPoint getSizeRatio ( int maxw, int maxh, int currw, int currh );
+	static ofPoint getSizeRatio ( int maxw, int maxh, float currw, float currh );
 	
 };
 

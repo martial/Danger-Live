@@ -9,26 +9,32 @@
 
 #include "oscObject.h"
 
+oscObject::oscObject () {
+	multiplierReferent = NULL;
+	oscMultiplier = "";
+	pct = 0.0;
+}
+
+void oscObject::setMultiplierReferent(oscObject * referent) {
+
+	if ( !referent ) {
+		
+		printf("Error - no multiplier referent here \n");
+		
+	} else {
+			
+		this->multiplierReferent = referent;
+		
+	}
+	
+}
+
 void oscObject::setPct(float val) {
-	this->pct = val/127;
+	this->pct = val;
+	if ( multiplierReferent ) {
+		this->pct *= multiplierReferent->pct;
+	}
 	ofNotifyEvent(onPctChangeEvent, this->pct);
 	
-	/*
-	 
-	 
-	 if ( splitString != "/signal" ) {
-	 splitString = msg.address.substr(0, 19);
-	 div = (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
-	 if ( splitString =="/live/track/volume/" ) {
-	 
-	 //printf("ok\n");
-	 //printf("val : %f\n", div);
-	 //printf("val msg : %f\n", msg.value);
-	 
-	 
-	 }
-	 }
-	 
-	 */
 	
 }

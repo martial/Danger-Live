@@ -35,18 +35,18 @@ void DangerMidiListener::newMidiMessage(ofxMidiEventArgs& eventArgs){
 	switch ( eventArgs.byteOne ) {
 			
 		case 23:
-			scene->changeMode(DGSCENEVIEWMODE_MODULE);
+			//scene->changeMode(DGSCENEVIEWMODE_MODULE);
 			break;
 			
 		
 		// [0,0]
 		case 44:
-			scene->changeMode(DGSCENEVIEWMODE_MODULE);
+			//scene->changeMode(DGSCENEVIEWMODE_MODULE);
 			break;
 		
 		// [0,1]
 		case 48:
-			scene->changeMode(DGSCENEVIEWMODE_VIDEOS);
+			//scene->changeMode(DGSCENEVIEWMODE_VIDEOS);
 			break;
 			
 			

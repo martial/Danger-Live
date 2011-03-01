@@ -52,9 +52,9 @@ void dgDebugView::draw() {
 	fps.update();
 	fps.draw(0,90);
 		
-	//string fps = "fps : ";
-	//fps += ofToString((int)ofGetFrameRate());
-	//digitalFont_tiny.drawString(fps, fpsxPos, fpsyPos  - 14 );
+	string fps = "fps : ";
+	fps += ofToString((int)ofGetFrameRate());
+	digitalFont_tiny.drawString(fps, 3, 90  - 14 );
 	
 	// draw beat man
 	float time = ofGetElapsedTimeMillis() - currentTime;
@@ -72,32 +72,34 @@ void dgDebugView::draw() {
 
 }
 
-void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, float width, float height) {
+void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, float width, float height, float scale) {
 	
 	
 	float x,y;
-	ofxVec2f videoSize = ofxUtils::getSizeRatio(width, height, texture->texData.width, texture->texData.height);
+	ofxVec2f videoSize = ofxUtils::getSizeRatio(width, height, (float)texture->texData.width * scale, (float)texture->texData.height* scale);
 	
 	//
-	x = 1440 *.5 - videoSize.x*.5;
+	
 	//y = ofGetHeight() *.5 - videoSize.y*.5;
-	float scalew = (videoSize.x  ) /  texture->texData.width;
-	float scaleh = (videoSize.y  ) / texture->texData.height;
+	//float scalew = (videoSize.x  ) /  texture->texData.width;
+	//float scaleh = (videoSize.y  ) / texture->texData.height;
 	
 	
 	// little border ( qui va bien )
-	y =  90 + (900-90) * .5 - videoSize.y * .5;
+	x = width *.5 - videoSize.x *scale *.5;
+	y =  90 +  ((height -90) * .5 - videoSize.y *scale  * .5);
 	
 	ofEnableAlphaBlending();
 	ofSetColor(255, 255, 255, 30);
-	ofRect(x-1, y-1, videoSize.x+2, videoSize.y+2);
+	ofRect(x-1, y-1, videoSize.x*scale +2, videoSize.y*scale +2);
 	ofDisableAlphaBlending();
 	ofSetColor(255, 255, 255, 255);
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
-	texture->draw(x,y ,videoSize.x,videoSize.y);
-	glDisable(GL_BLEND);
 	
+	
+	texture->draw(x,y ,videoSize.x*scale,videoSize.y*scale);
+	
+	
+	digitalFont_tiny.drawString(ofToString(scale), x+3, y+3);
 	
 	
 }

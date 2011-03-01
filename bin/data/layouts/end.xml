@@ -1,0 +1,75 @@
+<scene>
+
+  
+
+	<module name="">
+    
+  
+       
+       
+        <component>
+			
+			<name>danger_opacity</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="300"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+       
+                               
+        <component>
+			
+			<name>PAD</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="8" y="600"></position>
+            <rotation>0.0</rotation>
+            
+        </component>  
+        
+        <component>
+			
+			<name>LED_C</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-100" y="540"></position>
+            <rotation>0.0</rotation>
+            
+        </component>      
+        
+               
+         <component>
+			
+			<name>VUMETRE_C_2_24</name>
+			<osc_adress>reverb1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-400" y="540"></position>
+            <rotation>-90.0</rotation>
+            
+         </component>
+         
+         <component>
+			
+			<name>VUMETRE_C_2_24</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="400" y="540"></position>
+            <rotation>90.0</rotation>
+            
+         </component>
+        
+        
+        
+            
+	</module>
+	
+	
+	
+
+</scene>

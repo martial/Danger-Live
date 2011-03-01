@@ -27,7 +27,7 @@ void shaderBlur::setup(int fboW, int fboH){
 	shaderH.loadShader("shaders/simpleBlurHorizontal");
 	shaderV.loadShader("shaders/simpleBlurVertical");
 
-	noPasses = 2;
+	noPasses = 1;
 	blurDistance = 1.0;
 	blurPct = 0.0;
 }
@@ -98,7 +98,7 @@ ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useS
 			
 			shaderV.setShaderActive(false);
 			 
-			printf("woks");
+			//printf("woks");
 			
 		}		
 		

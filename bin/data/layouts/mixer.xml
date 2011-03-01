@@ -19,7 +19,7 @@
          <!-- Potards de cöté---------------------------------------------------------------------------------------------------------------- -->
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>bitred1</osc_adress>
 			<range min="" max = ""></range>
 			<position x="-600" y="490"></position>
@@ -30,7 +30,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress></osc_adress>
 			<range min="" max = ""></range>
 			<position x="-600" y="590"></position>
@@ -41,7 +41,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress></osc_adress>
 			<range min="" max = ""></range>
 			<position x="-600" y="690"></position>
@@ -52,7 +52,7 @@
         
            <component>
 			
-			<name>BTN_ROT_RED</name>
+			<name>knob_tiny_c</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-660" y="200"></position>			
@@ -61,7 +61,7 @@
         
            <component>
 			
-			<name>BTN_ROT_RED</name>
+			<name>knob_tiny_c</name>
 			<osc_adress>beatrep1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-660" y="328"></position>			
@@ -72,7 +72,7 @@
          
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress></osc_adress>
 			<range min="" max = ""></range>
 			<position x="-720" y="490"></position>
@@ -83,7 +83,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress></osc_adress>
 			<range min="" max = ""></range>
 			<position x="-720" y="590"></position>
@@ -94,7 +94,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>volume_Ambient</osc_adress>
 			<range min="" max = ""></range>
 			<position x="-720" y="690"></position>
@@ -103,11 +103,48 @@
 		
         </component>
         
+        <!-- skins -->
+        
+         <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="-720" y="482"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="-720" y="582"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>volume_Ambient</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-720" y="682"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+       
+        
         <!--- -->
         
             <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>volume_Ambient</osc_adress>
 			<range min="" max = ""></range>
 			<position x="600" y="490"></position>
@@ -118,7 +155,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>pitchshift1</osc_adress>
 			<range min="" max = ""></range>
 			<position x="600" y="590"></position>
@@ -129,7 +166,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>reverb1</osc_adress>
 			<range min="" max = ""></range>
 			<position x="600" y="690"></position>
@@ -140,7 +177,7 @@
         
         <component>
 			
-			<name>BTN_ROT_RED</name>
+			<name>knob_tiny_c</name>
 			<osc_adress>danger</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="660" y="200"></position>			
@@ -149,7 +186,7 @@
         
            <component>
 			
-			<name>BTN_ROT_RED</name>
+			<name>knob_tiny_c</name>
 			<osc_adress>danger</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="660" y="328"></position>			
@@ -160,7 +197,7 @@
          
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>disto1</osc_adress>
 			<range min="" max = ""></range>
 			<position x="720" y="490"></position>
@@ -171,7 +208,7 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>pitchshift2</osc_adress>
 			<range min="" max = ""></range>
 			<position x="720" y="590"></position>
@@ -182,7 +219,41 @@
         
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
+			<osc_adress>pitchshift2fine</osc_adress>
+			<range min="" max = ""></range>
+			<position x="720" y="690"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <!-- skins -->
+         <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>disto1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="720" y="490"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>pitchshift2</osc_adress>
+			<range min="" max = ""></range>
+			<position x="720" y="590"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
 			<osc_adress>pitchshift2fine</osc_adress>
 			<range min="" max = ""></range>
 			<position x="720" y="690"></position>
@@ -196,7 +267,7 @@
         <!-- potards centrés-->
         <component>
 			
-			<name>POT_PETIT_B</name>
+			<name>knob_tiny_b</name>
 			<osc_adress>gain/master</osc_adress>
 			<range min="" max = ""></range>
 			<position x="0" y="590"></position>
@@ -212,7 +283,7 @@
         
         <component>
 			
-			<name>BTN_ROT_RED</name>
+			<name>knob_tiny_c</name>
 			<osc_adress>/live/master/panning/</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="0" y="680"></position>			
@@ -226,7 +297,7 @@
       <!-- ---------------------------------------------------------------------------------------------------------------- -->
      <component>
 			
-			<name>BTN_ROT_LEFT</name>
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
 			<osc_adress>eqhi_mixer1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-350" y="200"></position>			
@@ -237,7 +308,7 @@
         
         <component>
 			
-			<name>BTN_ROT_LEFT</name>
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
 			<osc_adress>eqmid_mixer1</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-350" y="328"></position>			
@@ -246,7 +317,7 @@
         
         <component>
 			
-			<name>BTN_ROT_LEFT</name>
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
 			<osc_adress>eqlow_mixer1</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="-350" y="456"></position>			
@@ -259,7 +330,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Danger_L1/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="-92" y="340"></position>
+			<position x="-270" y="328"></position>
             			
 		
 		</component>
@@ -290,7 +361,7 @@
 			<name>numero-multipistes_1</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="-350" y="815"></position>
+			<position x="-350" y="835"></position>
             
 		
         </component>
@@ -302,7 +373,7 @@
         
           <component>
 			
-			<name>BTN_ROT_LEFT</name>
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
 			<osc_adress>eqhi_mixer2</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-160" y="200"></position>			
@@ -313,7 +384,7 @@
         
         <component>
 			
-			<name>BTN_ROT_LEFT</name>
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
 			<osc_adress>eqmid_mixer2</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="-160" y="328"></position>			
@@ -322,7 +393,7 @@
         
         <component>
 			
-			<name>BTN_ROT_LEFT</name>
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
 			<osc_adress>eqlow_mixer2</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="-160" y="456"></position>			
@@ -334,7 +405,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Outside/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="118" y="340"></position>
+			<position x="-80" y="328"></position>
             			
 		
 		</component>
@@ -365,7 +436,7 @@
 			<name>numero-multipistes_2</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="-160" y="815"></position>
+			<position x="-160" y="835"></position>
             
 		
         </component>
@@ -374,7 +445,7 @@
         
           <component>
 			
-			<name>BTN_ROT_RIGHT</name>
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
 			<osc_adress>eqhi_mixer3</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="160" y="200"></position>			
@@ -385,7 +456,7 @@
         
         <component>
 			
-			<name>BTN_ROT_RIGHT</name>
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
 			<osc_adress>eqmid_mixer3</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="160" y="328"></position>			
@@ -394,7 +465,7 @@
         
         <component>
 			
-			<name>BTN_ROT_RIGHT</name>
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
 			<osc_adress>eqlow_mixer3</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="160" y="456"></position>			
@@ -406,7 +477,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Danger_R1/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="262" y="340"></position>
+			<position x="80" y="328"></position>
             			
 		
 		</component>
@@ -437,7 +508,7 @@
 			<name>numero-multipistes_3</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="160" y="815"></position>
+			<position x="160" y="835"></position>
             
 		
         </component>
@@ -447,7 +518,7 @@
         
          <component>
 			
-			<name>BTN_ROT_RIGHT</name>
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
 			<osc_adress>eqhi_mixer4</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="350" y="200"></position>			
@@ -458,7 +529,7 @@
         
         <component>
 			
-			<name>BTN_ROT_RIGHT</name>
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
 			<osc_adress>eqmid_mixer4</osc_adress>
 			<range min="" max = "127"></range>
 			<position x="350" y="328"></position>			
@@ -467,7 +538,7 @@
         
         <component>
 			
-			<name>BTN_ROT_RIGHT</name>
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
 			<osc_adress>eqlow_mixer4</osc_adress>
 			<range min="" max = "230"></range>
 			<position x="350" y="456"></position>			
@@ -480,7 +551,7 @@
 			<name>METER_VU</name>
 			<osc_adress>/signal/Percus/</osc_adress>
 			<range min="" max = "127"></range>
-			<position x="456" y="340"></position>
+			<position x="270" y="328"></position>
             			
 		
 		</component>
@@ -514,7 +585,7 @@
 			<name>numero-multipistes_4</name>
 			<osc_adress></osc_adress>
 			<range min="" max = "127"></range>
-			<position x="350" y="815"></position>
+			<position x="350" y="835"></position>
             
 		
         </component>

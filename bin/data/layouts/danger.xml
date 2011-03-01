@@ -1,0 +1,75 @@
+<scene>
+
+  
+
+	<module name="">
+    
+  
+        <!-- switcher central du bas -->
+        <component>
+			
+			<name>knob_big_b</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="540"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-gros-a</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="478"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>skin-bouton-rotatif-gros-c-onoff</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="8" y="478"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+        
+        <component>
+			
+			<name>PAD</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="8" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>  
+        
+        <component>
+			
+			<name>LED_B</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-100" y="750"></position>
+            <rotation>0.0</rotation>
+            
+        </component>      
+        
+               
+        
+        
+        
+        
+            
+	</module>
+	
+	
+	
+
+</scene>

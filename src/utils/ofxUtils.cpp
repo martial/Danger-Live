@@ -11,7 +11,7 @@
 
 
 
-ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, int currw, int currh ) {
+ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, float currw, float currh ) {
 
 	float w,h;
 	

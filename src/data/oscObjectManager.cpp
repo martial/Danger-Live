@@ -17,27 +17,49 @@ void oscObjectManager::draw() {
 	
 }
 
-void oscObjectManager::addObject(string adress, bool isStateAdress) {
+void oscObjectManager::addObject(string adress, bool isStateAdress, string multiplier) {
 	
 	if ( adress =="" ) return;
 	
-	oscObject * obj = getObjectsByAdress(adress);
+	oscObject * obj = getObjectsByAdress(adress, multiplier);
 	
 	if ( obj ) {
-		
+		//printf("exist");
 	} else {
 		
 		oscObject * newObject = new oscObject();
 		newObject->oscAdress = adress;
 		newObject->isStateAdress = isStateAdress;
+		newObject->oscMultiplier = multiplier;
 		objects.push_back(newObject);
 	}
 	
 }
-oscObject * oscObjectManager::getObjectsByAdress(string adress) {
+
+void oscObjectManager::addReferents () {
+
+	for ( int i = 0; i< objects.size(); i++ ) {
+		if ( objects[i]->oscMultiplier != "" ) {
+			
+			// check if exist
+			oscObject * multiplierRef = getObjectsByAdress(objects[i]->oscMultiplier, "");
+			if (!multiplierRef) {
+				addObject(objects[i]->oscMultiplier, false, "");
+				
+			} else {
+				
+			}
+			
+			objects[i]->setMultiplierReferent(getObjectsByAdress(objects[i]->oscMultiplier, ""));
+		}
+	}
+	
+}
+
+oscObject * oscObjectManager::getObjectsByAdress(string adress, string multiplier) {
 	
 	for ( int i = 0; i< objects.size(); i++ ) {
-		if ( objects[i]->oscAdress == adress ) return objects[i];
+		if ( objects[i]->oscAdress == adress && objects[i]->oscMultiplier == multiplier ) return objects[i];
 	}
 	return NULL;
 }

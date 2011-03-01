@@ -10,9 +10,7 @@
 #include "dgSceneObject.h"
 
 dgSceneObject::dgSceneObject() {
-	
-	
-	
+
 }
 
 dgSceneObject::~dgSceneObject() {
@@ -20,7 +18,8 @@ dgSceneObject::~dgSceneObject() {
 	
 	for (int i=0; i<images.size(); i++) {
 		images[i]->clear();
-		//delete images[i];
+		delete images[i];
+		images[i] = NULL;
 	}
 	images.clear();
 	
@@ -31,7 +30,7 @@ dgSceneObject::~dgSceneObject() {
 	videos.clear();
 	
 	if ( activitySwitchObject ) {
-		//delete activitySwitchObject;
+		delete activitySwitchObject;
 		activitySwitchObject = NULL;
 	}
 	
@@ -39,6 +38,8 @@ dgSceneObject::~dgSceneObject() {
 	
 	if ( pctRef ) ofRemoveListener(pctRef->onPctChangeEvent, this, &dgSceneObject::onPctChangeHandler);
 	if ( pctStateRef ) ofRemoveListener(pctStateRef->onPctChangeEvent, this, &dgSceneObject::onPctStateChangeHandler);
+	
+	
 	pctRef = NULL;
 	pctStateRef = NULL;
 	
