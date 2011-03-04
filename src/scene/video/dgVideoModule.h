@@ -26,6 +26,8 @@ class dgVideoModule {
 	void update();
 	void draw();
 	
+	ofTexture	* getVideoTexture();
+	
 	void init();
 	void stop();
 	void setCurrentView (int viewID);

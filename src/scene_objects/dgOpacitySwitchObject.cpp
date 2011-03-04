@@ -17,13 +17,13 @@ dgOpacitySwitchObject::~dgOpacitySwitchObject() {
 		
 	
 	for (int i=0; i<imageSet.size(); i++) {
-		imageSet[i]->clear();
+		//imageSet[i]->clear();
 		delete imageSet[i];
 		imageSet[i] = NULL;
 	}
 	imageSet.clear();
 	
-	img->clear();
+	//img->clear();
 	//delete img;
 }
 
@@ -38,8 +38,8 @@ void dgOpacitySwitchObject::setup (string imgURL, string name, string type) {
 		
 	img = imgAssets->addImage(imgURL);
 	
-	this->width = img->width;
-	this->height = img->height;
+	this->width = img->getWidth();
+	this->height = img->getHeight();
 
 	//this->width = img->width;
 	//this->height = img->height;
@@ -52,7 +52,7 @@ void dgOpacitySwitchObject::setup (string imgURL, string name, string type) {
 
 void dgOpacitySwitchObject::addExtraImage(string url) {
 	
-	ofImage * img = imgAssets->addImage(url);
+	ofTexture * img = imgAssets->addImage(url);
 	imageSet.push_back(img);
 	
 	
@@ -64,9 +64,11 @@ void dgOpacitySwitchObject::update () {
 	
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
 	
+	
+	
 	int fakeTotal = imageSet.size();
 	fakeTotal -=1;
-	currentIndex = floor(easePct * (fakeTotal) );
+	currentIndex = round(easePct * (fakeTotal) );
 	
 	if ( currentIndex > imageSet.size()-2 ) currentIndex = imageSet.size()-2;
 	//printf("---- \n");
@@ -98,12 +100,12 @@ void dgOpacitySwitchObject::draw () {
 	ofPushMatrix();
 	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
 	ofSetColor(255, 255, 255, 255);
-	img->draw(0,0);
+	//img->draw(0,0);
 	
 	
 	
 		
-		if ( images.size() > 1 ) {
+		if ( imageSet.size() > 1 ) {
 	
 			ofSetColor(255, 255, 255, (1-alphaPct) * 255);
 			imageSet[currentIndex]->draw(0, 0);
@@ -113,7 +115,7 @@ void dgOpacitySwitchObject::draw () {
 			imageSet[currentIndex+1]->draw(0, 0);
 		
 		} else  {
-		//printf("ok");
+		
 		ofSetColor(255, 255, 255, (easePct) * 255);
 		imageSet[0]->draw(0, 0);
 
@@ -137,6 +139,32 @@ void dgOpacitySwitchObject::setPct(float pct) {
 	
 	// round
 	
+	if ( this->reversePct ) {
+		
+		
+		
+		
+		if ( pct > easePct ) {
+			easePct = pct;
+		} else {
+			blurRate = .7;
+		}
+		 
+		 
+		
+		
+	} else {
+		
+		if ( pct > easePct ) {
+			easePct = pct;
+		} else {
+			blurRate = .55;
+		}
+		
+		
+	}
+	
+		
 	dgSceneObject::setPct(pct);
 	
 }

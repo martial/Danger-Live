@@ -32,8 +32,8 @@ class dgRotationBtnObject : public dgSceneObject {
 	
 	private :
 	
-	ofImage			*		img;
-	vector<ofImage*>		frontImages;
+	ofTexture			*		img;
+	vector<ofTexture*>		frontImages;
 	float					btnRotation;
 	
 	

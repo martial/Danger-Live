@@ -12,22 +12,34 @@
 #include "ofxFBOTexture.h"
 #include "dgDebugView.h"
 #include "customOscMessage.h"
-#include "dgSceneEffects.h"
+#include "dangerPrefs.h"
+
+#include "ofxFenster.h"
 
 #define EDITOR_MODE
+//#define _USE_FENSTER
 
 
+#ifdef _USE_FENSTER
+class dangerApp : public ofBaseApp , public ofxFensterListener{
+#else
+class dangerApp : public ofBaseApp {
+#endif	
 
-class dangerApp : public ofBaseApp{
-	
 public:
 	void setup();
 	void update();
 	void draw();
 	
+	#ifdef _USE_FENSTER
+	void fensterDraw();
+	void fensterUpdate();
+	#endif
+	
 	void reset();
 	void onBeatEvent(int & f);
 	void onOscEvent(customOscMessage & f ) ;
+	void onMasterSignalEvent(float & val);
 	void keyPressed  (int key);
 	void keyReleased(int key);
 	void mouseMoved(int x, int y );
@@ -47,10 +59,13 @@ public:
 	
 	ofxMidiIn					midiIn;
 	DangerMidiListener			midiListener;
+	
+	dangerPrefs					appSettings;
 		
 	dgDebugView					debugView;
 		
 	ofxFBOTexture		*		fbo;
+	ofxFBOTexture		*		sceneFbo;
 	dgSceneEffects				sceneEffects;
 	
 	ofPoint						screen1Size, screen2Size;

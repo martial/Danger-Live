@@ -32,6 +32,7 @@ class moduleData {
 	vector <dgSceneObject*>	cpObjects;
 	
 	string						name;
+	string						layer;
 	
 	void clean();
 	

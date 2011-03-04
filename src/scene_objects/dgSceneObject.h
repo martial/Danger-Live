@@ -44,6 +44,7 @@ class dgSceneObject {
 	string							adress;
 	string							adressState;
 	string							adressMultiplier;
+	ofPoint							range;
 	
 	
 	string							type;
@@ -51,6 +52,9 @@ class dgSceneObject {
 	string							activityObjectRefName;
 	ofPoint							pos;
 	ofPoint							activitySwitchObjPos;
+	float							activitySwitchRotation;
+	
+	bool							reversePct;
 	
 	
 	
@@ -61,7 +65,7 @@ class dgSceneObject {
 	float							pct, statePct, easePct, oldPct;
 	vector<float>					configValues;
 	
-	vector<ofImage*>				images;
+	vector<ofTexture*>				images;
 	vector<ofxQTKitVideoPlayer*>	videos;
 	dgSceneObject			*		activitySwitchObject;
 	

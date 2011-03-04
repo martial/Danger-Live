@@ -17,7 +17,7 @@
 //#include "ofEvents.h"
 #include "ofEvents.h"
 
-#define OSC_PORT 9001
+#define OSC_PORT 12345
 #define NUM_MSG_STRINGS 24
 
 class OscReceiver {
@@ -33,6 +33,9 @@ public:
 	
 	ofEvent<int>	beatEvent;
 	ofEvent<customOscMessage>	oscEvent;
+	ofEvent<float>				masterSignalEvent;
+	
+	
 	//ofEvent<float>	test;
 	
 private:
@@ -42,6 +45,7 @@ private:
 	string			msg_strings[NUM_MSG_STRINGS];
 	float			timers[NUM_MSG_STRINGS];
 	
+	float			currentTime;
 	
 	
 	//ofEvent<customOscMessage> newFloatEvent;

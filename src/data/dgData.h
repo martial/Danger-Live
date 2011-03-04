@@ -24,6 +24,7 @@ class dgData  {
 
 	public:
 	void setup();
+	void update();
 	void addSceneObjects (dgCompBuilder & compBuilder);
 	void debug();
 	void clean();
@@ -31,6 +32,7 @@ class dgData  {
 	float getPctByAdress(string address);
 	
 	void onOscEvent (customOscMessage & msg );
+	void onBeatEvent();
 	
 	moduleData * getModuleByName(string nameTarget);
 	

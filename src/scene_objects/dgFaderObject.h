@@ -30,7 +30,7 @@ public:
 	
 	private :
 	
-	ofImage			*		img;
+	ofTexture			*		img;
 	int						currentIndex;
 	
 	

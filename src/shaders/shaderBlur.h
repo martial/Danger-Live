@@ -24,6 +24,7 @@ class shaderBlur{
 		
 		void setBlurParams(int numPasses, float blurDist);
 		ofxFBOTexture * getFbo(float x, float y, float w, float h, bool useShader);
+		ofxFBOTexture * getFboReference();
 				
 		ofxShader shaderH;
 		ofxShader shaderV;

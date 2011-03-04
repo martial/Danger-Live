@@ -14,13 +14,14 @@
 #include "ofMain.h"
 #include "moduleData.h"
 #include "customOscMessage.h"
+#include "dgVideoModule.h"
 
 class dgAbstractModuleWrapper {
 	
 	
 public:
 	
-	virtual void setup(moduleData * relatedModule, string name);
+	virtual void setup(moduleData * relatedModule, dgVideoModule * videoModule, string name);
 	virtual void update();
 	virtual void draw();
 	
@@ -29,6 +30,7 @@ public:
 	
 	string name;
 	moduleData	*	relatedModule;	
+	dgVideoModule *	videoModule;
 	
 	
 private:

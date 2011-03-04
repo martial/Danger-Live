@@ -40,7 +40,7 @@ void dgMultipleLedObject::addSwitchObject(dgSceneObject * switchObj) {
 	
 	switchObj->setPosition( 0, 0);
 	
-	switchObj->blurRate = .1;
+	switchObj->blurRate = 0.0;
 	switchObjects.push_back(switchObj);
 	
 	//this->height = yPos;
@@ -66,6 +66,7 @@ void dgMultipleLedObject::init() {
 	if ( this->configValues[5] ) {
 		for ( int k=0; k<total; k++ ) {
 		switchObjects[k]->rotation = -rotation;
+		switchObjects[k]->blurRate = 0.0;
 		}
 	}
 	
@@ -88,12 +89,19 @@ void dgMultipleLedObject::update () {
 	
 	// find current value
 	
-		
-	int enabledLeds = round(total*pct);
+	//printf("statePCT : %f\n", statePct);
+	
+	//printf(adressState.c_str());
+	
+	if ( pctStateRef ) {
+			//printf("youpiii");
+	}
+	
+	int enabledLeds = round((total)*pct);
 	
 		
 	for ( int i=(total-1); i>=0; i-- ) {
-		if ( i > (total - enabledLeds) ) {
+		if ( i >= (total - enabledLeds) ) {
 			switchObjects[i]->setPct(1 * statePct);
 		} else {
 			switchObjects[i]->setPct(0);
@@ -153,7 +161,7 @@ void dgMultipleLedObject::draw () {
 }
 
 void dgMultipleLedObject::setPct(float pct) {
-	//printf ("Number of pct : %f\n", pct);
+	
 	dgSceneObject::setPct(pct);
 	//mainVideo->setPosition(pct);
 	

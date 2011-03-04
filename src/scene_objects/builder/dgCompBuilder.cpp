@@ -280,6 +280,7 @@ dgSceneObject * dgCompBuilder::createCompByName (string name) {
 					component->activityObjectRefName =  XML.getValue("id", "", 0);
 					component->activitySwitchObjPos.x = XML.getAttribute("position", "x", 0, 0);
 					component->activitySwitchObjPos.y= XML.getAttribute("position", "y", 0, 0);
+					component->activitySwitchRotation= XML.getValue("rotation",0, 0);
 					XML.popTag();
 					
 				}

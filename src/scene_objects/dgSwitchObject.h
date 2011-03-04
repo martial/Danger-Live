@@ -32,7 +32,7 @@ public:
 	private :
 	
 	//ofImage					img;
-	vector<ofImage*>		imageSet;
+	vector<ofTexture*>		imageSet;
 	int						imagesSize;
 	int						currentIndex;
 		

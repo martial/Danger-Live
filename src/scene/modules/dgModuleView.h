@@ -20,13 +20,18 @@
 #include "dgModuleIntroWrapper.h"
 #include "dgStyleSwitchIntroWrapper.h"
 #include "dgSceneEffects.h"
+#include "dgVideoModule.h"
+#include "dgMixerModuleWrapper.h"
+
+//#define EDITOR_MODE
 
 class dgModuleView {
 	
 	public:
-	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects);
+	void setup(dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects, dgVideoModule & videoModule);
 	void update();
 	void draw();
+	void clean();
 	
 	void initModulesWrappers();
 		
@@ -53,28 +58,32 @@ class dgModuleView {
 	dgCompBuilder			*	compBuilder;
 	OscReceiver				*	oscReceiver;
 	dgSceneEffects			*	effects;
+	dgVideoModule			*	videoModule;
 	
 	/* current stuff*/
 	
 	vector<dgSceneObject*>		currentObjects;
 	
 	/* wrappers for custom layout actions */
+	
 	dgAbstractModuleWrapper * getRelatedWrapper (string name);
+	
 	vector<dgAbstractModuleWrapper*>	modulesWrappers;
 	dgAbstractModuleWrapper		*		currentWrapper;
+	moduleData					*		currentModule;
 	
-	moduleData * currentModule;
-	
-	dgSceneObject		*			beatObject;
+	dgSceneObject				*		beatObject;
 	
 	
-	// beat stuff
 	
-	float	beatLatency, currentTime;
+	float						beatLatency, currentTime;
 	
 	// fade stuff
 	float						globalOpacity;
 	
+	#ifdef EDITOR_MODE
+	ofImage						layerImg;
+	#endif
 	
 };
 

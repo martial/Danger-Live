@@ -22,7 +22,7 @@ dgSwitchObject::~dgSwitchObject() {
 	
 	
 	for (int i=0; i<imageSet.size(); i++) {
-		imageSet[i]->clear();
+		//imageSet[i]->clear();
 		delete imageSet[i];
 		imageSet[i] = NULL;
 	}
@@ -38,8 +38,8 @@ void dgSwitchObject::setup (string imgURL, string name, string type) {
 	// first image is default state
 	addExtraImage(imgURL);
 	
-	this->width = imageSet[0]->width;
-	this->height = imageSet[0]->height;
+	this->width = imageSet[0]->getWidth();
+	this->height = imageSet[0]->getHeight();
 	
 	active = true;
 	
@@ -50,7 +50,7 @@ void dgSwitchObject::setup (string imgURL, string name, string type) {
 
 void dgSwitchObject::addExtraImage(string url) {
 	
-	ofImage * img = imgAssets->addImage(url);
+	ofTexture * img = imgAssets->addImage(url);
 	//img->setUseTexture(true);
 	
 	//ofImage * img = new ofImage();
@@ -58,8 +58,8 @@ void dgSwitchObject::addExtraImage(string url) {
 	imageSet.push_back(img);
 	imagesSize = imageSet.size();
 	
-	if ( img->width > width ) this->width = img->width;
-	if ( img->height > height ) this->height = img->height;
+	if ( img->getWidth() > width ) this->width = img->getWidth();
+	if ( img->getHeight() > height ) this->height = img->getHeight();
 	
 	
 }
@@ -68,8 +68,14 @@ void dgSwitchObject::update () {
 	
 	dgSceneObject::update();
 	
+	// check if go up or down
+	
+	
+	
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
-	currentIndex = (int)floor((pct * (imagesSize)));
+	
+	
+	currentIndex = (int)floor((easePct * (imagesSize)));
 	if ( currentIndex > imagesSize-1 ) currentIndex = imagesSize-1;
 		
 }
@@ -105,6 +111,12 @@ void dgSwitchObject::setPct(float pct) {
 	
 	
 	// round
+	
+	if ( pct > easePct ) {
+		blurRate = 0.0;
+	} else {
+		blurRate = .5;
+	}
 	
 	dgSceneObject::setPct(pct);
 	

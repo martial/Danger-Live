@@ -30,6 +30,9 @@ class DangerScene {
 	void setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects);
 	void update();
 	void draw();
+	void clean();
+	
+	ofTexture * getVideoTexture();
 	
 	void changeMode (int mode); 
 	

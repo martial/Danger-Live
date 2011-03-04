@@ -14,43 +14,42 @@ imgAssetsManager::imgAssetsManager () {
 	numOfImgs = 0;
 }
 
-ofImage * imgAssetsManager::addImage(string url) {
-	
-	//printf("yo");
-	
-	//printf("size : %d\n", numOfImgs);
-	//numOfImgs++;
+ofTexture * imgAssetsManager::addImage(string url) {
 	
 	if (!checkIfImageExist(url)) {
-		ofImage * img = new ofImage();
-		img->loadImage(ofToDataPath(url));
-		//img->setUseTexture(false);
-		imageSet.push_back(img);
-		return img;
+		
+		loader.loadImage(ofToDataPath(url));
+		
+		ofTexture * texture = new ofTexture();
+		
+		texture->allocate( loader.getWidth(), loader.getHeight(), GL_RGBA );				
+		texture->loadData( loader.getPixels(), loader.getWidth(), loader.getHeight(), GL_RGBA );
+		
+		imageName.push_back(ofToDataPath(url));
+		imageSet.push_back(texture);
+		return texture;
 		
 	} else {
-		//printf("exist");
-		return  getImage(url);
 		
+		return  getImage(url);
+	
 	}
 	//return img;
 }
 
-ofImage *  imgAssetsManager::getImage(string url){
+ofTexture *  imgAssetsManager::getImage(string url){
 	
 	for ( int i=0; i<imageSet.size(); i++) {
-		if (imageSet[i]->fileName == url) return imageSet[i];
+		if (imageName[i] == url) return imageSet[i];
 	}
 	return NULL;
 	
 }
 
 bool  imgAssetsManager::checkIfImageExist(string url) {
-	
-	//printf("size : %d\n", imageSet.size());
-	
+		
 	for ( int i=0; i<imageSet.size(); i++) {
-		if (imageSet[i]->fileName == url) return true;
+		if (imageName[i] == url) return true;
 	}
 	return false;
 }

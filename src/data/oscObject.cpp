@@ -34,7 +34,34 @@ void oscObject::setPct(float val) {
 	if ( multiplierReferent ) {
 		this->pct *= multiplierReferent->pct;
 	}
-	ofNotifyEvent(onPctChangeEvent, this->pct);
+	
+
 	
 	
+	/*
+	if ( oscAdress.substr(0, 19) == "/live/track/volume/" ) {
+			printf("ok from osc %f\n", pct);
+	}
+	 */
+	
+	ofNotifyEvent(onPctChangeEvent, this->pct);	
+}
+
+void oscObject::setPct(float val, float duration) {
+	
+	this->pct = val;
+	ofNotifyEvent(onPctChangeEvent, this->pct);	
+	
+	timer.stopTimer();
+	timer.setup(duration, false);
+	timer.startTimer();
+	
+	ofAddListener(timer.TIMER_REACHED, this, &oscObject::onTimerComplete);
+}
+
+void oscObject::onTimerComplete(ofEventArgs & ahou) {
+	
+	this->pct = 0.0;
+	ofRemoveListener(timer.TIMER_REACHED, this, &oscObject::onTimerComplete);
+	ofNotifyEvent(onPctChangeEvent, this->pct);	
 }

@@ -1,0 +1,204 @@
+<scene>
+
+  
+
+	<module name="" layer="components/layers/CATHEDRALDOMEproto.png">
+    
+  
+        <!-- switcher central du bas -->
+        <component>
+			
+			<name>knob_big_a</name>
+			<osc_adress >lowpass1</osc_adress>
+            <osc_adress_state>lowpass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="500"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-gros-c-onoff</name>
+			<osc_adress>lowpass1_onoff</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="10" y="472"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        <!-- red center-->
+        
+        
+        
+         <component>
+			
+			<name>METER_LED_C_2_10</name>
+			<osc_adress multiplier="lowpass1">/signal/Master/</osc_adress>
+            <osc_adress_state>lowpass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-580" y="470"></position>
+            <rotation>-90.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>METER_LED_C_2_10</name>
+			<osc_adress multiplier="lowpass1">/signal/Master/</osc_adress>
+            <osc_adress_state>lowpass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="580" y="470"></position>
+            <rotation>90.0</rotation>
+            
+        </component>
+       
+       <!-- deux mediums -->
+        
+         <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>/live/track/volume/Danger_L1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-375" y="290"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>/live/track/volume/Danger_R1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="375" y="290"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		  <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>live/track/volume/Danger_L1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-373" y="258"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+         <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>live/track/volume/Danger_R1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="377" y="258"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+		
+		
+         
+        
+        
+        <!-- little LP & hp-->
+                
+        
+         <component>
+			
+			<name>knob_med_b</name>
+			<osc_adress>pitchshift1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-330" y="675"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+
+        
+        
+         <!-- little left  & right-->
+         
+         <component>
+			
+			<name>knob_med_b</name>
+			<osc_adress>bitred1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="330" y="675"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_c_skin_eq_led_a_left</name>
+			<osc_adress>eqlow_mixer1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-700" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_c_skin_eq_led_a_right</name>
+			<osc_adress>eqlow_mixer3</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="700" y="800"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <!-- red center-->
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>sidechain1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="750"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		<component>
+			
+			<name>METER_VU_B_1_6</name>
+			<osc_adress>/signal/Master/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-35" y="852"></position>
+            <rotation>-90.0</rotation>
+            
+        </component>
+		
+		<component>
+			
+			<name>METER_VU_B_1_6</name>
+			<osc_adress>/signal/Master/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="35" y="850"></position>
+            <rotation>90.0</rotation>
+            
+        </component>
+        
+        
+        
+			
+	</module>
+	
+	
+	
+
+</scene>

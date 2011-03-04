@@ -16,7 +16,7 @@ void dgDebugView::setup() {
 	
 	logo.loadImage("assets/logo.png");
 	
-	fps.setup(1440, 900, 30);
+	fps.setup(1440, 900, 40);
 	
 	beatLatency = 100;
 	currentTime = 0;
@@ -102,6 +102,13 @@ void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, float width, float heig
 	digitalFont_tiny.drawString(ofToString(scale), x+3, y+3);
 	
 	
+}
+
+void dgDebugView::drawCurrentVideo (ofTexture * videoTexture, float width, float height, float scale) {
+	//videoTexture->draw(0,0);
+	float x,y;
+	//ofxVec2f videoSize = ofxUtils::getSizeRatio(width, height, (float)texture->texData.width * scale, (float)texture->texData.height* scale);
+	//videoTexture->draw(x,y ,videoSize.x*scale,videoSize.y*scale);
 }
 
 void dgDebugView::onBeatEvent() {

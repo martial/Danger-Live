@@ -26,7 +26,7 @@ public:
 		
 	private :
 	
-	ofImage			*		img;
+	ofTexture			*		img;
 	
 	
 	

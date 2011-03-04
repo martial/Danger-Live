@@ -17,12 +17,14 @@ class imgAssetsManager  {
 	public:
 		
 	imgAssetsManager();
-	 ofImage * addImage(string url);
-	 ofImage * getImage(string url);
+	 ofTexture * addImage(string url);
+	 ofTexture * getImage(string url);
 	 bool  checkIfImageExist(string url);
 	
 private:
-	 vector<ofImage*>		imageSet;
+	ofImage					loader;
+	vector<ofTexture*>		imageSet;
+	vector<string>			imageName;
 	int numOfImgs;
 	
 };

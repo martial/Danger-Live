@@ -50,17 +50,17 @@ void DangerMidiListener::newMidiMessage(ofxMidiEventArgs& eventArgs){
 			break;
 			
 			
-		case 20:
+		case 10:
 			val = (float)eventArgs.byteTwo * 2.0 / 127.0;
 			sceneEffects->setContrast(val);
 			break;
 			
-		case 21:
+		case 12:
 			val = (float) eventArgs.byteTwo * 2.0 / 127.0;;
 			sceneEffects->setSaturation(val);
 			break;
 			
-		case 22:
+		case 13:
 			val = (float)eventArgs.byteTwo * 2.0/ 127.0;;
 			sceneEffects->setBrightness(val);
 			break;

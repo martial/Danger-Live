@@ -9,10 +9,10 @@
 
 #include "dgModuleIntroWrapper.h"
 
-void dgModuleIntroWrapper::setup(moduleData * relatedModule,string name) {
+void dgModuleIntroWrapper::setup(moduleData * relatedModule, dgVideoModule * videoModule, string name) {
 	
 	currentTime = -1.0;
-	dgAbstractModuleWrapper::setup(relatedModule, name);
+	dgAbstractModuleWrapper::setup(relatedModule, videoModule, name);
 	
 	loadingSound.loadSound(ofToDataPath("sound/LOADER.wav"));
 	releaseSound.loadSound(ofToDataPath("sound/Release.wav"));

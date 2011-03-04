@@ -17,11 +17,13 @@ DangerScene::DangerScene() {
 
 void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects) {
 	
-	background.setup();
-	moduleView.setup(layoutData, compBuilder, oscReceiver,effects);
-	videoView.setup(videoData);
-	
 	this->effects = &effects;
+	
+	background.setup();
+	moduleView.setup(layoutData, compBuilder, oscReceiver,effects,videoView);
+	videoView.setup(videoData);
+	videoView.init();
+	
 	
 	currentMode = DGSCENEVIEWMODE_MODULE;
 	
@@ -33,8 +35,19 @@ void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuil
 	
 }
 
+void DangerScene::clean () {
+	
+	
+	moduleView.clean();
+	
+}
+
 void DangerScene::update() {
 	
+	moduleView.update();
+	videoView.update();
+	
+	return;
 	
 	switch (currentMode) {
 			
@@ -50,6 +63,8 @@ void DangerScene::update() {
 		default:
 			break;
 	}
+	 
+	 
 		
 }
 
@@ -66,7 +81,7 @@ void DangerScene::draw () {
 			background.draw(moduleView.currentViewID);
 			ofPushMatrix();
 			// push on the right and center axis
-			ofTranslate((int)(1920*.5 - 1280*.5 + 1280*.5), 0, 0);
+			ofTranslate((int)(1920*.5), 0, 0);
 			moduleView.draw();
 			ofPopMatrix();
 			
@@ -83,13 +98,25 @@ void DangerScene::draw () {
 	}
 	//ofDisableAlphaBlending();
 	
+	
+	
 
+}
+
+ofTexture * DangerScene::getVideoTexture () {
+		
+	return videoView.getVideoTexture();
+	
 }
 
 void DangerScene::fade () {
 	
-	effects->blurFadeInOut(600);
-	effects->colorFadeInOut(500, 0.2, 3, 0);
+	
+	//moduleView.nextView();
+	//return;
+	
+	effects->blurFadeInOut(400);
+	effects->colorFadeInOut(200, 0.2, 3, 0);
 	ofAddListener(effects->onFadeChangeEvent, this, &DangerScene::onFadeChangeComplete);
 	
 	
@@ -97,7 +124,7 @@ void DangerScene::fade () {
 
 
 void DangerScene::onFadeChangeComplete (int & e) {
-	printf(" / fade complete");
+	//printf(" / fade complete");
 	ofRemoveListener(effects->onFadeChangeEvent, this, &DangerScene::onFadeChangeComplete);
 	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.nextView();
 }
@@ -111,7 +138,7 @@ void DangerScene::setCurrentView(int viewID) {
 		case DGSCENEVIEWMODE_MODULE:
 			
 			moduleView.setCurrentView(viewID);
-			videoView.stop();
+			//videoView.stop();
 			
 			break;
 			
@@ -131,8 +158,6 @@ void DangerScene::setCurrentView(int viewID) {
 void DangerScene::changeMode (int mode) {
 	
 	if ( mode == currentMode ) return;
-	
-	
 	currentMode = mode;
 	setCurrentView(currentView);
 	if ( mode == DGSCENEVIEWMODE_VIDEOS ) videoView.init();
@@ -158,7 +183,7 @@ void DangerScene::onBeatEvent () {
 	beatTime = ofGetElapsedTimeMillis() - oldTime;
 	oldTime = ofGetElapsedTimeMillis();
 	
-	if ( currentMode == DGSCENEVIEWMODE_VIDEOS ) videoView.onBeatEvent(beatTime/1000);
+	videoView.onBeatEvent(beatTime/1000);
 	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onBeatEvent();
 	
 }

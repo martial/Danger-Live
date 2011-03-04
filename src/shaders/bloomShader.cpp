@@ -11,8 +11,7 @@
 
 void bloomShader::setup(int fboW, int fboH){
 	
-	ofBackground(255,255,255);	
-	ofSetVerticalSync(true);
+	
 	
 	fbo = new ofxFBOTexture();
 	fbo->allocate(fboW, fboH, GL_RGBA);

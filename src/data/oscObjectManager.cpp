@@ -11,7 +11,7 @@
 
 
 void oscObjectManager::update(){
-	
+	updateMultiplierReferents();
 }
 void oscObjectManager::draw() {
 	
@@ -71,3 +71,32 @@ void oscObjectManager::getRelatedObjects (string val, vector<oscObject*> * oscOb
 	}
 
 }
+
+
+void oscObjectManager::updateMultiplierReferents () {
+	
+	//for ( int i = 0; i< objects.size(); i++ ) {
+		//if ( objects[i]->multiplierReferent  ) {
+			//objects[i]->pct = objects[i]->multiplierReferent->pct;
+		//}
+	//}
+	
+}
+
+
+void oscObjectManager::onBeatEvent () {
+	
+	for ( int i = 0; i< objects.size(); i++ ) {
+		
+		if ( objects[i]->oscAdress == "tempo" ) {
+			
+			objects[i]->setPct(1, 25);
+			
+			
+		}
+		
+	}
+	
+}
+ 
+

@@ -12,8 +12,7 @@
 //--------------------------------------------------------------
 void shaderBlur::setup(int fboW, int fboH){	
 	
-	ofBackground(255,255,255);	
-	ofSetVerticalSync(true);
+	
 	
 	fbo1 = new ofxFBOTexture();
 	fbo1->allocate(fboW, fboH, GL_RGBA);
@@ -52,6 +51,10 @@ void shaderBlur::setBlurParams(int numPasses, float blurDist){
 	blurDistance	= blurDist;
 }
 
+ofxFBOTexture * shaderBlur::getFboReference() {
+	return fbo1;
+}
+
 //--------------------------------------------------------------
 ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useShader){
 	
@@ -59,8 +62,12 @@ ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useS
 	src = fbo1;
 	dst = fbo2;
 	
-	if ( blurPct*blurDistance <= 0.0 ) useShader = false; 
+	if ( blurPct*blurDistance <= 0.0 ) {
+		useShader = false; 
+	} else {
+		useShader = true; 
 	
+	}
 	
 	
 	
@@ -68,6 +75,9 @@ ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useS
 				
 		for(int i = 0; i < noPasses; i++){
 			//float blurPer =  blurDistance * ofMap(i, 0, noPasses, 1.0/noPasses, 1.0);
+			
+			
+			
 			
 			//first the horizontal shader 
 			shaderH.setShaderActive(true);

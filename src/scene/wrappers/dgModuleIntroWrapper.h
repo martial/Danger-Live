@@ -20,7 +20,7 @@ class dgModuleIntroWrapper : public dgAbstractModuleWrapper {
 	
 	public:
 	
-	void setup(moduleData * relatedModule, string name);
+	void setup(moduleData * relatedModule, dgVideoModule * videoModule, string name);
 	void update();
 	void draw();
 	

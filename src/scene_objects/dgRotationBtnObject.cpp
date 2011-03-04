@@ -15,11 +15,11 @@ dgRotationBtnObject::dgRotationBtnObject() {
 
 dgRotationBtnObject::~dgRotationBtnObject() {
 	
-	img->clear();
+	//img->clear();
 	//delete img;
 	
 	for (int i=0; i<frontImages.size(); i++) {
-		frontImages[i]->clear();
+		//frontImages[i]->clear();
 		delete frontImages[i];
 		frontImages[i] = NULL;
 	}
@@ -32,8 +32,8 @@ void dgRotationBtnObject::setup (string imgURL, string name, string type) {
 	dgSceneObject::setup(name, type);
 	
 	img = imgAssets->addImage(imgURL);
-	this->width = img->width;
-	this->height = img->height;
+	this->width = img->getWidth();
+	this->height = img->getHeight();
 	
 	easePct = pct;
 	blurRate = .3;
@@ -42,7 +42,7 @@ void dgRotationBtnObject::setup (string imgURL, string name, string type) {
 
 void dgRotationBtnObject::addExtraImage(string url) {
 	
-	ofImage * img = imgAssets->addImage(url);
+	ofTexture * img = imgAssets->addImage(url);
 	frontImages.push_back(img);
 	
 	
@@ -80,9 +80,9 @@ void dgRotationBtnObject::draw () {
 	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
 	
 	ofPushMatrix();
-	ofTranslate(img->width*.5, img->height*.5, 0);
+	ofTranslate(img->getWidth()*.5, img->getHeight()*.5, 0);
 	ofRotate(btnRotation, 0, 0, 1);
-	img->draw(-img->width*.5, -img->height*.5);
+	img->draw(-img->getWidth()*.5, -img->getHeight()*.5);
 	ofPopMatrix();
 	
 	for (int i=0; i<frontImages.size(); i++) {

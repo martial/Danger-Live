@@ -23,6 +23,9 @@ class oscObjectManager {
 	void draw();
 	
 	void addReferents();
+	void updateMultiplierReferents();
+	
+	void onBeatEvent();
 	
 	void addObject(string adress, bool isStateAdress, string multiplier = "");
 	oscObject * getObjectsByAdress(string adress, string multiplier) ;

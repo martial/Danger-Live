@@ -17,7 +17,7 @@ dgImgSequenceObject::dgImgSequenceObject() {
 dgImgSequenceObject::~dgImgSequenceObject() {
 	
 	for ( int i= 0; i< images.size(); i++) {
-		images[i]->clear();
+		//images[i]->clear();
 		//delete images[i];
 	}
 	images.clear();
@@ -51,8 +51,8 @@ void dgImgSequenceObject::setup (string folderOn, string folderOff, string name 
 	
 	//addExtraImage(imgURL);
 	
-	this->width = images[0]->width;
-	this->height = images[0]->height;
+	this->width = images[0]->getWidth();
+	this->height = images[0]->getHeight();
 	
 	easePct = pct;
 	blurRate = .35;
@@ -66,19 +66,19 @@ void dgImgSequenceObject::addExtraImage(string url, string imgSet) {
 	
 	if ( imgSet =="off_state" ) {
 	
-	ofImage * img = imgAssets->addImage(url);
+	ofTexture * img = imgAssets->addImage(url);
 	imagesOff.push_back(img);
 	
-	this->width = img->width*.5;
-	this->height = img->height * .5;
+	this->width = img->getWidth()*.5;
+	this->height = img->getHeight() * .5;
 	
 	} else  {
 		
-	ofImage * img = imgAssets->addImage(url);
+	ofTexture * img = imgAssets->addImage(url);
 	images.push_back(img);
 		
-	this->width = img->width*.5;
-	this->height = img->height * .5;
+	this->width = img->getWidth()*.5;
+	this->height = img->getHeight() * .5;
 		
 		
 	}
@@ -92,6 +92,8 @@ void dgImgSequenceObject::addExtraImage(string url, string imgSet) {
 void dgImgSequenceObject::update () {
 	
 	dgSceneObject::update();
+	
+	
 	
 	easePct = blurRate * easePct + (1 - blurRate) * pct;
 	currentIndex = floor((easePct * (images.size())) + 0.5);
@@ -114,15 +116,26 @@ void dgImgSequenceObject::draw () {
 	ofPushMatrix();
 	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
 	
-	if (imagesOff.size() == images.size()) {
+	if ( currentIndex >= 0 && currentIndex <= images.size() -1) {
+		
+	if (imagesOff.size() == images.size() && statePct == 0.0) {
 		imagesOff[currentIndex]->draw(0,0);
-	}
+	} 
 	
 	if ( statePct > 0 ) { 
-	ofSetColor(255, 255, 255, statePct * 255);
-	images[currentIndex]->draw(0, 0);
+		ofSetColor(255, 255, 255, statePct * 255);
+		images[currentIndex]->draw(0, 0);
+	} else {
+			
+		if (imagesOff.size() <= 0 ) {
+			ofSetColor(255, 255, 255, 255);
+			images[0]->draw(0, 0);
+		}
 	}
+		
 	
+	
+	}
 	
 	ofPopMatrix();
 	ofDisableAlphaBlending();

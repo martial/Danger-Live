@@ -11,6 +11,7 @@
 #define _OSC_OBJ
 
 #include "ofMain.h"
+#include "ofxTimer.h"
 
 
 class oscObject {
@@ -20,6 +21,7 @@ class oscObject {
 	oscObject();
 	
 	void setMultiplierReferent(oscObject * referent);
+	
 	oscObject	* multiplierReferent;
 	
 	string oscAdress;
@@ -30,10 +32,12 @@ class oscObject {
 	
 	
 	void setPct(float val);
+	void setPct(float val, float duration);
+	void onTimerComplete(ofEventArgs & ahou);
 	
 	ofEvent<float>	onPctChangeEvent;
 	
-	
+	ofxTimer		timer;
 	
 	
 	private:

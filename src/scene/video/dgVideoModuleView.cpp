@@ -17,12 +17,29 @@ void dgVideoModuleView::setup (dgVideoDataSet & videoSet) {
 	currentVideoID = 0;
 	currentVideoDuration = 0;
 	isWaitingForBeat = false;
+	
+	#ifdef USEOFXQTKIT
+	fboVideo = new ofxFBOTexture();
+	fboVideo->clear(0, 0, 0, 0);
+	fboVideo->allocate(this->videoSet->videos[0]->getWidth(), this->videoSet->videos[0]->getHeight(), GL_RGB);
+	#endif
+	
+	
+	
+	
+	
 }
 
 void dgVideoModuleView::update() {
 	
 	// weird.
 	#ifdef USEOFXQTKIT
+	
+	// update fbo
+	fboVideo->begin();
+	videoSet->videos[currentVideoID]->draw(0,0);
+	fboVideo->end();
+	
 	#else
 	videoSet->videos[currentVideoID]->play();
 	#endif
@@ -48,12 +65,39 @@ void dgVideoModuleView::draw() {
 	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
 	
 	
+	#ifdef USEOFXQTKIT
+	
+	
+	
+	fboVideo->draw(x, y,videoSize.x,videoSize.y);
+	
+	#else
+	
+	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
+	
+		
+	#endif
+	
+	
 	//printf("draw video\n");
 	
 	//videoSet->videos[currentVideoID]->draw(0,0);
 	
 	
 }
+
+ofTexture * dgVideoModuleView::getVideoTexture () {
+	
+	#ifndef USEOFXQTKIT
+	return &videoSet->videos[currentVideoID]->getTextureReference();
+	#else 
+	return fboVideo;
+	#endif
+	
+	
+	
+}
+
 
 void dgVideoModuleView::goNext() {
 	
@@ -88,8 +132,14 @@ void dgVideoModuleView::play() {
 	
 	currentVideoDuration = videoSet->videos[currentVideoID]->getDuration();
 	videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
-	//videoSet->videos[currentVideoID]->setSpeed(1.0);
 	videoSet->videos[currentVideoID]->play();
+	
+	// if ofxqtkit, grab a fbo of video
+	
+	#ifdef USEOFXQTKIT
+	//fboVideo->clear(0, 0, 0, 0);
+	//fboVideo->allocate(videoSet->videos[currentVideoID]->getWidth(), videoSet->videos[currentVideoID]->getHeight(), GL_RGB);
+	#endif
 	
 }
 
@@ -99,7 +149,7 @@ void dgVideoModuleView::stop() {
 		videoSet->videos[i]->setPosition(0);
 		
 		#ifdef USEOFXQTKIT
-		videoSet->videos[i]->pause();
+		videoSet->videos[i]->stop();
 		#else 
 		videoSet->videos[i]->stop();
 		#endif

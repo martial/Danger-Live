@@ -13,8 +13,7 @@
 //--------------------------------------------------------------
 void colorShader::setup(int fboW, int fboH){	
 	
-	ofBackground(255,255,255);	
-	//ofSetVerticalSync(true);
+
 	
 	fbo1 = new ofxFBOTexture();
 	fbo1->allocate(fboW, fboH, GL_RGBA);
@@ -32,9 +31,9 @@ void colorShader::setup(int fboW, int fboH){
 	saturation = 1.0;
 	contrast = 1.0;
 	
-	saturationPct = 1.0;
+	saturationPct = 0.0;
 	contrastPct = 1.0;
-	brightnessPct = 1.0;
+	brightnessPct = 0.0;
 	
 	
 }

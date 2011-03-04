@@ -15,6 +15,9 @@
 #include "dgVideoDataSet.h"
 #include "ofxVec2f.h"
 #include "ofxUtils.h"
+#include "ofxFBOTexture.h"
+
+#define USEOFXQTKIT
 
 class dgVideoModuleView {
 	
@@ -22,6 +25,8 @@ class dgVideoModuleView {
 	void setup (dgVideoDataSet & videoSet);
 	void update();
 	void draw();
+	
+	ofTexture	* getVideoTexture();
 	
 	void onBeatEvent (float beatTime);
 	
@@ -41,6 +46,9 @@ class dgVideoModuleView {
 	ofEvent<int>		beatEvent;
 	bool				isWaitingForBeat;
 	
+	#ifdef USEOFXQTKIT
+	ofxFBOTexture	*	fboVideo;
+	#endif
 };
 
 #endif

@@ -13,6 +13,22 @@
 		</medias>
 		
 	</comp>
+	
+	 <comp>
+		
+		<name>knob_big_a_led_a</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/GROS/bouton-rotatif-gros-a-on</url>
+		<url_off>components/ROTATIFS/GROS/bouton-rotatif-gros-a-off</url_off>
+		<medias>
+		</medias>
+		
+		<activity_switch>
+            <id>LED_A</id>
+            <position x="-165" y="70"></position>
+        </activity_switch>
+		
+	</comp>
     
     <comp>
 		
@@ -22,6 +38,39 @@
 		<url_off>components/ROTATIFS/GROS/bouton-rotatif-gros-b-off</url_off>
 		<medias>
 		</medias>
+		
+	</comp>
+	
+	
+	   <comp>
+		
+		<name>knob_big_b_led_a</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/GROS/bouton-rotatif-gros-b-on</url>
+		<url_off>components/ROTATIFS/GROS/bouton-rotatif-gros-b-off</url_off>
+		<medias>
+		</medias>
+		
+		<activity_switch>
+            <id>LED_A</id>
+            <position x="-167" y="45"></position>
+        </activity_switch>
+		
+	</comp>
+    
+     <comp>
+		
+		<name>knob_big_b_led_on</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/GROS/bouton-rotatif-gros-b-on</url>
+		<url_off>components/ROTATIFS/GROS/bouton-rotatif-gros-b-off</url_off>
+		<medias>
+		</medias>
+		
+		<activity_switch>
+            <id>SWITCHER_SQUARE_ON</id>
+            <position x="0" y="180"></position>
+        </activity_switch>
 		
 	</comp>
     
@@ -46,10 +95,54 @@
 		</medias>
 		
 	</comp>
+	
+	<comp>
+		
+		<name>knob_med_b</name>
+		<type>image_sequence</type>
+		<url>components/ROTATIFS/MOYEN/bouton-rotatif-moyen-b</url>
+		<medias>
+		</medias>
+		
+	</comp>
     
     <!-- ROTATIFS PETITS -->
     
     <!-- images knobs -->
+	
+	<comp>
+		<name>knob_tiny_a_led_a_right_bottom</name>
+		<type>image_knob</type>
+        <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-a/potentiometre-petit-a-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+<item>-140</item>
+            <item>270</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+            
+            
+            <media>
+                <type>image</type>
+                <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-a/potentiometre-petit-a-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/ROTATIFS/PETIT/bouton-rotatif-petit-a/potentiometre-petit-a-front.png</extraurl>
+        </extras_url>
+        
+        <activity_switch>
+            <id>LED_A</id>
+            <position x="60" y="50"></position>
+        </activity_switch>		
+                        
+                                
+	</comp>
     
         <comp>
 		<name>knob_tiny_a_skin_eq_led_a_left</name>
@@ -57,8 +150,8 @@
         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-a/potentiometre-petit-a-centre.png</url>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>-30</item>
-            <item>235</item>
+<item>-140</item>
+            <item>270</item>
         </config>
 		
         
@@ -94,8 +187,8 @@
         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-a/potentiometre-petit-a-centre.png</url>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>-30</item>
-            <item>235</item>
+<item>-140</item>
+            <item>270</item>
         </config>
 		
         
@@ -131,8 +224,8 @@
         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-a/potentiometre-petit-a-centre.png</url>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>-30</item>
-            <item>235</item>
+<item>-140</item>
+            <item>270</item>
         </config>
 		
         
@@ -168,8 +261,8 @@
         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-centre.png</url>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>-30</item>
-            <item>235</item>
+<item>-140</item>
+            <item>270</item>
         </config>
 		
         
@@ -190,6 +283,74 @@
                         
                                 
 	</comp>
+	
+	 <comp>
+		<name>knob_tiny_c_skin_eq_led_a_left</name>
+		<type>image_knob</type>
+         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+<item>-140</item>
+            <item>270</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+                        
+            <media>
+                <type>image</type>
+                <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-front.png</extraurl>
+        </extras_url>
+        
+        <activity_switch>
+            <id>LED_A</id>
+            <position x="-60" y="-60"></position>
+        </activity_switch>		
+                        
+                                
+	</comp>
+	
+	<comp>
+		<name>knob_tiny_c_skin_eq_led_a_right</name>
+		<type>image_knob</type>
+         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-centre.png</url>
+        <config>
+            <!-- this value is the total width of possible drag-->
+<item>-140</item>
+            <item>270</item>
+        </config>
+		
+        
+        <!-- back -->
+		<medias>
+                        
+            <media>
+                <type>image</type>
+                <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-back.png</url>
+            </media>
+        </medias>
+        
+        <!-- front -->
+        <extras_url>
+            <extraurl>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-front.png</extraurl>
+        </extras_url>
+        
+       
+        
+        <activity_switch>
+            <id>LED_A</id>
+            <position x="60" y="-60"></position>
+        </activity_switch>		
+                        
+                                
+	</comp>
     
     
     
@@ -199,8 +360,8 @@
         <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-c/bouton-rotatif-petit-c-centre.png</url>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>-30</item>
-            <item>235</item>
+<item>-140</item>
+            <item>270</item>
         </config>
 		
         
@@ -261,6 +422,19 @@
         </activity_switch>
       		                                
 	</comp>
+	
+	<comp>
+		<name>knob_tiny_b_led_a_left_bottom</name>
+		<type>image_sequence</type>
+        <url>components/ROTATIFS/PETIT/bouton-rotatif-petit-b</url>
+        
+        <activity_switch>
+            <id>LED_A</id>
+            <position x="-50" y="40"></position>
+        </activity_switch>
+      		                                
+	</comp>
+
 
     
     <comp>
@@ -302,6 +476,18 @@
     
      <comp>
 		
+		<name>skin-bouton-rotatif-gros-e</name>
+		<type>opacity_switch</type>
+		<url>components/SKIN/skin-bouton-rotatif-gros-e/skin-bouton-rotatif-gros-e-off.png</url>
+		
+		 <extras_url>
+            <extraurl>components/SKIN/skin-bouton-rotatif-gros-e/skin-bouton-rotatif-gros-e-on.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
+     <comp>
+		
 		<name>skin-bouton-rotatif-gros-c-onoff</name>
 		<type>opacity_switch</type>
 		<url>components/SKIN/skin-bouton-rotatif-gros-c/skin-gros-c-off.png</url>
@@ -326,14 +512,10 @@
     
      <comp>
 		
-		<name>skin-bouton-rotatif-moyen-e-onoff</name>
-		<type>opacity_switch</type>
-		<url>components/SKIN/skin-bouton-rotatif-moyen-e/skin-moyen-e-off.png</url>
-		
-		 <extras_url>
-            <extraurl>components/SKIN/skin-bouton-rotatif-moyen-e/skin-moyen-e-on.png</extraurl>
-        </extras_url>
-		
+		<name>skin-bouton-rotatif-moyen-leds</name>
+		<type>image_sequence</type>
+		<url>components/SKIN/skin-bouton-rotatif-moyen-leds</url>
+				
 	</comp>
     
      <comp>
@@ -345,15 +527,27 @@
 		</medias>
 		
 	</comp>
+    
+    <comp>
+		
+		<name>skin-bouton-rotatif-petit-d</name>
+		<type>opacity_switch</type>
+		<url>components/SKIN/skin-bouton-rotatif-petit-d/skin-petit-d-off.png</url>
+		
+		 <extras_url>
+            <extraurl>components/SKIN/skin-bouton-rotatif-petit-d/skin-petit-d-on.png</extraurl>
+        </extras_url>
+		
+	</comp>
 
     <!-- SWITCHS -->
     
     <comp>
 		<name>BOUTON_POUSSOIR_A</name>
 		<type>switch</type>
-		<url>components/BOUTON_POUSSOIR_A/bouton-poussoir-a-off.png</url>
+		<url>components/BOUTON_POUSSOIR_A/b-poussoir-a-off.png</url>
 		<extras_url>
-            <extraurl>components/BOUTON_POUSSOIR_A/bouton-poussoir-a-off.png</extraurl>
+            <extraurl>components/BOUTON_POUSSOIR_A/b-poussoir-a-on.png</extraurl>
         </extras_url>		
 	</comp>
     
@@ -402,7 +596,7 @@
 		<extras_url>
             <extraurl>components/LED_A/led-a-02.png</extraurl>
             <extraurl>components/LED_A/led-a-03.png</extraurl>
-            <extraurl>components/LED_A/led-a-04.png</extraurl>
+            <!--<extraurl>components/LED_A/led-a-04.png</extraurl>-->
         </extras_url>		
 	</comp>
     
@@ -426,6 +620,37 @@
             <extraurl>components/LED_C/led-c-03.png</extraurl>
         </extras_url>		
 	</comp>
+	
+	<comp>
+		<name>LED_D</name>
+		<type>opacity_switch</type>
+		<url>components/LED_D/LED-D-01.png</url>
+		<extras_url>
+            <extraurl>components/LED_D/LED-D-02.png</extraurl>
+            <extraurl>components/LED_D/LED-D-03.png</extraurl>
+        </extras_url>		
+	</comp>
+	
+	<comp>
+		<name>VUMETRE_A</name>
+		<type>switch</type>
+		<url>components/VUMETRE_A/vumetre-a-01.png</url>
+		<extras_url>
+            <extraurl>components/VUMETRE_A/vumetre-a-01b.png</extraurl>
+			<extraurl>components/VUMETRE_A/vumetre-a-02.png</extraurl>
+			<!--<extraurl>components/VUMETRE_A/vumetre-a-03.png</extraurl>-->
+        </extras_url>		
+	</comp>
+	
+	<comp>
+		<name>VUMETRE_B</name>
+		<type>switch</type>
+		<url>components/VUMETRE_B/vumetre-b-off.png</url>
+		<extras_url>
+            <extraurl>components/VUMETRE_B/vumetre-b-on.png</extraurl>
+			
+        </extras_url>		
+	</comp>
     
      <comp>
 		<name>VUMETRE_C</name>
@@ -433,6 +658,15 @@
 		<url>components/VUMETRE_C/vumetre-c-off.png</url>
 		<extras_url>
             <extraurl>components/VUMETRE_C/vumetre-c-on.png</extraurl>
+        </extras_url>		
+	</comp>
+	
+	 <comp>
+		<name>VUMETRE_D</name>
+		<type>switch</type>
+		<url>components/VUMETRE_D/vumetre-d-off.png</url>
+		<extras_url>
+            <extraurl>components/VUMETRE_D/vumetre-d-on.png</extraurl>
         </extras_url>		
 	</comp>
 
@@ -465,19 +699,33 @@
      <comp>
 		<name>SWITCHER_HORIZONTAL_LP</name>
 		<type>switch</type>
-		<url>components/SWITCHER_HORIZONTAL/switch-lowpass-off.png</url>
+		<url>components/SWITCHER_HORIZONTAL/switcher-horizontal-lowpass-off.png</url>
 		<extras_url>
-            <extraurl>components/SWITCHER_HORIZONTAL/switch-lowpass-on.png</extraurl>
+            <extraurl>components/SWITCHER_HORIZONTAL/switcher-horizontal-lowpass-on.png</extraurl>
         </extras_url>		
 	</comp>
     
     <comp>
 		<name>PAD</name>
 		<type>switch</type>
-		<url>components/PAD/pad/pad-bas.png</url>
+		<url>components/PAD/pad/pad-haut.png</url>
 		<extras_url>
-            <extraurl>components/PAD/pad/pad-haut.png</extraurl>
+            <extraurl>components/PAD/pad/pad-bas.png</extraurl>
         </extras_url>		
+	</comp>
+    
+    <comp>
+		<name>PAD_ACTIVITY</name>
+		<type>switch</type>
+		<url>components/PAD/pad/pad-haut.png</url>
+		<extras_url>
+            <extraurl>components/PAD/pad/pad-bas.png</extraurl>
+        </extras_url>
+        
+        <activity_switch>
+            <id>LED_A</id>
+            <position x="-60" y="-60"></position>
+        </activity_switch>			
 	</comp>
     
      <comp>
@@ -494,7 +742,7 @@
 		<type>switch</type>
 		<url>components/PAD/pad-rouge/pad-rouge-bas.png</url>
 		<extras_url>
-            <extraurl>components/PAD/pad/pad-rouge-haut.png</extraurl>
+            <extraurl>components/PAD/pad-rouge-haut.png</extraurl>
         </extras_url>		
 	</comp>
     
@@ -503,12 +751,13 @@
 		
 		<name>danger_opacity</name>
 		<type>opacity_switch</type>
-		<url>components/DECOUPE_DANGER/decoupedanger0.png</url>
+		<url>components/DECOUPE_DANGER/decoupedanger3.png</url>
 		
 		 <extras_url>
-            <extraurl>components/DECOUPE_DANGER/decoupedanger1.png</extraurl>
             <extraurl>components/DECOUPE_DANGER/decoupedanger2.png</extraurl>
-            <extraurl>components/DECOUPE_DANGER/decoupedanger3.png</extraurl>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger1.png</extraurl>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger0.png</extraurl>
+            
         </extras_url>
 		
 	</comp>
@@ -523,7 +772,25 @@
             <extraurl>components/SWITCHER_HORIZONTAL/switcher-horizontal-haut.png</extraurl>
         </extras_url>		
 	</comp>
+	
+	<comp>
+		<name>SWITCHER_SQUARE_ON</name>
+		<type>switch</type>
+		<url>components/SWITCHER_SQUARE/switch-on-off.png</url>
+		<extras_url>
+            <extraurl>components/SWITCHER_SQUARE/switch-on-on.png</extraurl>
+        </extras_url>		
+	</comp>
     
+    
+     <comp>
+		<name>SKIN_TINY_C</name>
+		<type>switch</type>
+		<url>components/SKIN/skin-bouton-rotatif-petit-c/skin-petit-d-off.png</url>
+		<extras_url>
+            <extraurl>components/SKIN/skin-bouton-rotatif-petit-c/skin-petit-d-on.png</extraurl>
+        </extras_url>		
+	</comp>
     
     <!-- Faders -->
     
@@ -534,7 +801,7 @@
             <!-- this value is the total width of possible drag-->
             <item>215</item>
         </config>
-		<url>components/CROSSFADER/crossfader-fader.png</url>
+		<url>components/CROSSFADER/crossfader-fader2.png</url>
 		<medias>
             <media>
             <type>image</type>
@@ -556,7 +823,37 @@
             <type>image</type>
             <url>components/FADER/fader-vertical-reperes.png</url>
         </media>
-        </medias>		
+        </medias>	
+        
+        <activity_switch>
+            <id>BOUTON_POUSSOIR_B</id>
+            <position x="-128" y="-105"></position>
+            <rotation>-90</rotation>
+        </activity_switch>	
+                	
+	</comp>
+    
+    <comp>
+		<name>FADER_REVERSE</name>
+		<type>fader</type>
+        <config>
+            <!-- this value is the total width of possible drag-->
+            <item>192</item>
+        </config>
+		<url>components/FADER/fader-vertical-fader.png</url>
+		<medias>
+            <media>
+            <type>image</type>
+            <url>components/FADER/fader-vertical-reperes.png</url>
+        </media>
+        </medias>	
+        
+        <activity_switch>
+            <id>BOUTON_POUSSOIR_B</id>
+            <position x="-184" y="-105"></position>
+            <rotation>-90</rotation>
+        </activity_switch>	
+                	
 	</comp>
     
     
@@ -569,7 +866,7 @@
 		
 		<config>
             <!-- width-->
-            <item>500</item>
+            <item>750</item>
             <!-- height-->
             <item>2</item>
              
@@ -578,6 +875,20 @@
 	</comp>
     
         <!-- images -->
+		
+	<comp>
+		<name>PAD_PLAY</name>
+		<type>image</type>
+        <url>components/PAD_PLAY/pad-play.png</url>
+
+	</comp>
+	
+	<comp>
+		<name>PAD_REC</name>
+		<type>image</type>
+        <url>components/PAD_PLAY/pad-rec.png</url>
+
+	</comp>
 
     <comp>
 		<name>numero-multipistes_1</name>
@@ -618,15 +929,15 @@
             <!-- columns-->
             <item>2</item>
             <!-- row-->
-            <item>10</item>
+            <item>12</item>
             <!-- blur rate-->
             <item>.1</item>
             
              <!-- xpadding -->
-            <item>2</item>
+            <item>20</item>
             
              <!-- yPadding -->
-            <item>10</item>
+            <item>13</item>
             
         </config>
         
@@ -641,7 +952,7 @@
             <!-- columns-->
             <item>2</item>
             <!-- row-->
-            <item>112</item>
+            <item>104</item>
             <!-- blur rate-->
             <item>.1</item>
             
@@ -652,6 +963,53 @@
             <item>-3</item>
              <!-- rotate switch -->
             <item>0</item>
+            
+        </config>
+		
+		</comp>
+		
+		<comp>
+		<name>VUMETRE_C_1_148</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_C</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>178</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>4</item>
+            
+             <!-- yPadding -->
+            <item>-3</item>
+             <!-- rotate switch -->
+            <item>0</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>METER_LED_C_1_13</name>
+		<type>meter</type>
+        <switch_id>LED_C</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>13</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>2</item>
+            
+             <!-- yPadding -->
+            <item>2</item>
             
         </config>
         
@@ -680,6 +1038,219 @@
         
 			
 	</comp>
+	
+	 <comp>
+		<name>METER_VU_B_1_6</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_B</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>5</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>0</item>
+            
+             <!-- yPadding -->
+            <item>-24</item>
+			<item>0</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>METER_VU_B_1_12</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_B</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>10</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>0</item>
+            
+             <!-- yPadding -->
+            <item>-24</item>
+			<item>0</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>METER_VU_B_1_24</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_B</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>26</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>0</item>
+            
+             <!-- yPadding -->
+            <item>-24</item>
+			<item>0</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>METER_LED_A_1_24</name>
+		<type>meter</type>
+        <switch_id>LED_A</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>24</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>2</item>
+            
+             <!-- yPadding -->
+            <item>-10</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>METER_LED_A_1_46</name>
+		<type>meter</type>
+        <switch_id>LED_A</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>46</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>2</item>
+            
+             <!-- yPadding -->
+            <item>-10</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>METER_LED_C_1_14</name>
+		<type>meter</type>
+        <switch_id>LED_C</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>14</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>14</item>
+            
+             <!-- yPadding -->
+            <item>19</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>VUMETER_A_2_24</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_A</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>30</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>-20</item>
+            
+             <!-- yPadding -->
+            <item>-38</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>VUMETER_D_1_24</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_D</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>64</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>-20</item>
+            
+             <!-- yPadding -->
+            <item>-29</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	<comp>
+		<name>VUMETER_MASTER_A_2_24</name>
+		<type>meter</type>
+        <switch_id>VUMETRE_A</switch_id>
+        <config>
+            <!-- columns-->
+            <item>2</item>
+            <!-- row-->
+            <item>30</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>-20</item>
+            
+             <!-- yPadding -->
+            <item>-36</item>
+            
+        </config>
+        
+			
+	</comp>
+	
+	
+	
        
 
 	

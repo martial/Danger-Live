@@ -25,6 +25,7 @@ void dgVideoDataSet::addVideo(string url) {
 	video->loadMovie(url,1);
 #else 
 	ofVideoPlayer * video = new ofVideoPlayer();
+	video->setUseTexture(true);
 	video->loadMovie(url);
 #endif
 	

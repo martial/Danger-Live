@@ -17,6 +17,7 @@ void bloomEffect::setup(string name) {
 	
 	transformedColor.setup("transformed");
 	
+		
 	
 	filteredFbo = new ofxFBOTexture();
 	filteredFbo->allocate(1920, 1080, GL_RGBA);
@@ -32,14 +33,22 @@ void bloomEffect::init(blurEffect * blur, colorEffect * color) {
 	this->blur = blur;
 	this->color = color;
 	
+	transformedColor.setContrast(color->contrastPct , 1);
+	transformedColor.setBrightness(color->brightnessPct, 1);
+	transformedColor.setSaturation(color->contrastPct, 1);
+	
+	
 		
 }
 
 void bloomEffect::update() {
 	
 	
-	transformedColor.setContrast(color->contrastPct + .2, 1);
-	transformedColor.setBrightness(color->brightnessPct - .2, 1);
+	transformedColor.setContrast(color->contrastPct-.01, .1);
+	transformedColor.setBrightness(color->brightnessPct+1, .1);
+	transformedColor.setSaturation(color->saturationPct, .1);
+	
+	
 	
 	transformedColor.update();
 	intensityPct = intensityPctTween.update();
@@ -67,7 +76,7 @@ ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) 
 	
 	ofxFBOTexture * blurredFbo = blur->getFbo(*coloredFbo,x,y);	
 	
-	
+	//printf("intensityPct test : %f\n", blur->blurPct);
 	
 	ofxFBOTexture * finalFbo =  transformedColor.getFbo(*blurredFbo, x, y,intensityPct);
 	
@@ -75,12 +84,12 @@ ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) 
 	filteredFbo->clear(0, 0, 0, 0);
 	filteredFbo->begin();
 	
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
+	//glEnable(GL_BLEND);
+	//glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 
 	coloredFbo->draw(0, 0);
 	
-	glDisable(GL_BLEND);
+	//glDisable(GL_BLEND);
 	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE_MINUS_DST_COLOR, GL_ONE);
@@ -89,6 +98,7 @@ ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) 
 	//ofDisableAlphaBlending();
 	
 	glDisable(GL_BLEND);
+	 
 	
 	filteredFbo->end();
 	//filteredFbo->clear(0, 0, 0, 0);

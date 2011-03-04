@@ -31,8 +31,8 @@ public:
 	
 	private :
 	
-	ofImage			*		img;
-	vector<ofImage*>		imageSet;
+	ofTexture			*		img;
+	vector<ofTexture*>		imageSet;
 	int						currentIndex;
 	
 	

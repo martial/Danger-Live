@@ -12,7 +12,7 @@
 
 #include "ofMain.h"
 
-//#define USEOFXQTKIT
+#define USEOFXQTKIT
 
 #ifdef USEOFXQTKIT
 #include "ofxQTKitVideoPlayer.h"

@@ -1,0 +1,63 @@
+<scene>
+
+  
+
+	<module name="" layer="components/layers/STARTER_Variante.png">
+    
+  
+       
+       
+        <component>
+			
+			<name>progress</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="420"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+       
+                               
+        <component>
+			
+			<name>PAD_TEST</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="40" y="520"></position>
+            <rotation>0.0</rotation>
+            
+        </component>  
+        
+        <component>
+			
+			<name>PAD_ROUGE</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-60" y="500"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>LED_C</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-110" y="480"></position>
+            <rotation>0.0</rotation>
+            
+        </component>         
+        
+                
+        
+            
+	</module>
+	
+	
+	
+
+</scene>

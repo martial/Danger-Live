@@ -2,24 +2,18 @@
 
     <set>
         
-        <video>6.avi</video>
+        <video>new/QT H264 70 10fr.mov</video>
+           <video>new/QT H264 70 10fr.mov</video>
+           <video>new/QT H264 70 10fr.mov</video>
+           <video>new/QT H264 70 10fr.mov</video>      
+    
+    </set>
+    
+     <set>
         <video>5.avi</video>
-        <video>3.avi</video>
-        
+                
     
     </set>
     
-     <set>
-        
-        <video>6.avi</video>
-    
-    </set>
-    
-     <set>
-        
-        <video>11.avi</video>
-    
-    </set>
-
-	
+     	
 </videos>

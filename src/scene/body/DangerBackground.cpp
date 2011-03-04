@@ -23,7 +23,7 @@ void DangerBackground::setup () {
 	
 	
 	//DIR.setVerbose(false);
-    int numfOfImgs = DIR.listDir("images/DIGITAL");
+    int numfOfImgs = DIR.listDir("components/DIGITAL");
 	
 	for (int i = 0; i<numfOfImgs; i++) {
 		ofImage * img = new ofImage();
@@ -53,13 +53,14 @@ void DangerBackground::draw (int viewID) {
 		
 	background.draw(x,y,imgSize.x, imgSize.y);
 	
-	float ofMidWidth = 1920 * .5;
-	int digitalXPos = ofMidWidth - digitalPlaceholder.width * .5;
-	int digitalYPos = 40;
+	
 	
 	//printf("view id %d\n",viewID);
 	if ( viewID >= 0 && viewID < digitalLeds.size() -1 ) {
-	digitalLeds[viewID]->draw(digitalXPos, digitalYPos);
+		float ofMidWidth = 1920 * .5;
+		int digitalXPos = ofMidWidth - digitalLeds[viewID]->width * .5;
+		int digitalYPos = 40;
+		digitalLeds[viewID]->draw(digitalXPos, digitalYPos);
 	}
 	
 	

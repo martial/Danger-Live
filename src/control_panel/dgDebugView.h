@@ -23,6 +23,7 @@ class dgDebugView {
 	void setup();
 	void draw();
 	void drawSceneFbo (ofxFBOTexture * texture, float width, float height, float scale);
+	void drawCurrentVideo (ofTexture * videoTexture, float width, float height, float scale);
 	void onBeatEvent();
 	
 	bool	visible;

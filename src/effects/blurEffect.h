@@ -28,6 +28,7 @@ class blurEffect : public dgAbstractEffect {
 	void init();
 	void update();
 	ofxFBOTexture * getFbo(ofxFBOTexture & fbo, int x, int y);	
+	ofxFBOTexture * getFboReference();	
 	float		blurPct;
 	
 	

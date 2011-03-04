@@ -18,6 +18,8 @@ void blurEffect::setup(string name) {
 	
 	blurPct = 2.0;
 	
+	//printf("setuyp blur \n");
+	
 }
 
 void blurEffect::init() {
@@ -28,6 +30,8 @@ void blurEffect::init() {
 void blurEffect::update() {
 	
 	blur.blurPct = blurPctTween.update();
+	
+	
 	//blur.blurPct  = 2.0;
 }
 
@@ -62,7 +66,6 @@ void blurEffect::setBlurPct (float pct, float duration) {
 
 ofxFBOTexture * blurEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
 	
-	
 	blur.beginRender();
 	fbo.draw(0, 0, 1920, 1080);
 	blur.endRender();
@@ -73,3 +76,18 @@ ofxFBOTexture * blurEffect::getFbo(ofxFBOTexture & fbo, int x, int y) {
 	
 	
 }
+
+ofxFBOTexture * blurEffect::getFboReference() {
+	
+
+	
+	return blur.getFboReference();
+	//blur.draw(0, 0, 1440, 900, true);
+	
+	
+	
+}
+
+
+
+

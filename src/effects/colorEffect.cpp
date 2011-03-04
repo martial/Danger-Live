@@ -18,9 +18,14 @@ void colorEffect::setup(string name) {
 	contrastPct = 1.0;
 	brightnessPct = 1.0;
 	
+	brightnessPctVariation = 0.0;
+	contrastPctVariation = 0.0;
+	saturationPctVariation = 0.0;
+	
 	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.saturationPct, 1.0, 0, 0);
 	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, 1.0, 0, 0);
 	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.brightnessPct, 1.0, 0, 0);
+	
 	
 
 }
@@ -30,9 +35,9 @@ void colorEffect::init() {
 
 void colorEffect::update() {
 	
-	saturationPct = clrShader.saturationPct = saturationPctTween.update();
-	contrastPct = clrShader.contrastPct = contrastPctTween.update();
-	brightnessPct = clrShader.brightnessPct = brightnessPctTween.update();
+	saturationPct = clrShader.saturationPct = saturationPctTween.update() + saturationPctVariation;
+	contrastPct = clrShader.contrastPct = contrastPctTween.update() + contrastPctVariation;
+	brightnessPct = clrShader.brightnessPct = brightnessPctTween.update() +brightnessPctVariation;
 	
 }
 
@@ -55,7 +60,7 @@ void colorEffect::fadeOutAll (int & e) {
 	
 	ofRemoveListener(brightnessPctTween.end_E,this,&colorEffect::fadeOutAll);
 	
-		
+	/*
 	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.saturationPct, 1.0, fadeDuration*.8, 0);
 	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.contrastPct, 1.0, fadeDuration*.3, 0);
 	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeOut, clrShader.brightnessPct, 1.0, fadeDuration*.5, 0);
@@ -64,6 +69,8 @@ void colorEffect::fadeOutAll (int & e) {
 	contrastPctTween.start();
 	brightnessPctTween.start();
 	
+	 */
+	 
 	int temp = 0;
 	ofNotifyEvent(completeBrightnessEvent, temp);
 

@@ -15,7 +15,7 @@ dgImageObject::dgImageObject() {
 
 dgImageObject::~dgImageObject() {
 	
-	img->clear();
+	//img->clear();
 	//delete img;
 	
 }
@@ -25,8 +25,8 @@ void dgImageObject::setup (string imgURL, string name, string type) {
 	dgSceneObject::setup(name, type);
 	
 	img = imgAssets->addImage(imgURL);
-	this->width = img->width;
-	this->height = img->height;
+	this->width = img->getWidth();
+	this->height = img->getHeight();
 }
 
 void dgImageObject::update () {

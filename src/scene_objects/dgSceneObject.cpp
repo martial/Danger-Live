@@ -10,6 +10,8 @@
 #include "dgSceneObject.h"
 
 dgSceneObject::dgSceneObject() {
+	
+	reversePct = false;
 
 }
 
@@ -17,7 +19,7 @@ dgSceneObject::~dgSceneObject() {
 	//printf("adios from simple object\n");
 	
 	for (int i=0; i<images.size(); i++) {
-		images[i]->clear();
+		//images[i]->clear();
 		delete images[i];
 		images[i] = NULL;
 	}
@@ -30,7 +32,7 @@ dgSceneObject::~dgSceneObject() {
 	videos.clear();
 	
 	if ( activitySwitchObject ) {
-		delete activitySwitchObject;
+		//delete activitySwitchObject;
 		activitySwitchObject = NULL;
 	}
 	
@@ -56,7 +58,7 @@ void dgSceneObject::initValues () {
 
 	if ( pctRef ) {
 		setPct(pctRef->pct);
-		easePct = pct;
+		//easePct = pct;
 	}
 	if ( pctStateRef ) {
 		setPct(pctStateRef->pct);
@@ -98,9 +100,13 @@ void dgSceneObject::setPctObjectsReference(oscObject * pctRef, oscObject * pctSt
 	this->pctRef = pctRef;
 	this->pctStateRef = pctStateRef;
 	
+	
 	if ( pctRef ) ofAddListener(pctRef->onPctChangeEvent, this, &dgSceneObject::onPctChangeHandler);
-	if ( pctStateRef ) ofAddListener(pctStateRef->onPctChangeEvent, this, &dgSceneObject::onPctStateChangeHandler);
-	//if ( pctStateRef ) 
+	if ( pctStateRef ) {
+		statePct = 0.0;
+		ofAddListener(pctStateRef->onPctChangeEvent, this, &dgSceneObject::onPctStateChangeHandler);
+	}
+		//if ( pctStateRef ) 
 }
 
 void dgSceneObject::update () {
@@ -134,7 +140,7 @@ void dgSceneObject::draw () {
 
 		ofPushMatrix();
 		ofTranslate(pos.x, pos.y, 0);
-		ofRotate((int)rotation, 0, 0, 1);
+		ofRotate((int)rotation + activitySwitchRotation, 0, 0, 1);
 		activitySwitchObject->draw();
 		ofPopMatrix();
 		ofDisableAlphaBlending();
@@ -147,8 +153,8 @@ void dgSceneObject::draw () {
 	for (int i=0; i<images.size(); i++) {
 		
 		// center pos
-		xPos =  - images[i]->width *.5;
-		yPos =  - images[i]->height *.5;
+		xPos =  - images[i]->getWidth() *.5;
+		yPos =  - images[i]->getHeight() *.5;
 		
 		ofPushMatrix();
 		ofTranslate(pos.x +xPos, pos.y +yPos, 0);
@@ -197,9 +203,14 @@ void dgSceneObject::setPosition (int x, int y) {
 
 void dgSceneObject::setPct(float pct) {
 	
-	if ( pct != this->pct   ) {
-	this->pct = pct;
+	if ( pct < this->range.x ) pct = 0.0;
+	if ( pct > this->range.y ) pct = 1.0;
+	
+	if ( pct != this->pct  ) {
+		this->pct = ( reversePct ) ? 1.0 - pct :pct;
 	}
+	
+	
 	
 }
 
@@ -213,7 +224,6 @@ void dgSceneObject::setStatePct(float pct) {
 
 void dgSceneObject::onPctChangeHandler(float & pct) {
 	setPct(pct);
-	//printf("pct change ! %f\n", pct);
 }
 
 void dgSceneObject::onPctStateChangeHandler(float & pct) {
@@ -231,7 +241,7 @@ void dgSceneObject::addMedia(string url, string mediaType) {
 	int currentIndex;
 	
 	if ( mediaType == "image" ) {
-		ofImage * img = imgAssets->addImage(url);
+		ofTexture * img = imgAssets->addImage(url);
 		images.push_back(img);
 	}
 	

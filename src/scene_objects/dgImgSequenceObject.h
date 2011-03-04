@@ -42,8 +42,8 @@ public:
 	private :
 	
 	//ofImage					img;
-	vector<ofImage*>		images;
-	vector<ofImage*>		imagesOff;
+	vector<ofTexture*>		images;
+	vector<ofTexture*>		imagesOff;
 	int						currentIndex;
 	
 	ofxDirList				DIR;

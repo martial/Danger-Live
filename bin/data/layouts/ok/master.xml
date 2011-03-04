@@ -1,0 +1,242 @@
+<scene>
+
+  
+
+	<module name="" layer="components/layers/MASTER CHAINER_BLANC.jpg">
+		
+		<!-- deux du haut -->
+    
+        <component>
+			
+			<name>knob_big_b_led_a</name>
+            <nameID></nameID>
+			<osc_adress>pitchshift1</osc_adress>
+            <osc_adress_state>pitchshift1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-240" y="300"></position>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_big_b_led_a</name>
+            <nameID></nameID>
+			<osc_adress>bitred1</osc_adress>
+             <osc_adress_state>bitred1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="240" y="300"></position>
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-gros-a</name>
+            <nameID></nameID>
+			<osc_adress>pitchshift1</osc_adress>
+             <osc_adress_state>pitchshift1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-240" y="240"></position>
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-gros-a</name>
+            <nameID></nameID>
+			<osc_adress>bitred1</osc_adress>
+            <osc_adress_state>bitred1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="240" y="240"></position>
+            
+		
+        </component>
+		
+		
+		<!-- centre-->
+        
+          <component>
+			
+			<name>knob_big_c</name>
+            <nameID></nameID>
+			<osc_adress>reverb1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="720"></position>
+            
+		
+        </component>
+        
+		<!-- bas-->
+        <component>
+			
+			<name>knob_big_a_led_a</name>
+            <nameID></nameID>
+			<osc_adress>lowpass1</osc_adress>
+             <osc_adress_state>lowpass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-520" y="620"></position>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_big_a_led_a</name>
+            <nameID></nameID>
+			<osc_adress>hipass1</osc_adress>
+             <osc_adress_state>hipass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="520" y="620"></position>
+            
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-gros-a</name>
+            <nameID></nameID>
+			<osc_adress>lowpass1</osc_adress>
+             <osc_adress_state>lowpass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-520" y="585"></position>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-gros-a</name>
+            <nameID></nameID>
+			<osc_adress>hipass1</osc_adress>
+            <osc_adress_state>hipass1_onoff</osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="520" y="585"></position>
+            
+            
+		
+        </component>
+        
+        
+        
+        <component>
+			
+			<name>lp</name>
+            <nameID></nameID>
+			<osc_adress>lowpass1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="265"></position>
+           
+            
+		
+        </component>
+
+
+        <component>
+			
+			<name>hp</name>
+            <nameID></nameID>
+			<osc_adress>hipass1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="320"></position>
+            
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+            <nameID></nameID>
+			<osc_adress>reverb1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="460"></position>
+           
+            
+		
+        </component>
+
+       
+         <!-- poussoir gauche droite -->
+		 
+		 <component>
+			
+			<name>BOUTON_POUSSOIR_A</name>
+            <nameID></nameID>
+			<osc_adress>pitchshift1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-520" y="270"></position>
+           
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>BOUTON_POUSSOIR_A</name>
+            <nameID></nameID>
+			<osc_adress>lowpass1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-520" y="335"></position>
+           
+            
+		
+        </component>
+		
+		 <component>
+			
+			<name>BOUTON_POUSSOIR_A</name>
+            <nameID></nameID>
+			<osc_adress>bitred1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="520" y="270"></position>
+           
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>BOUTON_POUSSOIR_A</name>
+            <nameID></nameID>
+			<osc_adress>hipass1_onoff</osc_adress>
+			<range min="" max = ""></range>
+			<position x="520" y="335"></position>
+           
+            
+		
+        </component>
+		 
+       			
+		<! -- vu metres -->
+		
+		
+		
+		<component>
+			
+			<name>METER_LED_C_1_13</name>
+            <nameID></nameID>
+			<osc_adress>/signal/Master/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-800" y="480"></position>
+           
+        </component>
+		
+		<component>
+			
+			<name>METER_LED_C_1_13</name>
+            <nameID></nameID>
+			<osc_adress>/signal/Master/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="800" y="480"></position>
+           
+        </component>
+				
+	</module>
+	
+	
+	
+
+</scene>

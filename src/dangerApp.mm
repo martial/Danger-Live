@@ -12,20 +12,25 @@ void dangerApp::setup(){
 	
 	/* Screen */
 	ofSetVerticalSync(true);	
-	MSA::ofxCocoa::setSyncToDisplayLink(false);
-	ofSetFrameRate(35);
-	ofSetLogLevel(OF_LOG_NOTICE);
+	//MSA::ofxCocoa::setSyncToDisplayLink(false);
+	ofSetFrameRate(60);
+	//ofSetLogLevel(OF_LOG_NONE);
 	
 	screen1Size = MSA::ofxCocoa::getSizeForScreen(0);
 	if ( MSA::ofxCocoa::getNumberOfScreen() > 1 ) {
 		screen2Size = MSA::ofxCocoa::getSizeForScreen(1);
 	}
-		
+	
+	#ifdef _USE_FENSTER
+	fenster->setFPS(24);
+	fenster->setBounds(0, 0, screen1Size.x*.5, screen1Size.y*.5);
+	#endif
 	
 	/* Midi / OSC */
 	oscReceiver.setup();
 	ofAddListener(oscReceiver.beatEvent,this,&dangerApp::onBeatEvent);
 	ofAddListener(oscReceiver.oscEvent,this,&dangerApp::onOscEvent);
+	ofAddListener(oscReceiver.masterSignalEvent,this,&dangerApp::onMasterSignalEvent);
 	
 	
 	midiListener.setup(scene, sceneEffects);
@@ -42,13 +47,15 @@ void dangerApp::setup(){
 	data.addSceneObjects(builder);
 	videoData.setup(ofToDataPath("videos.xml"));
 	
+	appSettings.setup();
+	
 	
 	/* scene */
 	scene.setup(data, videoData, builder, oscReceiver, sceneEffects);
 	
 	debugView.setup();
 	
-	sceneEffects.setup();
+	sceneEffects.setup(appSettings);
 	//sceneEffects.setEffectByName("bloom");
 	
 	/* Scene main FBO */
@@ -60,25 +67,28 @@ void dangerApp::setup(){
 	
 	panelViewScale = .5;
 	
+	
 	printf("loaded in %f milliseconds \n",  ofGetElapsedTimeMillis() - time);
 	
 	
-	MSA::ofxCocoa::setSyncToDisplayLink(true);
+	//MSA::ofxCocoa::setSyncToDisplayLink(true);
 }
 
 //--------------------------------------------------------------
 void dangerApp::update(){
 	
 	oscReceiver.update();
+	data.update();
 	sceneEffects.update();
 	scene.update();
+	
 }
 
 //--------------------------------------------------------------
 void dangerApp::draw(){
 	
 	//fbo.clear();
-	fbo->clear(0,0,0,1);
+	fbo->clear(0,0,0,0);
 	//ofSetupGraphicDefaults();
 	ofBackground(0, 0, 0);
 	
@@ -94,22 +104,37 @@ void dangerApp::draw(){
 
 	
 	ofSetColor(255, 255, 255);
-	debugView.draw();
-	
-	
-	
-	ofxFBOTexture * sceneFbo =  sceneEffects.draw(fbo, 0,0);
+	//debugView.draw();
+		
+	sceneFbo =  sceneEffects.draw(fbo, 0,0);
 	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
 	debugView.drawSceneFbo(sceneFbo, screen1Size.x, screen1Size.y, panelViewScale);
-	sceneFbo->draw( screen1Size.x, 0);
+	//debugView.drawCurrentVideo(scene.getVideoTexture());
+	sceneFbo->draw( 0, 0);
 	//scene.draw();
 	glDisable(GL_BLEND);
 	
 		
 	
 }
+
+
+#ifdef _USE_FENSTER
+void dangerApp::fensterUpdate(){
+	
+}
+
+void dangerApp::fensterDraw(){
+	
+	
+	debugView.draw();
+	debugView.drawSceneFbo(sceneFbo, screen1Size.x*.5, screen1Size.y*.5, panelViewScale);
+	//fbo->draw(0, 0);
+}
+
+#endif
 
 //--------------------------------------------------------------
 void dangerApp::keyPressed(int key){
@@ -120,6 +145,8 @@ void dangerApp::keyPressed(int key){
 			
 		case 'f':
 			ofToggleFullscreen();
+			
+			//fenster->toggleFullscreen();
 			break;
 			
 		case 'q':
@@ -215,7 +242,11 @@ void dangerApp::keyPressed(int key){
 void dangerApp::onBeatEvent(int & f){
 	
 	scene.onBeatEvent();
+	data.onBeatEvent();
 	debugView.onBeatEvent();
+	
+	printf("BEAT | ");
+	
 }
 
 void dangerApp::onOscEvent(customOscMessage & f ) {
@@ -224,11 +255,17 @@ void dangerApp::onOscEvent(customOscMessage & f ) {
 	
 }
 
+void dangerApp::onMasterSignalEvent(float & val) {
+	sceneEffects.onMasterSignalEvent(val);
+}
+
 void dangerApp::reset () {
 	builder.setup(ofToDataPath("components.xml"));
 	data.clean();
+	scene.clean();
 	data.setup();
 	data.addSceneObjects(builder);
+	scene.changeMode(0);
 }
 
 

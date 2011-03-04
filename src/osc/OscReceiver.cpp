@@ -16,7 +16,7 @@ void OscReceiver::setup () {
 	cout << "listening for osc messages on port " << OSC_PORT << "\n";
 	
 	current_msg_string = 0;
-	
+	currentTime = 0.0;
 }
 
 
@@ -38,9 +38,7 @@ void OscReceiver::update () {
 		ofxOscMessage m;
 		receiver.getNextMessage( &m );
 		
-		// clean vector 
-		
-		
+		// clean vector 		
 				 
 		 customOscMessage  msg;
 		 messages.push_back(msg);
@@ -60,17 +58,23 @@ void OscReceiver::update () {
 		 }
 		 
 		if ( msg.address == "beat" ) {
-			int foo = 0;
-			ofNotifyEvent(beatEvent,foo,this);
 			
-		
+			int foo = 0;
+			
+			if ( ofGetElapsedTimeMillis() - currentTime >= 200.0 ) {
+				currentTime = ofGetElapsedTimeMillis();
+				ofNotifyEvent(beatEvent,foo,this);	
+			}
+			
+			
 		}else {
 			//int foo = 0;
-			
 			ofNotifyEvent(oscEvent,msg,this);
 		}
 		
-		
+		if ( msg.address == "/signal/Master/" ){
+			ofNotifyEvent(masterSignalEvent, msg.value,this);
+		}
 		
 	
 		

@@ -37,6 +37,7 @@ void dgData::setup () {
 		// go through components
 		
 		data[i]->name = XML.getAttribute("module", "name", "", 0);
+		data[i]->layer = XML.getAttribute("module", "layer", "", 0);
 	
 		XML.pushTag("module", 0);
 		
@@ -62,6 +63,7 @@ void dgData::setup () {
 			
 			data[i]->cpData[j]->adressState = XML.getValue("osc_adress_state", "");
 			
+			data[i]->cpData[j]->reversePct =  (XML.getValue("reversePct", "") == "true" ) ? true : false;
 			
 			
 			
@@ -71,7 +73,7 @@ void dgData::setup () {
 			
 			
 			data[i]->cpData[j]->range.x = XML.getAttribute("range", "min", 0, 0);
-			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 127, 0);
+			data[i]->cpData[j]->range.y = XML.getAttribute("range", "max", 1, 0);
 						
 			if (XML.tagExists("rotation", 0)) {
 				data[i]->cpData[j]->rotation = XML.getValue("rotation", 0);	
@@ -93,6 +95,10 @@ void dgData::setup () {
 	}
 	
 	debug();
+}
+
+void dgData::update() {
+	oscObjManager.update();
 }
 
 
@@ -120,6 +126,8 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			sceneObject->adressState = compData->adressState;
 			sceneObject->adressMultiplier = compData->adressMultiplier;
 			sceneObject->nameId = compData->nameId;
+			sceneObject->reversePct = compData->reversePct;
+			sceneObject->range = compData->range;
 			currentModule->cpObjects.push_back(sceneObject);
 			}
 			
@@ -147,6 +155,7 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->activityObjectRefName);
 				if(refSceneObject) {
 				refSceneObject->pos = sceneObject->activitySwitchObjPos;
+				refSceneObject->blurRate = .7;
 				sceneObject->addActivitySwitchObject(refSceneObject);
 				}
 				//printf("add activity object : " );
@@ -166,20 +175,26 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 					sceneObject->addSwitchObject(refSceneObject);
 					}
 				}
+				
 			}
+				
 			
 			// finally add the reference object
-			sceneObject->setPctObjectsReference(oscObjManager.getObjectsByAdress(sceneObject->adress, sceneObject->adressMultiplier), oscObjManager.getObjectsByAdress(sceneObject->adressState, sceneObject->adressMultiplier));
+			sceneObject->setPctObjectsReference(oscObjManager.getObjectsByAdress(sceneObject->adress, sceneObject->adressMultiplier), oscObjManager.getObjectsByAdress(sceneObject->adressState, ""));
 			sceneObject->init();
 		}
 		
-		dgSceneObject  * beatObject = compBuilder.createCompByName("LED_VU");
+			
+		/*
+		dgSceneObject  * beatObject = compBuilder.createCompByName("LED_A");
 		if ( beatObject != NULL) {
 			beatObject->setPosition(0, 120);
 			beatObject->nameId = "beatObject";
 			beatObject->blurRate = 0.0;
 			currentModule->cpObjects.push_back(beatObject);
 		}
+		 
+		 */
 		
 		
 	}	
@@ -210,8 +225,12 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 	
 	
 	for ( int i=0; i<total; i++) {
-		objects[i]->setPct(msg.value / getPctByAdress(msg.address));
 		
+		if (msg.address == "/live/master/crossfader" ) {
+			msg.value += 1.0;
+		}
+		
+		objects[i]->setPct(msg.value / getPctByAdress(msg.address));
 	}
 	
 	objects.clear();
@@ -223,7 +242,9 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 		for ( int k=0; k<total; k++) {
 			
 			
-			
+			if (msg.stringArgs[j] == "/live/master/crossfader" ) {
+				msg.value += 1.0;
+			}
 			objects[k]->setPct(msg.value / getPctByAdress(msg.stringArgs[j]));
 		}
 		
@@ -231,71 +252,13 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 	
 	objects.clear();
 	
-	
-	
-	/*
-	getRelatedObject(msg.address, &objects, &stateObjects);
-	int total = objects.size();
-	
-	string splitString = msg.address.substr(0, 7);
-	float div = (splitString == "/signal" ) ? 1.0 : 127.0;
-	
-	
-	if ( splitString != "/signal" ) {
-		splitString = msg.address.substr(0, 19);
-		div = (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
-		if ( splitString =="/live/track/volume/" ) {
-			
-			//printf("ok\n");
-			//printf("val : %f\n", div);
-			//printf("val msg : %f\n", msg.value);
-			
-			
-		}
-	}
-	//printf(splitString.c_str());
-	 
-	
-	
-	for ( int i=0; i<total; i++) {
-		objects[i]->setPct(msg.value/div);
-		
-	}
-	
-	total = stateObjects.size();
-	for ( int i=0; i<total; i++) {
-		stateObjects[i]->setStatePct(msg.value/127);
-		
-	}
+	// update referents 
 	
 	
 	
-	for ( int j=0; j < msg.stringArgs.size(); j++ ) {	
-		
-		getRelatedObject( msg.stringArgs[j], &objects, &stateObjects);
-		
-		
-		string splitString = msg.stringArgs[j].substr(0, 7);
-		float div = (splitString == "/signal" ) ? 1 : 127.0;
-		
-		total = objects.size();
-		for ( int k=0; k<total; k++) {
-			objects[k]->setPct(msg.value/div);
-		}
-		
-		total = stateObjects.size();
-		for ( int k=0; k<total; k++) {
-			stateObjects[k]->setStatePct(msg.value/127);
-		}
-		
-	}
 	
-	//printf("objects size : %d\n", total);
 	
-	objects.clear();
-	stateObjects.clear();
 	
-	 */
 }
 
 float dgData::getPctByAdress(string address) {
@@ -305,14 +268,26 @@ float dgData::getPctByAdress(string address) {
 	string splitString = address.substr(0, 7);
 	
 	
-	if ( splitString == "/signal" ) return 1.0;
+	if ( splitString == "/signal" ) return 1.2;
 	
 	splitString = address.substr(0, 19);
-	if (splitString == "/live/track/volume/" ) return 1.0;
+	if (splitString == "/live/track/volume/" ) {
+		return .85;
+	}
+	
+	if (address == "/live/master/crossfader" ) return 2;
+	if (address == "/live/master/volume" ) return .85;
+	
 	return 127.0;
 	//return (splitString == "/live/track/volume/" ) ? 1.0 : 127.0;
 	
 }
+
+
+void dgData::onBeatEvent () {
+	oscObjManager.onBeatEvent();
+}
+
 		
 void dgData::clean() {
 

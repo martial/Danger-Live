@@ -14,8 +14,8 @@
 void dgVideoModule::setup (dgVideoData & videoData) {
 
 	this->videoData = &videoData;
-	currentView = 0;
 	
+	currentView = 0;
 	/* set up views */
 	
 	for ( int i = 0; i< this->videoData->videoSets.size(); i++ ) {
@@ -24,19 +24,26 @@ void dgVideoModule::setup (dgVideoData & videoData) {
 		view->setup(*set);
 		views.push_back(view);
 	}
-	
+	//setCurrentView(0);
 }
 
 void dgVideoModule::update() {
 	
-	views[currentView]->update();
-
+	if ( views.size() > 0 ) {
+	 views[currentView]->update();
+	}
 }
 
 void dgVideoModule::draw () {
 	
 	views[currentView]->draw();
 
+}
+
+ofTexture * dgVideoModule::getVideoTexture () {
+	
+	return views[currentView]->getVideoTexture();
+	
 }
 
 void dgVideoModule::init () {

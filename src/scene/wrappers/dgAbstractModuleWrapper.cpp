@@ -9,10 +9,11 @@
 
 #include "dgAbstractModuleWrapper.h"
 
-void dgAbstractModuleWrapper::setup(moduleData * relatedModule, string name) {
+void dgAbstractModuleWrapper::setup(moduleData * relatedModule, dgVideoModule * videoModule, string name) {
 	
 	this->name = name;
 	this->relatedModule = relatedModule;
+	this->videoModule = videoModule;
 	
 }
 

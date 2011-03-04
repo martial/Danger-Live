@@ -38,7 +38,13 @@ public:
 	float				saturationPct;
 	float				contrastPct;
 	
+	float				brightnessPctVariation;
+	float				saturationPctVariation;
+	float				contrastPctVariation;
+	
 	ofEvent<int>		completeBrightnessEvent;
+	
+	
 	
 private:
 	
@@ -48,7 +54,8 @@ private:
 	ofxTween			saturationPctTween;
 	ofxTween			contrastPctTween;
 	ofxTween			brightnessPctTween;
-	ofxEasingQuint		easeQuint;
+	//ofxEasingQuint		easeQuint;
+	ofxEasingSine		easeQuint;
 	
 	float				fadeDuration;
 	

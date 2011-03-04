@@ -17,11 +17,13 @@
 #include "blurEffect.h"
 #include "colorEffect.h"
 #include "bloomEffect.h"
+#include "dangerPrefs.h"
+
 
 class dgSceneEffects {
 
 	public :
-	void setup();
+	void setup(dangerPrefs & settings);
 	void addEffect();
 	void update();
 	ofxFBOTexture * draw(ofxFBOTexture * fbo, int x, int y);
@@ -34,14 +36,16 @@ class dgSceneEffects {
 	void reset();
 	
 	void setColorSettintgs(float brightness, float saturation, float contrast);
-	void setBrightness(float brightness, int duration = 0);
-	void setSaturation( float saturation, int duration = 0);
-	void setContrast(float contrast, int duration = 0);
-
+	void setBrightness(float brightness, int duration = 0, bool save = true);
+	void setSaturation( float saturation, int duration = 0, bool save = true);
+	void setContrast(float contrast, int duration = 0, bool save = true);
+	void saveToSettings();
 	
 	void initBloom();
 	void quitBloom();
 	void removeBloom (int & e);
+	
+	void onMasterSignalEvent(float val);
 	
 	dgAbstractEffect * getEffectByName(string name);
 	
@@ -58,6 +62,7 @@ class dgSceneEffects {
 	
 	int					currentEffectID;
 	
+	dangerPrefs		 *	settings;
 	dgAbstractEffect *	currentEffect;
 	colorEffect			color;
 	blurEffect			blur;

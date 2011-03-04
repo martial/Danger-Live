@@ -9,17 +9,18 @@
 
 #include "dgModuleView.h"
 
-void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects) {
+void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscReceiver & oscReceiver, dgSceneEffects & effects, dgVideoModule & videoModule) {
 	
 	this->layoutData = &layoutData;
 	this->compBuilder = &compBuilder;
 	this->oscReceiver = &oscReceiver;
 	this->effects = &effects;
+	this->videoModule = &videoModule;
 	
 	currentModule = NULL;
 	
 	initModulesWrappers();
-	setCurrentView(1);
+	setCurrentView(0);
 	
 	beatLatency = 100;
 	currentTime = 0;
@@ -28,16 +29,28 @@ void dgModuleView::setup (dgData & layoutData, dgCompBuilder & compBuilder, OscR
 	
 }
 
+void dgModuleView::clean () {
+	
+	currentModule = NULL;
+	currentWrapper = NULL;
+	
+}
+
 void dgModuleView::initModulesWrappers () {
 
 	// intro 
 	dgModuleIntroWrapper * introWrapper = new dgModuleIntroWrapper();
-	introWrapper->setup(layoutData->getModuleByName("intro"), "intro");
+	introWrapper->setup(layoutData->getModuleByName("intro"), videoModule,  "intro");
 	modulesWrappers.push_back(introWrapper);
 	
 	dgStyleSwitchIntroWrapper * switchWrapper = new dgStyleSwitchIntroWrapper();
-	switchWrapper->setup(layoutData->getModuleByName("styleswitch"), "styleswitch");
+	switchWrapper->setup(layoutData->getModuleByName("styleswitch"), videoModule, "styleswitch");
 	modulesWrappers.push_back(switchWrapper);
+	
+	dgMixerModuleWrapper * mixerWrapper = new  dgMixerModuleWrapper();
+	mixerWrapper->setup(layoutData->getModuleByName("mixer"), videoModule, "mixer");
+	modulesWrappers.push_back(mixerWrapper);
+	
 	
 	
 }
@@ -51,7 +64,7 @@ void dgModuleView::update() {
 	
 	for ( int i = 0; i<currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
-		if ( object ) object->update();
+		if ( object != NULL ) object->update();
 	}
 	 
 
@@ -63,11 +76,13 @@ void dgModuleView::draw () {
 	
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
-		if ( object )object->draw();
+		if ( object != NULL )object->draw();
 	}
 	
 	
 	if ( currentWrapper ) currentWrapper->draw();
+	
+	
 	
 	if ( beatObject ) {
 		
@@ -80,7 +95,15 @@ void dgModuleView::draw () {
 	} else {
 			//printf("error");
 	}
-	 
+	
+	
+#ifdef EDITOR_MODE
+	ofEnableAlphaBlending();
+	ofSetColor(255, 255, 255, 130);
+	layerImg.draw(-layerImg.width*.5, 0);
+	ofSetColor(255, 255, 255, 255);
+	ofDisableAlphaBlending();
+#endif
 
 }
 
@@ -157,7 +180,7 @@ void dgModuleView::onMidiEvent(int adress, int val) {
 
 void dgModuleView::nextView () {
 	
-	printf("next view \n");
+	//printf("next view \n");
 	
 	int curViewID = currentViewID;
 	curViewID++;
@@ -165,7 +188,7 @@ void dgModuleView::nextView () {
 	if ( curViewID < 0 || curViewID > layoutData->data.size()-1 ) curViewID = 0;
 	
 	
-	printf("curViewID: %d \n", curViewID);
+	//printf("curViewID: %d \n", curViewID);
 	setCurrentView(curViewID);
 	
 	//currentViewID = viewID;
@@ -183,6 +206,7 @@ void dgModuleView::setCurrentView(int viewID) {
 	
 	currentModule = layoutData->data[currentViewID];
 	
+	
 	currentWrapper = NULL;
 	currentWrapper = getRelatedWrapper(layoutData->data[currentViewID]->name);
 	
@@ -198,6 +222,19 @@ void dgModuleView::setCurrentView(int viewID) {
 		}
 	}
 	
+	
+	
+	#ifdef EDITOR_MODE
+
+	if ( currentModule->layer != "" ) {
+		layerImg.loadImage(currentModule->layer);
+		printf("go!\n");
+		printf(currentModule->layer.c_str());
+		printf("\n");
+	} else {
+		layerImg.clear();
+	}
+	#endif
 	
 	//addSceneObjects();
 	

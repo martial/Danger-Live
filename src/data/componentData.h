@@ -25,6 +25,8 @@ class componentData {
 	string		adressState;
 	string		adressMultiplier;
 	
+	bool		reversePct;
+	
 	/* nameId is used to get one component in a wrapper */
 	string		nameId;
 	ofPoint		range;

@@ -10,9 +10,9 @@
 #include "dgStyleSwitchIntroWrapper.h"
 
 
-void dgStyleSwitchIntroWrapper::setup(moduleData * relatedModule,string name) {
+void dgStyleSwitchIntroWrapper::setup(moduleData * relatedModule, dgVideoModule * videoModule, string name) {
 	
-	dgAbstractModuleWrapper::setup(relatedModule, name);
+	dgAbstractModuleWrapper::setup(relatedModule, videoModule,name);
 	
 	}
 

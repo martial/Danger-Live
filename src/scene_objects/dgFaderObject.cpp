@@ -15,7 +15,7 @@ dgFaderObject::dgFaderObject() {
 
 dgFaderObject::~dgFaderObject() {
 	
-	img->clear();
+	//img->clear();
 	//delete img;
 	
 }
@@ -25,8 +25,8 @@ void dgFaderObject::setup (string imgURL, string name, string type) {
 	dgSceneObject::setup(name, type);
 	
 	img = imgAssets->addImage(imgURL);
-	this->width = img->width;
-	this->height = img->height;
+	this->width = img->getWidth();
+	this->height = img->getHeight();
 	
 }
 
@@ -43,13 +43,15 @@ void dgFaderObject::draw () {
 	
 	
 	float total = this->configValues[0];
-	float xPos = total + (-( total * .5)  +  (total*-pct*127 ));
+	float xPos =   total*.5 + (total*-pct );
 
+	
+	//printf("pct : %f\n", pct);
 	
 	//printf("pct fader: %f\n", pct);
 	
 	ofPushMatrix();
-	ofTranslate((int)(pos.x - width *.5), (int)(pos.y - height * .5), 0);
+	ofTranslate((int)(pos.x - width * .5), (int)(pos.y - height * .5), 0);
 	ofRotate((int)this->rotation, 0, 0, 1);
 	ofEnableAlphaBlending();
 	img->draw((int)xPos, 0 );
