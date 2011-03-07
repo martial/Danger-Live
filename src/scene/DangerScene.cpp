@@ -137,6 +137,9 @@ void DangerScene::onFadeChangeComplete (int & e) {
 		//setCurrentView(currentView);
 		if ( currentMode == DGSCENEVIEWMODE_VIDEOS ) {
 			//videoView.init();
+			
+			
+			
 		} else {
 			moduleView.setCurrentView(viewToGo);
 		}

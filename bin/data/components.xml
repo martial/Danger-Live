@@ -457,6 +457,32 @@
     
     <comp>
 		
+		<name>skin-bouton-rotatif-gros-d</name>
+		<type>opacity_switch</type>
+		<url>components/SKIN/skin-bouton-rotatif-gros-d/skin-gros-d-off.png</url>
+		
+		 <extras_url>
+            <extraurl>components/SKIN/skin-bouton-rotatif-gros-d/skin-gros-d-on.png</extraurl>
+        </extras_url>
+		
+	</comp>
+
+    
+    
+    <comp>
+		
+		<name>skin-bouton-rotatif-gros-numeros</name>
+		<type>opacity_switch</type>
+		<url>components/SKIN/skin-bouton-rotatif-gros-numeros/skin-gros-numero-gris.png</url>
+		
+		 <extras_url>
+            <extraurl>components/SKIN/skin-bouton-rotatif-gros-numeros/skin-gros-numero-rouge.png</extraurl>
+        </extras_url>
+		
+	</comp>
+    
+    <comp>
+		
 		<name>skin-bouton-rotatif-gros-a</name>
 		<type>image_sequence</type>
 		<url>components/SKIN/skin-bouton-rotatif-gros-a</url>

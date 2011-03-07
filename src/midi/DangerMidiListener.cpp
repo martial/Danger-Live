@@ -53,7 +53,7 @@ void DangerMidiListener::newMidiMessage(ofxMidiEventArgs& eventArgs){
 			break;
 			
 		case 3:
-			scene->setFlickrLogoIntensity((int)(eventArgs.byteTwo / 4));
+			scene->setFlickrLogoIntensity((int)(eventArgs.byteTwo / 16));
 			break;
 			
 		case 13:
@@ -150,17 +150,17 @@ void DangerMidiListener::newMidiMessage(ofxMidiEventArgs& eventArgs){
 			
 		case 15:
 			val = (float)eventArgs.byteTwo * 2.0 / 127.0;
-			sceneEffects->setContrast(val);
+		//	sceneEffects->setContrast(val);
 			break;
 			
 		case 16:
 			val = (float) eventArgs.byteTwo * 2.0 / 127.0;;
-			sceneEffects->setSaturation(val);
+			//sceneEffects->setSaturation(val);
 			break;
 			
 		case 14:
 			val = (float)eventArgs.byteTwo * 2.0/ 127.0;;
-			sceneEffects->setBrightness(val);
+			//sceneEffects->setBrightness(val);
 			break;
 			
 					

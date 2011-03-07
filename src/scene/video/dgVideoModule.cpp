@@ -87,7 +87,13 @@ ofVideoPlayer * dgVideoModule::getVideoInstance() {
 
 
 void dgVideoModule::init () {
-	setCurrentView(0);
+	stop();
+	//currentView = viewID;
+	views[currentView]->play();
+}
+
+void dgVideoModule::play() {
+	//views[currentView]->play();
 }
 
 void dgVideoModule::stop () {

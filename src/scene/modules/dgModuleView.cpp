@@ -39,14 +39,20 @@ void dgModuleView::clean () {
 void dgModuleView::initModulesWrappers () {
 
 	// intro 
+	
+	/*
 	dgModuleIntroWrapper * introWrapper = new dgModuleIntroWrapper();
 	introWrapper->setup(layoutData->getModuleByName("intro"), videoModule,  "intro");
 	modulesWrappers.push_back(introWrapper);
+	
 	
 	dgStyleSwitchIntroWrapper * switchWrapper = new dgStyleSwitchIntroWrapper();
 	switchWrapper->setup(layoutData->getModuleByName("styleswitch"), videoModule, "styleswitch");
 	modulesWrappers.push_back(switchWrapper);
 	
+	 
+	 */
+	 
 	dgMixerModuleWrapper * mixerWrapper = new  dgMixerModuleWrapper();
 	mixerWrapper->setup(layoutData->getModuleByName("mixer"), videoModule, "mixer");
 	modulesWrappers.push_back(mixerWrapper);

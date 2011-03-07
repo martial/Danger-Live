@@ -115,7 +115,7 @@
         <component>
 			
 			<name>VUMETRE_C_2_24</name>
-			<osc_adress multiplier="pitchshift2">/signal/Master/</osc_adress>
+			<osc_adress >/signal/Master/</osc_adress>
             <osc_adress_state></osc_adress_state>
 			<range min="" max = ""></range>
 			<position x="-401" y="290"></position>
@@ -126,7 +126,7 @@
          <component>
 			
 			<name>VUMETRE_C_2_24</name>
-			<osc_adress multiplier="pitchshift2">/signal/Master/</osc_adress>
+			<osc_adress >/signal/Master/</osc_adress>
             <osc_adress_state></osc_adress_state>
 			<range min="" max = ""></range>
 			<position x="-400" y="718"></position>
@@ -138,7 +138,7 @@
         <component>
 			
 			<name>VUMETRE_C_2_24</name>
-			<osc_adress multiplier="pitchshift2" >/signal/Master/</osc_adress>
+			<osc_adress  >/signal/Master/</osc_adress>
             <osc_adress_state></osc_adress_state>
 			<range min="" max = ""></range>
 			<position x="400" y="290"></position>
@@ -149,7 +149,7 @@
          <component>
 			
 			<name>VUMETRE_C_2_24</name>
-			<osc_adress multiplier="pitchshift2" >/signal/Master/</osc_adress>
+			<osc_adress >/signal/Master/</osc_adress>
             <osc_adress_state></osc_adress_state>
 			<range min="" max = ""></range>
 			<position x="401" y="718"></position>

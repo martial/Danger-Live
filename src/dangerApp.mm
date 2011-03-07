@@ -50,12 +50,12 @@ void dangerApp::setup(){
 	/* Scene main FBO */
 	fbo = new ofxFBOTexture();
 	fbo->allocate(1920, 1080, GL_RGB);
-	fbo->clear(0,0,0,0);
+	//fbo->clear(0,0,0,0);
 	
 	oscDebugEnabled = false;
 	
 	panelViewScale = .5;
-	fps.setup(500,25, 120);
+	//fps.setup(500,25, 120);
 	
 	
 	/* Midi / OSC */
@@ -74,7 +74,8 @@ void dangerApp::setup(){
 	masterVariation = 1.0;
 	
 	printf("loaded in %f milliseconds \n",  ofGetElapsedTimeMillis() - time);
-
+	
+	ofHideCursor();
 	
 	//MSA::ofxCocoa::setSyncToDisplayLink(true);
 }
@@ -86,14 +87,14 @@ void dangerApp::update(){
 	data.update();
 	sceneEffects.update();
 	scene.update();
-	fps.update();
+	//fps.update();
 }
 
 //--------------------------------------------------------------
 void dangerApp::draw(){
 	
 	
-	ofSetupGraphicDefaults();
+	//ofSetupGraphicDefaults();
 	
 	
 	//----------------------------------------------------
@@ -104,7 +105,7 @@ void dangerApp::draw(){
 	
 	
 	//fbo.clear();
-	fbo->clear(0,0,0,0);
+	//fbo->clear(0,0,0,0);
 	//ofSetupGraphicDefaults();
 	ofBackground(0, 0, 0);
 	
@@ -135,6 +136,8 @@ void dangerApp::draw(){
 	//fps.draw(0,0);
 	 
 	
+	//printf("fps : %f\n", MSA::ofxCocoa::getFps());
+	
 }
 
 
@@ -148,7 +151,7 @@ void dangerApp::fensterDraw(){
 	
 	debugView.draw();
 	debugView.drawSceneFbo(sceneFbo, screen1Size.x*.5, screen1Size.y*.5, panelViewScale);
-	//fbo->draw(0, 0);
+	fbo->draw(0, 0);
 }
 
 #endif
@@ -160,6 +163,11 @@ void dangerApp::keyPressed(int key){
 	
 	switch (key) {
 			
+			case 'r':
+			sceneEffects.resetColorSettings();
+			break;
+
+			
 		case 'f':
 			ofToggleFullscreen();
 			
@@ -167,11 +175,11 @@ void dangerApp::keyPressed(int key){
 			break;
 			
 		case 'b':
-			sceneEffects.initBloom();
+			//sceneEffects.initBloom();
 			break;
 			
 		case 'n':
-			sceneEffects.quitBloom();
+			//sceneEffects.quitBloom();
 			break;
 			
 		case 'p':
@@ -207,7 +215,7 @@ void dangerApp::keyPressed(int key){
 		
 						
 		case 'g':
-			oscDebugEnabled = !oscDebugEnabled;
+			//oscDebugEnabled = !oscDebugEnabled;
 			break;
 			
 			

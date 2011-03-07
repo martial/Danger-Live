@@ -68,6 +68,19 @@
 		
         </component>
         
+        <component>
+			
+			<name>skin-bouton-rotatif-gros-d</name>
+            <nameID></nameID>
+			<osc_adress>reverb1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="660"></position>
+            
+		
+        </component>
+        
+        
+        
 		<!-- bas-->
         <component>
 			
@@ -152,7 +165,7 @@
             <nameID></nameID>
 			<osc_adress>reverb1_onoff</osc_adress>
 			<range min="" max = ""></range>
-			<position x="0" y="460"></position>
+			<position x="0" y="420"></position>
            
             
 		

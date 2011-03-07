@@ -102,6 +102,13 @@ ofxFBOTexture * dgSceneEffects::draw(ofxFBOTexture * fbo, int x, int y) {
 	
 }
 
+void dgSceneEffects::resetColorSettings () {
+		
+	setBrightness(this->settings->getBrightness(), 1000);
+	setContrast(this->settings->getContrast(), 1000);
+	setSaturation(this->settings->getSaturation(), 1000);
+}
+
 /*  ----- -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  */
 
 /*  Bloom */

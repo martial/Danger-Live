@@ -32,6 +32,7 @@ class dgVideoModule {
 	ofVideoPlayer * getVideoInstance();
 	
 	void init();
+	void play();
 	void stop();
 	void setCurrentView (int viewID);
 	void setRandomVideo();

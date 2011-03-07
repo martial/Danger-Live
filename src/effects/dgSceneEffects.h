@@ -41,6 +41,8 @@ class dgSceneEffects {
 	void setContrast(float contrast, int duration = 0, bool save = true);
 	void saveToSettings();
 	
+	void resetColorSettings();
+	
 	void initBloom();
 	void quitBloom();
 	void removeBloom (int & e);

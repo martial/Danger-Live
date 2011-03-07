@@ -44,7 +44,10 @@ void dgVideoModuleView::update() {
 	videoSet->videos[currentVideoID]->update();
 	#else
 	videoSet->videos[currentVideoID]->update();
-	//videoSet->videos[currentVideoID]->play();
+	
+	if ( !videoSet->videos[currentVideoID]->isPlaying() ) {
+	videoSet->videos[currentVideoID]->play();
+	}
 	#endif
 	
 	//printf("Video view update \n");
