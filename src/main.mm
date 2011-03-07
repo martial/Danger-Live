@@ -1,7 +1,7 @@
 #include "ofMain.h"
 #include "dangerApp.h"
 
-//#define _USE_COCOA_WINDOW
+#define _USE_COCOA_WINDOW
 
 //#define _USE_FENSTER
 
@@ -32,9 +32,9 @@ int main() {
 	initSettings.windowMode				= OF_FULLSCREEN;
 	
 	// to go fullscreen across all windows:
-	initSettings.windowStyle			= NSBorderlessWindowMask;
+	//initSettings.windowStyle			= NSBorderlessWindowMask;
 	//initSettings.initRect				= MSA::ofxCocoa::rectForMainScreen();
-	initSettings.initRect				= MSA::ofxCocoa::rectForAllScreens();
+	//initSettings.initRect				= MSA::ofxCocoa::rectForAllScreens();
 	
 	MSA::ofxCocoa::AppWindow window(initSettings);
 	w = h = 0;
@@ -45,7 +45,7 @@ int main() {
 	 
 	#endif
 	
-	ofSetupOpenGL(&window, w, h, 0);
+	ofSetupOpenGL(&window, w, h, OF_FULLSCREEN);
 	
 	dangerApp* app = new dangerApp;
 	

@@ -17,7 +17,7 @@
 #include "ofxUtils.h"
 #include "ofxFBOTexture.h"
 
-#define USEOFXQTKIT
+//#define USEOFXQTKIT
 
 class dgVideoModuleView {
 	
@@ -27,6 +27,8 @@ class dgVideoModuleView {
 	void draw();
 	
 	ofTexture	* getVideoTexture();
+	//ofxQTKitVideoPlayer  * getVideoInstance();
+	ofVideoPlayer * getVideoInstance();
 	
 	void onBeatEvent (float beatTime);
 	
@@ -34,13 +36,18 @@ class dgVideoModuleView {
 	void goNext(int & f);
 	void play();
 	void stop();
+	void setRandomVideo();
+	int getRandom (int max);
+	
+	dgVideoDataSet	*	videoSet;
+	int					currentVideoID;
 	
 	private:
 	
 	void addBeatListener();
 	
-	dgVideoDataSet	*	videoSet;
-	int					currentVideoID;
+	
+	
 	float				currentVideoDuration;
 	float				beatTime;
 	ofEvent<int>		beatEvent;

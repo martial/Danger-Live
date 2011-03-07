@@ -52,15 +52,17 @@ void oscObject::setPct(float val, float duration) {
 	this->pct = val;
 	ofNotifyEvent(onPctChangeEvent, this->pct);	
 	
-	timer.stopTimer();
-	timer.setup(duration, false);
-	timer.startTimer();
+	printf("OK !");
 	
+	timer.stopTimer();
+	timer.setup(15, false);
+	timer.startTimer();
+	ofRemoveListener(timer.TIMER_REACHED, this, &oscObject::onTimerComplete);
 	ofAddListener(timer.TIMER_REACHED, this, &oscObject::onTimerComplete);
 }
 
 void oscObject::onTimerComplete(ofEventArgs & ahou) {
-	
+	printf("DONE !");
 	this->pct = 0.0;
 	ofRemoveListener(timer.TIMER_REACHED, this, &oscObject::onTimerComplete);
 	ofNotifyEvent(onPctChangeEvent, this->pct);	

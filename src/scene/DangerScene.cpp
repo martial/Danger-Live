@@ -27,6 +27,9 @@ void DangerScene::setup(dgData & layoutData, dgVideoData & videoData, dgCompBuil
 	
 	currentMode = DGSCENEVIEWMODE_MODULE;
 	
+	modeToGo = 0;
+	viewToGo = 0;
+	
 	currentView = 0;
 	globalOpacity = 1.0;
 	globalOpacityDown = 1.0;
@@ -44,10 +47,12 @@ void DangerScene::clean () {
 
 void DangerScene::update() {
 	
-	moduleView.update();
-	videoView.update();
+	//videoView.update();
+	//moduleView.update();
 	
-	return;
+		
+	
+	//return;
 	
 	switch (currentMode) {
 			
@@ -63,8 +68,7 @@ void DangerScene::update() {
 		default:
 			break;
 	}
-	 
-	 
+		 
 		
 }
 
@@ -96,10 +100,7 @@ void DangerScene::draw () {
 		default:
 			break;
 	}
-	//ofDisableAlphaBlending();
-	
-	
-	
+	ofDisableAlphaBlending();
 
 }
 
@@ -112,11 +113,10 @@ ofTexture * DangerScene::getVideoTexture () {
 void DangerScene::fade () {
 	
 	
-	//moduleView.nextView();
-	//return;
 	
-	effects->blurFadeInOut(400);
-	effects->colorFadeInOut(200, 0.2, 3, 0);
+	
+	effects->blurFadeInOut(550);
+	effects->colorFadeInOut(400, 0.0, 3, 0);
 	ofAddListener(effects->onFadeChangeEvent, this, &DangerScene::onFadeChangeComplete);
 	
 	
@@ -126,20 +126,58 @@ void DangerScene::fade () {
 void DangerScene::onFadeChangeComplete (int & e) {
 	//printf(" / fade complete");
 	ofRemoveListener(effects->onFadeChangeEvent, this, &DangerScene::onFadeChangeComplete);
-	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.nextView();
+	
+	
+	
+	// check if we change mode 
+	
+	if ( modeToGo != currentMode ) {
+		
+		currentMode = modeToGo;
+		//setCurrentView(currentView);
+		if ( currentMode == DGSCENEVIEWMODE_VIDEOS ) {
+			//videoView.init();
+		} else {
+			moduleView.setCurrentView(viewToGo);
+		}
+		
+	} else {
+		
+		
+		if ( currentMode == DGSCENEVIEWMODE_MODULE ) {
+			moduleView.setCurrentView(viewToGo);
+			videoView.stop();
+			if ( viewToGo != 1 ) {
+				videoView.stop();
+			} else {
+				videoView.init();
+			}
+		}
+		
+		
+	}
+
+	
+		
 }
 
 void DangerScene::setCurrentView(int viewID) {
 	
-	this->currentView = viewID;
+	viewToGo = viewID;
+	fade();
+	return;
+	//this->currentView = viewID;
 	
 	switch (currentMode) {
 			
 		case DGSCENEVIEWMODE_MODULE:
 			
 			moduleView.setCurrentView(viewID);
-			//videoView.stop();
-			
+			if ( viewID != 1 ) {
+				videoView.stop();
+			} else {
+				videoView.init();
+			}
 			break;
 			
 			
@@ -157,6 +195,11 @@ void DangerScene::setCurrentView(int viewID) {
 
 void DangerScene::changeMode (int mode) {
 	
+	modeToGo = mode;
+	fade();
+	return;
+	
+	
 	if ( mode == currentMode ) return;
 	currentMode = mode;
 	setCurrentView(currentView);
@@ -164,17 +207,37 @@ void DangerScene::changeMode (int mode) {
 	
 }
 
+void DangerScene::changeVideoSet (int set) {
+		
+	videoView.setCurrentView(set);
+	
+}
+
+void DangerScene::setRandomVideo () {
+	videoView.setRandomVideo();
+}
+
 void DangerScene::onMidiEvent(int adress, int val) {
 	moduleView.onMidiEvent(adress, val);
-	
-	if ( adress == 27 && val == 127 ) {
-		fade();
-	}
 	
 }
 
 void DangerScene::onOscEvent(customOscMessage & msg) {
 	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onOscEvent(msg);
+}
+
+void DangerScene::setLogoAlpha(float val) {
+		
+	videoView.logoAlpha = val;
+	printf("alpha : %f\n ", val);
+}
+
+void DangerScene::setFlickrLogoIntensity (int val) {
+	videoView.flickrIntensity = val;
+}
+
+void DangerScene::onSignalEvent(float val) {
+	videoView.logoAlphaVariation = val;
 }
 
 void DangerScene::onBeatEvent () {
@@ -183,7 +246,8 @@ void DangerScene::onBeatEvent () {
 	beatTime = ofGetElapsedTimeMillis() - oldTime;
 	oldTime = ofGetElapsedTimeMillis();
 	
-	videoView.onBeatEvent(beatTime/1000);
+	if ( currentMode == DGSCENEVIEWMODE_VIDEOS || currentView == 1 ) videoView.onBeatEvent(beatTime/1000);
+	
 	if ( currentMode == DGSCENEVIEWMODE_MODULE ) moduleView.onBeatEvent();
 	
 }

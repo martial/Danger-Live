@@ -40,11 +40,18 @@ class DangerScene {
 	void onOscEvent(customOscMessage & msg);
 	void onBeatEvent();
 	void onMidiEvent(int adress, int val);
+	void onSignalEvent(float val);
 	
 	void fade();	
 	void onFadeChangeComplete (int & e);
 	/* delete this later */
 	void setCurrentView(int viewID);
+	
+	void changeVideoSet (int set);
+	void setRandomVideo();
+	
+	void setLogoAlpha(float val);
+	void setFlickrLogoIntensity (int val);
 	
 	float				globalOpacity,globalOpacityDown;
 	
@@ -57,6 +64,8 @@ class DangerScene {
 	
 	int					currentMode;
 	int					currentView;
+	int					viewToGo;
+	int					modeToGo;
 	
 	
 	/* beat utils*/ 
@@ -69,7 +78,7 @@ class DangerScene {
 
 	bool				isfading;
 	bool				isFadeIn;
-	int				sens;
+	int					sens;
 	
 };
 

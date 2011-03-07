@@ -1,0 +1,249 @@
+<scene>
+
+  
+
+	<module name="loop" layer="components/layers/LOOP_RYTHM.png" layout="components/LAYOUTS/loop_lay.png">
+    
+    
+        
+        <!-- 
+        <component>
+			
+			<name>VUMETER_MASTER_BTN_B_1_4</name>
+			<osc_adress>beatrep1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-170" y="200"></position>
+            <rotation>-90.0</rotation>
+            
+        </component> 
+        
+        <component>
+			
+			<name>VUMETER_MASTER_BTN_B_1_4</name>
+			<osc_adress>beatrep1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="170" y="200"></position>
+            <rotation>90.0</rotation>
+            
+        </component> 
+        
+        -->
+  
+        <component>
+			
+			<name>CROSSFADER</name>
+			<osc_adress>scratch1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-40" y="630"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>PAD_2</name>
+			<osc_adress>reverse</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-280" y="640"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>PAD_REC</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="200" y="640"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>PAD_PLAY</name>
+			<osc_adress></osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="320" y="640"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+       
+        <component>
+			
+			<name>knob_med_b</name>
+			<osc_adress>beatrep1</osc_adress>
+             <nameID>beat_main</nameID>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-0" y="380"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>METER_VU_B_1_24</name>
+			<osc_adress>scratch1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-40" y="720"></position>
+            <rotation>-90.0</rotation>
+            
+        </component>
+		
+		
+		<component>
+			
+			<name>BOUTON_POUSSOIR_A</name>
+			<osc_adress>beatrep1_onoff</osc_adress>
+            <osc_adress_state></osc_adress_state>
+            <nameID>beat_main_onoff</nameID>
+			<range min="" max = ""></range>
+			<position x="0" y="530"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		
+		<component>
+			
+			<name>knob_tiny_b_led_a_left</name>
+           
+			<osc_adress>lowpass1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-300" y="360"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+        
+        
+		
+		<component>
+			
+			<name>knob_tiny_b_led_a_right</name>
+			<osc_adress>hipass1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="300" y="360"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+        
+        	<component>
+			
+			<name>skin-bouton-rotatif-petit-a</name>
+           
+			<osc_adress>lowpass1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-298" y="333"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+        
+        
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-petit-a</name>
+			<osc_adress>hipass1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="302" y="333"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        
+        
+		
+		<!-- lp hp -->
+		<component>
+			
+			<name>lp</name>
+			<osc_adress>lowpass1_onoff</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-300" y="440"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>hp</name>
+			<osc_adress>hipass1_onoff</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="300" y="440"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>VUMETER_A_2_24</name>
+			<osc_adress>/signal/Master/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-690" y="480"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-690" y="760"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>VUMETER_A_2_24</name>
+			<osc_adress>/signal/Master/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="690" y="480"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		
+       <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="690" y="760"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+        
+        
+        <!-- -->
+        
+        
+        
+                
+        
+            
+	</module>
+	
+	
+	
+
+</scene>

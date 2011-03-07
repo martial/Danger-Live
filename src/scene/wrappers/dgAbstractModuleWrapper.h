@@ -15,6 +15,7 @@
 #include "moduleData.h"
 #include "customOscMessage.h"
 #include "dgVideoModule.h"
+#include "dgCompBuilder.h"
 
 class dgAbstractModuleWrapper {
 	
@@ -25,13 +26,16 @@ public:
 	virtual void update();
 	virtual void draw();
 	
+	virtual void setCompBuilder(dgCompBuilder * builder);
+	
 	virtual void onMidiEvent(int adress, int val);
 	virtual void onOscEvent(customOscMessage & m );
+	virtual void onBeatEvent();
 	
 	string name;
 	moduleData	*	relatedModule;	
 	dgVideoModule *	videoModule;
-	
+	dgCompBuilder * builder;
 	
 private:
 	

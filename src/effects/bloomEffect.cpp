@@ -21,7 +21,7 @@ void bloomEffect::setup(string name) {
 	
 	filteredFbo = new ofxFBOTexture();
 	filteredFbo->allocate(1920, 1080, GL_RGBA);
-	filteredFbo->clear(0, 0, 0, 0);
+	//filteredFbo->clear(0, 0, 0, 0);
 	
 	intensityPct = 0.0;
 	intensityPctTween.setParameters( 0,easeQuint, ofxTween::easeInOut, intensityPct, 0, 0, 0);
@@ -81,7 +81,7 @@ ofxFBOTexture * bloomEffect::getFbo(ofxFBOTexture * originalFbo,  int x, int y) 
 	ofxFBOTexture * finalFbo =  transformedColor.getFbo(*blurredFbo, x, y,intensityPct);
 	
 	
-	filteredFbo->clear(0, 0, 0, 0);
+	//filteredFbo->clear(0, 0, 0, 0);
 	filteredFbo->begin();
 	
 	//glEnable(GL_BLEND);

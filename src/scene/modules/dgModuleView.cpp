@@ -52,19 +52,26 @@ void dgModuleView::initModulesWrappers () {
 	modulesWrappers.push_back(mixerWrapper);
 	
 	
+	dgLoopModuleWrapper * loop = new dgLoopModuleWrapper();
+	loop->setCompBuilder(compBuilder);
+	loop->setup(layoutData->getModuleByName("loop"), videoModule, "loop");
+	loop->init();
+	modulesWrappers.push_back(loop);
+	 
+	 
 	
 }
 
 void dgModuleView::update() {
 	
-	if (!currentModule) return;
+	//if (!currentModule) return;
 	
 	if ( currentWrapper ) currentWrapper->update();
 	
-	
-	for ( int i = 0; i<currentModule->cpObjects.size(); i++ ) {
+	int total = currentModule->cpObjects.size();
+	for ( int i = 0; i<total; i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
-		if ( object != NULL ) object->update();
+		object->update();
 	}
 	 
 
@@ -72,18 +79,23 @@ void dgModuleView::update() {
 
 void dgModuleView::draw () {
 	
-	if (!currentModule) return;;
+	//if (!currentModule) return;;
 	
+	ofEnableAlphaBlending();
+	layerImg.draw(-layerImg.width*.5, 0);
+	ofDisableAlphaBlending();
+	
+	int total = currentModule->cpObjects.size();
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		dgSceneObject  * object = currentModule->cpObjects[i];
-		if ( object != NULL )object->draw();
+		object->draw();
 	}
 	
 	
 	if ( currentWrapper ) currentWrapper->draw();
 	
 	
-	
+	/*
 	if ( beatObject ) {
 		
 		float time = ofGetElapsedTimeMillis() - currentTime;
@@ -104,6 +116,8 @@ void dgModuleView::draw () {
 	ofSetColor(255, 255, 255, 255);
 	ofDisableAlphaBlending();
 #endif
+	 
+	 */
 
 }
 
@@ -122,21 +136,14 @@ void dgModuleView::getRelatedObject (string val, vector<dgSceneObject*> * pctObj
 	
 	int total = currentModule->cpObjects.size();
 	for ( int i = 0; i< total; i++ ) {
-		
-		//printf("adress: \n");
-		//string adress = currentModule->cpObjects[i]->adress;
-		//printf(adress.c_str());
-		
 		if ( currentModule->cpObjects[i]->adress == val  ) {
 			pctObjects->push_back(currentModule->cpObjects[i]);
 		}
-		
 		if ( currentModule->cpObjects[i]->adressState == val  ) {
 			statePctObjects->push_back(currentModule->cpObjects[i]);
 		}
 	}
-	//printf("objects size before : %d\n", relatedObjects.size());
-	//return &relatedObjects;
+	
 }
 
 dgAbstractModuleWrapper * dgModuleView::getRelatedWrapper (string name) {
@@ -147,10 +154,6 @@ dgAbstractModuleWrapper * dgModuleView::getRelatedWrapper (string name) {
 	}
 	return NULL;
 }
-
-
-
-
 
 /*
 
@@ -165,7 +168,7 @@ void dgModuleView::onBeatEvent() {
 	
 	
 	currentTime = ofGetElapsedTimeMillis();	
-	
+	if ( currentWrapper ) currentWrapper->onBeatEvent();
 	
 }
 
@@ -173,25 +176,18 @@ void dgModuleView::onMidiEvent(int adress, int val) {
 	//moduleView.onMidiEvent(adress, val);
 	
 	if ( currentWrapper ) currentWrapper->onMidiEvent(adress, val);
-	if ( adress == 15 ) nextView();
+	
 	
 	
 }
 
 void dgModuleView::nextView () {
-	
-	//printf("next view \n");
-	
+		
 	int curViewID = currentViewID;
 	curViewID++;
 	
 	if ( curViewID < 0 || curViewID > layoutData->data.size()-1 ) curViewID = 0;
-	
-	
-	//printf("curViewID: %d \n", curViewID);
 	setCurrentView(curViewID);
-	
-	//currentViewID = viewID;
 	
 	
 }
@@ -213,7 +209,19 @@ void dgModuleView::setCurrentView(int viewID) {
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
 		currentModule->cpObjects[i]->initValues();
 	}
+	 
+	 
 	
+	
+	if ( currentModule->layout != "" ) {
+		layerImg.loadImage(currentModule->layout);
+		
+	} else {
+		layerImg.clear();
+	}
+	
+	
+	/*
 	// get beat object
 	beatObject = NULL;
 	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
@@ -221,6 +229,8 @@ void dgModuleView::setCurrentView(int viewID) {
 			beatObject = currentModule->cpObjects[i];
 		}
 	}
+	 
+	
 	
 	
 	
@@ -235,7 +245,7 @@ void dgModuleView::setCurrentView(int viewID) {
 		layerImg.clear();
 	}
 	#endif
-	
+	 */
 	//addSceneObjects();
 	
 }

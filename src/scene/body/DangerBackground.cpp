@@ -47,10 +47,6 @@ void DangerBackground::draw (int viewID) {
 	y = 1080 *.5 - imgSize.y*.5;
 	float scalew = (imgSize.x  ) /  background.width;
 	float scaleh = (imgSize.y  ) / background.height;
-	
-	
-	
-		
 	background.draw(x,y,imgSize.x, imgSize.y);
 	
 	
@@ -59,7 +55,7 @@ void DangerBackground::draw (int viewID) {
 	if ( viewID >= 0 && viewID < digitalLeds.size() -1 ) {
 		float ofMidWidth = 1920 * .5;
 		int digitalXPos = ofMidWidth - digitalLeds[viewID]->width * .5;
-		int digitalYPos = 40;
+		int digitalYPos = 20;
 		digitalLeds[viewID]->draw(digitalXPos, digitalYPos);
 	}
 	

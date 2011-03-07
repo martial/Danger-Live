@@ -88,19 +88,21 @@ void dgOpacitySwitchObject::draw () {
 	fakeTotal -=1;
 	float stepValue = 1 / ( (float)fakeTotal);
 
-	float currentStepPct = ((float)currentIndex * stepValue);
-	float nextStepPct = (((float)currentIndex+1.0) * stepValue) -(float)currentStepPct;
+	float currentStepPct = ((float) currentIndex * stepValue);
+	float nextStepPct = (((float) currentIndex+1.0) * stepValue) -(float)currentStepPct;
 	
-	float pctStep = easePct - ( (float)currentIndex * stepValue );
+	float pctStep = easePct - ( (float) currentIndex * stepValue );
 	
 	float alphaPct =   (pctStep / stepValue ) ;
 
+	
+	//printf("alpha PCT : %f\n", alphaPct);
 	
 	ofEnableAlphaBlending();
 	ofPushMatrix();
 	ofTranslate(pos.x - width *.5, pos.y - height * .5, 0);
 	ofSetColor(255, 255, 255, 255);
-	//img->draw(0,0);
+	
 	
 	
 	
@@ -115,7 +117,7 @@ void dgOpacitySwitchObject::draw () {
 			imageSet[currentIndex+1]->draw(0, 0);
 		
 		} else  {
-		
+		img->draw(0,0);
 		ofSetColor(255, 255, 255, (easePct) * 255);
 		imageSet[0]->draw(0, 0);
 

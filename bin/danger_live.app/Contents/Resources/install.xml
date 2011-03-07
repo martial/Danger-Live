@@ -1,37 +1,32 @@
 <install>
-    <name>ofxXmlSettings</name>
-	<version>0.01</version>
-	<author></author>
-	<url></url>
-	
-    <add>	
+	<name>ofxOsc</name>
+	<version>0.04</version>
+	<author>damian stewart</author>
+	<url>http://frey.co.nz/ofxosc</url>
+
+	<add>	
 		<!-- 	=====================================================================	-->
 		<!--	========================== add per project using this addon =========	-->
 		<!-- 	=====================================================================	-->
-	
-	    <src>
-		
-		    <folder name="addons/ofXmlSettings/src">	
-			    <file>../../../addons/ofxXmlSettings/src/ofxXmlSettings.h</file>
-			    <file>../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp</file>
-		    </folder>
-		
-		    <folder name="addons/ofXmlSettings/libs">
-			    <file>../../../addons/ofxXmlSettings/libs/tinyxml.h</file>
-			    <file>../../../addons/ofxXmlSettings/libs/tinyxml.cpp</file>
-			    <file>../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp</file>
-			    <file>../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp</file>
-		    </folder>
-		
-	    </src>
-	
-	    <include>
-		    <path>../../../addons/ofxXmlSettings/src</path>
-		    <path>../../../addons/ofxXmlSettings/libs</path>
-	    </include>    </add>
-    
-</install>
-ofxOsc/libs/oscpack/include/ip</path>
+
+		<src>
+			<folder name="addons/ofxOsc/src">			
+			<file>../../../addons/ofxOsc/src/ofxOsc.h</file>
+			<file>../../../addons/ofxOsc/src/ofxOscArg.h</file>
+			<file>../../../addons/ofxOsc/src/ofxOscBundle.cpp</file>
+			<file>../../../addons/ofxOsc/src/ofxOscBundle.h</file>
+			<file>../../../addons/ofxOsc/src/ofxOscMessage.h</file>
+			<file>../../../addons/ofxOsc/src/ofxOscMessage.cpp</file>
+			<file>../../../addons/ofxOsc/src/ofxOscReceiver.h</file>
+			<file>../../../addons/ofxOsc/src/ofxOscReceiver.cpp</file>
+			<file>../../../addons/ofxOsc/src/ofxOscSender.cpp</file>
+			<file>../../../addons/ofxOsc/src/ofxOscSender.h</file>
+			</folder>
+		</src>
+
+		<include>
+			<path>../../../addons/ofxOsc/src</path>
+			<path>../../../addons/ofxOsc/libs/oscpack/include/ip</path>
 			<path>../../../addons/ofxOsc/libs/oscpack/include/osc</path>
 		</include>
 		

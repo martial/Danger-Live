@@ -16,6 +16,7 @@
 #include "dgVideoData.h"
 #include "dgVideoDataSet.h"
 #include "dgVideoModuleView.h"
+#include "ofxQTKitVideoPlayer.h"
 
 class dgVideoModule {
 		
@@ -26,22 +27,37 @@ class dgVideoModule {
 	void update();
 	void draw();
 	
-	ofTexture	* getVideoTexture();
+	ofTexture			 *  getVideoTexture();
+	//ofxQTKitVideoPlayer  * getVideoInstance();
+	ofVideoPlayer * getVideoInstance();
 	
 	void init();
 	void stop();
 	void setCurrentView (int viewID);
-	
+	void setRandomVideo();
 	void onBeatEvent(float beatTime);
 	
+	
+	ofImage						logo;
+	
+	float						logoAlpha;
+	float						logoAlphaVariation;
+	
+	int							flickrIntensity;
+	
+	vector<dgVideoModuleView*>	views;
+	
+	int							currentView;
 	
 	private:
 	
 	dgVideoData		*			videoData;
 	
-	vector<dgVideoModuleView*>	views;
 	
-	int							currentView;
+	
+	
+	int							flickrCount;
+	
 	
 	
 };

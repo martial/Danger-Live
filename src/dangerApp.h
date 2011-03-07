@@ -16,7 +16,7 @@
 
 #include "ofxFenster.h"
 
-#define EDITOR_MODE
+//#define EDITOR_MODE
 //#define _USE_FENSTER
 
 
@@ -74,6 +74,12 @@ public:
 	
 	
 	float						panelViewScale;
+	float						masterVariation;
+	
+	
+	fpsViewer					fps;
+	
+	
 	
 	//ofTexture					texture;
 };

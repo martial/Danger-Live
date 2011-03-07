@@ -38,6 +38,7 @@ void dgData::setup () {
 		
 		data[i]->name = XML.getAttribute("module", "name", "", 0);
 		data[i]->layer = XML.getAttribute("module", "layer", "", 0);
+		data[i]->layout = XML.getAttribute("module", "layout", "", 0);
 	
 		XML.pushTag("module", 0);
 		

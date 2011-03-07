@@ -32,19 +32,22 @@ void dgVideoModuleView::setup (dgVideoDataSet & videoSet) {
 
 void dgVideoModuleView::update() {
 	
+	
+	
+	//printf("VIDEOS PLAYING : %d\n", count);
+	
 	// weird.
 	#ifdef USEOFXQTKIT
 	
 	// update fbo
-	fboVideo->begin();
-	videoSet->videos[currentVideoID]->draw(0,0);
-	fboVideo->end();
-	
+	ofxQTKitVideoPlayer * video = videoSet->videos[currentVideoID];
+	videoSet->videos[currentVideoID]->update();
 	#else
-	videoSet->videos[currentVideoID]->play();
+	videoSet->videos[currentVideoID]->update();
+	//videoSet->videos[currentVideoID]->play();
 	#endif
 	
-	videoSet->videos[currentVideoID]->idleMovie();
+	//printf("Video view update \n");
 	
 }
 
@@ -53,7 +56,8 @@ void dgVideoModuleView::draw() {
 	/*/
 	 * Check the ratio so It will work with any resolution 
 	 */
-		
+	ofSetVerticalSync(true);
+	
 	float x,y;
 	ofxVec2f videoSize = ofxUtils::getSizeRatio(1920, 1080, videoSet->videos[currentVideoID]->width, videoSet->videos[currentVideoID]->height);
 	x = 1920 *.5 - videoSize.x*.5;
@@ -62,19 +66,13 @@ void dgVideoModuleView::draw() {
 	float scaleh = (videoSize.y  ) / videoSet->videos[currentVideoID]->height;
 	
 	
-	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
+	//videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
 	
 	
 	#ifdef USEOFXQTKIT
-	
-	
-	
-	fboVideo->draw(x, y,videoSize.x,videoSize.y);
-	
+	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);	
 	#else
-	
 	videoSet->videos[currentVideoID]->draw(x,y,videoSize.x,videoSize.y);
-	
 		
 	#endif
 	
@@ -92,11 +90,23 @@ ofTexture * dgVideoModuleView::getVideoTexture () {
 	return &videoSet->videos[currentVideoID]->getTextureReference();
 	#else 
 	return fboVideo;
-	#endif
-	
-	
+	#endif	
 	
 }
+
+ofVideoPlayer * dgVideoModuleView::getVideoInstance() {
+	return videoSet->videos[currentVideoID];
+}
+
+/*
+ofxQTKitVideoPlayer * dgVideoModuleView::getVideoInstance () {
+	
+	return NULL;
+	//return videoSet->videos[currentVideoID];
+	
+}
+ 
+ */
 
 
 void dgVideoModuleView::goNext() {
@@ -104,8 +114,8 @@ void dgVideoModuleView::goNext() {
 	
 	int oldVideo = currentVideoID;
 	
-	stop();
-	
+	//stop();
+	videoSet->videos[currentVideoID]->setPosition(0);
 	currentVideoID++;
 	if ( currentVideoID > videoSet->videos.size() -1 ) {
 		currentVideoID = 0;
@@ -127,28 +137,49 @@ void dgVideoModuleView::goNext(int & f) {
 	
 }
 
+void dgVideoModuleView::setRandomVideo() {
+	
+	videoSet->videos[currentVideoID]->setPosition(0);
+	
+	int rdm = getRandom(videoSet->videos.size() -1);
+	while ( rdm == currentVideoID) {
+		rdm = getRandom(videoSet->videos.size() -1);
+	}
+	
+	currentVideoID = rdm;
+	play();
+}
+
+int dgVideoModuleView::getRandom (int max) {
+	return round(ofRandom(0, max));
+}
+
 void dgVideoModuleView::play() {
 	
 	
+	
+	
+	stop();
+	
+	printf("PLAY VIDEO \n");
 	currentVideoDuration = videoSet->videos[currentVideoID]->getDuration();
-	videoSet->videos[currentVideoID]->setLoopState(OF_LOOP_NONE);
+	
 	videoSet->videos[currentVideoID]->play();
 	
-	// if ofxqtkit, grab a fbo of video
 	
-	#ifdef USEOFXQTKIT
-	//fboVideo->clear(0, 0, 0, 0);
-	//fboVideo->allocate(videoSet->videos[currentVideoID]->getWidth(), videoSet->videos[currentVideoID]->getHeight(), GL_RGB);
-	#endif
 	
 }
 
 void dgVideoModuleView::stop() {
 	
+	printf("STOP VIDEO \n");
+	
+	
 	for ( int i=0; i<videoSet->videos.size(); i++ ) {
-		videoSet->videos[i]->setPosition(0);
+		
 		
 		#ifdef USEOFXQTKIT
+		//videoSet->videos[i]->pause();
 		videoSet->videos[i]->stop();
 		#else 
 		videoSet->videos[i]->stop();

@@ -20,6 +20,7 @@ public:
 	int 	status;
 	int 	byteOne;
 	int 	byteTwo;
+	int		byteFour;
 	double 	timestamp;
 };
 

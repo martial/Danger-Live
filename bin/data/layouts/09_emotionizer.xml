@@ -1,0 +1,101 @@
+<scene>
+
+  
+
+	<module name="emotionizer" layer="components/layers/EMOTIONIZER.png" layout="components/LAYOUTS/emo.png">
+    
+  
+       
+       
+        <component>
+			
+			<name>METER_LED_C_1_14</name>
+			<osc_adress>/live/master/crossfader</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-420" y="260"></position>
+            <rotation>-90.0</rotation>
+            <reversePct>true</reversePct>
+            
+        </component> 
+		
+		  <component>
+			
+			<name>METER_LED_C_1_14</name>
+			<osc_adress>/live/master/crossfader</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="420" y="260"></position>
+            <rotation>90.0</rotation>
+            <reversePct>true</reversePct>
+            
+        </component> 
+		
+		 <component>
+			
+			<name>LED_D</name>
+			<osc_adress>/live/master/crossfader</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="270"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+        
+        <component>
+			
+			<name>LED_A</name>
+			<osc_adress>/live/master/crossfader</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="0.99" max = ""></range>
+			<position x="0" y="330"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		<component>
+			
+			<name>CROSSFADER</name>
+			<osc_adress>/live/master/crossfader</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="500"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		<component>
+			
+			<name>knob_tiny_b_led_a_right</name>
+			<osc_adress>reverb2</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="240" y="520"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+		
+		
+		<component>
+			
+			<name>knob_tiny_b_led_a_right</name>
+			<osc_adress>reverb1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-270" y="805"></position>
+            <rotation>0.0</rotation>
+            
+        </component>
+       
+                               
+       
+        
+                
+        
+            
+	</module>
+	
+	
+	
+
+</scene>

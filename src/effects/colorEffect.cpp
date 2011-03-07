@@ -44,10 +44,10 @@ void colorEffect::update() {
 void colorEffect::fadeInAll (float duration, float brightVal, float contrastVal, float saturationVal) {
 	
 	fadeDuration = duration;
-	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.saturationPct, saturationVal, fadeDuration*.25, 0);
-	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, contrastVal, fadeDuration*.3, 0);
+	saturationPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.saturationPct, saturationVal, fadeDuration*.5, 0);
+	contrastPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.contrastPct, contrastVal, fadeDuration*.4, 0);
 	brightnessPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, clrShader.brightnessPct, brightVal, fadeDuration*.5, 0);
-
+	ofRemoveListener(brightnessPctTween.end_E,this,&colorEffect::fadeOutAll);
 	ofAddListener(brightnessPctTween.end_E,this,&colorEffect::fadeOutAll);
 		
 	saturationPctTween.start();

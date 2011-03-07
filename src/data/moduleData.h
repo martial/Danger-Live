@@ -33,6 +33,7 @@ class moduleData {
 	
 	string						name;
 	string						layer;
+	string						layout;
 	
 	void clean();
 	

@@ -21,12 +21,13 @@ void dgVideoDataSet::addVideo(string url) {
 	
 	
 #ifdef USEOFXQTKIT
+	int mode = OFXQTVIDEOPLAYER_MODE_TEXTURE_ONLY;
 	ofxQTKitVideoPlayer * video = new ofxQTKitVideoPlayer();
-	video->loadMovie(url,1);
+	video->loadMovie(url,mode);
 #else 
 	ofVideoPlayer * video = new ofVideoPlayer();
-	video->setUseTexture(true);
 	video->loadMovie(url);
+	video->setUseTexture(true);
 #endif
 	
 	

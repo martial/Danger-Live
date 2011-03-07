@@ -1,0 +1,563 @@
+<scene>
+
+  
+
+	<module name="mixer" layer="components/layers/MIXER_MONITEURproto.png" layout="components/LAYOUTS/mixer_lay.png">
+    
+    <!--
+         <component>f
+			
+			<name>danger_logo</name>
+			<osc_adress></osc_adress>
+			<range min="" max = ""></range>
+			<position x="475" y="180"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        -->
+         <!-- Potards de cöté---------------------------------------------------------------------------------------------------------------- -->
+        
+        
+          
+        
+         <!-- -------------------------------- -->
+         
+		 <!-- left -->
+		 
+        <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>reverb1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-740" y="390"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>pitchshift1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-740" y="500"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>beatrep1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-740" y="610"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <!-- skins -->
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>reverb1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-738" y="360"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>pitchshift1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-738" y="470"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>beatrep1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-738" y="580"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        
+       
+        
+        <!--- -->
+        
+            <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>bitred1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="740" y="390"></position>
+            <rotation>0.0</rotation>
+            
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>hipass1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="740" y="500"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>lowpass1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="740" y="610"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <!-- skins -->
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>bitred1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="742" y="360"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>hipass1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="742" y="470"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>lopass1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="742" y="580"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+        
+        <!-- ---------------------------------------------------------------------------------------------------------------- -->
+        
+        <!-- potards centrés-->
+        <component>
+			
+			<name>knob_tiny_b</name>
+			<osc_adress>/live/master/volume</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="520"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+		
+		<component>
+			
+			<name>skin-bouton-rotatif-petit-b</name>
+			<osc_adress>/live/master/volume</osc_adress>
+			<range min="" max = ""></range>
+			<position x="2" y="490"></position>
+            <rotation>0.0</rotation>
+            
+		
+        </component>
+      
+    
+  
+        
+           <!-- potard du milieu  -->
+        <!--
+        <component>
+			
+			<name>knob_tiny_c</name>
+			<osc_adress>/live/master/panning/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="680"></position>			
+		
+		</component>
+        -->
+
+    
+    <!-- grille de knobs bas en haut gauche a droite,  -->
+    
+      <!-- ---------------------------------------------------------------------------------------------------------------- -->
+     <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>eqhi_mixer1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-540" y="160"></position>			
+		
+		</component>
+        
+      
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>eqmid_mixer1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-540" y="300"></position>			
+		
+		</component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>eqlow_mixer1</osc_adress>
+			<range min="" max = "230"></range>
+			<position x="-540" y="430"></position>			
+		
+		</component>
+    
+    
+        <component>
+			
+			<name>METER_VU</name>
+			<osc_adress>/signal/Danger_L1/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-450" y="300"></position>
+            			
+		
+		</component>
+        
+		
+         <component>
+			
+			<name>FADER</name>
+			<osc_adress>/live/track/volume/Danger_L1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-380" y="640"></position>
+            <rotation>90.0</rotation>
+            
+		
+        </component>
+        
+          <component>
+			
+			<name>SWITCHER_SQUARE_ON</name>
+			<osc_adress>/live/track/volume/Danger_L1</osc_adress>
+			<range min="" max = "0.0001"></range>
+			<position x="-540" y="885"></position>
+            
+		
+        </component>
+        
+     
+        
+        
+         <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-564" y="535"></position>
+            
+		
+        </component>
+        
+        <!-- ---------------------------------------------------------------------------------------------------------------- -->
+        
+          <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>eqhi_mixer2</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-350" y="160"></position>			
+		
+		</component>
+        
+      
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>eqmid_mixer2</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-350" y="300"></position>			
+		
+		</component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>eqlow_mixer2</osc_adress>
+			<range min="" max = "230"></range>
+			<position x="-350" y="430"></position>			
+		
+		</component>
+        
+         <component>
+			
+			<name>METER_VU</name>
+			<osc_adress>/signal/Outside/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-265" y="300"></position>
+            			
+		
+		</component>
+        
+        <component>
+			
+			<name>FADER</name>
+			<osc_adress>/live/track/volume/Outside</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-190" y="640"></position>
+            <rotation>90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_SQUARE_ON</name>
+			<osc_adress>/live/track/volume/Outside</osc_adress>
+			<range min="" max = "0.0001"></range>
+			<position x="-350" y="885"></position>
+            
+		
+        </component>
+        
+        
+        
+         <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-374" y="535"></position>
+            
+		
+        </component>
+        
+          <!-- ---------------------------------------------------------------------------------------------------------------- -->
+        
+           <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress>eqhi_mixer3</osc_adress>
+			<range min="" max = ""></range>
+			<position x="350" y="160"></position>			
+		
+		</component>
+        
+      
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress>eqmid_mixer3</osc_adress>
+			<range min="" max = ""></range>
+			<position x="350" y="300"></position>			
+		
+		</component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress>eqlow_mixer3</osc_adress>
+			<range min="" max = "230"></range>
+			<position x="350" y="430"></position>			
+		
+		</component>
+        
+         <component>
+			
+			<name>METER_VU</name>
+			<osc_adress>/signal/Danger_R1/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="265" y="300"></position>
+            			
+		
+		</component>
+        
+         <component>
+			
+			<name>FADER_REVERSE</name>
+			<osc_adress>/live/track/volume/Danger_R1</osc_adress>
+			<range min="" max = ""></range>
+			<position x="506" y="640"></position>
+            <rotation>90.0</rotation>
+            
+		
+        </component>
+        
+        <component>
+			
+			<name>SWITCHER_SQUARE_ON</name>
+			<osc_adress>/live/track/volume/Danger_R1</osc_adress>
+			<range min="" max = "0.0001"></range>
+			<position x="350" y="885"></position>
+            
+		
+        </component>
+        
+     
+        
+         <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+			<range min="" max = ""></range>
+			<position x="378" y="535"></position>
+            
+		
+        </component>
+
+        
+          <!-- ---------------------------------------------------------------------------------------------------------------- -->
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress>eqhi_mixer4</osc_adress>
+			<range min="" max = ""></range>
+			<position x="540" y="160"></position>			
+		
+		</component>
+        
+      
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress>eqmid_mixer4</osc_adress>
+			<range min="" max = ""></range>
+			<position x="540" y="300"></position>			
+		
+		</component>
+        
+        <component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_right</name>
+			<osc_adress>eqlow_mixer4</osc_adress>
+			<range min="" max = "230"></range>
+			<position x="540" y="430"></position>			
+		
+		</component>
+    
+    
+        <component>
+			
+			<name>METER_VU</name>
+			<osc_adress>/signal/Percus/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="450" y="300"></position>
+            			
+		
+		</component>
+        
+         <component>
+			
+			<name>FADER_REVERSE</name>
+			<osc_adress>/live/track/volume/Percus</osc_adress>
+			<range min="" max = ""></range>
+			<position x="700" y="640"></position>
+            <rotation>90.0</rotation>
+            
+		
+        </component>
+
+		
+        
+        <component>
+			
+			<name>SWITCHER_SQUARE_ON</name>
+			<osc_adress>/live/track/volume/Percus</osc_adress>
+            <osc_switch></osc_switch>
+			<range min="" max = "0.0001"></range>
+			<position x="540" y="885"></position>
+            
+		
+        </component>
+        
+        
+        
+         <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+			<range min="" max = ""></range>
+			<position x="572" y="535"></position>
+            
+		
+        </component>
+
+        
+		
+		<! -- vu metres--> 
+		
+		 <component>
+			
+			<name>VUMETER_D_1_24</name>
+			<osc_adress>/signal/Master/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="650" y="460"></position>
+            
+		
+        </component>
+		
+		 <component>
+			
+			<name>VUMETER_D_1_24</name>
+			<osc_adress>/signal/Master/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="-650" y="460"></position>
+            
+		
+        </component>
+		
+          <component>
+			
+			<name>VUMETER_MASTER_A_2_24</name>
+			<osc_adress>/signal/Master/</osc_adress>
+			<range min="" max = ""></range>
+			<position x="0" y="780"></position>
+            
+		
+        </component>
+        
+        
+        
+          <!-- ---------------------------------------------------------------------------------------------------------------- -->
+        
+      
+ 
+        
+			
+	</module>
+	
+	
+	
+
+</scene>

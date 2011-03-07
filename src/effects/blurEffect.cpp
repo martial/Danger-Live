@@ -39,6 +39,7 @@ void blurEffect::fadeIn (float duration) {
 	
 	fadeDuration = duration;
 	blurPctTween.setParameters( 0,easeQuint, ofxTween::easeIn, blur.blurPct, 2, fadeDuration*.5, 0);
+	ofRemoveListener(blurPctTween.end_E,this,&blurEffect::fadeOut);
 	ofAddListener(blurPctTween.end_E,this,&blurEffect::fadeOut);
 	blurPctTween.start();
 	

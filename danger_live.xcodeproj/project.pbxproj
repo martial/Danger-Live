@@ -113,6 +113,7 @@
 		83326190131F01A0008788BF /* ofxFenster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8332618E131F01A0008788BF /* ofxFenster.cpp */; };
 		83326368131FFF1A008788BF /* ofxTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83326366131FFF1A008788BF /* ofxTimer.cpp */; };
 		83362FC61315747500D31962 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83362FC51315747500D31962 /* GLUT.framework */; };
+		83C44669132107B500E4ECF3 /* dgLoopModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C44668132107B500E4ECF3 /* dgLoopModuleWrapper.cpp */; };
 		83F19AB1131EA7F000446110 /* dgMixerModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83F19AB0131EA7F000446110 /* dgMixerModuleWrapper.cpp */; };
 		83F3CFC2131D41DA007612A6 /* dangerPrefs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83F3CFC1131D41DA007612A6 /* dangerPrefs.cpp */; };
 		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; };
@@ -126,7 +127,7 @@
 		E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
 		E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
 		E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
-		E4C2422B10CC554B004149E2 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2421E10CC549C004149E2 /* openFrameworksDebug.a */; };
+		E4C2422B10CC554B004149E2 /* openFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2421E10CC549C004149E2 /* openFrameworks.a */; };
 		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
@@ -375,6 +376,8 @@
 		83326366131FFF1A008788BF /* ofxTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTimer.cpp; sourceTree = "<group>"; };
 		83326367131FFF1A008788BF /* ofxTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTimer.h; sourceTree = "<group>"; };
 		83362FC51315747500D31962 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		83C44667132107B500E4ECF3 /* dgLoopModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgLoopModuleWrapper.h; sourceTree = "<group>"; };
+		83C44668132107B500E4ECF3 /* dgLoopModuleWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgLoopModuleWrapper.cpp; sourceTree = "<group>"; };
 		83F19AAF131EA7F000446110 /* dgMixerModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgMixerModuleWrapper.h; sourceTree = "<group>"; };
 		83F19AB0131EA7F000446110 /* dgMixerModuleWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgMixerModuleWrapper.cpp; sourceTree = "<group>"; };
 		83F3CFC0131D41DA007612A6 /* dangerPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dangerPrefs.h; sourceTree = "<group>"; };
@@ -420,7 +423,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C2422B10CC554B004149E2 /* openFrameworksDebug.a in Frameworks */,
+				E4C2422B10CC554B004149E2 /* openFrameworks.a in Frameworks */,
 				E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */,
 				E45BE2E40E8CC69C009D7055 /* rtAudio.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
@@ -695,6 +698,8 @@
 				833015B613156A3D00BFEF00 /* dgStyleSwitchIntroWrapper.h */,
 				83F19AAF131EA7F000446110 /* dgMixerModuleWrapper.h */,
 				83F19AB0131EA7F000446110 /* dgMixerModuleWrapper.cpp */,
+				83C44667132107B500E4ECF3 /* dgLoopModuleWrapper.h */,
+				83C44668132107B500E4ECF3 /* dgLoopModuleWrapper.cpp */,
 			);
 			path = wrappers;
 			sourceTree = "<group>";
@@ -1275,7 +1280,7 @@
 		E4C2421710CC549C004149E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4C2421E10CC549C004149E2 /* openFrameworksDebug.a */,
+				E4C2421E10CC549C004149E2 /* openFrameworks.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1382,10 +1387,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E4C2421E10CC549C004149E2 /* openFrameworksDebug.a */ = {
+		E4C2421E10CC549C004149E2 /* openFrameworks.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = openFrameworksDebug.a;
+			path = openFrameworks.a;
 			remoteRef = E4C2421D10CC549C004149E2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1525,6 +1530,7 @@
 				83F19AB1131EA7F000446110 /* dgMixerModuleWrapper.cpp in Sources */,
 				83326190131F01A0008788BF /* ofxFenster.cpp in Sources */,
 				83326368131FFF1A008788BF /* ofxTimer.cpp in Sources */,
+				83C44669132107B500E4ECF3 /* dgLoopModuleWrapper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

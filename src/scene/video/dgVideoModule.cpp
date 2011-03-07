@@ -24,10 +24,19 @@ void dgVideoModule::setup (dgVideoData & videoData) {
 		view->setup(*set);
 		views.push_back(view);
 	}
+	
+	logoAlpha = 0.0;
+	logoAlphaVariation = 0.0;
+	flickrCount = 0;
+	flickrIntensity = 1;
+	logo.loadImage("components/LOGO_DANGER/LOGO.png");
 	//setCurrentView(0);
 }
 
 void dgVideoModule::update() {
+	
+	
+	//printf("Video module update \n");
 	
 	if ( views.size() > 0 ) {
 	 views[currentView]->update();
@@ -36,8 +45,29 @@ void dgVideoModule::update() {
 
 void dgVideoModule::draw () {
 	
-	views[currentView]->draw();
-
+	
+	
+	
+	// 
+	
+	if ( flickrCount > flickrIntensity ) {
+		views[currentView]->draw();
+		ofEnableAlphaBlending();
+		ofSetColor(255, 255, 255, logoAlpha*200 + logoAlphaVariation * 55 );
+		logo.draw(1920*.5 - logo.width * .5 , 120);
+		ofDisableAlphaBlending();	
+		flickrCount = 0;
+		
+	} else {
+		
+	}
+	
+	
+	flickrCount ++;
+	
+	
+	
+	
 }
 
 ofTexture * dgVideoModule::getVideoTexture () {
@@ -46,23 +76,36 @@ ofTexture * dgVideoModule::getVideoTexture () {
 	
 }
 
+//ofxQTKitVideoPlayer  * dgVideoModule::getVideoInstance() {
+	//return views[currentView]->getVideoInstance();
+//}
+
+ofVideoPlayer * dgVideoModule::getVideoInstance() {
+	return views[currentView]->getVideoInstance();
+}
+
+
+
 void dgVideoModule::init () {
-	setCurrentView(currentView);
+	setCurrentView(0);
 }
 
 void dgVideoModule::stop () {
 	
 	views[currentView]->stop();
 	
-	
 }
 
 void dgVideoModule::setCurrentView (int viewID) {
 	
-	views[currentView]->stop();
+	stop();
 	currentView = viewID;
 	views[currentView]->play();
 	
+}
+
+void dgVideoModule::setRandomVideo () {
+	views[currentView]->setRandomVideo();
 }
 
 void dgVideoModule::onBeatEvent (float beatTime) {

@@ -84,7 +84,7 @@ void dgSceneObject::setup (string name, string type) {
 	
 	active = false;
 	
-	pct = 0.0;
+	pct = (reversePct ) ? 1.0 : 0.0;
 	easePct = 0.0;
 	statePct = 1.0;
 	oldPct = 0.0;
@@ -203,12 +203,13 @@ void dgSceneObject::setPosition (int x, int y) {
 
 void dgSceneObject::setPct(float pct) {
 	
+	
 	if ( pct < this->range.x ) pct = 0.0;
 	if ( pct > this->range.y ) pct = 1.0;
 	
-	if ( pct != this->pct  ) {
-		this->pct = ( reversePct ) ? 1.0 - pct :pct;
-	}
+	
+	this->pct = ( reversePct ) ? 1.0 - pct :pct;
+	
 	
 	
 	

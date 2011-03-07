@@ -63,6 +63,7 @@ void OscReceiver::update () {
 			
 			if ( ofGetElapsedTimeMillis() - currentTime >= 200.0 ) {
 				currentTime = ofGetElapsedTimeMillis();
+				printf("BEAT ! ");
 				ofNotifyEvent(beatEvent,foo,this);	
 			}
 			
@@ -73,7 +74,7 @@ void OscReceiver::update () {
 		}
 		
 		if ( msg.address == "/signal/Master/" ){
-			ofNotifyEvent(masterSignalEvent, msg.value,this);
+			ofNotifyEvent(masterSignalEvent, msg.value, this);
 		}
 		
 	

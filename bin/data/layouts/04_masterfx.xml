@@ -1,0 +1,203 @@
+<scene>
+
+  
+
+	<module name="" layer="components/layers/MASTERFX2_proto.png" layout="components/LAYOUTS/master2_lay.png">
+    
+  
+       
+       
+        <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress>eqlow_mixer1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="280"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		 <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress>eqlow_master</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="490"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		 <component>
+			
+			<name>knob_med_d</name>
+			<osc_adress>eqlow_mixer3</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="700"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<!-- mediums -->
+		
+		 <component>
+			
+			<name>knob_tiny_b_led_a_left</name>
+			<osc_adress>eqhi_mixer1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-120" y="340"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		 <component>
+			
+			<name>knob_tiny_b_led_a_right</name>
+			<osc_adress>eqmid_mixer1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="120" y="340"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>knob_tiny_b_led_a_left</name>
+			<osc_adress>eqhi_mixer3</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-120" y="590"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		 <component>
+			
+			<name>knob_tiny_b_led_a_right</name>
+			<osc_adress>eqmid_mixer3</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="120" y="590"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+       
+	   
+	   
+	   <! -- tempo -->
+                               
+        <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="230" y="570"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		 <component>
+			
+			<name>BOUTON_POUSSOIR_B</name>
+			<osc_adress>tempo</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-230" y="570"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+        
+        <!-- Petit du centre -->
+		
+		<component>
+			
+			<name>knob_tiny_a_skin_eq_led_a_left</name>
+			<osc_adress>reverb1</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="0" y="835"></position>
+            <rotation>0.0</rotation>
+            
+        </component> 
+		
+		<! -- bumetres -->
+		<component>
+			
+			<name>METER_LED_A_1_24</name>
+			<osc_adress>/signal/Danger_L1/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-290" y="250"></position>
+            <rotation>-90.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>METER_LED_A_1_24</name>
+			<osc_adress>/signal/Danger_L1/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="290" y="250"></position>
+            <rotation>90.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>METER_LED_A_1_46</name>
+			<osc_adress>/signal/Master/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-472" y="458"></position>
+            <rotation>-90.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>METER_LED_A_1_46</name>
+			<osc_adress>/signal/Master/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="472" y="458"></position>
+            <rotation>90.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>METER_LED_A_1_24</name>
+			<osc_adress>/signal/Danger_R1/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="-290" y="667"></position>
+            <rotation>-90.0</rotation>
+            
+        </component> 
+		
+		<component>
+			
+			<name>METER_LED_A_1_24</name>
+			<osc_adress>/signal/Danger_R1/</osc_adress>
+            <osc_adress_state></osc_adress_state>
+			<range min="" max = ""></range>
+			<position x="290" y="667"></position>
+            <rotation>90.0</rotation>
+            
+        </component> 
+            
+			
+			
+			
+	</module>
+	
+	
+	
+
+</scene>

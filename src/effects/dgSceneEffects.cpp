@@ -37,6 +37,8 @@ void dgSceneEffects::setup(dangerPrefs & settings) {
 	brightnessPct = 1.0;
 	blurPct = 0.0;
 	
+	masterSignalVariation = 1.0;
+	
 	addEffect();
 	
 	setBrightness(this->settings->getBrightness(), 3000);
@@ -128,6 +130,7 @@ void dgSceneEffects::quitBloom () {
 	
 	blur.setBlurPct(0.0, 500);
 	bloom.setIntensity(0.0, 500);
+	ofRemoveListener(bloom.intensityEnd, this, &dgSceneEffects::removeBloom);
 	ofAddListener(bloom.intensityEnd, this, &dgSceneEffects::removeBloom);
 }
 
@@ -150,6 +153,7 @@ void dgSceneEffects::blurFadeInOut (float duration) {
 void dgSceneEffects::colorFadeInOut (float duration, float brightVal, float contrastVal, float saturationVal ) {
 	
 	color.fadeInAll(duration, brightVal, contrastVal, saturationVal);
+	ofRemoveListener(color.completeBrightnessEvent, this, &dgSceneEffects::onBrigthnessBlackEvent);
 	ofAddListener(color.completeBrightnessEvent, this, &dgSceneEffects::onBrigthnessBlackEvent);
 }
 

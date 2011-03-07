@@ -16,6 +16,7 @@
 #include "ofMain.h"
 #include "dgAbstractModuleWrapper.h"
 #include "moduleData.h"
+#include "ofxQTKitVideoPlayer.h"
 
 class dgMixerModuleWrapper : public dgAbstractModuleWrapper {
 	
@@ -36,7 +37,10 @@ public:
 private:
 	
 	ofImage screen;
+	ofTexture * video;
 	
+	//ofxQTKitVideoPlayer * videoInstance;
+	ofVideoPlayer * videoInstance;
 	
 };
 

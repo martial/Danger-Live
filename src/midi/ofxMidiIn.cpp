@@ -62,13 +62,13 @@ void ofxMidiIn::closePort(){
 void ofxMidiIn::manageNewMessage(double deltatime, std::vector< unsigned char > *message){
 
 	unsigned int nBytes = message->size();
-	if(bVerbose){
+	//if(bVerbose){
 		std::cout << "num bytes: "<<nBytes;
 		for ( unsigned int i=0; i<nBytes; i++ )
 			std::cout << " Byte " << i << " = " << (int)message->at(i) << ", ";
 		if ( nBytes > 0 )
 			std::cout << "stamp = " << deltatime << '\n';
-	}
+	//}
 
     if(nBytes>0){
 
@@ -83,7 +83,11 @@ void ofxMidiIn::manageNewMessage(double deltatime, std::vector< unsigned char > 
         }else if(nBytes==3){
             eventArgs.byteOne = (int)message->at(1);
             eventArgs.byteTwo = (int)message->at(2);
-        }
+        } else if (nBytes==6){
+			eventArgs.byteOne = (int)message->at(1);
+            eventArgs.byteTwo = (int)message->at(2);
+			eventArgs.byteFour =  (int)message->at(4);
+		}
 
 
         ofNotifyEvent( newMessageEvent, eventArgs, this );

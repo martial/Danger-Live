@@ -17,6 +17,10 @@ void dgAbstractModuleWrapper::setup(moduleData * relatedModule, dgVideoModule * 
 	
 }
 
+void dgAbstractModuleWrapper::setCompBuilder(dgCompBuilder * builder) {
+	this->builder = builder;
+}	
+
 void dgAbstractModuleWrapper::update() {
 	
 }
@@ -35,4 +39,8 @@ void dgAbstractModuleWrapper::onMidiEvent(int adress, int val) {
 
 void dgAbstractModuleWrapper::onOscEvent(customOscMessage & m ) {
 
+}
+
+void dgAbstractModuleWrapper::onBeatEvent() {
+	
 }

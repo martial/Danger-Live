@@ -1,19 +1,51 @@
 <videos>
 
-    <set>
-        
-        <video>new/QT H264 70 10fr.mov</video>
-           <video>new/QT H264 70 10fr.mov</video>
-           <video>new/QT H264 70 10fr.mov</video>
-           <video>new/QT H264 70 10fr.mov</video>      
+   
+    
+     <set>
+        <video>JUNGLE001.mov</video>
+        <video>JUNGLE002.mov</video>
+        <video>JUNGLE003.mov</video>
+        <video>JUNGLE004.mov</video>
+        <video>JUNGLE005.mov</video>
+        <video>JUNGLE007.mov</video>
+        <video>JUNGLE008.mov</video>
+        <video>JUNGLE009.mov</video>
+        <video>JUNGLE010.mov</video>
+        <video>JUNGLE011.mov</video>
+        <video>JUNGLE012.mov</video>            
     
     </set>
     
      <set>
-        <video>5.avi</video>
-                
-    
+        
+        <video>CITY001.mov</video>
+        <video>CITY002.mov</video>
+        <video>CITY003.mov</video>
+        <video>CITY004.mov</video>
+        <video>CITY005.mov</video>
+               
     </set>
+    
+    <set>
+        
+        <video>SOLAR01.mov</video>
+         <video>SOLAR02.mov</video>
+          <video>SOLAR03.mov</video>
+           <video>SOLAR04.mov</video>
+            <video>SOLAR05.mov</video>
+             <video>SOLAR06.mov</video>
+              <video>SOLAR07.mov</video>
+               <video>SOLAR08.mov</video>
+                <video>SOLAR09.mov</video>
+                 <video>SOLAR10.mov</video>
+                  <video>SOLAR11.mov</video>
+                   <video>SOLAR12.mov</video>
+                    <video>SOLAR13.mov</video>
+     
+               
+    </set>
+ 
     
      	
 </videos>

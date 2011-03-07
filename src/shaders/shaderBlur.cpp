@@ -33,7 +33,7 @@ void shaderBlur::setup(int fboW, int fboH){
 
 //--------------------------------------------------------------
 void shaderBlur::beginRender(){
-	fbo1->clear(0,0,0,0);
+	//fbo1->clear(0,0,0,0);
 	fbo1->begin();
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
@@ -83,7 +83,7 @@ ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useS
 			shaderH.setShaderActive(true);
 			shaderH.setUniformVariable1f("blurAmnt", blurDistance*blurPct);
 			
-			dst->clear(0,0,0,0);
+			//dst->clear(0,0,0,0);
 			dst->begin();
 			glEnable(GL_BLEND);
 			glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 
@@ -98,7 +98,7 @@ ofxFBOTexture * shaderBlur::getFbo(float x, float y, float w, float h, bool useS
 			shaderV.setShaderActive(true);	
 			shaderV.setUniformVariable1f("blurAmnt", blurDistance*blurPct);
 			
-			src->clear(0, 0, 0, 0);
+			//src->clear(0, 0, 0, 0);
 			src->begin();
 			glEnable(GL_BLEND);
 			glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 

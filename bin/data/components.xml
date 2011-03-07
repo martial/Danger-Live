@@ -157,10 +157,7 @@
         
         <!-- back -->
 		<medias>
-            <media>
-                <type>image</type>
-                <url>components/SKIN/skin-bouton-rotatif-petit-EQ/skin-petit-EQ-gris.png</url>
-            </media>
+            
             
             <media>
                 <type>image</type>
@@ -194,10 +191,7 @@
         
         <!-- back -->
 		<medias>
-            <media>
-                <type>image</type>
-                <url>components/SKIN/skin-bouton-rotatif-petit-EQ/skin-petit-EQ-gris.png</url>
-            </media>
+            
             
             <media>
                 <type>image</type>
@@ -231,10 +225,7 @@
         
         <!-- back -->
 		<medias>
-            <media>
-                <type>image</type>
-                <url>components/SKIN/skin-bouton-rotatif-petit-EQ/skin-petit-EQ-rouge.png</url>
-            </media>
+            
             
             <media>
                 <type>image</type>
@@ -406,7 +397,7 @@
         
         <activity_switch>
             <id>LED_A</id>
-            <position x="-45" y="-45"></position>
+            <position x="-45" y="-70"></position>
         </activity_switch>
       		                                
 	</comp>
@@ -418,7 +409,7 @@
         
         <activity_switch>
             <id>LED_A</id>
-            <position x="45" y="-45"></position>
+            <position x="45" y="-70"></position>
         </activity_switch>
       		                                
 	</comp>
@@ -528,6 +519,19 @@
 		
 	</comp>
     
+     <comp>
+		
+		<name>skin-bouton-rotatif-petit-a</name>
+		<type>image_sequence</type>
+		<url>components/SKIN/skin-bouton-rotatif-petit-a</url>
+		<medias>
+		</medias>
+		
+	</comp>
+    
+    
+    
+    
     <comp>
 		
 		<name>skin-bouton-rotatif-petit-d</name>
@@ -626,6 +630,7 @@
 		<type>opacity_switch</type>
 		<url>components/LED_D/LED-D-01.png</url>
 		<extras_url>
+            <extraurl>components/LED_D/LED-D-01.png</extraurl>
             <extraurl>components/LED_D/LED-D-02.png</extraurl>
             <extraurl>components/LED_D/LED-D-03.png</extraurl>
         </extras_url>		
@@ -715,6 +720,15 @@
 	</comp>
     
     <comp>
+		<name>PAD_2</name>
+		<type>switch</type>
+		<url>components/PAD/pad-traits/pad-traits-bas.png</url>
+		<extras_url>
+            <extraurl>components/PAD/pad-traits/pad-traits-haut.png</extraurl>
+        </extras_url>		
+	</comp>
+    
+    <comp>
 		<name>PAD_ACTIVITY</name>
 		<type>switch</type>
 		<url>components/PAD/pad/pad-haut.png</url>
@@ -754,6 +768,7 @@
 		<url>components/DECOUPE_DANGER/decoupedanger3.png</url>
 		
 		 <extras_url>
+            <extraurl>components/DECOUPE_DANGER/decoupedanger3.png</extraurl>
             <extraurl>components/DECOUPE_DANGER/decoupedanger2.png</extraurl>
             <extraurl>components/DECOUPE_DANGER/decoupedanger1.png</extraurl>
             <extraurl>components/DECOUPE_DANGER/decoupedanger0.png</extraurl>
@@ -799,7 +814,7 @@
 		<type>fader</type>
         <config>
             <!-- this value is the total width of possible drag-->
-            <item>215</item>
+            <item>174</item>
         </config>
 		<url>components/CROSSFADER/crossfader-fader2.png</url>
 		<medias>
@@ -1142,7 +1157,7 @@
             <!-- columns-->
             <item>1</item>
             <!-- row-->
-            <item>46</item>
+            <item>45</item>
             <!-- blur rate-->
             <item>.1</item>
             
@@ -1196,7 +1211,7 @@
             <item>-20</item>
             
              <!-- yPadding -->
-            <item>-38</item>
+            <item>-35</item>
             
         </config>
         
@@ -1234,7 +1249,7 @@
             <!-- columns-->
             <item>2</item>
             <!-- row-->
-            <item>30</item>
+            <item>27</item>
             <!-- blur rate-->
             <item>.1</item>
             
@@ -1243,6 +1258,29 @@
             
              <!-- yPadding -->
             <item>-36</item>
+            
+        </config>
+        
+			
+	</comp>
+    
+    <comp>
+		<name>VUMETER_MASTER_BTN_B_1_4</name>
+		<type>meter</type>
+        <switch_id>BOUTON_POUSSOIR_B</switch_id>
+        <config>
+            <!-- columns-->
+            <item>1</item>
+            <!-- row-->
+            <item>7</item>
+            <!-- blur rate-->
+            <item>.1</item>
+            
+             <!-- xpadding -->
+            <item>0</item>
+            
+             <!-- yPadding -->
+            <item>0</item>
             
         </config>
         

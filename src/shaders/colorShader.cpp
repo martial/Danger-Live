@@ -40,7 +40,7 @@ void colorShader::setup(int fboW, int fboH){
 
 //--------------------------------------------------------------
 void colorShader::beginRender(){
-	fbo1->clear(0, 0, 0, 0);
+	//fbo1->clear(0, 0, 0, 0);
 	fbo1->begin();
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); 

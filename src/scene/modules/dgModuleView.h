@@ -22,6 +22,7 @@
 #include "dgSceneEffects.h"
 #include "dgVideoModule.h"
 #include "dgMixerModuleWrapper.h"
+#include "dgLoopModuleWrapper.h"
 
 //#define EDITOR_MODE
 
@@ -81,10 +82,9 @@ class dgModuleView {
 	// fade stuff
 	float						globalOpacity;
 	
-	#ifdef EDITOR_MODE
-	ofImage						layerImg;
-	#endif
 	
+	ofImage						layerImg;
+		
 };
 
 #endif
