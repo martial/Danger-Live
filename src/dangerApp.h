@@ -13,10 +13,11 @@
 #include "dgDebugView.h"
 #include "customOscMessage.h"
 #include "dangerPrefs.h"
+#include "screenManager.h"
 
 #include "ofxFenster.h"
 
-//#define EDITOR_MODE
+//#define DEBUG_DANGER_MODE
 //#define _USE_FENSTER
 
 
@@ -31,11 +32,6 @@ public:
 	void update();
 	void draw();
 	
-	#ifdef _USE_FENSTER
-	void fensterDraw();
-	void fensterUpdate();
-	#endif
-	
 	void reset();
 	void onBeatEvent(int & f);
 	void onOscEvent(customOscMessage & f ) ;
@@ -47,6 +43,11 @@ public:
 	void mousePressed(int x, int y, int button);
 	void mouseReleased(int x, int y, int button);
 	void windowResized(int w, int h);
+    
+    #ifdef _USE_FENSTER
+	void fensterDraw();
+	void fensterUpdate();
+    #endif
 	
 	
 	private :
@@ -63,25 +64,21 @@ public:
 	dangerPrefs					appSettings;
 		
 	dgDebugView					debugView;
+	screenManager				screens;
 		
 	ofxFBOTexture		*		fbo;
 	ofxFBOTexture		*		sceneFbo;
 	dgSceneEffects				sceneEffects;
 	
-	ofPoint						screen1Size, screen2Size;
+	ofPoint						screen1Size, screen2Size, mainScreen;
 	
 	bool						oscDebugEnabled;
 	
-	
-	float						panelViewScale;
-	float						masterVariation;
-	
-	
 	fpsViewer					fps;
 	
+	bool						uniqueScreenMode;
 	
-	
-	//ofTexture					texture;
+		
 };
 
 //#endif

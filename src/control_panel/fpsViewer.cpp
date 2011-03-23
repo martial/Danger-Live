@@ -41,6 +41,9 @@ void fpsViewer::draw(int x, int y,int width, int height) {
 	
 	
 	ofSetColor(255, 255, 255, 255);
+	
+	//ofRect(0, 0, 1200, 90);
+	
 	if (fpsCounter < width){
 		for (int i = 0; i < fpsCounter; i++){
 			// ofVertex(i, fpsHistory[i]);
@@ -51,7 +54,7 @@ void fpsViewer::draw(int x, int y,int width, int height) {
 		int start = fpsCounter;
 		int end   = fpsCounter + width;
 		for (int i = start; i < end; i++){
-			int posInArray = i % width;              // this is tricky, it's how we deal with the "jump" in the ring buffer
+			int posInArray = i % width;          
 			//ofVertex(i, fpsHistory[i]);
 			ofSetColor(255, (int)fpsHistory[posInArray] * 255 / maxFps ,(int)fpsHistory[posInArray] * 255 / maxFps);
 			ofRect(x + i-start, y+maxFps  - fpsHistory[posInArray], 1, 1);
@@ -59,5 +62,8 @@ void fpsViewer::draw(int x, int y,int width, int height) {
 		
 	}
 	
-	
+    ofSetColor(255, 0, 0);
+    ofDrawBitmapString(ofToString(ofGetFrameRate()), x+10, y+10);
+    ofSetColor(255, 255, 255);
+
 }

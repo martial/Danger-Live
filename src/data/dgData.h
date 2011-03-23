@@ -23,9 +23,9 @@
 class dgData  {
 
 	public:
-	void setup();
+	void setup(dgCompBuilder & compBuilder);
 	void update();
-	void addSceneObjects (dgCompBuilder & compBuilder);
+	//void addSceneObjects (dgCompBuilder & compBuilder);
 	void debug();
 	void clean();
 	

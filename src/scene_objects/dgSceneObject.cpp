@@ -58,11 +58,19 @@ void dgSceneObject::initValues () {
 
 	if ( pctRef ) {
 		setPct(pctRef->pct);
-		//easePct = pct;
+		easePct = pct;
 	}
 	if ( pctStateRef ) {
-		setPct(pctStateRef->pct);
+		setStatePct(pctStateRef->pct);
 	}
+	
+	
+	printf("-------\n");
+	printf("init values for ");
+	printf(name.c_str());
+	printf("\n");
+	printf("pct : %f\n ", pct);
+	printf("state pct : %f\n ",statePct);
 }
 
 
@@ -205,7 +213,7 @@ void dgSceneObject::setPct(float pct) {
 	
 	
 	if ( pct < this->range.x ) pct = 0.0;
-	if ( pct > this->range.y ) pct = 1.0;
+	//if ( pct > this->range.y ) pct = 1.0;
 	
 	
 	this->pct = ( reversePct ) ? 1.0 - pct :pct;

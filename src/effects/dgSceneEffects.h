@@ -58,8 +58,7 @@ class dgSceneEffects {
 	float				contrastPct;
 	float				blurPct;
 	
-	float				masterSignalVariation;
-	
+
 	ofEvent<int>		onFadeChangeEvent;
 	
 	private:

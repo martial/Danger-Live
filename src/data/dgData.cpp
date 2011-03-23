@@ -9,7 +9,7 @@
 
 #include "dgData.h"
 
-void dgData::setup () {
+void dgData::setup (dgCompBuilder & compBuilder) {
 	
 	//printf("set up data \n");
 	
@@ -52,7 +52,33 @@ void dgData::setup () {
 		//printf ("Number of components : %d\n", numOfComponents);
 		
 		for (int j=0; j<numOfComponents; j++ ) {
+            
+              XML.pushTag("component", j);
+            dgSceneObject  * sceneObject = compBuilder.createCompByName(XML.getValue("name", ""));
 			
+          
+            
+			if (sceneObject) {
+                printf("ok");
+                sceneObject->setPosition(XML.getAttribute("position", "x", 0, 0),XML.getAttribute("position", "y", 0, 0));
+                sceneObject->rotation = XML.getValue("rotation", 0,0);
+                sceneObject->adress = XML.getValue("osc_adress", "");
+                sceneObject->adressState =  XML.getValue("osc_adress_state", "");
+                sceneObject->adressMultiplier =  XML.getAttribute("osc_adress", "multiplier", "", 0);
+                sceneObject->nameId =XML.getValue("nameID", "");
+                sceneObject->reversePct = (XML.getValue("reversePct", "") == "true" ) ? true : false;
+                ofPoint range;
+                range.x = XML.getAttribute("range", "min", 0, 0);
+                range.y = XML.getAttribute("range", "max", 0, 0);
+                sceneObject->range = range;
+                data[i]->cpObjects.push_back(sceneObject);
+                oscObjManager.addObject(sceneObject->adress , false,  sceneObject->adressMultiplier);
+                oscObjManager.addObject( sceneObject->adressState, true);
+			}
+
+            
+            
+			/*
 			data[i]->cpData.push_back(new componentData());
 			
 			XML.pushTag("component", j);
@@ -67,8 +93,6 @@ void dgData::setup () {
 			data[i]->cpData[j]->reversePct =  (XML.getValue("reversePct", "") == "true" ) ? true : false;
 			
 			
-			
-			
 			data[i]->cpData[j]->pos.x = XML.getAttribute("position", "x", 0, 0);
 			data[i]->cpData[j]->pos.y = XML.getAttribute("position", "y", 0, 0);
 			
@@ -81,20 +105,70 @@ void dgData::setup () {
 			} else {
 				data[i]->cpData[j]->rotation = 0.0f;
 			}
-
+            */
 			
 			/* osc object manager */
 			
-			oscObjManager.addObject(data[i]->cpData[j]->adress, false, data[i]->cpData[j]->adressMultiplier);
-			oscObjManager.addObject(data[i]->cpData[j]->adressState, true);
+			
 			
 			
 			XML.popTag();
 		}
+        
+        
+        for ( int j = 0; j< data[i]->cpObjects.size(); j++ ) {
+			
+			
+			
+			dgSceneObject  * sceneObject =  data[i]->cpObjects[j];
+			
+            
+			/*
+             printf("\ndouble check object : ");
+             printf(sceneObject->name.c_str());
+             printf(" | ");
+             printf(sceneObject->type.c_str());
+             printf("\n");
+			 */
+			
+			if ( sceneObject->activityObjectRefName != "") {
+				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->activityObjectRefName);
+				if(refSceneObject) {
+                    refSceneObject->pos = sceneObject->activitySwitchObjPos;
+                    refSceneObject->blurRate = .7;
+                    sceneObject->addActivitySwitchObject(refSceneObject);
+				}
+				//printf("add activity object : " );
+			}
+			
+			
+			if ( sceneObject->type == "meter") {
+				int numOfRows = (int)sceneObject->configValues[1];
+				
+				//printf("\nmeter object ");
+				//printf(sceneObject->name.c_str());
+				//printf("\n");
+				
+				for (int k=0; k<numOfRows; k++ ) {
+                    dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->sceneObjectRefName);
+                    if ( refSceneObject) {
+                        sceneObject->addSwitchObject(refSceneObject);
+					}
+				}
+				
+			}
+            
+			
+			// finally add the reference object
+			sceneObject->setPctObjectsReference(oscObjManager.getObjectsByAdress(sceneObject->adress, sceneObject->adressMultiplier), oscObjManager.getObjectsByAdress(sceneObject->adressState, ""));
+			sceneObject->init();
+		}
+
+        
 		XML.popTag();
 		
 	}
-	
+	oscObjManager.addReferents();
 	debug();
 }
 
@@ -103,12 +177,12 @@ void dgData::update() {
 }
 
 
-
+/*
 void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 	
 	//printf("\nSTARTING COMPONENT BUILD----------------------------------\n");
 	
-	
+	/*
 	for ( int u=0; u< data.size(); u++ ) {
 		
 		moduleData * currentModule = data[u];
@@ -144,14 +218,7 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			dgSceneObject  * sceneObject =  currentModule->cpObjects[j];
 			
 						
-			/*
-			printf("\ndouble check object : ");
-			printf(sceneObject->name.c_str());
-			printf(" | ");
-			printf(sceneObject->type.c_str());
-			printf("\n");
-			 */
-			
+						
 			if ( sceneObject->activityObjectRefName != "") {
 				dgSceneObject  * refSceneObject = compBuilder.createCompByName(sceneObject->activityObjectRefName);
 				if(refSceneObject) {
@@ -185,25 +252,15 @@ void dgData::addSceneObjects (dgCompBuilder & compBuilder) {
 			sceneObject->init();
 		}
 		
-			
-		/*
-		dgSceneObject  * beatObject = compBuilder.createCompByName("LED_A");
-		if ( beatObject != NULL) {
-			beatObject->setPosition(0, 120);
-			beatObject->nameId = "beatObject";
-			beatObject->blurRate = 0.0;
-			currentModule->cpObjects.push_back(beatObject);
-		}
-		 
-		 */
-		
 		
 	}	
 	
 	// link referents
-	oscObjManager.addReferents();
+	//oscObjManager.addReferents();
 	
 }
+
+*/
 
 moduleData * dgData::getModuleByName(string nameTarget) {
 	
@@ -222,15 +279,15 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 	oscObjManager.getRelatedObjects(msg.address, &objects);
 	int total = objects.size();
 	
-	
-	
-	
 	for ( int i=0; i<total; i++) {
 		
 		if (msg.address == "/live/master/crossfader" ) {
 			msg.value += 1.0;
 		}
 		
+        float val = getPctByAdress(msg.address);
+       
+        
 		objects[i]->setPct(msg.value / getPctByAdress(msg.address));
 	}
 	
@@ -246,6 +303,8 @@ void dgData::onOscEvent (customOscMessage & msg ) {
 			if (msg.stringArgs[j] == "/live/master/crossfader" ) {
 				msg.value += 1.0;
 			}
+            
+                       
 			objects[k]->setPct(msg.value / getPctByAdress(msg.stringArgs[j]));
 		}
 		

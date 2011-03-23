@@ -57,7 +57,7 @@ void DangerMidiListener::newMidiMessage(ofxMidiEventArgs& eventArgs){
 			break;
 			
 		case 13:
-			sceneEffects->masterSignalVariation = (float)((float)eventArgs.byteTwo / 127 * 2);
+			//sceneEffects->masterSignalVariation = (float)((float)eventArgs.byteTwo / 127 * 2);
 			break;
 			
 			

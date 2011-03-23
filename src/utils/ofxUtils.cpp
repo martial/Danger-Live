@@ -11,7 +11,7 @@
 
 
 
-ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, float currw, float currh ) {
+ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, float currw, float currh, bool keepInto ) {
 
 	float w,h;
 	
@@ -32,6 +32,43 @@ ofPoint ofxUtils::getSizeRatio ( int maxw, int maxh, float currw, float currh ) 
 	w = (float)maxh * imageAspectRatio;
 	h = (float)maxh;
 
+		
+	}
+	
+	if ( keepInto ) {
+		
+		if ( currw > maxw ) {
+			
+			w = (float)maxw;
+			float scale = maxw / currw;
+			h = (float)currh * scale;
+			
+		} 
+		
+		if ( currh > maxh ) {
+			
+			h = (float)maxh;
+			float scale = maxh / currh;
+			w = (float)currw * scale;
+			
+		} 
+		
+		if ( w > maxw ) {
+			
+			w = (float)maxw;
+			float scale = maxw / currw;
+			h = (float)currh * scale;
+			
+		} 
+		
+		if ( h > maxh ) {
+			
+			h = (float)maxh;
+			float scale = maxh / currh;
+			w = (float)currw * scale;
+			
+		} 
+		
 		
 	}
 	

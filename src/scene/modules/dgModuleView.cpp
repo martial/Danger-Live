@@ -100,37 +100,11 @@ void dgModuleView::draw () {
 	
 	if ( currentWrapper ) currentWrapper->draw();
 	
-	
-	/*
-	if ( beatObject ) {
-		
-		float time = ofGetElapsedTimeMillis() - currentTime;
-		if ( time < beatLatency ) {
-			beatObject->setPct(1.0);
-		} else {
-			beatObject->setPct(0.0);
-		}
-	} else {
-			//printf("error");
-	}
-	
-	
-#ifdef EDITOR_MODE
-	ofEnableAlphaBlending();
-	ofSetColor(255, 255, 255, 130);
-	layerImg.draw(-layerImg.width*.5, 0);
-	ofSetColor(255, 255, 255, 255);
-	ofDisableAlphaBlending();
-#endif
-	 
-	 */
+
 
 }
 
 
-/*
- 
- */
 
 void dgModuleView::processOsc (customOscMessage & msg) {
 	
@@ -216,9 +190,7 @@ void dgModuleView::setCurrentView(int viewID) {
 		currentModule->cpObjects[i]->initValues();
 	}
 	 
-	 
-	
-	
+	 	
 	if ( currentModule->layout != "" ) {
 		layerImg.loadImage(currentModule->layout);
 		
@@ -226,32 +198,5 @@ void dgModuleView::setCurrentView(int viewID) {
 		layerImg.clear();
 	}
 	
-	
-	/*
-	// get beat object
-	beatObject = NULL;
-	for ( int i = 0; i< currentModule->cpObjects.size(); i++ ) {
-		if ( currentModule->cpObjects[i]->nameId == "beatObject" ) {
-			beatObject = currentModule->cpObjects[i];
-		}
-	}
-	 
-	
-	
-	
-	
-	#ifdef EDITOR_MODE
-
-	if ( currentModule->layer != "" ) {
-		layerImg.loadImage(currentModule->layer);
-		printf("go!\n");
-		printf(currentModule->layer.c_str());
-		printf("\n");
-	} else {
-		layerImg.clear();
-	}
-	#endif
-	 */
-	//addSceneObjects();
 	
 }

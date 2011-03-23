@@ -37,8 +37,7 @@ void dgSceneEffects::setup(dangerPrefs & settings) {
 	brightnessPct = 1.0;
 	blurPct = 0.0;
 	
-	masterSignalVariation = 1.0;
-	
+		
 	addEffect();
 	
 	setBrightness(this->settings->getBrightness(), 3000);
@@ -67,7 +66,6 @@ void dgSceneEffects::update() {
 		blur.blurPct = blurPct;
 		blur.update();
 		
-	//}
 	
 	if ( currentEffect ) currentEffect->update();
 }
@@ -218,9 +216,8 @@ dgAbstractEffect * dgSceneEffects::getEffectByName(string name) {
 
 void dgSceneEffects::onMasterSignalEvent(float val) {
 	
-	//printf("val : %f\n", val);
-	color.brightnessPctVariation = val * .5;
-	color.contrastPctVariation = val * .25;
+	color.brightnessPctVariation = 1.0 * val * .5;
+	color.contrastPctVariation = 1.0 * val * .25;
 }
 
 

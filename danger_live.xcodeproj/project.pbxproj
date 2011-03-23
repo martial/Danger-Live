@@ -13,11 +13,6 @@
 		8300EB801317C52A00525F70 /* oscObjectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EB7F1317C52A00525F70 /* oscObjectManager.cpp */; };
 		8300EB831317C53400525F70 /* oscObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EB821317C53400525F70 /* oscObject.cpp */; };
 		8300EBB21317D76200525F70 /* fpsViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300EBB11317D76200525F70 /* fpsViewer.cpp */; };
-		8307DDEB1316605700E5CA59 /* .cproject in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDC91316605700E5CA59 /* .cproject */; };
-		8307DDEC1316605700E5CA59 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCA1316605700E5CA59 /* .gitignore */; };
-		8307DDED1316605700E5CA59 /* .project in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCB1316605700E5CA59 /* .project */; };
-		8307DDEE1316605700E5CA59 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCC1316605700E5CA59 /* LICENSE */; };
-		8307DDEF1316605700E5CA59 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDCD1316605700E5CA59 /* README */; };
 		8307DDF01316605700E5CA59 /* easing_terms_of_use.html in Resources */ = {isa = PBXBuildFile; fileRef = 8307DDD01316605700E5CA59 /* easing_terms_of_use.html */; };
 		8307DDF11316605700E5CA59 /* ofxEasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8307DDD11316605700E5CA59 /* ofxEasing.cpp */; };
 		8307DDF21316605700E5CA59 /* ofxEasingBack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8307DDD31316605700E5CA59 /* ofxEasingBack.cpp */; };
@@ -33,7 +28,6 @@
 		8307DDFC1316605700E5CA59 /* ofxEasingSine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8307DDE71316605700E5CA59 /* ofxEasingSine.cpp */; };
 		8307DDFD1316605700E5CA59 /* ofxTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8307DDE91316605700E5CA59 /* ofxTween.cpp */; };
 		8307DF431316B03F00E5CA59 /* bloomEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8307DF421316B03F00E5CA59 /* bloomEffect.cpp */; };
-		8308722D130DF79500E38512 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8308721C130DF79500E38512 /* README.txt */; };
 		8308722E130DF79500E38512 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8308721F130DF79500E38512 /* AppDelegate.mm */; };
 		8308722F130DF79500E38512 /* AppWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83087221130DF79500E38512 /* AppWindow.mm */; };
 		83087230130DF79500E38512 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83087224130DF79500E38512 /* GLView.mm */; };
@@ -50,14 +44,11 @@
 		833015E613156A3D00BFEF00 /* dgAbstractEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330157E13156A3D00BFEF00 /* dgAbstractEffect.cpp */; };
 		833015E713156A3D00BFEF00 /* dgSceneEffects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330158013156A3D00BFEF00 /* dgSceneEffects.cpp */; };
 		833015E813156A3D00BFEF00 /* flickrEffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330158213156A3D00BFEF00 /* flickrEffect.cpp */; };
-		833015EA13156A3D00BFEF00 /* fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330158813156A3D00BFEF00 /* fft.cpp */; };
-		833015EB13156A3D00BFEF00 /* fftOctaveAnalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330158A13156A3D00BFEF00 /* fftOctaveAnalyzer.cpp */; };
 		833015ED13156A3D00BFEF00 /* DangerMidiListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330158E13156A3D00BFEF00 /* DangerMidiListener.cpp */; };
 		833015EE13156A3D00BFEF00 /* MyMidiListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330159013156A3D00BFEF00 /* MyMidiListener.cpp */; };
 		833015EF13156A3D00BFEF00 /* ofxMidiIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330159513156A3D00BFEF00 /* ofxMidiIn.cpp */; };
 		833015F013156A3D00BFEF00 /* ofxMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330159713156A3D00BFEF00 /* ofxMidiOut.cpp */; };
 		833015F213156A3D00BFEF00 /* customOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330159C13156A3D00BFEF00 /* customOscMessage.cpp */; };
-		833015F313156A3D00BFEF00 /* DgOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330159E13156A3D00BFEF00 /* DgOscReceiver.cpp */; };
 		833015F413156A3D00BFEF00 /* OscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833015A013156A3D00BFEF00 /* OscReceiver.cpp */; };
 		833015F513156A3D00BFEF00 /* DangerBackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833015A413156A3D00BFEF00 /* DangerBackground.cpp */; };
 		833015F613156A3D00BFEF00 /* DangerScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833015A613156A3D00BFEF00 /* DangerScene.cpp */; };
@@ -88,8 +79,6 @@
 		8330161513156ABF00BFEF00 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330161413156ABF00BFEF00 /* CoreMIDI.framework */; };
 		8330161713156ABF00BFEF00 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330161613156ABF00BFEF00 /* QTKit.framework */; };
 		8330162013156ACE00BFEF00 /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330161E13156ACE00BFEF00 /* RtMidi.cpp */; };
-		8330167013156B0100BFEF00 /* Instructions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8330162313156B0100BFEF00 /* Instructions.txt */; };
-		8330167113156B0100BFEF00 /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8330162413156B0100BFEF00 /* install.xml */; };
 		8330167213156B0100BFEF00 /* ofxDirList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330162613156B0100BFEF00 /* ofxDirList.cpp */; };
 		8330167313156B0100BFEF00 /* ofxFBOTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330162A13156B0100BFEF00 /* ofxFBOTexture.cpp */; };
 		8330167413156B0100BFEF00 /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8330162D13156B0100BFEF00 /* install.xml */; };
@@ -101,11 +90,9 @@
 		8330167A13156B0100BFEF00 /* ofxQTKitVideoPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8330165013156B0100BFEF00 /* ofxQTKitVideoPlayer.mm */; };
 		8330167B13156B0100BFEF00 /* QTKitMovieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330165213156B0100BFEF00 /* QTKitMovieRenderer.m */; };
 		8330167C13156B0100BFEF00 /* ofxShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330165413156B0100BFEF00 /* ofxShader.cpp */; };
-		8330167D13156B0100BFEF00 /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8330165713156B0100BFEF00 /* install.xml */; };
 		8330167E13156B0100BFEF00 /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330165913156B0100BFEF00 /* ofxMatrix3x3.cpp */; };
 		8330167F13156B0100BFEF00 /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330165B13156B0100BFEF00 /* ofxMatrix4x4.cpp */; };
 		8330168013156B0100BFEF00 /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330166013156B0100BFEF00 /* ofxQuaternion.cpp */; };
-		8330168113156B0100BFEF00 /* install.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8330166713156B0100BFEF00 /* install.xml */; };
 		8330168213156B0100BFEF00 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330166913156B0100BFEF00 /* tinyxml.cpp */; };
 		8330168313156B0100BFEF00 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330166B13156B0100BFEF00 /* tinyxmlerror.cpp */; };
 		8330168413156B0100BFEF00 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8330166C13156B0100BFEF00 /* tinyxmlparser.cpp */; };
@@ -113,6 +100,7 @@
 		83326190131F01A0008788BF /* ofxFenster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8332618E131F01A0008788BF /* ofxFenster.cpp */; };
 		83326368131FFF1A008788BF /* ofxTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83326366131FFF1A008788BF /* ofxTimer.cpp */; };
 		83362FC61315747500D31962 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83362FC51315747500D31962 /* GLUT.framework */; };
+		834502381339FD1B00FDCCD7 /* screenManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 834502371339FD1B00FDCCD7 /* screenManager.mm */; };
 		83C44669132107B500E4ECF3 /* dgLoopModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83C44668132107B500E4ECF3 /* dgLoopModuleWrapper.cpp */; };
 		83F19AB1131EA7F000446110 /* dgMixerModuleWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83F19AB0131EA7F000446110 /* dgMixerModuleWrapper.cpp */; };
 		83F3CFC2131D41DA007612A6 /* dangerPrefs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83F3CFC1131D41DA007612A6 /* dangerPrefs.cpp */; };
@@ -168,11 +156,6 @@
 		8300EB821317C53400525F70 /* oscObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oscObject.cpp; sourceTree = "<group>"; };
 		8300EBB01317D76200525F70 /* fpsViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fpsViewer.h; sourceTree = "<group>"; };
 		8300EBB11317D76200525F70 /* fpsViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fpsViewer.cpp; sourceTree = "<group>"; };
-		8307DDC91316605700E5CA59 /* .cproject */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .cproject; sourceTree = "<group>"; };
-		8307DDCA1316605700E5CA59 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		8307DDCB1316605700E5CA59 /* .project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .project; sourceTree = "<group>"; };
-		8307DDCC1316605700E5CA59 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		8307DDCD1316605700E5CA59 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		8307DDD01316605700E5CA59 /* easing_terms_of_use.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = easing_terms_of_use.html; sourceTree = "<group>"; };
 		8307DDD11316605700E5CA59 /* ofxEasing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxEasing.cpp; sourceTree = "<group>"; };
 		8307DDD21316605700E5CA59 /* ofxEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxEasing.h; sourceTree = "<group>"; };
@@ -202,7 +185,6 @@
 		8307DDEA1316605700E5CA59 /* ofxTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTween.h; sourceTree = "<group>"; };
 		8307DF411316B03F00E5CA59 /* bloomEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bloomEffect.h; sourceTree = "<group>"; };
 		8307DF421316B03F00E5CA59 /* bloomEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bloomEffect.cpp; sourceTree = "<group>"; };
-		8308721C130DF79500E38512 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		8308721E130DF79500E38512 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8308721F130DF79500E38512 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		83087220130DF79500E38512 /* AppWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppWindow.h; sourceTree = "<group>"; };
@@ -236,10 +218,6 @@
 		8330158113156A3D00BFEF00 /* dgSceneEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgSceneEffects.h; sourceTree = "<group>"; };
 		8330158213156A3D00BFEF00 /* flickrEffect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flickrEffect.cpp; sourceTree = "<group>"; };
 		8330158313156A3D00BFEF00 /* flickrEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flickrEffect.h; sourceTree = "<group>"; };
-		8330158813156A3D00BFEF00 /* fft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fft.cpp; sourceTree = "<group>"; };
-		8330158913156A3D00BFEF00 /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
-		8330158A13156A3D00BFEF00 /* fftOctaveAnalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fftOctaveAnalyzer.cpp; sourceTree = "<group>"; };
-		8330158B13156A3D00BFEF00 /* fftOctaveAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fftOctaveAnalyzer.h; sourceTree = "<group>"; };
 		8330158E13156A3D00BFEF00 /* DangerMidiListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DangerMidiListener.cpp; sourceTree = "<group>"; };
 		8330158F13156A3D00BFEF00 /* DangerMidiListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DangerMidiListener.h; sourceTree = "<group>"; };
 		8330159013156A3D00BFEF00 /* MyMidiListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyMidiListener.cpp; sourceTree = "<group>"; };
@@ -253,8 +231,6 @@
 		8330159813156A3D00BFEF00 /* ofxMidiOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMidiOut.h; sourceTree = "<group>"; };
 		8330159C13156A3D00BFEF00 /* customOscMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = customOscMessage.cpp; sourceTree = "<group>"; };
 		8330159D13156A3D00BFEF00 /* customOscMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customOscMessage.h; sourceTree = "<group>"; };
-		8330159E13156A3D00BFEF00 /* DgOscReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DgOscReceiver.cpp; sourceTree = "<group>"; };
-		8330159F13156A3D00BFEF00 /* DgOscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DgOscReceiver.h; sourceTree = "<group>"; };
 		833015A013156A3D00BFEF00 /* OscReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscReceiver.cpp; sourceTree = "<group>"; };
 		833015A113156A3D00BFEF00 /* OscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscReceiver.h; sourceTree = "<group>"; };
 		833015A413156A3D00BFEF00 /* DangerBackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DangerBackground.cpp; sourceTree = "<group>"; };
@@ -307,14 +283,12 @@
 		833015DC13156A3D00BFEF00 /* ofxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxUtils.h; sourceTree = "<group>"; };
 		8330160F13156A8F00BFEF00 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		8330161013156A8F00BFEF00 /* dangerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dangerApp.h; sourceTree = "<group>"; };
-		8330161113156A8F00BFEF00 /* dangerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dangerApp.mm; sourceTree = "<group>"; };
+		8330161113156A8F00BFEF00 /* dangerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dangerApp.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8330161413156ABF00BFEF00 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
 		8330161613156ABF00BFEF00 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		8330161D13156ACE00BFEF00 /* RtError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtError.h; sourceTree = "<group>"; };
 		8330161E13156ACE00BFEF00 /* RtMidi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RtMidi.cpp; sourceTree = "<group>"; };
 		8330161F13156ACE00BFEF00 /* RtMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtMidi.h; sourceTree = "<group>"; };
-		8330162313156B0100BFEF00 /* Instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
-		8330162413156B0100BFEF00 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		8330162613156B0100BFEF00 /* ofxDirList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxDirList.cpp; sourceTree = "<group>"; };
 		8330162713156B0100BFEF00 /* ofxDirList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxDirList.h; sourceTree = "<group>"; };
 		8330162A13156B0100BFEF00 /* ofxFBOTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFBOTexture.cpp; sourceTree = "<group>"; };
@@ -350,7 +324,6 @@
 		8330165213156B0100BFEF00 /* QTKitMovieRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTKitMovieRenderer.m; sourceTree = "<group>"; };
 		8330165413156B0100BFEF00 /* ofxShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxShader.cpp; sourceTree = "<group>"; };
 		8330165513156B0100BFEF00 /* ofxShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxShader.h; sourceTree = "<group>"; };
-		8330165713156B0100BFEF00 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		8330165913156B0100BFEF00 /* ofxMatrix3x3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMatrix3x3.cpp; sourceTree = "<group>"; };
 		8330165A13156B0100BFEF00 /* ofxMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMatrix3x3.h; sourceTree = "<group>"; };
 		8330165B13156B0100BFEF00 /* ofxMatrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMatrix4x4.cpp; sourceTree = "<group>"; };
@@ -364,7 +337,6 @@
 		8330166313156B0100BFEF00 /* ofxVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec3f.h; sourceTree = "<group>"; };
 		8330166413156B0100BFEF00 /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec4f.h; sourceTree = "<group>"; };
 		8330166513156B0100BFEF00 /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
-		8330166713156B0100BFEF00 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		8330166913156B0100BFEF00 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		8330166A13156B0100BFEF00 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		8330166B13156B0100BFEF00 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
@@ -376,6 +348,8 @@
 		83326366131FFF1A008788BF /* ofxTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTimer.cpp; sourceTree = "<group>"; };
 		83326367131FFF1A008788BF /* ofxTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTimer.h; sourceTree = "<group>"; };
 		83362FC51315747500D31962 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		834502361339FD1B00FDCCD7 /* screenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screenManager.h; sourceTree = "<group>"; };
+		834502371339FD1B00FDCCD7 /* screenManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = screenManager.mm; sourceTree = "<group>"; };
 		83C44667132107B500E4ECF3 /* dgLoopModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgLoopModuleWrapper.h; sourceTree = "<group>"; };
 		83C44668132107B500E4ECF3 /* dgLoopModuleWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dgLoopModuleWrapper.cpp; sourceTree = "<group>"; };
 		83F19AAF131EA7F000446110 /* dgMixerModuleWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dgMixerModuleWrapper.h; sourceTree = "<group>"; };
@@ -468,11 +442,6 @@
 		8307DDC81316605700E5CA59 /* ofxTween */ = {
 			isa = PBXGroup;
 			children = (
-				8307DDC91316605700E5CA59 /* .cproject */,
-				8307DDCA1316605700E5CA59 /* .gitignore */,
-				8307DDCB1316605700E5CA59 /* .project */,
-				8307DDCC1316605700E5CA59 /* LICENSE */,
-				8307DDCD1316605700E5CA59 /* README */,
 				8307DDCE1316605700E5CA59 /* src */,
 			);
 			name = ofxTween;
@@ -524,7 +493,6 @@
 		83087215130DF79500E38512 /* ofxCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				8308721C130DF79500E38512 /* README.txt */,
 				8308721D130DF79500E38512 /* src */,
 			);
 			name = ofxCocoa;
@@ -556,6 +524,8 @@
 				8330156D13156A3D00BFEF00 /* dgDebugView.h */,
 				8300EBB01317D76200525F70 /* fpsViewer.h */,
 				8300EBB11317D76200525F70 /* fpsViewer.cpp */,
+				834502361339FD1B00FDCCD7 /* screenManager.h */,
+				834502371339FD1B00FDCCD7 /* screenManager.mm */,
 			);
 			path = control_panel;
 			sourceTree = "<group>";
@@ -603,17 +573,6 @@
 			path = effects;
 			sourceTree = "<group>";
 		};
-		8330158713156A3D00BFEF00 /* fft */ = {
-			isa = PBXGroup;
-			children = (
-				8330158813156A3D00BFEF00 /* fft.cpp */,
-				8330158913156A3D00BFEF00 /* fft.h */,
-				8330158A13156A3D00BFEF00 /* fftOctaveAnalyzer.cpp */,
-				8330158B13156A3D00BFEF00 /* fftOctaveAnalyzer.h */,
-			);
-			path = fft;
-			sourceTree = "<group>";
-		};
 		8330158D13156A3D00BFEF00 /* midi */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,8 +596,6 @@
 			children = (
 				8330159C13156A3D00BFEF00 /* customOscMessage.cpp */,
 				8330159D13156A3D00BFEF00 /* customOscMessage.h */,
-				8330159E13156A3D00BFEF00 /* DgOscReceiver.cpp */,
-				8330159F13156A3D00BFEF00 /* DgOscReceiver.h */,
 				833015A013156A3D00BFEF00 /* OscReceiver.cpp */,
 				833015A113156A3D00BFEF00 /* OscReceiver.h */,
 			);
@@ -765,13 +722,6 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		833015DD13156A3D00BFEF00 /* video */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = video;
-			sourceTree = "<group>";
-		};
 		8330161C13156ACE00BFEF00 /* rtMidi */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,21 +736,11 @@
 		8330162113156B0100BFEF00 /* ofxDirList */ = {
 			isa = PBXGroup;
 			children = (
-				8330162213156B0100BFEF00 /* doc */,
-				8330162413156B0100BFEF00 /* install.xml */,
 				8330162513156B0100BFEF00 /* src */,
 			);
 			name = ofxDirList;
 			path = ../../../addons/ofxDirList;
 			sourceTree = SOURCE_ROOT;
-		};
-		8330162213156B0100BFEF00 /* doc */ = {
-			isa = PBXGroup;
-			children = (
-				8330162313156B0100BFEF00 /* Instructions.txt */,
-			);
-			path = doc;
-			sourceTree = "<group>";
 		};
 		8330162513156B0100BFEF00 /* src */ = {
 			isa = PBXGroup;
@@ -951,7 +891,6 @@
 		8330165613156B0100BFEF00 /* ofxVectorMath */ = {
 			isa = PBXGroup;
 			children = (
-				8330165713156B0100BFEF00 /* install.xml */,
 				8330165813156B0100BFEF00 /* src */,
 			);
 			name = ofxVectorMath;
@@ -981,7 +920,6 @@
 		8330166613156B0100BFEF00 /* ofxXmlSettings */ = {
 			isa = PBXGroup;
 			children = (
-				8330166713156B0100BFEF00 /* install.xml */,
 				8330166813156B0100BFEF00 /* libs */,
 				8330166D13156B0100BFEF00 /* src */,
 			);
@@ -1022,20 +960,12 @@
 		83326364131FFF19008788BF /* ofxTimer */ = {
 			isa = PBXGroup;
 			children = (
-				83326365131FFF1A008788BF /* example */,
 				83326366131FFF1A008788BF /* ofxTimer.cpp */,
 				83326367131FFF1A008788BF /* ofxTimer.h */,
 			);
 			name = ofxTimer;
 			path = ../../../addons/ofxTimer;
 			sourceTree = SOURCE_ROOT;
-		};
-		83326365131FFF1A008788BF /* example */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = example;
-			sourceTree = "<group>";
 		};
 		83F3CFBF131D41CE007612A6 /* preferences */ = {
 			isa = PBXGroup;
@@ -1265,14 +1195,12 @@
 				8330156B13156A3D00BFEF00 /* control_panel */,
 				8330156E13156A3D00BFEF00 /* data */,
 				8330157913156A3D00BFEF00 /* effects */,
-				8330158713156A3D00BFEF00 /* fft */,
 				8330158D13156A3D00BFEF00 /* midi */,
 				8330159B13156A3D00BFEF00 /* osc */,
 				833015A213156A3D00BFEF00 /* scene */,
 				833015B713156A3D00BFEF00 /* scene_objects */,
 				833015D113156A3D00BFEF00 /* shaders */,
 				833015DA13156A3D00BFEF00 /* utils */,
-				833015DD13156A3D00BFEF00 /* video */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1403,17 +1331,7 @@
 			files = (
 				27CE63AD12CA8E3800FB70D1 /* Info.plist in Resources */,
 				277D051C12CA9549003A5BD5 /* NoWindow.xib in Resources */,
-				8308722D130DF79500E38512 /* README.txt in Resources */,
-				8330167013156B0100BFEF00 /* Instructions.txt in Resources */,
-				8330167113156B0100BFEF00 /* install.xml in Resources */,
 				8330167413156B0100BFEF00 /* install.xml in Resources */,
-				8330167D13156B0100BFEF00 /* install.xml in Resources */,
-				8330168113156B0100BFEF00 /* install.xml in Resources */,
-				8307DDEB1316605700E5CA59 /* .cproject in Resources */,
-				8307DDEC1316605700E5CA59 /* .gitignore in Resources */,
-				8307DDED1316605700E5CA59 /* .project in Resources */,
-				8307DDEE1316605700E5CA59 /* LICENSE in Resources */,
-				8307DDEF1316605700E5CA59 /* README in Resources */,
 				8307DDF01316605700E5CA59 /* easing_terms_of_use.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1457,14 +1375,11 @@
 				833015E613156A3D00BFEF00 /* dgAbstractEffect.cpp in Sources */,
 				833015E713156A3D00BFEF00 /* dgSceneEffects.cpp in Sources */,
 				833015E813156A3D00BFEF00 /* flickrEffect.cpp in Sources */,
-				833015EA13156A3D00BFEF00 /* fft.cpp in Sources */,
-				833015EB13156A3D00BFEF00 /* fftOctaveAnalyzer.cpp in Sources */,
 				833015ED13156A3D00BFEF00 /* DangerMidiListener.cpp in Sources */,
 				833015EE13156A3D00BFEF00 /* MyMidiListener.cpp in Sources */,
 				833015EF13156A3D00BFEF00 /* ofxMidiIn.cpp in Sources */,
 				833015F013156A3D00BFEF00 /* ofxMidiOut.cpp in Sources */,
 				833015F213156A3D00BFEF00 /* customOscMessage.cpp in Sources */,
-				833015F313156A3D00BFEF00 /* DgOscReceiver.cpp in Sources */,
 				833015F413156A3D00BFEF00 /* OscReceiver.cpp in Sources */,
 				833015F513156A3D00BFEF00 /* DangerBackground.cpp in Sources */,
 				833015F613156A3D00BFEF00 /* DangerScene.cpp in Sources */,
@@ -1531,6 +1446,7 @@
 				83326190131F01A0008788BF /* ofxFenster.cpp in Sources */,
 				83326368131FFF1A008788BF /* ofxTimer.cpp in Sources */,
 				83C44669132107B500E4ECF3 /* dgLoopModuleWrapper.cpp in Sources */,
+				834502381339FD1B00FDCCD7 /* screenManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

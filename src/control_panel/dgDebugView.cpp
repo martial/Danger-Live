@@ -11,12 +11,12 @@
 
 void dgDebugView::setup() {
 	
-	digitalFont.loadFont("fonts/digital-7_italic.ttf", 32);
-	digitalFont_tiny.loadFont("fonts/digital-7_italic.ttf", 11);
+	//digitalFont.loadFont("fonts/digital-7_italic.ttf", 32);
+	//digitalFont_tiny.loadFont("fonts/digital-7_italic.ttf", 11);
 	
 	logo.loadImage("assets/logo.png");
 	
-	fps.setup(1440, 900, 40);
+	fps.setup(1440, 900, 60);
 	
 	beatLatency = 100;
 	currentTime = 0;
@@ -49,12 +49,12 @@ void dgDebugView::draw() {
 	ofSetColor(255, 255, 255);
 	logo.draw(1440*.5 - logo.width *.5, 45 - logo.height * .5);
 	
-	fps.update();
-	fps.draw(0,90);
+	//fps.update();
+	//fps.draw(0,90);
 		
 	string fps = "fps : ";
 	fps += ofToString((int)ofGetFrameRate());
-	digitalFont_tiny.drawString(fps, 3, 90  - 14 );
+	//digitalFont_tiny.drawString(fps, 3, 90  - 14 );
 	
 	// draw beat man
 	float time = ofGetElapsedTimeMillis() - currentTime;
@@ -92,14 +92,24 @@ void dgDebugView::drawSceneFbo (ofxFBOTexture * texture, float width, float heig
 	ofEnableAlphaBlending();
 	ofSetColor(255, 255, 255, 30);
 	ofRect(x-1, y-1, videoSize.x*scale +2, videoSize.y*scale +2);
-	ofDisableAlphaBlending();
+	
 	ofSetColor(255, 255, 255, 255);
 	
 	
 	texture->draw(x,y ,videoSize.x*scale,videoSize.y*scale);
 	
 	
-	digitalFont_tiny.drawString(ofToString(scale), x+3, y+3);
+	ofSetColor(255, 255, 255);
+	logo.draw(width*.5 - logo.width *.5, 45 - logo.height * .5);
+
+	
+	fps.update();
+	fps.draw(0, 60, (int)width, 60);
+	
+	ofDisableAlphaBlending();
+	
+	
+	//digitalFont_tiny.drawString(ofToString(scale), x+3, y+3);
 	
 	
 }

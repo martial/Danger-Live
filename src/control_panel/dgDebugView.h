@@ -32,8 +32,8 @@ class dgDebugView {
 	
 	ofImage			logo;
 	
-	ofTrueTypeFont	digitalFont;
-	ofTrueTypeFont	digitalFont_tiny;
+	//ofTrueTypeFont	digitalFont;
+	//ofTrueTypeFont	digitalFont_tiny;
 	
 	fpsViewer		fps;
 	

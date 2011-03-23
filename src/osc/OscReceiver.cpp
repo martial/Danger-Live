@@ -52,7 +52,6 @@ void OscReceiver::update () {
 				
 			if( m.getArgType( i ) == OFXOSC_TYPE_FLOAT ){
 				msg.value = m.getArgAsFloat( i );
-				//printf ("yo! : %f\n", msg->value);
 			}
 			
 		 }

@@ -16,14 +16,14 @@
 int main() {
 	
 	
-	int w = 1920;
-	int h = 1080;
+	int w = 1440 + 1680;
+	int h = 1200;
 	
 	#ifdef _USE_COCOA_WINDOW
     MSA::ofxCocoa::InitSettings			initSettings;
 	initSettings.isOpaque				= true;
-	//initSettings.windowLevel			= NSNormalWindowLevel;
-	initSettings.windowLevel			= NSMainMenuWindowLevel + 1;
+	initSettings.windowLevel			= NSNormalWindowLevel;
+	//initSettings.windowLevel			= NSMainMenuWindowLevel + 1;
 
 	initSettings.hasWindowShadow		= false;
 	initSettings.numFSAASamples			= 4;
@@ -32,9 +32,9 @@ int main() {
 	initSettings.windowMode				= OF_FULLSCREEN;
 	
 	// to go fullscreen across all windows:
-	//initSettings.windowStyle			= NSBorderlessWindowMask;
+	initSettings.windowStyle			= NSBorderlessWindowMask;
 	//initSettings.initRect				= MSA::ofxCocoa::rectForMainScreen();
-	//initSettings.initRect				= MSA::ofxCocoa::rectForAllScreens();
+	initSettings.initRect				= MSA::ofxCocoa::rectForAllScreens();
 	
 	MSA::ofxCocoa::AppWindow window(initSettings);
 	w = h = 0;
@@ -49,10 +49,13 @@ int main() {
 	
 	dangerApp* app = new dangerApp;
 	
-#ifdef _USE_FENSTER
+    #ifdef _USE_FENSTER
+    #ifdef _USE_COCOA_WINDOW
+    return print("Error can't be both ofxcocoa and fenster");
+    #endif
 	ofxFenster fenster;
 	fenster.init(app);
-#endif
+    #endif
 
 	ofRunApp(app);
 
